@@ -1,0 +1,68 @@
+﻿{
+  "version": "1.0",
+  "ai": {
+    "provider": "deepseek",
+    "model": "deepseek-chat",
+    "base_url": "https://api.deepseek.com",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "temperature": 0.3,
+    "max_tokens": 4096,
+    "throttle_sec": 1,
+    "languages": ["zh", "en"],
+    "analysis_concurrency": 2,
+    "enrichment_concurrency": 2
+  },
+  "email": { "enabled": false },
+  "sources": {
+    "github": [
+      { "type": "user_events", "username": "karpathy", "enabled": true },
+      { "type": "repo_releases", "owner": "openai", "repo": "openai-python", "enabled": true },
+      { "type": "repo_releases", "owner": "vllm-project", "repo": "vllm", "enabled": true },
+      { "type": "repo_releases", "owner": "sgl-project", "repo": "sglang", "enabled": true }
+    ],
+    "hackernews": { "enabled": true, "fetch_top_stories": 20, "min_score": 100 },
+    "rss": [
+      { "name": "OpenAI Blog", "url": "https://openai.com/news/rss.xml", "enabled": true, "category": "ai-news" },
+      { "name": "Google DeepMind Blog", "url": "https://deepmind.google/blog/rss.xml", "enabled": true, "category": "ai-news" },
+      { "name": "Anthropic News", "url": "https://www.anthropic.com/news/rss.xml", "enabled": true, "category": "ai-news" },
+      { "name": "Simon Willison", "url": "https://simonwillison.net/atom/everything/", "enabled": true, "category": "ai-tools" },
+      { "name": "GitHub Trending Daily", "url": "https://mshibanami.github.io/GitHubTrendingRSS/daily/all.xml", "enabled": true, "category": "github-trending" }
+    ],
+    "reddit": { "enabled": false, "subreddits": [], "users": [], "fetch_comments": 0 },
+    "twitter": { "enabled": false, "users": [], "fetch_limit": 0 },
+    "telegram": { "enabled": false, "channels": [] },
+    "openbb": { "enabled": false },
+    "ossinsight": { "enabled": false },
+    "gdelt": { "enabled": false },
+    "google_news": {
+      "enabled": true,
+      "query": "artificial intelligence OR large language model OR AI agent",
+      "language": "zh-CN",
+      "country": "CN",
+      "ceid": "CN:zh-Hans",
+      "max_results": 30,
+      "category": "ai-news"
+    }
+  },
+  "filtering": {
+    "ai_score_threshold": 7.0,
+    "time_window_hours": 24,
+    "max_items": 12,
+    "category_groups": {
+      "ai": { "limit": 8, "categories": ["ai-news", "ai-tools", "github-trending"] }
+    },
+    "default_group": "other",
+    "default_group_limit": 4
+  },
+  "webhook": {
+    "enabled": false,
+    "url_env": "HORIZON_WEBHOOK_URL",
+    "delivery": "summary",
+    "platform": "generic",
+    "layout": "markdown",
+    "fallback_layout": "markdown",
+    "languages": ["zh"],
+    "request_body": {},
+    "headers": ""
+  }
+}
