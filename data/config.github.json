@@ -137,7 +137,7 @@
       "users": []
     },
     "twitter": {
-      "enabled": true,
+      "enabled": false,
       "mode": "apify",
       "users": [
         "karpathy",
