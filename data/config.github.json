@@ -90,19 +90,90 @@
       }
     ],
     "reddit": {
-      "enabled": false,
-      "subreddits": [],
-      "users": [],
-      "fetch_comments": 0
+      "enabled": true,
+      "fetch_comments": 5,
+      "subreddits": [
+        {
+          "subreddit": "MachineLearning",
+          "enabled": true,
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 10,
+          "min_score": 50
+        },
+        {
+          "subreddit": "LocalLLaMA",
+          "enabled": true,
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 10,
+          "min_score": 50
+        },
+        {
+          "subreddit": "OpenAI",
+          "enabled": true,
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 10,
+          "min_score": 20
+        },
+        {
+          "subreddit": "singularity",
+          "enabled": true,
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 10,
+          "min_score": 50
+        },
+        {
+          "subreddit": "ArtificialInteligence",
+          "enabled": true,
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 10,
+          "min_score": 20
+        }
+      ],
+      "users": []
     },
     "twitter": {
-      "enabled": false,
-      "users": [],
-      "fetch_limit": 0
+      "enabled": true,
+      "mode": "apify",
+      "users": [
+        "karpathy",
+        "sama",
+        "ylecun",
+        "AndrewYNg",
+        "emollick",
+        "nearcyan"
+      ],
+      "fetch_limit": 10,
+      "fetch_reply_text": false,
+      "max_replies_per_tweet": 3,
+      "max_tweets_to_expand": 10,
+      "reply_min_likes": 5,
+      "apify_token_env": "APIFY_TOKEN",
+      "actor_id": "altimis~scweet"
     },
     "telegram": {
-      "enabled": false,
-      "channels": []
+      "enabled": true,
+      "channels": [
+        {
+          "channel": "zaihuapd",
+          "enabled": true,
+          "fetch_limit": 20
+        },
+        {
+          "channel": "aigclink",
+          "enabled": true,
+          "fetch_limit": 20
+        },
+        {
+          "channel": "opencat",
+          "enabled": true,
+          "fetch_limit": 20
+        }
+      ]
     },
     "openbb": {
       "enabled": false
@@ -138,7 +209,7 @@
       }
     },
     "default_group": "other",
-    "default_group_limit": 4
+    "default_group_limit": 6
   },
   "webhook": {
     "enabled": false,
