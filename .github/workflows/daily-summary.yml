@@ -2,9 +2,11 @@ name: Daily Horizon Summary
 
 on:
   schedule:
-    # GitHub cron uses UTC. 00:17 UTC = 08:17 Asia/Shanghai.
+    # GitHub cron uses UTC. These retries all run during 08:00-08:59 Asia/Shanghai, before DeepSeek peak pricing.
+    - cron: '7 0 * * *'
     - cron: '17 0 * * *'
-    # Backup before DeepSeek peak pricing window. 00:47 UTC = 08:47 Asia/Shanghai.
+    - cron: '27 0 * * *'
+    - cron: '37 0 * * *'
     - cron: '47 0 * * *'
   workflow_dispatch:
 
@@ -31,7 +33,14 @@ jobs:
             exit 0
           fi
 
-          today="$(date -u +'%Y-%m-%d')"
+          bj_hour="$(TZ=Asia/Shanghai date +'%H')"
+          if [ "$bj_hour" != "08" ]; then
+            echo "Scheduled run started outside 08:00-08:59 Asia/Shanghai (hour=${bj_hour}). Skipping to avoid DeepSeek peak pricing."
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          today="$(TZ=Asia/Shanghai date +'%Y-%m-%d')"
           git fetch origin gh-pages --depth=1 || true
           if git cat-file -e "origin/gh-pages:_posts/${today}-summary-zh.md" 2>/dev/null; then
             echo "Today's summary already exists: ${today}. Skipping scheduled duplicate run."
