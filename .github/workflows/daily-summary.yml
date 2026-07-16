@@ -2,7 +2,12 @@ name: Daily Horizon Summary
 
 on:
   schedule:
-    # GitHub cron uses UTC. These retries all run during 08:00-08:59 Asia/Shanghai, before DeepSeek peak pricing.
+    # GitHub cron uses UTC. These retries run during 07:00-08:59 Asia/Shanghai, before DeepSeek peak pricing.
+    - cron: '7 23 * * *'
+    - cron: '17 23 * * *'
+    - cron: '27 23 * * *'
+    - cron: '37 23 * * *'
+    - cron: '47 23 * * *'
     - cron: '7 0 * * *'
     - cron: '17 0 * * *'
     - cron: '27 0 * * *'
@@ -34,8 +39,8 @@ jobs:
           fi
 
           bj_hour="$(TZ=Asia/Shanghai date +'%H')"
-          if [ "$bj_hour" != "08" ]; then
-            echo "Scheduled run started outside 08:00-08:59 Asia/Shanghai (hour=${bj_hour}). Skipping to avoid DeepSeek peak pricing."
+          if [ "$bj_hour" != "07" ] && [ "$bj_hour" != "08" ]; then
+            echo "Scheduled run started outside 07:00-08:59 Asia/Shanghai (hour=${bj_hour}). Skipping to avoid DeepSeek peak pricing."
             echo "exists=true" >> "$GITHUB_OUTPUT"
             exit 0
           fi
