@@ -5,217 +5,284 @@ date: 2026-08-11
 lang: en
 ---
 
-> From 45 items, 9 important content pieces were selected
+> From 43 items, 12 important content pieces were selected
 
 ---
 
-1. [vLLM v0.27.0 Adds Kimi K3, Qwen3.5, PyTorch 2.13, FlashAttention 4](#item-1) ⭐️ 8.0/10
-2. [Meta Unveils Muse Glimmer 30B for Local Agent Workflows](#item-2) ⭐️ 8.0/10
-3. [Zuckerberg Criticizes Closed AI Rivals, Reaffirms Meta's Open Model Strategy](#item-3) ⭐️ 8.0/10
-4. [Needle2: 14MB Agentic LLM for Edge Devices](#item-4) ⭐️ 8.0/10
-5. [Rust Portable SIMD Runs on GPU Warps](#item-5) ⭐️ 8.0/10
-6. [SMM Exploit Using a Very Long Interrupt Instruction](#item-6) ⭐️ 8.0/10
-7. [OpenAI Launches GPT-5.6-Cyber for Authorized Security Testing](#item-7) ⭐️ 8.0/10
-8. [OpenAI's GPT-5.6 Sol Boosts Finance Work with Editable Outputs](#item-8) ⭐️ 7.0/10
-9. [OpenAI Urges Texas Governor for Responsible AI Infrastructure](#item-9) ⭐️ 5.0/10
+1. [Researchers Steal Hidden Reasoning from Major AI APIs](#item-1) ⭐️ 9.0/10
+2. [Meta's Muse Glimmer: 30B Open-Weight Agentic Model](#item-2) ⭐️ 9.0/10
+3. [Ngrok Argues Compression Is Fundamentally Prediction](#item-3) ⭐️ 8.0/10
+4. [Mojo 1.0 Released: High-Performance Python Superset for AI](#item-4) ⭐️ 8.0/10
+5. [OpenAI Tests Ads in ChatGPT to Sustain Free Access](#item-5) ⭐️ 8.0/10
+6. [Decoupled Descent: Enforcing Exact Train-Test Error Tracking via AMP Onsager Corrections](#item-6) ⭐️ 8.0/10
+7. [HyperSAE: Poincaré Geometry for Sparse Autoencoders Cuts MSE by 9.8%](#item-7) ⭐️ 8.0/10
+8. [Nvidia Unveils Nemotron 3.5 Lightning and NeMo Switchyard](#item-8) ⭐️ 7.0/10
+9. [Go Ideal for AI-Assisted Software Engineering, Google Argues](#item-9) ⭐️ 7.0/10
+10. [OpenAI Daybreak Models Now Available on AWS Bedrock](#item-10) ⭐️ 7.0/10
+11. [ByteDance CEO Rejects Model Distillation as Shortcut in AI Strategy](#item-11) ⭐️ 7.0/10
+12. [TVB Surges on AI Computing Joint Venture](#item-12) ⭐️ 5.0/10
 
 ---
 
 <a id="item-1"></a>
-## [vLLM v0.27.0 Adds Kimi K3, Qwen3.5, PyTorch 2.13, FlashAttention 4](https://github.com/vllm-project/vllm/releases/tag/v0.27.0) ⭐️ 8.0/10
+## [Researchers Steal Hidden Reasoning from Major AI APIs](https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/#atom-everything) ⭐️ 9.0/10
 
-vLLM v0.27.0 was released with 561 commits from 242 contributors, adding support for Kimi K3 and Qwen3.5 models, upgrading to PyTorch 2.13.0, and deepening FlashAttention 4 integration on SM100. It also includes performance optimizations for DeepSeek-V4 and expansion of Model Runner V2 to non-generative workloads. This release significantly expands vLLM's model support with cutting-edge models like Kimi K3 and Qwen3.5, making it a go-to inference engine for the latest AI models. The PyTorch 2.13 upgrade and FlashAttention 4 enhancements promise better performance and efficiency, benefiting the entire LLM deployment ecosystem. Kimi K3 is a 2.8T-parameter multimodal model built on Kimi Delta Attention (KDA) and Attention Residuals (AttnRes), with native vision and 1M-token context. The release also includes DeepGEMM support, AttnRes kernels, and optional shared-expert sharding for Kimi K3, plus a breaking environment change due to the PyTorch 2.13 upgrade.
+Researchers demonstrated a method to steal hidden chain-of-thought reasoning from proprietary LLM APIs (Anthropic, OpenAI, Google) by replaying encrypted reasoning blocks into weaker sibling models and jailbreaking them to output plaintext. The attack has been acknowledged by providers and subsequently fixed. This research exposes a significant vulnerability in major AI APIs, raising concerns about model safety, intellectual property, and user privacy. It highlights the fragility of encryption-based protections for chain-of-thought reasoning and could influence future security practices in the AI industry. The attack exploited the fact that all models within the same family share the same encryption key for reasoning blocks. The researchers successfully extracted reasoning traces from models like Claude Haiku 4.5 using a simple prompt, and the paper includes extensive examples of the recovered chains of thought.
 
-github · khluu · Aug 10, 21:18
+rss · Simon Willison · Aug 11, 22:40
 
-**Background**: vLLM is a high-throughput, memory-efficient inference and serving engine for large language models. FlashAttention is a fast and memory-efficient attention algorithm, and DeepGEMM is a high-performance tensor core kernel library. The upgrade to PyTorch 2.13 and Triton 3.7.1 is part of ongoing efforts to improve performance and support newer hardware.
+**Background**: Proprietary LLM APIs often return encrypted chain-of-thought blocks to clients to hide the model's internal reasoning. These blocks are meant to be opaque and are replayed back to the API for multi-turn conversations. The researchers found that these blocks could be replayed into weaker models, which could be jailbroken to decode the encryption, effectively bypassing the protection.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://huggingface.co/moonshotai/Kimi-K3">moonshotai/Kimi-K3 · Hugging Face</a></li>
-<li><a href="https://github.com/deepseek-ai/DeepGEMM">GitHub - deepseek-ai/DeepGEMM: DeepGEMM: clean and efficient BLAS kernel library on GPU · GitHub</a></li>
-<li><a href="https://github.com/catswe/Flash-Attention-Residuals">GitHub - catswe/flash-attention-residuals: Triton kernels and PyTorch...</a></li>
+<li><a href="https://www.alphaxiv.org/abs/2608.09867">Stealing Reasoning Traces from Proprietary LLM APIs | alphaXiv</a></li>
+<li><a href="https://ai-tldr.dev/releases/stolen-thoughts-reasoning-extraction/">Stolen Thoughts — encrypted reasoning pulled out… | AI/TLDR</a></li>
+<li><a href="https://arxiv.org/pdf/2608.09867">Stealing Reasoning Traces from Proprietary LLM APIs</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#vLLM`, `#LLM inference`, `#PyTorch`, `#FlashAttention`, `#release`
+**Discussion**: Community comments show mixed reactions: some question the ethical framing of 'stealing' tokens users already paid for, while others express curiosity about the technical feasibility and whether the vulnerability was intentionally left open. Some users also point out alternative methods to extract reasoning, such as using a 'deep_think' tool.
+
+**Tags**: `#LLM security`, `#chain-of-thought`, `#AI safety`, `#proprietary APIs`, `#research`
 
 ---
 
 <a id="item-2"></a>
-## [Meta Unveils Muse Glimmer 30B for Local Agent Workflows](https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model) ⭐️ 8.0/10
+## [Meta's Muse Glimmer: 30B Open-Weight Agentic Model](https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/#atom-everything) ⭐️ 9.0/10
 
-Meta has introduced Muse Glimmer, a 30-billion-parameter open-weight model optimized for always-on local agent workflows, with a dedicated perception encoder and distilled from Muse Spark. The company also announced that open weights for Muse Spark 1.2 will be released soon. This release is significant as it advances the feasibility of running capable AI agents entirely on consumer hardware, reducing reliance on cloud infrastructure and addressing privacy and latency concerns. It also strengthens Meta's position in the open-weight AI space, especially amid competition with Chinese models. Muse Glimmer is designed to run on a single GPU, achieving up to 20K tokens per second on NVIDIA platforms, and is small enough to run on a Mac or PC with 32GB RAM. It includes a dedicated perception encoder and is optimized for agentic tasks such as tool use and multi-step reasoning, with open weights available on Hugging Face.
+Meta has released Muse Glimmer, a 30-billion-parameter open-weights model under the Apache 2.0 license, optimized for agentic task completion, reliable tool use, and multi-step reasoning. The model is available in an 18.16 GB quantized version on LM Studio and can run on consumer hardware with 32 GB RAM or more. Muse Glimmer's release under Apache 2.0 marks a significant shift from Meta's previous Llama licenses, which were more restrictive. This move could accelerate adoption of open-weights models for agentic AI applications, especially on local hardware, and may influence other companies' licensing strategies. Muse Glimmer is a vision model with a dedicated perception encoder, distilled from Muse Spark. It performs well on benchmarks like DeepSearch QA, MCP-Atlas, τ-Bench, and SWE-Bench, and supports tool use via function calling. The model is available on Hugging Face, Ollama, and LM Studio.
 
-hackernews · riordan · Aug 10, 10:10 · [Discussion](https://news.ycombinator.com/item?id=49241679)
+rss · Simon Willison · Aug 10, 23:56
 
-**Background**: Agentic AI refers to systems that can autonomously perform tasks, such as reading files, calling APIs, and executing multi-step workflows, rather than just answering questions. Traditionally, such models require substantial cloud computing resources, but recent advances in model efficiency and quantization have enabled smaller models to run locally on consumer devices, offering benefits in privacy, cost, and offline availability.
+**Background**: Agentic AI refers to models that can autonomously complete multi-step tasks by using tools and reasoning over long horizons. Open-weights models allow developers to run and fine-tune them locally, but previous Llama models used a custom license with restrictions. Apache 2.0 is a permissive open-source license that allows free use, modification, and distribution, making Muse Glimmer more accessible for commercial and research use.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://huggingface.co/meta-models/Muse-Glimmer-30B">meta-models/Muse-Glimmer-30B · Hugging Face</a></li>
-<li><a href="https://developer.nvidia.com/blog/run-local-agentic-ai-workflows-with-metas-muse-glimmer-on-nvidia/">Run Local Agentic AI Workflows with Meta’s Muse Glimmer on NVIDIA | NVIDIA Technical Blog</a></li>
-<li><a href="https://news.ycombinator.com/item?id=49241679">Muse Glimmer: 30B-parameter model optimized for always-on local agent workflows | Hacker News</a></li>
+<li><a href="https://ollama.com/library/muse-glimmer:latest">muse - glimmer</a></li>
+<li><a href="https://lmstudio.ai/models/muse-glimmer">Muse Glimmer</a></li>
+<li><a href="https://huggingface.co/meta-models/Muse-Glimmer-30B">meta- models / Muse - Glimmer -30B · Hugging Face</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community comments are largely positive, with users noting the potential of Muse Glimmer for local inference and comparing it to upcoming models like Qwen3.8 27B. Some highlight the strategic importance of Meta releasing open weights for Muse Spark 1.2, seeing it as a move to dominate the open-weight American model space. Others share practical experiences running the model locally, noting slow but functional performance on older hardware.
-
-**Tags**: `#AI`, `#Meta`, `#open-weights`, `#local inference`, `#agentic AI`
+**Tags**: `#AI`, `#Open Source`, `#Meta`, `#Agentic AI`, `#Model Release`
 
 ---
 
 <a id="item-3"></a>
-## [Zuckerberg Criticizes Closed AI Rivals, Reaffirms Meta's Open Model Strategy](https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878) ⭐️ 8.0/10
+## [Ngrok Argues Compression Is Fundamentally Prediction](https://ngrok.com/blog/compression-is-prediction) ⭐️ 8.0/10
 
-Mark Zuckerberg publicly attacked closed AI rivals while reaffirming Meta's commitment to open models, marking a significant shift as Meta returns to its open-source approach. This comes after Meta had previously fallen behind competitors like OpenAI and Anthropic in the AI race. This development is significant because it reignites the debate over open versus closed AI models, with major implications for AI policy, competition, and societal impact. Meta's stance could influence the direction of AI development and regulation, affecting developers, businesses, and end users worldwide. Zuckerberg's critique was delivered in a public writeup, where he argued that the doom-laden discourse from some AI developers is misguided and that concentrating power in a few closed labs is problematic. Meta's return to open models includes releasing models like Llama 4, which are available for free, contrasting with the closed strategies of OpenAI and Anthropic.
+Ngrok published a blog post titled 'Compression is prediction' arguing that data compression and large language models (LLMs) are solving the same fundamental problem: predicting what comes next in a sequence. The post explains how better prediction leads to better compression, drawing a direct parallel between the two fields. This perspective bridges information theory and modern AI, offering a unifying framework that could influence how researchers think about model design and efficiency. It also highlights the theoretical underpinnings of LLMs, which are central to current AI advancements, and may inspire new approaches to compression and prediction. The blog post is part of ngrok's engineering blog, which typically covers networking, APIs, and developer tools, making this a notable departure into theoretical topics. The post references the connection between compression and LLMs, and the discussion includes a link to Grant Sanderson's video series 'Compression is Intelligence' as a related resource.
 
-hackernews · root-parent · Aug 10, 14:06 · [Discussion](https://news.ycombinator.com/item?id=49243880)
+hackernews · nikolay · Aug 11, 19:49 · [Discussion](https://news.ycombinator.com/item?id=49263497)
 
-**Background**: Open-source AI models are those whose weights and code are publicly available, allowing anyone to use, modify, and build upon them. Meta has historically been a proponent of open-source AI, releasing models like Llama, but had recently shifted to more closed approaches as it fell behind in the AI race. The debate centers on whether open models foster innovation and competition or pose safety and misuse risks.
+**Background**: Information theory, introduced by Claude Shannon in 1948, provides a mathematical framework for quantifying information, data compression, and transmission. In machine learning, information theory offers tools for analyzing and improving algorithms, and the idea that compression is equivalent to prediction has been explored in various contexts, including the work of David MacKay and recent discussions about LLMs.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.llama.com/">Industry Leading, Open -Source AI | Llama</a></li>
-<li><a href="https://www.nytimes.com/2026/08/10/technology/meta-ai-open-source.html">Meta Unveils an Open Version of Its Most Powerful A . I . Model</a></li>
-<li><a href="https://www.thestreet.com/technology/anthropic-open-weight-ai-ban-dario-amodei-dario-amodei">Anthropic clarifies stance on open-weight AI models - TheStreet</a></li>
+<li><a href="https://ngrok.com/blog/compression-is-prediction">Compression is prediction | ngrok blog</a></li>
+<li><a href="https://news.linxi.com.au/news/ngrok-argues-data-compression-and-llms-share-fundamental-prediction-mechanics">ngrok blog: Compression is prediction and the link to LLMs | Linxi News</a></li>
+<li><a href="https://www.geeksforgeeks.org/machine-learning/information-theory-in-machine-learning/">Information Theory in Machine Learning - GeeksforGeeks</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community comments show mixed reactions. Some users, like bushido and ViktorRay, see Meta's open-source push as a net positive, even if they distrust Zuckerberg's motives. Others, like forestrywat, question whether Zuckerberg's critique is just sour grapes from a losing position. blueSky1989 highlights Zuckerberg's argument against doom-laden AI discourse, while cmiles8 suggests that if LLMs are commoditized, closed models may have little value.
+**Discussion**: The Hacker News discussion reflects a generally positive reception, with users praising ngrok's blog quality and noting the connection to existing educational resources like Grant Sanderson's videos. However, one commenter (ssivark) offers a nuanced critique, arguing that compression is only equivalent to prediction when the data distribution exactly represents all future problems, and that generalization introduces complications that the simple equivalence misses.
 
-**Tags**: `#AI`, `#Open Source`, `#Meta`, `#Industry News`, `#Policy`
+**Tags**: `#information theory`, `#machine learning`, `#compression`, `#prediction`, `#AI`
 
 ---
 
 <a id="item-4"></a>
-## [Needle2: 14MB Agentic LLM for Edge Devices](https://cactuscompute.com/needle) ⭐️ 8.0/10
+## [Mojo 1.0 Released: High-Performance Python Superset for AI](https://www.modular.com/blog/modular-26-5-mojo-1-0-is-here) ⭐️ 8.0/10
 
-Cactus Compute released Needle2, a 14MB agentic LLM optimized for edge devices, achieving 500 tokens/sec on Raspberry Pi 5 and 400-1500 tokens/sec on VR headsets. It expands to structured extraction and includes a fine-tuning pipeline. This is significant because it pushes the frontier of micro-LLMs, enabling on-device AI for billions of low-cost IoT devices without NPUs. It could democratize agentic AI, making it accessible in emerging markets and embedded systems. The model is 45M parameters at 2-bit compression, runs in 28MB RAM, and uses Simple Attention Networks architecture. It spends 70 MFLOPs per token, 7x to 85x fewer than other small models, and can be fine-tuned on a Mac/PC in minutes to hours.
+Modular has officially released Mojo 1.0, a programming language designed for AI/ML workloads that combines Python-like syntax with C-level performance. The release marks a major milestone, with plans to open-source the compiler and toolchain in 2026. Mojo 1.0 is significant because it aims to bridge the gap between ease of use and performance for AI developers, potentially offering a unified language for both prototyping and production. Its success could reshape how AI systems are built, especially in heterogeneous hardware environments. Mojo is built on the MLIR compiler framework, enabling it to target CPUs, GPUs, TPUs, and other accelerators. It features static typing and a borrow checker inspired by Rust, while maintaining Python-like syntax. The roadmap notes that Mojo may not become a full superset of Python, and the compiler is currently proprietary until the planned open-sourcing in 2026.
 
-hackernews · HenryNdubuaku · Aug 10, 17:22 · [Discussion](https://news.ycombinator.com/item?id=49246804)
+hackernews · dayanruben · Aug 11, 16:56 · [Discussion](https://news.ycombinator.com/item?id=49261128)
 
-**Background**: Edge AI has traditionally focused on Macs and PCs, but most of the 21 billion connected IoT devices are low-cost phones, wearables, and microcontrollers. Needle2 is designed for these devices, using a novel architecture that reduces computational cost while maintaining performance on tool calling and structured extraction tasks.
+**Background**: Mojo is a systems programming language developed by Modular Inc., designed for high-performance AI infrastructure. It uses a syntax reminiscent of Python but with semantics inspired by Rust, such as static typing and a borrow checker. Mojo builds on the MLIR compiler framework, which allows it to exploit higher-level compiler passes and target diverse hardware, making it well-suited for AI workloads.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://towardsdatascience.com/graph-attention-networks-in-python-975736ac5c0c/">towardsdatascience.com/graph- attention - networks -in-python-975736...</a></li>
-<li><a href="https://towardsdatascience.com/boost-2-bit-llm-accuracy-with-eora/">Boost 2-Bit LLM Accuracy with EoRA | Towards Data Science</a></li>
-<li><a href="https://arxiv.org/pdf/2401.06118">Extreme Compression of Large Language Models via Additive Quantization</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mojo_(programming_language)">Mojo (programming language) - Wikipedia</a></li>
+<li><a href="https://mojolang.org/">Mojo</a></li>
+<li><a href="https://www.modular.com/blog/the-next-big-step-in-mojo-open-source">Modular: The Next Big Step in Mojo Open Source</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The HN community is generally positive, praising the micro-LLM space and the WASM implementation. Some users note the web demo is not impressive and the text on the page is over-optimized for AI, while others ask about the creation process and express interest in fine-tuning.
+**Discussion**: Community comments express mixed sentiments. Some users question the value of a closed-source compiler, suggesting alternatives like Python with Rust-based libraries. Others are concerned about the language's positioning and whether it will remain a superset of Python, while some are hopeful but skeptical about the open-source timeline.
 
-**Tags**: `#LLM`, `#edge computing`, `#embedded AI`, `#agentic AI`, `#open source`
+**Tags**: `#programming-languages`, `#AI/ML`, `#compiler`, `#Python`, `#release`
 
 ---
 
 <a id="item-5"></a>
-## [Rust Portable SIMD Runs on GPU Warps](https://www.vectorware.com/blog/simd-on-gpu/) ⭐️ 8.0/10
+## [OpenAI Tests Ads in ChatGPT to Sustain Free Access](https://openai.com/index/testing-ads-in-chatgpt) ⭐️ 8.0/10
 
-VectorWare announced that Rust's portable SIMD API can now be used directly on GPUs, mapping SIMD vectors onto warp lanes without modification. This enables writing GPU code in Rust using the same SIMD abstractions as on CPU. This development bridges the gap between CPU and GPU programming, allowing Rust developers to leverage their existing SIMD knowledge for GPU acceleration. It could simplify GPU programming and increase Rust's adoption in high-performance computing and graphics. The implementation uses Rust's core::simd, which is currently nightly-only, and maps a portable SIMD vector to a GPU warp's 32 lanes. This approach treats the GPU as a wide vector unit, similar to a 512-bit register on CPU.
+OpenAI has announced that it is beginning to test advertisements within ChatGPT, aiming to support the continued availability of the free tier. The company emphasizes that ads will be clearly labeled, will not compromise answer independence, and will include strong privacy protections and user control. This move signals a significant shift in how AI chatbots may be monetized, potentially setting a precedent for the industry. It could affect the user experience for millions of ChatGPT users and raise questions about the balance between revenue generation and maintaining trust in AI-provided information. The testing phase will likely involve a limited rollout to gather feedback before broader implementation. OpenAI has committed to clear labeling of ads, ensuring that ads do not influence the model's responses, and providing users with control over their data and ad preferences.
 
-hackernews · sagacity · Aug 10, 18:12 · [Discussion](https://news.ycombinator.com/item?id=49247477)
+rss · OpenAI Blog · Aug 11, 10:00
 
-**Background**: Rust's portable SIMD API (std::simd) provides architecture-independent SIMD operations, compiling to the target's native vector instructions. Previously, GPU programming required separate shader languages or CUDA kernels, but this work shows that a GPU warp can be treated as a SIMD vector target, enabling Rust SIMD code to run on GPUs unchanged.
+**Background**: ChatGPT is a widely used AI chatbot developed by OpenAI, available in both free and paid tiers. The free tier has been a major driver of user adoption, but sustaining it requires significant computational resources. Advertising is a common monetization strategy for free services, but its application in AI chatbots raises unique concerns about bias, privacy, and user trust.
 
-<details><summary>References</summary>
-<ul>
-<li><a href="https://www.vectorware.com/blog/simd-on-gpu/">Rust SIMD on the GPU - VectorWare</a></li>
-<li><a href="https://elsolitario.org/en/2026/08/10/vectorware-portable-simd-gpu-rust/">SIMD on GPU : Rust 's core:: simd Runs on Warps Unchanged</a></li>
-<li><a href="https://sourcefeed.dev/a/rust-treats-the-gpu-as-one-big-simd-register">Rust Treats the GPU as One Big SIMD Register — SourceFeed</a></li>
-<li><a href="https://doc.rust-lang.org/std/simd/index.html">std:: simd - Rust</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Community members expressed excitement and surprise, with some noting that portable SIMD is currently nightly-only and suggesting alternatives like fearless_simd for stable Rust. Others highlighted the lack of performance portability due to fixed SIMD width, and expressed interest in an open-source Rust SIMD library comparable to Google's Highway for C++.
-
-**Tags**: `#Rust`, `#SIMD`, `#GPU`, `#Performance`, `#Programming`
+**Tags**: `#OpenAI`, `#ChatGPT`, `#monetization`, `#ads`, `#AI`
 
 ---
 
 <a id="item-6"></a>
-## [SMM Exploit Using a Very Long Interrupt Instruction](https://github.com/xoreaxeaxeax/smiiiiiiiiiiiiiiii) ⭐️ 8.0/10
+## [Decoupled Descent: Enforcing Exact Train-Test Error Tracking via AMP Onsager Corrections](https://www.reddit.com/r/MachineLearning/comments/1vlu1se/decoupled_descent_enforcing_exact_traintest_error/) ⭐️ 8.0/10
 
-A GitHub repository demonstrates a novel exploit technique that abuses System Management Mode (SMM) by executing an extremely long interrupt instruction on one CPU core to trigger a timeout in the SMM handler on another core. This technique, dubbed 'smiiiiiiiiiiiiiiii', highlights a new attack vector against privileged firmware. This exploit is significant because SMM is a highly privileged CPU mode that runs below the operating system and is typically used for firmware operations like power management and security. If successfully exploited, it could allow attackers with root access to gain even deeper control over the system, potentially bypassing security mechanisms and persisting stealthily. The attack requires root privileges, as noted in community comments, and relies on the fact that SMM handlers have a timeout mechanism to prevent hangs. The exploit uses an instruction that takes over 4 billion cycles (over 1 second) to complete, exceeding the timeout and causing the SMM handler to malfunction. The repository also references the 'Assembly Hall of Shame' project, which explores the slowest possible single instructions.
+The paper introduces Decoupled Descent (DD), a novel training method that leverages approximate message passing (AMP) Onsager corrections to guarantee that the training error asymptotically matches the test error at each parameter iterate. This is demonstrated on full-batch gradient descent for Gaussian mixture models, with simulation results showing improved generalization compared to standard gradient descent. This work addresses the fundamental issue of data reuse bias in neural network training, where training error can decrease while test error stagnates or worsens. By providing a theoretical framework that enforces train-test error alignment, it opens new avenues for optimal stopping, hyperparameter tuning, and potentially more robust training methods for large-scale models. The method is grounded in high-dimensional statistical theory, specifically approximate message passing (AMP), and uses Onsager corrections to decouple prediction errors across iterations. The paper is theoretical and focuses on stylized Gaussian mixture models with full-batch gradient descent; the author notes that scaling to very large models remains a long-term goal, with plans to release a PyTorch-compatible package.
 
-hackernews · WhiteDawn · Aug 10, 16:03 · [Discussion](https://news.ycombinator.com/item?id=49245491)
+reddit · r/MachineLearning · /u/mlovik1 · Aug 11, 21:06
 
-**Background**: System Management Mode (SMM) is a special CPU mode in x86 processors that runs with the highest privilege level, even higher than the kernel. It is used for system management functions like power management, thermal control, and firmware updates. SMM code is typically stored in a protected memory region (SMRAM) that is inaccessible to the operating system, making it a prime target for rootkits and advanced exploits. The attack exploits the interaction between CPU cores and the SMM handler's timeout logic, which is designed to ensure the system doesn't hang during I/O operations.
+**Background**: Approximate message passing (AMP) is an iterative algorithm used in high-dimensional statistics and signal processing, known for its ability to achieve Bayes-optimal performance in certain settings. Onsager corrections are a key component of AMP that decouple errors across iterations, ensuring that the effective noise remains Gaussian. Data reuse bias refers to the overfitting that occurs when a model is trained repeatedly on the same data, leading to a gap between training and test performance.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/System_Management_Mode">System Management Mode - Wikipedia</a></li>
-<li><a href="https://eclypsium.com/blog/system-management-mode-speculative-execution-attacks/">System Management Mode Speculative Execution Attacks - Eclypsium</a></li>
-<li><a href="https://news.ycombinator.com/item?id=49245491">Exploiting System Management Mode with a very long interrupt</a></li>
+<li><a href="https://arxiv.org/abs/2201.07487">[2201.07487] A Concise Tutorial on Approximate Message Passing</a></li>
+<li><a href="https://arxiv.org/abs/1607.05966">[1607.05966] Onsager-corrected deep learning for sparse linear inverse problems</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community comments express mixed views: some argue that since root access is required, it's not a vulnerability but rather 'taking back control of your hardware,' while others point out the design flaw in SMM that allows such attacks. There is also amusement at the extreme length of the instruction and the detailed explanation in the readme, with some questioning the practical exploitability.
+**Discussion**: The Reddit post invites discussion and questions about the method, with the author offering to explain AMP concepts further and soliciting feature suggestions for a future PyTorch package. The overall sentiment appears positive and curious, though no explicit comments are provided in the given content.
 
-**Tags**: `#security`, `#exploit`, `#SMM`, `#CPU`, `#firmware`
+**Tags**: `#machine learning`, `#optimization`, `#approximate message passing`, `#generalization`, `#theory`
 
 ---
 
 <a id="item-7"></a>
-## [OpenAI Launches GPT-5.6-Cyber for Authorized Security Testing](https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows) ⭐️ 8.0/10
+## [HyperSAE: Poincaré Geometry for Sparse Autoencoders Cuts MSE by 9.8%](https://www.reddit.com/r/MachineLearning/comments/1vlpyh2/hypersae_decoupled_poincar%C3%A9_geometry_for_sparse/) ⭐️ 8.0/10
 
-OpenAI has introduced GPT-5.6-Cyber, a cybersecurity-specific model available through its Daybreak Red program for authorized vulnerability research, exploit validation, and security testing. The model is built on GPT-5.6 Sol and is designed to reduce refusals on legitimate security tasks. This announcement is significant for the cybersecurity community as it provides a specialized AI tool to help defenders keep pace with AI-driven attacks. It could enhance the efficiency and effectiveness of vulnerability research and red teaming, potentially narrowing the cyber defense window. GPT-5.6-Cyber is only available through Daybreak Red, a tier for approved partners, and is built on GPT-5.6 Sol. According to reports, GPT-5.6-Sol responded to only 1.5% of requests, while the defender version via Daybreak Blue responded to 2%, but GPT-5.6-Cyber reached only the 'High' cyber capability threshold under OpenAI's Preparedness Framework.
+HyperSAE, a new PyTorch library, applies Poincaré hyperbolic geometry to sparse autoencoders (SAEs) for mechanistic interpretability. On Gemma-2-2B, it reduces reconstruction MSE by 9.8% and dead latents to 0.2% with zero inference overhead. This work addresses a key limitation of standard SAEs—feature collisions and dead latents at large dictionary sizes—by leveraging hyperbolic geometry that better matches the hierarchical structure of learned concepts. It could improve the fidelity of mechanistic interpretability analyses and enable more reliable model steering, with no added inference cost. HyperSAE uses a decoupled dual-speed design: the forward pass remains Euclidean, while training projects dictionary weights into the Poincaré ball and applies an entailment cone loss. Results on Gemma-2-2B Layer 13 show MSE drop from 4.5724 to 4.1232, CE loss recovery improvement of 3.4 percentage points, and dead latents reduced from 3.8% to 0.2%.
 
-rss · OpenAI Blog · Aug 10, 10:00
+reddit · r/MachineLearning · /u/visha1v · Aug 11, 18:37 · [Discussion](https://www.reddit.com/r/MachineLearning/comments/1vlpyh2/hypersae_decoupled_poincaré_geometry_for_sparse/)
 
-**Background**: OpenAI's Daybreak program offers different tiers of access to its frontier models for cybersecurity purposes, with Daybreak Red for offensive security and Daybreak Blue for defensive use. The release of GPT-5.6-Cyber comes amid rising concerns about AI-led cyberattacks, and it is part of OpenAI's effort to provide tools for authorized security professionals.
+**Background**: Sparse autoencoders (SAEs) are a tool in mechanistic interpretability that learn sparse, interpretable features from neural network activations. Standard SAEs embed dictionary atoms in Euclidean space, where volume grows polynomially, but the concepts learned by LLMs often form branching hierarchies that expand exponentially, causing collisions and dead latents at large dictionary sizes. Poincaré hyperbolic geometry provides a space with exponential volume growth, better suited for representing hierarchical structures.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://techcrunch.com/2026/08/10/as-ai-led-attacks-multiply-openai-launches-a-new-cyber-model/">As AI-led attacks multiply, OpenAI launches a new cyber model</a></li>
-<li><a href="https://www.axios.com/2026/08/10/openai-gpt-astra-restrictions-safety-hacking-defenders">OpenAI unveils GPT - 5 . 6 - Cyber to help prepare for AI cyberattacks</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Poincaré_disk_model">Poincaré disk model - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sparse_Auto-Encoders">Sparse Auto-Encoders</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mechanistic_interpretability">Mechanistic interpretability</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#OpenAI`, `#Cybersecurity`, `#AI`, `#Vulnerability Research`, `#GPT-5.6`
+**Tags**: `#sparse autoencoders`, `#mechanistic interpretability`, `#hyperbolic geometry`, `#LLM interpretability`, `#PyTorch`
 
 ---
 
 <a id="item-8"></a>
-## [OpenAI's GPT-5.6 Sol Boosts Finance Work with Editable Outputs](https://openai.com/index/model-ml) ⭐️ 7.0/10
+## [Nvidia Unveils Nemotron 3.5 Lightning and NeMo Switchyard](https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/) ⭐️ 7.0/10
 
-OpenAI has introduced GPT-5.6 Sol, a flagship model in the GPT-5.6 series, which is now being used to streamline finance work by generating editable PowerPoint decks and Excel workbooks. This application was highlighted in a post featuring OpenAI CFO Sarah Friar's lessons on building an AI-native finance function. This development signals a significant step in applying advanced AI to business productivity, potentially transforming how finance teams operate by automating complex tasks like research, analysis, and report generation. It could set a new standard for AI integration in corporate finance, affecting CFOs, analysts, and other finance professionals. GPT-5.6 Sol is the flagship tier of OpenAI's GPT-5.6 family, which ships in three tiers, each advancing on its own schedule. The model is particularly strong at complex reasoning, coding, and agentic workflows, including command-line and multi-step coding tasks, and it shows strong improvements in cyber capabilities on benchmarks like ExploitGym.
+Nvidia has introduced Nemotron 3.5 Lightning, a 30B-parameter open Mixture-of-Experts (MoE) model with 3B active parameters, alongside NeMo Switchyard, an open-source model routing library. These releases aim to deliver faster, more efficient agentic AI across edge devices, PCs, data centers, and the cloud. This development is significant because it addresses the growing need for efficient, low-latency AI inference in agentic workflows, potentially reducing costs and improving accuracy by routing requests to the most suitable models. It also strengthens Nvidia's ecosystem by providing open-source tools that integrate with its hardware and software stack. Nemotron 3.5 Lightning uses a hybrid architecture with interleaved Mamba-2 and MoE layers, and includes speculative decoding and quantization (NVFP4 and BF16) for up to 4x faster execution. NeMo Switchyard is a Rust-based proxy and library that translates between OpenAI and Anthropic APIs, records metrics, and supports typed, composable routing algorithms.
 
-rss · OpenAI Blog · Aug 10, 12:00
+hackernews · droidjj · Aug 11, 19:35 · [Discussion](https://news.ycombinator.com/item?id=49263340)
 
-**Background**: AI-native finance refers to finance functions and tools built around AI and automation from the ground up, rather than adding AI onto legacy processes. This approach aims to improve efficiency, governance, and decision-support in finance. GPT-5.6 Sol is part of OpenAI's latest model series, designed for complex reasoning and agentic workflows, making it suitable for automating finance tasks like generating reports and analyses.
+**Background**: Mixture-of-Experts (MoE) models activate only a subset of parameters per token, enabling larger models with lower computational cost. Model routing is a technique that dynamically selects the most appropriate model for each request, balancing accuracy, latency, and cost. These tools are part of Nvidia's broader strategy to support agentic AI, where AI agents perform multi-step tasks autonomously.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://openai.com/index/previewing-gpt-5-6-sol/">Previewing GPT - 5 . 6 Sol : a next-generation model | OpenAI</a></li>
-<li><a href="https://openrouter.ai/openai/gpt-5.6-sol">GPT - 5 . 6 Sol - API Pricing & Benchmarks | OpenRouter</a></li>
-<li><a href="https://pluvo.io/glossary/ai-native-finance">What Is AI - Native Finance ? Definition | Pluvo</a></li>
+<li><a href="https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/">NVIDIA Nemotron 3.5 Lightning and NeMo Switchyard Deliver Faster, Smarter, More Efficient Agentic AI | NVIDIA Blog</a></li>
+<li><a href="https://developer.nvidia.com/blog/nvidia-nemotron-3-5-lightning-delivers-fast-accurate-specialized-task-execution-for-long-running-agents/">NVIDIA Nemotron 3.5 Lightning Delivers Fast ... - NVIDIA Developer</a></li>
+<li><a href="https://github.com/NVIDIA-NeMo/Switchyard">GitHub - NVIDIA-NeMo/Switchyard · GitHub</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI`, `#GPT-5.6`, `#Finance`, `#Productivity`, `#OpenAI`
+**Discussion**: Community comments highlight concerns about prompt caching in routing systems, with questions about how sticky sessions handle subsequent requests. Some users also criticize the omission of Qwen models in benchmark graphs, and others speculate that the trend toward smaller, efficient models will drive structural changes in AI development.
+
+**Tags**: `#Nvidia`, `#AI models`, `#model routing`, `#open source`, `#efficiency`
 
 ---
 
 <a id="item-9"></a>
-## [OpenAI Urges Texas Governor for Responsible AI Infrastructure](https://openai.com/index/responsible-ai-infrastructure-texas) ⭐️ 5.0/10
+## [Go Ideal for AI-Assisted Software Engineering, Google Argues](https://developers.googleblog.com/why-go-is-an-ideal-language-for-ai-assisted-software-engineering/) ⭐️ 7.0/10
 
-OpenAI has sent a letter to Texas Governor Greg Abbott outlining its commitment to developing responsible AI infrastructure in the state. The letter emphasizes reliable and transparent growth that benefits Texans. This move signals OpenAI's proactive engagement with state-level policymakers, potentially shaping AI regulation and infrastructure investment in Texas. It could influence how other tech companies approach regional AI development and public-private partnerships. The letter specifically supports reliable and transparent growth, indicating OpenAI's focus on building trust with local communities and governments. No specific projects or investments were disclosed in the announcement.
+Google's blog post argues that Go's simplicity and strong conventions make it an ideal language for AI-assisted software engineering, citing community experiences from Netflix and others. This perspective highlights how language design can influence AI-assisted development effectiveness, potentially guiding developers and organizations in choosing languages for AI-driven workflows. The article references Go's official resources like Effective Go and Google's style guide, and notes that Go's 'one way to do something' philosophy simplifies AI-generated code review and maintenance.
 
-rss · OpenAI Blog · Aug 10, 14:00
+hackernews · 0xedb · Aug 11, 16:57 · [Discussion](https://news.ycombinator.com/item?id=49261133)
 
-**Background**: AI infrastructure refers to the physical and digital resources needed to develop and deploy AI systems, such as data centers, computing power, and energy. As AI adoption grows, states like Texas are becoming hubs for tech investment, and companies like OpenAI are seeking to align with local regulations and community interests.
+**Background**: AI-assisted software engineering involves using AI tools like large language models to generate or assist with code. Go is a statically typed, compiled language known for simplicity, readability, and strong conventions, which may make it easier for AI models to produce consistent, correct code.
 
-**Tags**: `#OpenAI`, `#AI policy`, `#infrastructure`, `#Texas`
+<details><summary>References</summary>
+<ul>
+<li><a href="https://go.dev/doc/effective_go">Effective Go - The Go Programming Language</a></li>
+<li><a href="https://en.wikipedia.org/wiki/AI-assisted_software_development">AI-assisted software development - Wikipedia</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Community comments are mixed. Some agree, citing positive experiences with AI-generated Go code at Netflix and personal projects. Others are skeptical, noting that Go's lack of expressiveness may be a drawback, and some prefer Rust for its strict compiler which catches errors at compile time, which they find more suitable for LLMs.
+
+**Tags**: `#Go`, `#AI-assisted development`, `#software engineering`, `#programming languages`
+
+---
+
+<a id="item-10"></a>
+## [OpenAI Daybreak Models Now Available on AWS Bedrock](https://openai.com/index/daybreak-models-are-now-available-on-aws) ⭐️ 7.0/10
+
+OpenAI's Daybreak cybersecurity models are now available on AWS through Amazon Bedrock, enabling enterprise security workflows to leverage frontier AI capabilities. This integration brings OpenAI's cyber defense tools, including Daybreak Blue and Daybreak Red, to AWS customers. This collaboration marks a significant step in making advanced AI-driven cybersecurity accessible to enterprises, potentially improving threat detection and response times. It also strengthens the partnership between OpenAI and AWS, offering a secure and scalable platform for security teams to adopt frontier models. Daybreak Blue provides access to frontier general-purpose models, including GPT-5.6 Sol, with safeguards tailored to authorized defensive security work, while Daybreak Red analyzes malware, binaries, and firmware for security investigations. The availability on Amazon Bedrock ensures enterprise-grade security and serverless scalability, integrating with existing AWS workflows.
+
+rss · OpenAI Blog · Aug 11, 10:00
+
+**Background**: Amazon Bedrock is a managed service that provides access to foundation models from various providers, allowing organizations to build generative AI applications with enterprise security and scalability. OpenAI's Daybreak models are designed to help defenders find, validate, and fix vulnerabilities before attackers exploit them, addressing the accelerating threat landscape.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://openai.com/daybreak/">Daybreak | OpenAI for cybersecurity | OpenAI</a></li>
+<li><a href="https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/">Expanding Daybreak as the Cyber Defense Window Narrows | OpenAI</a></li>
+<li><a href="https://aws.amazon.com/bedrock/">Amazon Bedrock – Build genAI applications and agents at production...</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#OpenAI`, `#AWS`, `#Cybersecurity`, `#Enterprise AI`, `#Amazon Bedrock`
+
+---
+
+<a id="item-11"></a>
+## [ByteDance CEO Rejects Model Distillation as Shortcut in AI Strategy](https://news.google.com/rss/articles/CBMirgFBVV95cUxNUERWZDVySDZuLUJYR3VFTGk5a0RlODVYTUNDRTVSekZESVdTOFRUZHk2dGpqamNudzdsMC01V0NmeXJHZkZOY3lKaXlDX2JLUnNxTFpWdDRBVTJ5d3hyOFg1aUp4M1pmak9FRmJ0dGZvSUFkcm1IUGoyeE1SU0JVNG0ybVJNbHBZSzBfNGhFZDZYMHdXNWduX2FYakdUR18tM0NPYmRpOU1VZUtzY0E?oc=5) ⭐️ 7.0/10
+
+ByteDance's CEO Zhang Yiming publicly rejected model distillation as a shortcut in the company's long-term AI development strategy, emphasizing a focus on fundamental research and innovation. This stance signals ByteDance's commitment to building proprietary AI capabilities rather than relying on distillation from existing models, which could influence industry practices and regulatory discussions around AI development. Model distillation involves training a smaller 'student' model to mimic a larger 'teacher' model, making AI cheaper and easier to deploy. Zhang's rejection suggests ByteDance will invest more in original research, potentially impacting its competitive position against rivals like DeepSeek.
+
+google_news · 一财全球Yicai Global · Aug 11, 19:59
+
+**Background**: Model distillation is a machine learning technique where a smaller model learns to replicate the behavior of a larger, more complex model. It is often seen as a shortcut because it allows companies to achieve high performance without the cost of training from scratch. The technique has gained attention due to its efficiency and potential legal concerns, especially when used to imitate proprietary models.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://tech.yahoo.com/ai/articles/explainer-ai-model-distillation-why-060818561.html">Explainer-What is AI model distillation and why is it becoming a US ...</a></li>
+<li><a href="https://english.kyodonews.net/articles/-/81253">EXPLAINER: What is AI model distillation and why is it becoming a US ...</a></li>
+<li><a href="https://labelbox.com/guides/model-distillation/">What is Model Distillation ?</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#AI`, `#ByteDance`, `#model distillation`, `#industry strategy`
+
+---
+
+<a id="item-12"></a>
+## [TVB Surges on AI Computing Joint Venture](https://news.google.com/rss/articles/CBMivgFBVV95cUxQR3lLdEkxUFVGOGx4ZGJfWlUwWUZid1lBMTVmVzZCV3hLWEZxaHpuQmxkWWdtQTVCclZWYWVZRjBjWVNjVGk0bDlJMXFtWkRKM3pRc2c3bFlIY2ttWHh2b1NZTHlqT2RobFhObUJid0JJaHFoVFE5dl84N0JpVktGRnE3aHB0bl8yakJiRXFJakc4ODdjMWpaSHp2bGExODlMWWZZWWkxUWowUDduZWo3MHRoRGEybUpSQi1TNm13?oc=5) ⭐️ 5.0/10
+
+TVB announced a new joint venture with Raw Capital to enter the AI computing market, with TVB holding a 51% stake and Raw Capital investing up to HKD 2 billion (USD 255 million). The announcement led to a jump in TVB's stock price. This move signifies TVB's strategic pivot from traditional broadcasting to AI infrastructure, potentially opening new revenue streams. It also reflects a broader trend of media companies diversifying into high-growth technology sectors. The joint venture will focus on AI computing infrastructure, with TVB contributing its brand and resources while Raw Capital provides funding. The investment of up to HKD 2 billion underscores the scale of the venture.
+
+google_news · 一财全球Yicai Global · Aug 11, 13:12
+
+**Background**: AI computing involves the use of specialized hardware and software to run artificial intelligence workloads, such as training and inference. Companies like Google and Blackstone have recently launched similar AI compute joint ventures, indicating growing demand for AI infrastructure. TVB, a major Hong Kong broadcaster, is leveraging this trend to diversify its business.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://www.yicaiglobal.com/news/tvb-jumps-after-hong-kong-broadcaster-targets-ai-computing-market-with-new-joint-venture">TVB Jumps After Hong Kong Broadcaster Targets AI Computing ...</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#AI`, `#business`, `#joint venture`, `#Hong Kong`
 
 ---
