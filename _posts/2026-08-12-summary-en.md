@@ -5,273 +5,262 @@ date: 2026-08-12
 lang: en
 ---
 
-> From 43 items, 11 important content pieces were selected
+> From 41 items, 11 important content pieces were selected
 
 ---
 
-1. [Researchers Steal Hidden Reasoning from LLM APIs](#item-1) ⭐️ 9.0/10
-2. [Compression Is Prediction: A Fundamental Equivalence](#item-2) ⭐️ 8.0/10
-3. [Mojo 1.0 Released, But Closed-Source Compiler and Python Compatibility Questions Linger](#item-3) ⭐️ 8.0/10
-4. [Decoupled Descent: Exact Train-Test Error Tracking via AMP](#item-4) ⭐️ 8.0/10
-5. [Nvidia Unveils Nemotron 3.5 Lightning and NeMo Switchyard](#item-5) ⭐️ 7.0/10
-6. [Go's Simplicity Makes It Ideal for AI-Assisted Development](#item-6) ⭐️ 7.0/10
-7. [OpenAI Daybreak Models Now Available on AWS Bedrock](#item-7) ⭐️ 7.0/10
-8. [No Lossless Transformations of Natural-Language Text](#item-8) ⭐️ 7.0/10
-9. [ChatGPT Ads Expand to Five More Countries for Free and Go Users](#item-9) ⭐️ 6.0/10
-10. [ByteDance CEO Rejects Model Distillation as Shortcut in AI Strategy](#item-10) ⭐️ 6.0/10
-11. [TVB Stock Surges on AI Computing Joint Venture with Gaw Capital](#item-11) ⭐️ 5.0/10
+1. [Qwen3.8-2.4T-A95B: Massive Open-Weight MoE Model Released](#item-1) ⭐️ 9.0/10
+2. [Former Chinese Premier Zhu Rongji Dies at 98](#item-2) ⭐️ 9.0/10
+3. [OpenAI Python SDK v3.0.0 Switches to HTTPX2](#item-3) ⭐️ 8.0/10
+4. [DeepSeek V4 Pro 0813 Launches with Strong Performance and Low Cost](#item-4) ⭐️ 8.0/10
+5. [Tailscale Traces Database Corruption to 16-Year-Old SQLite WAL-Reset Bug](#item-5) ⭐️ 8.0/10
+6. [Grok 4.6 Launch Sparks API and Benchmark Controversy](#item-6) ⭐️ 8.0/10
+7. [Google DeepMind Launches SL2T Sign Language-to-Text Model](#item-7) ⭐️ 8.0/10
+8. [Enterprises Shift from AI Assistance to Autonomous Execution](#item-8) ⭐️ 7.0/10
+9. [AI Coding Risks: Convoluted Codebases Nobody Understands](#item-9) ⭐️ 7.0/10
+10. [Former Qwen AI Head Launches Tencent-Backed AI Startup](#item-10) ⭐️ 7.0/10
+11. [RingCentral Uses ChatGPT Work and Codex to Accelerate AI Development](#item-11) ⭐️ 6.0/10
 
 ---
 
 <a id="item-1"></a>
-## [Researchers Steal Hidden Reasoning from LLM APIs](https://stolen-thoughts.com/) ⭐️ 9.0/10
+## [Qwen3.8-2.4T-A95B: Massive Open-Weight MoE Model Released](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B) ⭐️ 9.0/10
 
-Researchers demonstrated a method to extract hidden chain-of-thought reasoning from proprietary LLM APIs by replaying traces into weaker models. The technique recovers the stronger model's reasoning without direct access, as detailed on stolen-thoughts.com. This raises serious concerns about model alignment and intellectual property, as proprietary models' internal reasoning can be exposed. It could impact AI security policies and the competitive advantage of API providers. The attack involves replaying a trace from a frontier model into a weaker sibling model and jailbreaking it to recover the reasoning. The paper notes that API summaries may not preserve distinctions like when a model states an answer before deriving it.
+Qwen has released Qwen3.8-2.4T-A95B, a 2.4-trillion-parameter Mixture-of-Experts (MoE) model with 95 billion active parameters, available in BF16 and FP8 formats on Hugging Face. The model card claims performance between Opus 4.8 and Fable 5, and it supports a native context length of 262,144 tokens, extendable to 1,010,000 tokens. This release is significant because it brings a frontier-scale open-weight model that rivals top proprietary models, potentially democratizing access to high-end AI capabilities. It also intensifies competition in the open-source AI space, especially against models like Kimi k3 and DeepSeek V4-Pro, and may drive further innovation in quantization and serving technologies. The model uses a hybrid architecture with 92 layers and a layout of 23 × (3 × (Gated DeltaNet → MoE) → 1 × (Gated Attention → MoE)). The BF16 version requires approximately 4.9TB of storage, while the FP8 version is smaller; community members note that a 1-bit quantized version could be around 397GB, making it more accessible. However, the open-weight model lacks vision input and default 1M context length, which are features of the official Qwen3.8-Max version.
 
-hackernews · quantumgarbage · Aug 11, 13:22 · [Discussion](https://news.ycombinator.com/item?id=49257876)
+hackernews · Philpax · Aug 12, 15:01 · [Discussion](https://news.ycombinator.com/item?id=49273478)
 
-**Background**: Chain-of-thought (CoT) reasoning is a technique where LLMs generate step-by-step reasoning before answering, improving performance on complex tasks. Proprietary APIs often encrypt or hide these traces to protect intellectual property and alignment. Model extraction attacks typically use observable outputs to train a student model, but this method exploits replay across models to access hidden reasoning.
+**Background**: Mixture-of-Experts (MoE) models activate only a subset of parameters per token, allowing massive total parameter counts while keeping inference costs manageable. Quantization reduces model size and memory requirements by representing weights with lower precision, often at a slight quality cost. Open-weight models like this one enable researchers and developers to run advanced AI locally or on private infrastructure, fostering innovation and customization.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://arxiv.org/abs/2505.15634">[2505.15634] Feature Extraction and Steering for Enhanced ... Feature Extraction and Steering for Enhanced Chain-of-Thought ... Think Faster Than Words: Efficient LLM Chain-of-Thought ... Chain-of-Thought Prompting: Step-by-Step Reasoning with LLMs Chain of Thought Prompting Explained (with examples) Stealing Reasoning Traces from Proprietary LLM APIs Thinking to recall: How reasoning unlocks parametric ...</a></li>
-<li><a href="https://ai-alert.org/posts/model-extraction-attacks-explained/">Model Extraction Attacks : How Adversaries Steal AI via the API</a></li>
-<li><a href="https://arxiv.org/pdf/2608.09867">Stealing Reasoning Traces from Proprietary LLM APIs</a></li>
+<li><a href="https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B">Qwen/ Qwen 3 . 8 - 2 . 4 T - A 95 B · Hugging Face</a></li>
+<li><a href="https://developer.nvidia.com/blog/serve-qwen3-8-2-4t-a95b-a-2-4t-parameter-model-with-configurable-reasoning-on-nvidia-gb300-nvl72/">Serve Qwen 3 . 8 - 2 . 4 T - A 95 B , a 2 . 4 T -Parameter Model , with...</a></li>
+<li><a href="https://www.remio.ai/post/qwen-3-8-open-weight-model-announcement-promises-2-4t-parameters-but-proof-comes">Qwen 3 . 8 Open-Weight Model Announcement Promises...</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters debated the ethics of 'stealing' reasoning, with some arguing it's fair use since users pay for tokens. Others noted alternative methods, such as using a 'deep_think' tool to bypass thinking restrictions, and shared experiences with similar extraction techniques.
+**Discussion**: Community comments highlight the model's massive size, with some noting that serving it at launch will be challenging due to only BF16 and FP8 releases, and that a QAT quantized version would be needed for practical deployment. Others are impressed by the performance claims and the potential of 1-bit quantization to bring Opus 4.5-level performance to consumer hardware, while some express disappointment over the lack of vision support and 1M context length in the open-weight version.
 
-**Tags**: `#LLM security`, `#chain-of-thought`, `#model extraction`, `#AI alignment`, `#proprietary APIs`
+**Tags**: `#AI/ML`, `#Large Language Models`, `#Open Source`, `#Model Release`, `#MoE`
 
 ---
 
 <a id="item-2"></a>
-## [Compression Is Prediction: A Fundamental Equivalence](https://ngrok.com/blog/compression-is-prediction) ⭐️ 8.0/10
+## [Former Chinese Premier Zhu Rongji Dies at 98](https://www.news.cn/politics/20260812/4c2c72e299ef4561915d2e507393a81f/c.html) ⭐️ 9.0/10
 
-The ngrok blog published an article arguing that compression and prediction are fundamentally equivalent, drawing on information theory and machine learning principles. The post has gained significant traction with 199 points and 92 comments on Hacker News. This perspective unifies two major fields and has deep implications for understanding why large language models work, potentially influencing future AI research and model design. It resonates with the community, sparking discussions about generalization and the nature of intelligence. The article likely explains that a system predicting posterior probabilities can be used for optimal compression via arithmetic coding, and vice versa. Community comments highlight nuances, such as the distinction between compression and prediction when the test distribution differs from training data, and reference related resources like Grant Sanderson's video series.
+Zhu Rongji, former Premier of China's State Council, passed away in Beijing on August 12, 2026, at 11:06 AM, at the age of 98. The official announcement was jointly issued by the CPC Central Committee, the NPC Standing Committee, the State Council, and the CPPCC National Committee. Zhu Rongji was a pivotal figure in China's economic reforms and its accession to the WTO, making his passing a significant moment in modern Chinese history. His policies during the Asian financial crisis and his market-oriented reforms have had a lasting impact on China's economic trajectory. Zhu Rongji was born in October 1928 in Changsha, Hunan, and joined the CPC in October 1949. He served as Premier from March 1998, during which he implemented proactive fiscal and prudent monetary policies, insisted on not devaluing the RMB, and oversaw major reforms in fiscal, financial, state-owned enterprise, housing, and grain circulation sectors.
 
-hackernews · nikolay · Aug 11, 19:49 · [Discussion](https://news.ycombinator.com/item?id=49263497)
+telegram · zaihuapd · Aug 12, 10:11
 
-**Background**: In information theory, compression reduces data size by exploiting statistical regularities, while prediction estimates future data based on past data. The equivalence arises because both rely on modeling the underlying probability distribution: better prediction leads to better compression, and vice versa. This concept is central to understanding modern machine learning, where models like LLMs are trained to predict next tokens, effectively compressing training data.
+**Background**: Zhu Rongji is widely recognized as a key architect of China's transition from a planned economy to a market-oriented one. His tenure as Premier coincided with the Asian financial crisis and the final stages of China's WTO accession negotiations, which he successfully concluded in 2001. His reforms laid the groundwork for China's subsequent rapid economic growth.
 
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Data_compression">Data compression - Wikipedia</a></li>
-<li><a href="https://dev.to/trismegistus/compression-is-prediction-and-it-explains-why-llms-actually-work-209e">Compression Is Prediction — and It Explains Why LLMs Actually ...</a></li>
-<li><a href="https://medium.com/@EleventhHourEnthusiast/compression-and-prediction-why-language-models-are-really-compression-engines-317c97babe04">Compression and Prediction. Why Language Models Are Really Compression Engines | by Eleventh Hour Enthusiast | Medium</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Community comments generally agree with the core idea, with some pointing to academic courses and videos that explore the same theme. However, a notable comment by ssivark argues that compression is only functionally equivalent to prediction when the data distribution exactly represents all future problems, emphasizing the importance of generalization. Others humorously note ngrok's blog quality, and one comment extends the analogy to evolution as compression.
-
-**Tags**: `#compression`, `#prediction`, `#information theory`, `#machine learning`, `#AI`
+**Tags**: `#China`, `#politics`, `#obituary`, `#history`, `#Zhu Rongji`
 
 ---
 
 <a id="item-3"></a>
-## [Mojo 1.0 Released, But Closed-Source Compiler and Python Compatibility Questions Linger](https://www.modular.com/blog/modular-26-5-mojo-1-0-is-here) ⭐️ 8.0/10
+## [OpenAI Python SDK v3.0.0 Switches to HTTPX2](https://github.com/openai/openai-python/releases/tag/v3.0.0) ⭐️ 8.0/10
 
-Modular announced the release of Mojo 1.0, marking a major milestone for the Python-superset language designed for high-performance AI applications. The release includes a fully open-sourced standard library, with plans to open-source the compiler and toolchain in 2026. Mojo 1.0 is significant because it aims to combine Python's ease of use with C-like performance, potentially impacting AI and systems programming. However, the closed-source compiler and uncertainty about full Python compatibility could affect its adoption and community trust. The Mojo standard library is fully open-source on GitHub, but the compiler remains closed-source until 2026. The roadmap indicates that Mojo may or may not become a full superset of Python, and the current Python interoperability relies on the CPython runtime for calling Python from Mojo.
+OpenAI released v3.0.0 of its Python SDK, making HTTPX2 the default HTTP client and no longer installing httpx automatically. This is a breaking change that requires users with custom HTTPX configurations to migrate to HTTPX2 equivalents. This major release affects a large developer base, as the OpenAI Python SDK is widely used. The migration to HTTPX2 reflects the broader ecosystem shift away from the unmaintained httpx library, ensuring better long-term support and performance. The SDK now uses HTTPX2 by default, and httpx is no longer installed automatically. Users with custom HTTPX clients, transports, or configuration objects must update to HTTPX2 equivalents or use a temporary runtime-only legacy HTTPX escape hatch, as detailed in the migration guide.
 
-hackernews · dayanruben · Aug 11, 16:56 · [Discussion](https://news.ycombinator.com/item?id=49261128)
+github · openai-sdks[bot] · Aug 12, 01:54
 
-**Background**: Mojo is a programming language created by Modular Inc., founded by Chris Lattner (creator of Swift and LLVM) and Tim Davis. It aims to bridge the gap between Python's ease of use and the performance needed for AI applications. The language uses Pythonic syntax and supports calling Python modules, but its full compatibility with Python is still evolving.
+**Background**: HTTPX2 is a next-generation HTTP client for Python, maintained by Pydantic Services Inc., and is the successor to httpx, which has become effectively unmaintained since 2024. The OpenAI Python SDK is a popular library for interacting with OpenAI's APIs, and this update aligns it with the evolving Python HTTP ecosystem.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Mojo_(programming_language)">Mojo (programming language) - Wikipedia</a></li>
-<li><a href="https://mojolang.org/">Mojo - Modular</a></li>
-<li><a href="https://mojolang.org/docs/manual/python/">Python interoperability | Mojo - Modular</a></li>
+<li><a href="https://github.com/pydantic/httpx2">GitHub - pydantic/httpx2: A next generation HTTP client for Python. 🦋</a></li>
+<li><a href="https://github.com/openai/openai-python/issues/3375">Consider migrating from httpx to httpx2 · Issue #3375 · openai/openai-python</a></li>
+<li><a href="https://developers.openai.com/api/reference/python">OpenAI Python API library | OpenAI API Reference</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community comments express mixed feelings: some question the value of a closed-source compiler, while others note the lack of a clear overview of the language's purpose. There is also concern about the delay in open-sourcing the compiler and the potential walking back of the Python superset goal.
+**Discussion**: The GitHub issue #3375 highlights that httpx has become unmaintained, with no releases since 2024 and issues being closed without resolution, prompting the ecosystem to move to httpx2. The community generally supports this migration, though some developers may need time to adapt their custom configurations.
 
-**Tags**: `#programming-languages`, `#mojo`, `#compiler`, `#python`, `#performance`
+**Tags**: `#OpenAI`, `#Python SDK`, `#HTTPX2`, `#Breaking Changes`, `#API`
 
 ---
 
 <a id="item-4"></a>
-## [Decoupled Descent: Exact Train-Test Error Tracking via AMP](https://www.reddit.com/r/MachineLearning/comments/1vlu1se/decoupled_descent_enforcing_exact_traintest_error/) ⭐️ 8.0/10
+## [DeepSeek V4 Pro 0813 Launches with Strong Performance and Low Cost](https://openrouter.ai/deepseek/deepseek-v4-pro-0813) ⭐️ 8.0/10
 
-The paper introduces Decoupled Descent (DD), a novel training method that uses Approximate Message Passing (AMP) Onsager corrections to enforce exact train-test error tracking in neural networks. This ensures that the training error asymptotically equals the test error at each parameter iterate, as demonstrated on a stylized Gaussian mixture model. This work addresses the fundamental generalization gap in neural network training, where training error can drop to zero while test error stagnates or worsens. By providing a theoretical guarantee of train-test error alignment, it opens new avenues for optimal stopping and hyperparameter tuning, potentially improving model reliability and efficiency. The method is based on full-batch gradient descent on a stylized Gaussian mixture model, where data reuse bias is identified as the cause of the generalization gap. The paper is theoretical and uses high-dimensional statistical theory, specifically AMP, to derive the algorithm; a PyTorch-compatible package is planned for future release.
+DeepSeek has released DeepSeek V4 Pro 0813, a large-scale mixture-of-experts model, as the general-availability version on OpenRouter and its API. The model shows significant performance gains, including a 15.8% improvement on Terminal Bench over the April preview, while being priced at $0.435 per million input tokens and $0.87 per million output tokens. This release offers a compelling price-to-performance ratio, potentially disrupting the AI model market by providing frontier-level capabilities at a fraction of the cost of competitors like Grok 4.6. It could accelerate adoption of DeepSeek models for cost-sensitive applications, especially in coding and agentic tasks. The model has a 1.6 trillion parameter count with 49 billion active parameters, a 1,048,576 token context window, and a maximum output of 384,000 tokens. It also adds support for the Responses API format, and community tests show it can complete tasks at a fraction of the cost of Grok 4.6, though sometimes with bugs.
 
-reddit · r/MachineLearning · /u/mlovik1 · Aug 11, 21:06
+hackernews · explosion-s · Aug 12, 16:04 · [Discussion](https://news.ycombinator.com/item?id=49274600)
 
-**Background**: Approximate Message Passing (AMP) is an iterative algorithm from high-dimensional statistics that uses Onsager corrections to account for self-interference, enabling accurate inference in linear inverse problems. In machine learning, AMP-inspired techniques have been used to construct deep networks with improved accuracy and efficiency. The generalization gap refers to the discrepancy between training and test performance, often caused by overfitting to training data.
+**Background**: DeepSeek is a Chinese AI lab known for producing high-performance models at low cost. Mixture-of-experts (MoE) models activate only a subset of parameters per token, enabling efficiency. The model is available on OpenRouter, a platform that aggregates multiple AI models for unified API access.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://arxiv.org/html/2604.27883v1">Decoupled Descent : Exact Test Error Tracking Via Approximate...</a></li>
-<li><a href="https://www.emergentmind.com/topics/onsager-correction-in-goamp">Onsager Correction in GOAMP - emergentmind.com</a></li>
-<li><a href="https://arxiv.org/pdf/1612.01183">AMP-Inspired Deep Networks for Sparse Linear Inverse Problems</a></li>
+<li><a href="https://openrouter.ai/deepseek/deepseek-v4-pro-0813">DeepSeek V4 Pro 0813 - API Pricing & Benchmarks | OpenRouter</a></li>
+<li><a href="https://www.unite.ai/deepseek-ships-v4-pro-as-its-flagship-model-leaves-preview/">DeepSeek Ships V4 Pro as Its Flagship Model Leaves Preview – Unite.AI</a></li>
+<li><a href="https://wccftech.com/deepseek-prices-its-new-v4-pro-0813-model-at-0-87-per-1-million-output-tokens-as-the-high-flying-chinese-ai-lab-wows-with-its-soaring-token-consumption/">DeepSeek Prices Its New V4-Pro-0813 Model At $0.87 Per 1 Million Output Tokens, As The Chinese AI Lab Comes Out Second Only To Anthropic On Token Consumption</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The author actively seeks community feedback and suggestions for future features, indicating an open and collaborative approach. The discussion likely focuses on the theoretical contributions and potential practical applications, with some skepticism about scalability to large models.
+**Discussion**: Community feedback is largely positive, with users reporting significant performance gains and cost savings in real-world tasks. One user noted DeepSeek V4 Pro 0813 completed a coding task in 12 minutes for $0.12 but had a bug, while Grok 4.6 took 3 minutes for $1.41 without bugs, highlighting a trade-off between cost and reliability. Some users also pointed out the lack of detailed information on OpenRouter and suggested linking to official sources.
 
-**Tags**: `#machine learning`, `#optimization`, `#approximate message passing`, `#generalization`, `#theory`
+**Tags**: `#AI`, `#LLM`, `#DeepSeek`, `#model release`, `#cost efficiency`
 
 ---
 
 <a id="item-5"></a>
-## [Nvidia Unveils Nemotron 3.5 Lightning and NeMo Switchyard](https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/) ⭐️ 7.0/10
+## [Tailscale Traces Database Corruption to 16-Year-Old SQLite WAL-Reset Bug](https://tailscale.com/blog/sqlite-wal-reset-bug) ⭐️ 8.0/10
 
-Nvidia has released the Nemotron 3.5 Lightning models, a 30B-parameter Mixture-of-Experts (MoE) model with 3B active parameters, and NeMo Switchyard, an open-source model routing library. These tools are designed to enhance efficiency and intelligence in agentic AI workflows. This announcement signals a shift toward smaller, more efficient models for agentic AI, potentially reducing costs and latency while maintaining high performance. The open-source routing library could enable more flexible and cost-effective deployment of AI systems across various providers. Nemotron 3.5 Lightning uses a hybrid architecture with interleaved Mamba-2 and MoE layers, along with selected attention layers, and is available in NVFP4 format. NeMo Switchyard is a Rust-based proxy and library that routes requests across providers, translates between OpenAI and Anthropic APIs, and provides composable routing algorithms.
+Tailscale published a detailed blog post explaining how they traced database corruption to a 16-year-old SQLite WAL-reset bug, and funded an open-source VFS shim to isolate and fix the issue. The bug was fixed in SQLite 3.51.3. This is significant because it highlights a subtle and long-standing bug in a widely used database engine, and demonstrates how companies can contribute to open-source debugging tools. The fix improves reliability for all SQLite users, and the VFS shim provides a reusable tool for detecting similar races in the future. The bug occurs due to a race condition between a write transaction and a WAL-reset operation, which can only happen with multiple connections to the same database. Tailscale used a single-writer design, but still encountered the issue, leading them to fund a VFS shim that helped isolate the race condition.
 
-hackernews · droidjj · Aug 11, 19:35 · [Discussion](https://news.ycombinator.com/item?id=49263340)
+hackernews · ropbear · Aug 12, 14:22 · [Discussion](https://news.ycombinator.com/item?id=49272832)
 
-**Background**: Agentic AI refers to systems that operate autonomously to complete tasks, often using multiple models in an ensemble. Model routing is a technique that dynamically selects the most appropriate model for each request or step, balancing accuracy, cost, and latency. Nvidia's new offerings aim to streamline this process for developers building always-on agents.
+**Background**: SQLite is a widely used embedded database that supports Write-Ahead Logging (WAL) for improved concurrency and durability. The WAL-reset bug, present since 2010, could cause database corruption under specific conditions. A VFS shim is a wrapper around the native VFS (Virtual File System) layer in SQLite, allowing developers to intercept and monitor I/O operations, which is useful for debugging and testing.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/">NVIDIA Nemotron 3.5 Lightning and NeMo Switchyard Deliver Faster, Smarter, More Efficient Agentic AI | NVIDIA Blog</a></li>
-<li><a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4">nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4 · Hugging Face</a></li>
-<li><a href="https://github.com/NVIDIA-NeMo/Switchyard">GitHub - NVIDIA-NeMo/Switchyard · GitHub</a></li>
+<li><a href="https://tailscale.com/blog/sqlite-wal-reset-bug">How Tailscale helped find the SQLite WAL-Reset bug</a></li>
+<li><a href="https://antithesis.com/blog/2026/wal-reset-bug/">Breaking the WAL | Antithesis</a></li>
+<li><a href="https://sqlite.org/vfs.html">The SQLite OS Interface or "VFS"</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community comments highlight a debate on the trend toward smaller, efficient models, with some believing it will drive structural improvements. Others raise practical concerns about routing, such as prompt caching and session consistency, and question the omission of Qwen models in benchmark comparisons.
+**Discussion**: The community praised the article for its clarity and depth, and appreciated Tailscale's decision to fund open-source debugging tools. Some commenters noted the irony of the bug persisting despite SQLite's extensive test suite, and expressed hope that Tailscale continues supporting SQLite development.
 
-**Tags**: `#Nvidia`, `#LLM`, `#AI infrastructure`, `#model routing`, `#open source`
+**Tags**: `#SQLite`, `#database`, `#bug`, `#Tailscale`, `#open-source`
 
 ---
 
 <a id="item-6"></a>
-## [Go's Simplicity Makes It Ideal for AI-Assisted Development](https://developers.googleblog.com/why-go-is-an-ideal-language-for-ai-assisted-software-engineering/) ⭐️ 7.0/10
+## [Grok 4.6 Launch Sparks API and Benchmark Controversy](https://x.ai/news/grok-4-6) ⭐️ 8.0/10
 
-Google's blog post argues that Go's simplicity, strong tooling, and clear conventions make it particularly well-suited for AI-assisted software engineering. The post sparked a lively debate on Hacker News, with 218 points and 270 comments. This perspective is significant because AI-assisted development is rapidly transforming software engineering, and the choice of programming language may affect how effectively AI tools can assist developers. If Go indeed offers advantages, it could influence language adoption trends and tooling investments. The article highlights Go's simple syntax, built-in concurrency, robust standard library, and strong tooling (e.g., gofmt, go vet) as factors that reduce ambiguity for AI models. However, critics argue that the argument is biased because it comes from a Go creator, and some prefer languages like Rust for their strict compilers that catch errors at compile time.
+xAI released Grok 4.6, a new frontier AI model, on August 2025, claiming it matches GPT-5.6 Sol on the Artificial Analysis Intelligence Index and achieves frontier intelligence on agentic coding and knowledge work benchmarks. The release has been met with community criticism over API system prompt issues and suspicions of benchmark manipulation. Grok 4.6's release intensifies competition among frontier AI labs, offering a cheaper and faster alternative to models like GPT-5.6 Sol and Claude 4.8/5. However, the controversy over API behavior and benchmark integrity could undermine trust in xAI's claims and affect adoption in production environments. The API reportedly injects a default system prompt that overrides user instructions, causing the model to refuse discussions about system prompts. Additionally, community members question the rapid improvement across labs within two months, suggesting possible benchmark hacking, while xAI has not yet published official benchmarks or pricing for Grok 4.6.
 
-hackernews · 0xedb · Aug 11, 16:57 · [Discussion](https://news.ycombinator.com/item?id=49261133)
+hackernews · iLuddite · Aug 12, 15:32 · [Discussion](https://news.ycombinator.com/item?id=49274027)
 
-**Background**: Go is a statically typed, compiled programming language designed at Google in 2007 by Robert Griesemer, Rob Pike, and Ken Thompson. It is known for its simplicity, efficiency, and built-in concurrency, making it popular for cloud and backend services. AI-assisted software engineering involves using AI tools, such as large language models, to help developers write, review, and maintain code.
+**Background**: Grok is a series of large language models developed by xAI, now branded as SpaceXAI, known for its witty and irreverent style. Frontier AI models are evaluated on benchmarks like the Artificial Analysis Intelligence Index, which aggregates multiple tests. The community's concerns highlight the importance of API transparency and benchmark integrity in the AI industry.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Go_(programming_language)">Go (programming language) - Wikipedia</a></li>
-<li><a href="https://go.dev/">The Go Programming Language</a></li>
-<li><a href="https://en.wikipedia.org/wiki/AI-assisted_software_development">AI-assisted software development - Wikipedia</a></li>
+<li><a href="https://windowsforum.com/windows-news.4/grok-4-6-release-slips-as-specs-and-api-plans-remain-unconfirmed.442159/">Grok 4.6 Release Slips as Specs and API Plans Remain Unconfirmed</a></li>
+<li><a href="https://docs.x.ai/developers/grok-4-6">Grok 4.6 - Docs - SpaceXAI</a></li>
+<li><a href="https://artificialanalysis.ai/articles/grok-4-6-benchmarks-and-analysis">Grok 4 . 6 returns SpaceXAI to the intelligence frontier and leads on cost...</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community comments show mixed but substantive viewpoints. Some agree, like a Netflix Go guild lead who reports better AI-generated Go code, while others criticize the argument's bias and suggest Rust's strict compiler is more suitable for AI assistance. There is also debate about Go's concurrency model and the role of tooling in raising code confidence.
+**Discussion**: Community comments express mixed feelings: some praise Grok 4.6's speed and conciseness, while others criticize the API's default system prompt for overriding user instructions and suspect benchmark manipulation. There is also discussion about the rapid pace of model releases and the potential for unhealthy competition.
 
-**Tags**: `#Go`, `#AI-assisted development`, `#software engineering`, `#programming languages`
+**Tags**: `#AI`, `#Grok`, `#xAI`, `#LLM`, `#API`
 
 ---
 
 <a id="item-7"></a>
-## [OpenAI Daybreak Models Now Available on AWS Bedrock](https://openai.com/index/daybreak-models-are-now-available-on-aws) ⭐️ 7.0/10
+## [Google DeepMind Launches SL2T Sign Language-to-Text Model](https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/) ⭐️ 8.0/10
 
-OpenAI's Daybreak cybersecurity models are now available on Amazon Bedrock, enabling enterprise security workflows. This integration brings OpenAI's frontier cyber capabilities to AWS customers. This partnership makes advanced AI-driven cybersecurity tools accessible to a broader enterprise audience, potentially improving vulnerability detection and response. It also strengthens OpenAI's presence in the enterprise cloud market and highlights the growing trend of AI-powered security solutions. The Daybreak models are integrated via Amazon Bedrock, allowing enterprises to use them within existing security and development workflows. The models are designed to help defenders find, validate, and fix vulnerabilities before attackers can exploit them.
+Google DeepMind has introduced SL2T (sign-language-to-text), a breakthrough AI model that translates sign language into text, and it is now being integrated into consumer products such as Gboard and Live Transcribe on the Pixel 11. This marks the first time a sign language AI has shipped in a real consumer product. This development is significant because it brings sign language AI out of research and into everyday devices, potentially improving communication and accessibility for Deaf and hard of hearing users. It also sets a precedent for other tech companies to invest in inclusive AI technologies. SL2T is initially available for American Sign Language (ASL) on Pixel 11, and it can be used to prompt Gemini for queries and actions, as well as to sign responses during face-to-face calls via Live Transcribe. The model leverages body landmarks to understand sign language gestures.
 
-rss · OpenAI Blog · Aug 11, 10:00
+rss · Google DeepMind Blog · Aug 12, 14:01
 
-**Background**: Amazon Bedrock is a managed service that provides access to foundation models from various providers via a unified API. OpenAI's Daybreak initiative combines frontier cyber models, Codex Security, and trusted workflows to assist security teams. This integration allows enterprises to leverage these capabilities without managing underlying infrastructure.
+**Background**: Sign language is a complex visual language with its own grammar and syntax, making it challenging for AI to translate. Traditional text-based models struggle with the spatial and temporal aspects of signing. SL2T represents a novel approach that uses body landmarks to capture these nuances, enabling real-time translation in consumer devices.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://openai.com/daybreak/">Daybreak | OpenAI for cybersecurity</a></li>
-<li><a href="https://openai.com/index/daybreak-securing-the-world/">Daybreak: Tools for securing every organization in the world</a></li>
-<li><a href="https://aws.amazon.com/bedrock/">Amazon Bedrock – Build genAI applications and agents at production...</a></li>
+<li><a href="https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/">Putting sign language AI into users’ hands — Google DeepMind</a></li>
+<li><a href="https://siliconangle.com/2026/08/12/google-debuts-sl2t-ai-model-thats-designed-understand-sign-language/">Google debuts SL 2 T , an AI model that's designed to understand sign ...</a></li>
+<li><a href="https://interestingengineering.com/ai-robotics/google-sign-language-model-body-landmarks">Google's new model turns sign language into text for web searches</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#OpenAI`, `#AWS`, `#Cybersecurity`, `#AI`, `#Enterprise`
+**Tags**: `#AI`, `#Accessibility`, `#Sign Language`, `#DeepMind`, `#NLP`
 
 ---
 
 <a id="item-8"></a>
-## [No Lossless Transformations of Natural-Language Text](https://simonwillison.net/2026/Aug/11/there-are-no-lossless-transformations-of-natural-language-text/#atom-everything) ⭐️ 7.0/10
+## [Enterprises Shift from AI Assistance to Autonomous Execution](https://openai.com/index/how-enterprises-put-ai-to-work) ⭐️ 7.0/10
 
-Sophie Alpert published an internal policy on acceptable use of AI writing by engineers, arguing that there are no lossless transformations of natural-language text. The policy emphasizes that engineers must stand behind every idea and sentence in their documentation. This policy provides practical guidance for engineers using LLMs, promoting accountability and clarity in AI-assisted writing. It could influence how teams adopt AI tools, encouraging them to avoid blindly accepting AI-generated text and to ensure documents accurately reflect the author's intent. The policy states that every rewrite or rephrase changes the meaning of writing, and if done by an entity without the author's detailed mental model, information will be lost. It also asserts that it is unacceptable to dismiss AI-generated lines with 'Oh sorry, AI wrote that, just ignore it.'
+OpenAI's latest research reveals that enterprises are increasingly adopting agentic AI, moving beyond simple assistance to autonomous execution using tools like ChatGPT and Codex. Frontier firms are leading this adoption trend, setting new benchmarks for AI integration. This shift signifies a major evolution in how businesses leverage AI, potentially increasing efficiency and innovation across industries. It also highlights the competitive advantage of early adopters, which could reshape market dynamics and influence AI development priorities. The report specifically highlights the use of OpenAI's Codex, a suite of AI-driven coding agents, and ChatGPT in enterprise workflows. It notes that frontier firms are pulling ahead, suggesting a widening gap between early adopters and laggards in AI adoption.
 
-rss · Simon Willison · Aug 11, 23:48
+rss · OpenAI Blog · Aug 12, 06:00
 
-**Background**: Large language models (LLMs) are increasingly used to assist with writing, including technical documentation. However, LLMs do not have access to the author's private thoughts and intentions, so any transformation they perform may introduce subtle changes in meaning. This policy addresses the risk of information loss and emphasizes the importance of human oversight in AI-assisted writing.
+**Background**: Agentic AI refers to systems that pursue goals autonomously over multiple steps without per-step human approval, contrasting with single-turn AI that responds to individual prompts. This capability enables AI to execute complex tasks, such as software engineering, with minimal human intervention, making it a key driver for enterprise adoption.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://sophiebits.com/2026/06/25/there-are-no-lossless-transformations-of-natural-language-text">There are no lossless transformations of natural-language text – Sophie Alpert</a></li>
-<li><a href="https://news.ycombinator.com/item?id=48980425">There are no lossless transformations of natural - language text</a></li>
+<li><a href="https://remolda.com/en/glossary/agentic-ai">Agentic AI — definition | Remolda</a></li>
+<li><a href="https://grokipedia.com/page/OpenAI_Codex">OpenAI Codex</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI`, `#writing`, `#LLM`, `#engineering-practices`, `#documentation`
+**Tags**: `#AI`, `#Enterprise`, `#Agentic AI`, `#OpenAI`, `#Adoption`
 
 ---
 
 <a id="item-9"></a>
-## [ChatGPT Ads Expand to Five More Countries for Free and Go Users](https://openai.com/index/testing-ads-in-chatgpt/) ⭐️ 6.0/10
+## [AI Coding Risks: Convoluted Codebases Nobody Understands](https://simonwillison.net/2026/Aug/12/florian-herrengt/) ⭐️ 7.0/10
 
-On August 11, OpenAI announced that ChatGPT ads are now live in the UK, Mexico, Brazil, Japan, and South Korea, expanding the ad test that began in the US in February. The ads are shown only to logged-in adult users on the free and Go tiers, with higher tiers like Plus and Pro remaining ad-free. This expansion signals OpenAI's growing reliance on advertising to sustain free access to ChatGPT, a significant shift in its business model. It could set a precedent for how AI assistants integrate ads while balancing user trust and privacy, affecting millions of users globally. OpenAI states that ads will not affect answers and will be clearly labeled as sponsored. Advertisers only see aggregated data like impressions and clicks, and ads are not shown to minors or near sensitive topics such as health and politics.
+Florian Herrengt's blog post warns that AI-assisted development can lead to convoluted, unmaintainable codebases where developers lose understanding of their own systems. The quote describes a scenario where even AI tools like Claude cannot fix a recurring bug, highlighting the cognitive debt incurred. This matters because as AI coding tools become more prevalent, the risk of creating unmaintainable systems grows, threatening long-term software quality and developer productivity. It sparks a critical discussion about balancing AI acceleration with human understanding and code maintainability. The quote references 'Fable', an AI coding tool, and describes a team repeatedly asking AI to fix a bug without success. It illustrates a common failure mode where AI-generated code becomes so layered and complex that no one on the team can understand the system, leading to 'cognitive debt'.
 
-telegram · OpenAI Blog · Aug 12, 00:00
+rss · Simon Willison · Aug 12, 15:08
 
-**Background**: ChatGPT Go is a lower-cost subscription tier introduced in January 2026, offering expanded access to GPT-5.2 Instant with higher usage limits and longer memory. OpenAI's ad policies emphasize brand safety and user trust, with safeguards to prevent ads in sensitive contexts. The company updated its privacy policy in February 2026 to formalize how ads work and what data advertisers can access.
+**Background**: AI-assisted development tools like GitHub Copilot and Claude Code generate code based on natural language prompts, significantly speeding up coding. However, this can lead to code that is poorly structured or overly complex, as developers may accept AI suggestions without fully understanding them. The concept of 'cognitive debt' refers to the long-term cost of reduced human understanding, which can make maintenance and debugging increasingly difficult.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://openai.com/index/testing-ads-in-chatgpt/">Testing ads in ChatGPT - OpenAI</a></li>
-<li><a href="https://openai.com/policies/ad-policies/">Ad policies - OpenAI</a></li>
-<li><a href="https://help.openai.com/en/articles/11989085-what-is-chatgpt-go">What is ChatGPT Go? - OpenAI Help Center</a></li>
+<li><a href="https://www.anthropic.com/claude/fable">Claude Fable \ Anthropic</a></li>
+<li><a href="https://www.linkedin.com/pulse/sustainable-ai-assisted-development-sanjay-mysoremutt-ngoac">Sustainable AI - Assisted Development</a></li>
+<li><a href="https://xantygc.medium.com/vibe-coding-vs-bmad-method-the-clash-of-titans-in-ai-development-f5ba2c0a5dcc">Vibe Coding vs BMAD Method: the clash of titans in AI Development</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#OpenAI`, `#ChatGPT`, `#advertising`, `#business model`, `#privacy`
+**Tags**: `#AI coding`, `#software engineering`, `#maintainability`, `#developer productivity`
 
 ---
 
 <a id="item-10"></a>
-## [ByteDance CEO Rejects Model Distillation as Shortcut in AI Strategy](https://news.google.com/rss/articles/CBMirgFBVV95cUxNUERWZDVySDZuLUJYR3VFTGk5a0RlODVYTUNDRTVSekZESVdTOFRUZHk2dGpqamNudzdsMC01V0NmeXJHZkZOY3lKaXlDX2JLUnNxTFpWdDRBVTJ5d3hyOFg1aUp4M1pmak9FRmJ0dGZvSUFkcm1IUGoyeE1SU0JVNG0ybVJNbHBZSzBfNGhFZDZYMHdXNWduX2FYakdUR18tM0NPYmRpOU1VZUtzY0E?oc=5) ⭐️ 6.0/10
+## [Former Qwen AI Head Launches Tencent-Backed AI Startup](https://news.google.com/rss/articles/CBMikwFBVV95cUxOYTZJQXU0X09tU2YtLUozTFFXcUVpS1c4MjhIOFFwVWhpNDZJVnRxVUlMRXJwNWEzaVZWOXZ3S0ZRNC0ycmVfdlA4SUNrVElsaV9JSzdldVEySjZydlRwN1pvZW9oTFB6R2kyYjA2aTdhNkFqS3V4eUY2TzNJOGlxaTlxb3drMEZqdEFqV0NGY0lrMzg?oc=5) ⭐️ 7.0/10
 
-ByteDance's CEO Zhang Yiming publicly rejected model distillation as a shortcut in the company's long-term AI development strategy, emphasizing sustainable growth over quick wins. This stance signals ByteDance's commitment to building proprietary AI capabilities from scratch, which could influence industry practices and set a precedent for other tech giants. It also highlights the growing importance of long-term AI research over short-term optimization. Model distillation involves training a smaller 'student' model to mimic a larger 'teacher' model, reducing computational costs but potentially limiting innovation. Zhang's rejection suggests ByteDance will prioritize original research and development, possibly increasing investment in foundational AI technologies.
+The former head of Alibaba's Qwen AI has founded a new AI startup, which has received backing from Tencent. This marks a significant move by a key AI figure into the competitive startup landscape. This development is significant as it highlights Tencent's aggressive investment strategy in AI, potentially reshaping the competitive dynamics between major Chinese tech firms. The new startup could attract top talent and drive innovation, impacting the broader AI ecosystem. The startup's specific focus and funding amount have not been disclosed, but Tencent's involvement signals substantial financial support. The former Qwen AI head brings deep expertise in large language models, which could be a core area for the new venture.
 
-google_news · 一财全球Yicai Global · Aug 11, 19:59
+google_news · 一财全球Yicai Global · Aug 12, 07:48
 
-**Background**: Model distillation is a common technique in AI to compress large models into smaller, more efficient ones, often used to deploy AI on edge devices. ByteDance, known for apps like TikTok and Douyin, has been aggressively expanding its AI capabilities, with reported plans for massive investments in AI infrastructure. The company's strategy appears to focus on long-term competitiveness rather than immediate cost savings.
+**Background**: Qwen (Tongyi Qianwen) is Alibaba's large language model series, competing with models from Baidu, Tencent, and others. Tencent has been increasing its AI investments, including stakes in startups like Manus and Lovable, as part of a broader strategy to expand its AI capabilities.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Knowledge_distillation">Knowledge distillation - Wikipedia</a></li>
-<li><a href="https://www.openxcell.com/blog/model-distillation">Model Distillation — How It Works & Why It Matters</a></li>
-<li><a href="https://intellibytes.substack.com/p/ai-distillation-explained-what-it">AI Distillation Explained: What It Is, How It Works, Legality ...</a></li>
+<li><a href="https://meyka.com/blog/tencent-hk0700-in-talks-to-become-largest-shareholder-in-ai-startup-manus-at-2-billion-valuation/">Tencent (HK:0700) in Talks to Become Largest Shareholder in AI ...</a></li>
+<li><a href="https://en.cryptonomist.ch/2026/08/12/tencent-ai-spending-insights/">Tencent AI Spending: Growth and Strategic Investment Insights</a></li>
+<li><a href="https://www.bloomberg.com/news/articles/2026-08-12/ai-coding-startup-lovable-raises-400-million-at-13-3-billion-valuation">AI Coding Startup Lovable Raises $400 Million at... - Bloomberg</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI`, `#ByteDance`, `#model distillation`, `#industry strategy`
+**Tags**: `#AI`, `#startup`, `#Tencent`, `#Qwen`, `#industry news`
 
 ---
 
 <a id="item-11"></a>
-## [TVB Stock Surges on AI Computing Joint Venture with Gaw Capital](https://news.google.com/rss/articles/CBMivgFBVV95cUxQR3lLdEkxUFVGOGx4ZGJfWlUwWUZid1lBMTVmVzZCV3hLWEZxaHpuQmxkWWdtQTVCclZWYWVZRjBjWVNjVGk0bDlJMXFtWkRKM3pRc2c3bFlIY2ttWHh2b1NZTHlqT2RobFhObUJid0JJaHFoVFE5dl84N0JpVktGRnE3aHB0bl8yakJiRXFJakc4ODdjMWpaSHp2bGExODlMWWZZWWkxUWowUDduZWo3MHRoRGEybUpSQi1TNm13?oc=5) ⭐️ 5.0/10
+## [RingCentral Uses ChatGPT Work and Codex to Accelerate AI Development](https://openai.com/index/ringcentral) ⭐️ 6.0/10
 
-TVB, Hong Kong's main terrestrial broadcaster, announced a joint venture with a Gaw Capital affiliate to build a subscription-based AI computing business, causing its shares to jump. The venture will develop AI computing facilities, including a data center at TVB's Tseung Kwan O campus, and procure GPUs and CPUs. This move marks a significant diversification for TVB, whose core broadcasting business has been under pressure, and signals growing interest from traditional media companies in the AI infrastructure market. It could provide a new revenue stream and contribute to Hong Kong's AI ecosystem development. The joint venture plans to build a data center within TVB's corporate campus at the Tseung Kwan O Industrial Estate, and has signed a Letter of Interest with a 'leading global technology group' for a sizeable subscription of AI computing services. TVB's broadcasting revenue fell 2% year-on-year to HK$3.2 billion in 2025, though the company returned to profitability.
+RingCentral is leveraging OpenAI's ChatGPT Work and Codex to accelerate AI product development and centralize operational intelligence across engineering and operations. This integration enables the company to build AI features faster and streamline data management. This case study highlights how enterprise companies can adopt OpenAI's tools to improve productivity and innovation. It demonstrates a practical application of AI in a real-world business context, potentially influencing other enterprises to follow suit. RingCentral, a provider of AI-powered cloud communication solutions, uses ChatGPT Work to transform fragmented data into actionable intelligence. The company also employs Codex to automate coding tasks, reducing development time for AI features.
 
-google_news · 一财全球Yicai Global · Aug 11, 13:12
+rss · OpenAI Blog · Aug 12, 00:00
 
-**Background**: AI computing involves providing computational resources, such as GPUs and CPUs, to run AI models and applications. Hong Kong is actively developing its AI ecosystem, with over 300 AI companies operating in the region. TVB, as a traditional broadcaster, is seeking new growth areas amid declining broadcast revenue.
+**Background**: RingCentral is an American company known for its cloud-based communication and collaboration products. ChatGPT Work is an AI agent that can complete tasks like generating documents and spreadsheets, while Codex is an AI coding assistant that helps developers write code faster.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.yicaiglobal.com/news/tvb-jumps-after-hong-kong-broadcaster-targets-ai-computing-market-with-new-joint-venture">TVB Jumps After Hong Kong Broadcaster Targets AI Computing ...</a></li>
-<li><a href="https://www.minichart.com.sg/2026/08/11/tvb-plans-ai-advanced-computing-joint-venture-with-gaw-capital-and-signs-loi-with-global-tech-group/">TVB Plans AI Advanced Computing Joint Venture With Gaw ...</a></li>
-<li><a href="https://www.mingtiandi.com/real-estate/data-centres/gaw-expanding-links-with-hong-kongs-tvb-in-ai-computing-plan/">Gaw Expanding Links with Hong Kong's TVB in AI Computing Plan - Mingtiandi</a></li>
+<li><a href="https://openai.com/index/ringcentral/">How RingCentral builds AI-native work from engineering to... | OpenAI</a></li>
+<li><a href="https://www.startuphub.ai/ai-news/artificial-intelligence/2026/ringcentral-scales-customer-programs-with-chatgpt">RingCentral Scales Customer Programs with ChatGPT | StartupHub. ai</a></li>
+<li><a href="https://en.wikipedia.org/wiki/RingCentral">RingCentral - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI computing`, `#Hong Kong`, `#joint venture`, `#business news`
+**Tags**: `#AI`, `#ChatGPT`, `#Codex`, `#Case Study`, `#Enterprise`
 
 ---
