@@ -9,57 +9,54 @@ lang: en
 
 ---
 
-1. [Doom Renderer Compiled into 21B-Parameter Transformer Without Training](#item-1) ⭐️ 9.0/10
-2. [Cursor Acquired by SpaceX, Joins SpaceXAI to Enhance Grok](#item-2) ⭐️ 9.0/10
-3. [Qwen 3.8 27B: Strong Reasoning, Local Execution Impress Community](#item-3) ⭐️ 8.0/10
-4. [Going Dark and the Rise of Law Enforcement Hacking](#item-4) ⭐️ 8.0/10
-5. [New PyTorch Linter torch-preflight Catches Bugs and Estimates VRAM](#item-5) ⭐️ 8.0/10
-6. [AI Robotic Labs Test 3M Human Tissue Samples Yearly, Could End Animal Testing](#item-6) ⭐️ 8.0/10
-7. [Don't Classify, Hallucinate: A New Tagging Technique](#item-7) ⭐️ 6.0/10
+1. [Doom's Renderer Compiled into a 21B-Parameter Transformer Without Training](#item-1) ⭐️ 9.0/10
+2. [Cursor Acquired by SpaceX, Joins SpaceXAI to Boost Grok](#item-2) ⭐️ 9.0/10
+3. [Qwen 3.8 27B: Strong Local LLM with Improved Reasoning](#item-3) ⭐️ 8.0/10
+4. [Going Dark: The Shift to Law Enforcement Hacking](#item-4) ⭐️ 8.0/10
+5. [Why Opus 5 Feels Worse to Work With: A Critical Analysis](#item-5) ⭐️ 8.0/10
+6. [Google Advances Practical Homomorphic Encryption for Private AI](#item-6) ⭐️ 8.0/10
+7. [Don't classify. Hallucinate!](#item-7) ⭐️ 7.0/10
 
 ---
 
 <a id="item-1"></a>
-## [Doom Renderer Compiled into 21B-Parameter Transformer Without Training](https://www.reddit.com/r/MachineLearning/comments/1voazhm/i_compiled_dooms_renderer_into_a_21bparameter/) ⭐️ 9.0/10
+## [Doom's Renderer Compiled into a 21B-Parameter Transformer Without Training](https://www.reddit.com/r/MachineLearning/comments/1voazhm/i_compiled_dooms_renderer_into_a_21bparameter/) ⭐️ 9.0/10
 
-A compiler called Torchwright converts Doom's rendering algorithm into a 21B-parameter transformer checkpoint that generates pixel-drawing commands to render frames, requiring no training. The model produces a 53,747-token sequence per frame, taking about 40 minutes on a B200 GPU. This demonstrates a novel approach to embedding complex algorithms into neural network weights without training, potentially enabling new ways to compile traditional software into transformer architectures. It could impact AI research by blurring the line between hand-coded algorithms and learned models, and may inspire further work on algorithmic compilation into neural networks. The generated checkpoint is a standard Hugging Face transformers checkpoint that can be loaded without trust_remote_code. The host program is only 43 lines of Python, while the computation graph definition is much longer but gets compiled into the transformer. One frame requires a 3,614-token prompt plus 53,747 generated tokens, achieving 35 frames per day on a B200, compared to Doom's original 35 FPS on a 486.
+A compiler called Torchwright converts Doom's rendering algorithm into a 21B-parameter transformer checkpoint, which can generate pixel-drawing commands to reproduce game frames. The model runs on a B200 GPU, taking about 40 minutes to generate one frame. This demonstrates a novel approach to program synthesis and model interpretability, showing that complex algorithms can be embedded into neural network weights without training. It could inspire new methods for creating interpretable AI systems and for compiling traditional software into neural architectures. The generated checkpoint is a standard transformers checkpoint loadable via Hugging Face without custom code. One frame requires a 3,614-token prompt and generates 53,747 tokens, achieving about 35 frames per day on a B200, compared to Doom's original 35 FPS on a 486.
 
 reddit · r/MachineLearning · /u/notforrob · Aug 14, 15:50
 
-**Background**: The Doom engine is a classic game engine known for its efficient software rendering, created by John Carmack and others. Torchwright is a compiler that converts fixed computation graphs into transformer weights, allowing algorithms to be embedded in neural networks without training. This project builds on prior work by the same author, such as compiling a calculator into a transformer.
+**Background**: The Doom engine, created by id Software, uses a raycasting-based renderer to draw 3D environments. Torchwright is a compiler that takes computation graphs defined in Python and constructs concrete transformer weights, allowing algorithms to run inside a transformer without training.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://ood.dev/posts/doom/">Doom, compiled into a transformer — Out of Distribution</a></li>
-<li><a href="https://ood.dev/posts/calculator/">A calculator, compiled into a transformer — Out of Distribution</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Doom_engine">Doom engine - Wikipedia</a></li>
+<li><a href="https://doomwiki.org/wiki/Doom_rendering_engine">Doom rendering engine - The Doom Wiki at DoomWiki.org</a></li>
+<li><a href="https://groundtruth.day/news/torchwright-compiles-python-to-transformer-weights.html">torchwright builds working transformer weights from... — Ground Truth</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The community discussion is not provided, but given the novelty and technical depth, it likely includes excitement about the approach, questions about scalability and efficiency, and comparisons to other methods of embedding computation in neural networks.
+**Discussion**: The community discussion is not provided, but given the novelty and prior posts, it likely includes excitement about the technical achievement and debates about the practical implications for AI and software engineering.
 
-**Tags**: `#transformers`, `#compilation`, `#neural networks`, `#Doom`, `#AI research`
+**Tags**: `#transformers`, `#compilation`, `#Doom`, `#neural networks`, `#program synthesis`
 
 ---
 
 <a id="item-2"></a>
-## [Cursor Acquired by SpaceX, Joins SpaceXAI to Enhance Grok](https://x.com/cursor_ai/status/2088249881718919393) ⭐️ 9.0/10
+## [Cursor Acquired by SpaceX, Joins SpaceXAI to Boost Grok](https://x.com/cursor_ai/status/2088249881718919393) ⭐️ 9.0/10
 
-Cursor officially announced that it has been acquired by SpaceX and will become part of SpaceXAI, collaborating to enhance Grok, Grok Build, Grok Bot, Grok API, and Cursor products. The goal is to make Grok the most practical AI globally. This acquisition merges a leading AI coding tool with a major AI chatbot platform, potentially reshaping the developer tools landscape and intensifying competition in the AI assistant market. It could also accelerate the integration of coding capabilities into Grok, benefiting developers and users of both products. The announcement was made via Cursor's official X account, and the team will join SpaceXAI to work on Grok, Grok Build, Grok Bot, Grok API, and Cursor. Cursor, developed by Anysphere, is an AI-native code editor valued at $29.3 billion, while Grok is SpaceXAI's AI chatbot with voice, image, and video generation capabilities.
+Cursor officially announced its acquisition by SpaceX, becoming part of SpaceXAI to jointly enhance Grok, Grok Build, Grok Bot, Grok API, and Cursor products. The goal is to make Grok the world's most useful AI. This acquisition merges a leading AI coding tool with a major AI assistant ecosystem, potentially accelerating Grok's development and expanding its capabilities. It signals a trend of consolidation in the AI industry, where coding tools and chatbots are integrated to create more comprehensive AI platforms. Cursor is an AI-native code editor developed by Anysphere, Inc., valued at $29.3 billion. Grok Build, a terminal-based AI coding agent, is part of SpaceXAI's offerings, available to SuperGrok subscribers at $30/month, and can run up to 8 AI agents in a three-stage process.
 
 telegram · zaihuapd · Aug 14, 15:45
 
-**Background**: Cursor is an AI-powered code editor that uses natural language to generate, edit, and debug code, making it popular among developers for boosting productivity. Grok is an AI chatbot developed by SpaceXAI (formerly xAI), designed to compete with OpenAI's GPT and Google's Gemini, offering features like real-time search and advanced reasoning. This acquisition reflects a trend of consolidation in the AI industry, where major players acquire specialized tools to enhance their ecosystems.
+**Background**: Grok is an AI assistant developed by SpaceXAI (formerly xAI), designed to be maximally truthful and useful, with capabilities including chat, image generation, and real-time web/X integration. Cursor is a popular AI coding tool that uses natural-language prompts to generate, edit, and debug code, making it a valuable asset for AI-driven software development.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Cursor_(company)">Cursor (company) - Wikipedia</a></li>
-<li><a href="https://cursor.com/">AI Coding Agent for Building Ambitious Software | Cursor</a></li>
-<li><a href="https://builtin.com/articles/what-is-cursor-ai">What Is Cursor? AI Code Editor Explained | Built In</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Grok_(chatbot)">Grok (chatbot) - Wikipedia</a></li>
-<li><a href="https://x.ai/">SpaceXAI — Creators of Grok, the AI Chatbot</a></li>
-<li><a href="https://www.igmguru.com/blog/what-is-grok-ai">What is Grok AI: How Does It Work and Useful Features | igmGuru</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cursor_(company)">Cursor (company) - Wikipedia</a></li>
+<li><a href="https://builtin.com/articles/what-is-cursor-ai">What Is Cursor? AI Code Editor Explained | Built In</a></li>
 
 </ul>
 </details>
@@ -69,116 +66,118 @@ telegram · zaihuapd · Aug 14, 15:45
 ---
 
 <a id="item-3"></a>
-## [Qwen 3.8 27B: Strong Reasoning, Local Execution Impress Community](https://huggingface.co/Qwen/Qwen3.8-27B-FP8) ⭐️ 8.0/10
+## [Qwen 3.8 27B: Strong Local LLM with Improved Reasoning](https://huggingface.co/Qwen/Qwen3.8-27B-FP8) ⭐️ 8.0/10
 
-Qwen 3.8 27B, a new open-source language model, has been released on Hugging Face, featuring a dense 27B parameter architecture with a vision encoder and 262K native context. It has quickly gained attention for its strong reasoning capabilities and efficient local execution. This release highlights the rapid commoditization of frontier AI, as open-source models like Qwen 3.8 27B deliver competitive reasoning performance that can run locally on consumer hardware. It challenges the dominance of proprietary models from major US companies and empowers developers and researchers with accessible, high-quality AI. The model is built on the Qwen 3.5 architecture and supports up to 262,144 tokens natively, extendable to 1M tokens with RoPE scaling. It offers BF16/FP8/NVFP4 W4A4 checkpoints and in-checkpoint MTP, and can run on a single GPU such as H200, RTX PRO 6000, RTX 5090, and DGX Spark.
+Qwen 3.8 27B is a new open-weight local LLM released by Alibaba's Qwen team, demonstrating strong reasoning and creative capabilities in community benchmarks. It is available on Hugging Face in FP8 format and can run on a single GPU with about 27GB of VRAM. This release is significant because it brings frontier-level reasoning to locally runnable models, potentially democratizing access to advanced AI capabilities. It also intensifies competition among open-weight models, challenging the dominance of proprietary models from major US companies. The model is a 27B-parameter dense model, requiring roughly 54GB VRAM at BF16, ~27GB at FP8, and ~14-16GB at 4-bit quantization. It is a native vision-language model that understands images and videos, with flexible thinking control, and can run on AMD Ryzen AI Max processors or Radeon GPUs via llama.cpp.
 
 hackernews · erdaltoprak · Aug 14, 15:00 · [Discussion](https://news.ycombinator.com/item?id=49299605)
 
-**Background**: Qwen is a series of open-source language models developed by Alibaba, known for pushing the boundaries of open-weight AI. The commoditization of frontier AI refers to the trend where models from different providers achieve comparable capabilities, making raw performance less of a differentiator. This release is part of a broader movement where open-source models are increasingly matching or exceeding proprietary ones in specific tasks.
+**Background**: Local LLMs are large language models that run on user-owned hardware, offering privacy and offline capabilities. Qwen is a series of open-weight models from Alibaba, and the 3.8 release continues the trend of improving reasoning and multimodal abilities in models that can be self-hosted.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://lmstudio.ai/models/qwen3.8">Qwen 3 . 8</a></li>
-<li><a href="https://huggingface.co/Qwen/Qwen3.8-27B">Qwen / Qwen 3 . 8 - 27 B · Hugging Face</a></li>
-<li><a href="https://docs.sglang.io/cookbook/autoregressive/Qwen/Qwen3.8-27B">Qwen 3 . 8 - 27 B - SGLang Documentation</a></li>
+<li><a href="https://www.yottalabs.ai/post/qwen-3-8-27b-specs-hardware-requirements-how-to-run-2026">Qwen 3.8 27B: Specs, Hardware Requirements, and How to Run It (2026) | Yotta Labs</a></li>
+<li><a href="https://www.amd.com/en/blogs/2026/run-qwen-3-8-27b-on-amd-ryzen-ai-max-and-radeon-graphics-cards-day-0.html">Run Qwen 3.8 27B on AMD Ryzen™ AI Max Agentic PCs and Radeon ™ GPUs</a></li>
+<li><a href="https://huggingface.co/Qwen/Qwen3.8-27B">Qwen/Qwen3.8-27B · Hugging Face</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community members praised the model's reasoning abilities, with one noting it was only the second local model to pass a private benchmark, albeit slower. Another highlighted its excellent SVG generation, while others discussed the implications for AI commoditization and the future of proprietary models. Some noted quirks in the thinking trace and suggested workarounds for Jinja template issues.
+**Discussion**: Community members praised the model's reasoning abilities, with one noting it was only the second local model to pass a private benchmark, though it took more tokens and time. Others highlighted its creative output, such as generating a well-structured pelican image, and noted a change in its thinking trace style. Some expressed optimism about the commoditization of frontier AI, while others mentioned issues with Jinja templates.
 
-**Tags**: `#LLM`, `#open-source`, `#local AI`, `#reasoning`, `#HuggingFace`
+**Tags**: `#LLM`, `#local-models`, `#AI`, `#Qwen`, `#machine-learning`
 
 ---
 
 <a id="item-4"></a>
-## [Going Dark and the Rise of Law Enforcement Hacking](https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark/) ⭐️ 8.0/10
+## [Going Dark: The Shift to Law Enforcement Hacking](https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark/) ⭐️ 8.0/10
 
-The article discusses the impending 'going dark' era, where encryption limits law enforcement access, and highlights the increasing use of law enforcement hacking as a response. It argues that the number of useful software bugs may soon hit a ceiling, affecting the viability of this approach. This matters because it addresses a critical tension between privacy and public safety, affecting policymakers, tech companies, and citizens. The shift toward law enforcement hacking raises significant legal and ethical questions about surveillance and the security of digital communications. The article references the historical context of wiretapping, noting that before computerized central offices, physical wires were required, and costs were significant. It also suggests that while software may be getting buggier due to AI-generated code, the number of exploitable bugs might not increase proportionally, challenging the sustainability of hacking as a law enforcement tool.
+The article discusses the impending 'going dark' era where law enforcement increasingly relies on hacking rather than wiretapping, highlighting a significant shift in surveillance tactics. This shift has profound implications for privacy and security, as it moves the debate from encryption backdoors to the use of vulnerabilities and hacking tools, affecting how governments balance security and civil liberties. The article notes that law enforcement hacking may face a ceiling on the number of useful bugs, and discusses the potential for software to become both buggier and more secure simultaneously, complicating the effectiveness of such tactics.
 
 hackernews · vslira · Aug 14, 20:52 · [Discussion](https://news.ycombinator.com/item?id=49304447)
 
-**Background**: The 'going dark' problem refers to the challenge law enforcement faces in accessing encrypted communications and data. As end-to-end encryption becomes widespread, authorities have increasingly turned to hacking techniques, such as government malware and zero-day exploits, to bypass security measures. This has sparked a debate over the balance between privacy and security, with some arguing for legislative solutions.
+**Background**: The 'going dark' problem refers to law enforcement's inability to access encrypted communications, even with a warrant. Historically, wiretapping required physical wires, but modern encryption has made interception harder, prompting a shift toward hacking techniques such as network investigative techniques.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://carnegieendowment.org/research/2024/04/exploring-law-enforcement-hacking-as-a-tool-against-transnational-cyber-crime">Exploring Law Enforcement Hacking as a Tool Against ...</a></li>
-<li><a href="https://www.schneier.com/blog/archives/2026/07/end-to-end-encryption-and-going-dark.html">End-to-End Encryption and "Going Dark" - Schneier on Security</a></li>
-<li><a href="https://www.fbi.gov/news/testimony/going-dark-encryption-technology-and-the-balances-between-public-safety-and-privacy">Going Dark: Encryption, Technology, and the Balances Between Public Safety and Privacy | Federal Bureau of Investigation</a></li>
+<li><a href="https://www.theiacp.org/resources/critical-issues-encryption-going-dark">Critical Issues: Encryption & Going Dark</a></li>
+<li><a href="https://www.congress.gov/crs_external_products/R/PDF/R44481/R44481.7.pdf">Encryption and the “Going Dark” Debate - Congress.gov</a></li>
+<li><a href="https://www.justsecurity.org/60785/shining-light-federal-law-enforcements-computer-hacking-tools/">Shining a Light on Federal Law Enforcement ’s Use of Computer...</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community comments highlight historical context, such as the physical and costly nature of early wiretapping, and question the assumption that law enforcement will always have access. Some commenters disagree with the claim that useful bugs are hitting a ceiling, noting that AI-generated code may introduce more vulnerabilities. Others point out the disparity between sophisticated hacking operations and common security failures in organizations.
+**Discussion**: Commenters debate the sustainability of finding software bugs, with some arguing that AI-generated code increases bugs while others see a ceiling. Historical context on wiretapping costs and concerns about security practices are also raised.
 
-**Tags**: `#cryptography`, `#law enforcement`, `#privacy`, `#hacking`, `#surveillance`
+**Tags**: `#cryptography`, `#law enforcement`, `#privacy`, `#security`, `#hacking`
 
 ---
 
 <a id="item-5"></a>
-## [New PyTorch Linter torch-preflight Catches Bugs and Estimates VRAM](https://www.reddit.com/r/MachineLearning/comments/1vo8vv0/a_linter_for_pytorch_torchpreflight_p/) ⭐️ 8.0/10
+## [Why Opus 5 Feels Worse to Work With: A Critical Analysis](https://mun-logadan.github.io/why-does-opus-5-feel-worse/) ⭐️ 8.0/10
 
-torch-preflight is a new static linter for PyTorch that detects common training bugs such as missing zero_grad(), gradient accumulation without division, and DDP without DistributedSampler, without executing the code. It also estimates VRAM usage for a given training script and GPU, providing a list of changes to fit the run. This tool addresses common PyTorch pitfalls that waste GPU hours, potentially saving significant time and resources for ML practitioners. By catching bugs before execution and estimating VRAM, it helps developers avoid costly trial-and-error and optimize their training setups. The linter currently implements 13 rules and never imports or executes the user's code, so it requires no GPU or PyTorch installation. The VRAM estimation is claimed to be within 4% of measured peaks, based on tests with four models on a single T4 GPU.
+A critical analysis argues that Anthropic's Opus 5 model feels worse to work with due to its elliptical writing style and a shift towards agent-oriented communication, sparking a large community discussion on Hacker News. This matters because it highlights a growing tension between optimizing AI models for human readability versus for agent-to-agent communication, which could impact how developers and users interact with AI. The high engagement (738 points, 675 comments) indicates significant concern among AI practitioners about the direction of post-training. The analysis points out that Opus 5 often uses inanimate nouns as sentence subjects and constructs sentences where the real action 'lands' at the end, making it feel abstract and elliptical. Community members also note that Opus 5 tends to 'confess' mistakes excessively and veer off-topic without strict instructions, leading some to switch back to older models or other providers.
 
-reddit · r/MachineLearning · /u/LeJanbandhu · Aug 14, 14:30
+hackernews · numeri · Aug 14, 10:12 · [Discussion](https://news.ycombinator.com/item?id=49296740)
 
-**Background**: PyTorch is a popular deep learning framework where training loops often require careful management of gradients and memory. Common mistakes like forgetting to call zero_grad() lead to gradient accumulation, causing incorrect training or memory leaks. Static analysis tools like linters can catch such issues without running the code, and VRAM estimation helps plan resource allocation before launching expensive training jobs.
+**Background**: Opus 5 is Anthropic's latest flagship large language model, known for its high capability. However, its communication style has been criticized for being overly abstract and elliptical, possibly because post-training is increasingly optimized for other AI agents rather than human readers. This shift reflects a broader trend in AI development towards multi-agent systems, where inter-agent communication protocols are becoming more important.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://github.com/pytorch-labs/torchfix">GitHub - meta-pytorch/torchfix: TorchFix - a linter for PyTorch-using code with autofix support · GitHub</a></li>
-<li><a href="https://thecodeforge.io/ml-ai/pytorch-training-loop/">PyTorch Training Loop — Missing zero_grad Causes Nonsense</a></li>
-<li><a href="https://stackoverflow.com/questions/48001598/why-do-we-need-to-call-zero-grad-in-pytorch">python - Why do we need to call zero_grad () in PyTorch ... Code sample</a></li>
+<li><a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5">Prompting Claude Opus 5 - Claude Platform Docs</a></li>
+<li><a href="https://news.ycombinator.com/item?id=49040857">I compared the writing style of Opus 5 vs Fable 5, and Opus 5 continues many of ... | Hacker News</a></li>
+<li><a href="https://www.ibm.com/think/topics/ai-agent-communication">What is AI Agent Communication? | IBM</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The Reddit discussion is not provided, but based on the post's context, practitioners likely appreciate the tool's practical value and may share feedback on false positives and additional rule suggestions. Some may compare it to existing linters like TorchFix, noting differences in scope and approach.
+**Discussion**: Community comments largely agree with the analysis, with users sharing their own frustrations about Opus 5's elliptical writing and excessive self-correction. Some users speculate that the model is optimized for agent-to-agent communication, while others report switching to alternative models like OpenAI's Sol for a better experience. A few users note that Opus 5's capabilities are still strong but require very strict instructions to stay on track.
 
-**Tags**: `#PyTorch`, `#linter`, `#MLOps`, `#GPU`, `#debugging`
+**Tags**: `#AI`, `#LLM`, `#UX`, `#Anthropic`, `#Agent`
 
 ---
 
 <a id="item-6"></a>
-## [AI Robotic Labs Test 3M Human Tissue Samples Yearly, Could End Animal Testing](https://www.fastcompany.com/91589344/the-worlds-largest-biological-datacenter-could-help-make-animal-testing-obsolete) ⭐️ 8.0/10
+## [Google Advances Practical Homomorphic Encryption for Private AI](https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/) ⭐️ 8.0/10
 
-Vivodyne has deployed 12 robotic 'hive' labs in the San Francisco Bay Area that use AI to design and run controlled experiments on over 3 million lab-grown human tissue samples annually, a capacity twice that of all U.S. clinical trials combined. This breakthrough could dramatically reduce reliance on animal testing, which currently fails to predict human responses in about 90% of clinical trials, potentially accelerating drug development and improving success rates. The system uses AI to design experiments and robotic automation to handle human tissues that are 'indistinguishable from living human tissues,' enabling high-throughput testing. Vivodyne recently raised $40M in Series A funding to scale this technology.
+Google announced progress in making homomorphic encryption (HE) practical for private AI, enabling computations on encrypted data without decryption. This development aims to reduce the computational overhead that has historically limited HE's commercial viability. This is significant because it could enable privacy-preserving machine learning in real-world applications, allowing sensitive data to be processed without exposure. It may accelerate adoption of confidential AI across industries like healthcare and finance, where data privacy is critical. Despite the progress, HE still incurs significant computational overhead—often over 1000x—compared to plaintext operations, as noted by community experts. Google's approach likely leverages optimizations like batching and hardware acceleration, but full commercial viability remains a challenge.
 
-telegram · zaihuapd · Aug 14, 01:48
+hackernews · u1hcw9nx · Aug 14, 15:43 · [Discussion](https://news.ycombinator.com/item?id=49300314)
 
-**Background**: Traditional drug testing relies heavily on animal models, which often fail to accurately predict human outcomes, leading to high clinical trial failure rates. Organ-on-a-chip and lab-grown tissue technologies are emerging alternatives that aim to better mimic human physiology. Vivodyne combines these with AI and robotics to create a scalable platform for human-relevant testing.
+**Background**: Homomorphic encryption (HE) is a form of encryption that allows computations to be performed on ciphertext, producing encrypted results that, when decrypted, match the results of operations on plaintext. This enables secure outsourcing of data processing to third parties without exposing the raw data. However, HE has historically been impractical due to high computational and storage overhead, limiting its use to niche applications. Recent advances aim to reduce this overhead, making HE more viable for AI workloads.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.vivodyne.com/">Vivodyne | Make biology computable</a></li>
-<li><a href="https://hlth.com/insights/news/vivodyne-raises-40m-to-transform-drug-development-with-ai-powered-human-tissue-testing-2025-06-03">Vivodyne Raises $40M to Transform Drug Development with...</a></li>
-<li><a href="https://hitconsultant.net/2025/05/30/vivodyne-secures-40m-series-a-to-scale-ai-powered-human-tissue-testing/">Vivodyne Secures $40M Series A to Scale AI -Powered Human ...</a></li>
+<li><a href="https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/">How Google is Making Private AI Practical with Homomorphic Encryption</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Homomorphic_encryption">Homomorphic encryption - Wikipedia</a></li>
+<li><a href="https://www.sciencedirect.com/topics/computer-science/homomorphic-encryption">Homomorphic Encryption - an overview | ScienceDirect Topics</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI`, `#biotech`, `#drug development`, `#animal testing`, `#robotics`
+**Discussion**: Community comments express skepticism about the practicality of HE, citing high computational overhead (e.g., ~10^3 on inference) and questioning commercial viability. Some users also criticize Google's overall privacy stance, noting contradictions like lack of default end-to-end encryption in their password manager. Others share learning resources, such as the FHE textbook, indicating ongoing interest in the technology.
+
+**Tags**: `#homomorphic encryption`, `#privacy-preserving ML`, `#Google`, `#AI`, `#security`
 
 ---
 
 <a id="item-7"></a>
-## [Don't Classify, Hallucinate: A New Tagging Technique](https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/) ⭐️ 6.0/10
+## [Don't classify. Hallucinate!](https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/) ⭐️ 7.0/10
 
-Doug Turnbull proposed a novel approach to content tagging: instead of asking an LLM to match content to an existing tag vocabulary, let it hallucinate hypothetical tags and then use vector embeddings to map those to the closest existing tags. Simon Willison demonstrated this technique for tagging his blog's older untagged content. This technique offers a practical solution for large-scale content tagging where the tag vocabulary is too large to fit into an LLM's context window. It leverages the semantic understanding of LLMs and the efficiency of vector search, potentially improving content management workflows for blogs, e-commerce, and knowledge bases. The approach involves prompting the LLM to generate novel tags without providing the existing vocabulary, but including examples of the tag shape to guide the model. Then, vector embeddings are used to find the concrete existing tags that are closest to the hallucinated ones. Simon Willison notes that his blog has 1,856 tags, which is too many to feed to an LLM in one go.
+Doug Turnbull proposed a technique where an LLM generates novel tags without seeing the existing vocabulary, and then vector embeddings map these hallucinated tags to the closest existing tags. Simon Willison highlighted this approach on his blog as a solution for tagging untagged content. This technique offers a practical way to leverage LLMs for content tagging without the constraint of a fixed tag set, which is especially useful for large tag vocabularies. It can improve content management and search by enabling more flexible and scalable tagging systems. The method involves prompting the LLM to generate tags based on examples of the tag shape, then using embeddings to find the nearest existing tags. This approach avoids the need to feed the entire tag list to the model, which can be impractical for large vocabularies.
 
 rss · Simon Willison · Aug 14, 21:54
 
-**Background**: Vector embeddings are numerical representations of words or phrases that capture their semantic meaning, allowing similar items to be located nearby in vector space. LLM hallucination typically refers to the generation of false or misleading information, but here it is repurposed as a creative generation step. This technique combines the generative power of LLMs with the retrieval efficiency of vector databases, a common pattern in modern AI applications.
+**Background**: LLM hallucination typically refers to the generation of false or misleading information. However, in this context, hallucination is used creatively to generate plausible tags. Vector embeddings represent text as numerical vectors, allowing similarity comparison, which is a common technique in search and classification tasks.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Vector_embedding">Vector embedding</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)">Hallucination (artificial intelligence) - Wikipedia</a></li>
+<li><a href="https://developers.openai.com/api/docs/guides/embeddings">Vector embeddings | OpenAI API</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#LLM`, `#tagging`, `#embeddings`, `#AI`, `#content management`
+**Tags**: `#LLM`, `#embeddings`, `#tagging`, `#content management`, `#search`
 
 ---
