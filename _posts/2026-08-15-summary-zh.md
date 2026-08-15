@@ -5,177 +5,190 @@ date: 2026-08-15
 lang: zh
 ---
 
-> 从 36 条内容中筛选出 7 条重要资讯。
+> 从 27 条内容中筛选出 8 条重要资讯。
 
 ---
 
-1. [将《毁灭战士》渲染器编译为 210 亿参数 Transformer，无需训练](#item-1) ⭐️ 9.0/10
-2. [Qwen 3.8 27B：社区验证的强本地大模型](#item-2) ⭐️ 8.0/10
-3. [走向黑暗与执法黑客的转变](#item-3) ⭐️ 8.0/10
-4. [RustDesk 在 Wayland 上实现真正的无人值守访问](#item-4) ⭐️ 8.0/10
-5. [Firefox 成为唯一支持 uBlock Origin 的主流浏览器](#item-5) ⭐️ 8.0/10
-6. [AI 机器人实验室年测 300 万人体组织样本，有望终结动物测试](#item-6) ⭐️ 8.0/10
-7. [别分类，去幻觉：一种新的标签生成技术](#item-7) ⭐️ 7.0/10
+1. [使用 Codex 自动研究实现内核 232 倍加速](#item-1) ⭐️ 8.0/10
+2. [BDH-CQ：循环潜在推理突破 ARC-AGI-1 成本-精度前沿](#item-2) ⭐️ 8.0/10
+3. [阿里开放权重 AI 模型下载量超 30 亿，超越 Meta 和谷歌](#item-3) ⭐️ 8.0/10
+4. [斯坦福和 MIT 发布全球最大系统提示词库](#item-4) ⭐️ 8.0/10
+5. [OpenAI Python SDK v3.1.0 新增 WebSocket ID、Ultrafast 层级，弃用 Sora](#item-5) ⭐️ 7.0/10
+6. [AI 更大的工作记忆改变了数学问题解决方式](#item-6) ⭐️ 7.0/10
+7. [Unicode 幽灵字符：未知起源的谜团](#item-7) ⭐️ 7.0/10
+8. [谷歌内部 AI 之争终于显现后果](#item-8) ⭐️ 7.0/10
 
 ---
 
 <a id="item-1"></a>
-## [将《毁灭战士》渲染器编译为 210 亿参数 Transformer，无需训练](https://www.reddit.com/r/MachineLearning/comments/1voazhm/i_compiled_dooms_renderer_into_a_21bparameter/) ⭐️ 9.0/10
+## [使用 Codex 自动研究实现内核 232 倍加速](https://sankalp.bearblog.dev/autoresearch/) ⭐️ 8.0/10
 
-作者将《毁灭战士》的渲染算法移植为计算图，并使用自定义编译器 torchwright 将其转换为 210 亿参数 Transformer 的权重。该模型生成像素绘制命令，执行这些命令即可重现游戏中的 E1M1 画面。 这展示了一种无需训练即可将复杂算法嵌入神经网络权重的新方法，可能为编程和控制 Transformer 提供新途径。它可能激发进一步研究，将任意计算编译进模型，连接传统软件与神经计算。 生成的检查点是标准 Transformers 检查点，无需 trust_remote_code 即可加载。渲染一帧需要 3,614 个 token 的提示并生成 53,747 个 token，在 B200 GPU 上约需 40 分钟，相当于每天约 35 帧，而原版《毁灭战士》在 486 上可达 35 FPS。
+一位工程师使用 OpenAI 的 Codex 自动研究和优化内核，实现了 232 倍的加速。该过程涉及基准测试、性能分析和代码改进的自动化循环。 这展示了 AI 辅助开发在性能工程中的潜力，可能加速传统上需要深厚专业知识的优化任务。然而，社区讨论指出，此类 AI 生成的优化可能过度拟合特定输入，并在分布外数据上失败，凸显了专家监督的必要性。 优化实现了 232 倍的加速，但社区评论指出，在相关竞赛中，10 个顶级解决方案中有 8 个经过 AI 优化的方案在分布外输入上失效。唯一稳健的解决方案是由 GPU 编程专家制定的，他们将改动控制在合理范围内。
 
-reddit · r/MachineLearning · /u/notforrob · 8月14日 15:50
+hackernews · tosh · 8月15日 11:00 · [社区讨论](https://news.ycombinator.com/item?id=49309549)
 
-**背景**: Transformer 是一种神经网络架构，通过注意力机制处理序列，通常在大数据集上训练。将计算图编译为 Transformer 权重是一种新兴技术，将程序逻辑直接编码到模型参数中，使模型在推理时执行程序。《毁灭战士》的渲染器使用二叉空间分割（BSP）等算法高效绘制 3D 场景，作者将其移植为图表示。
+**背景**: Codex 是 OpenAI 的 AI 编程代理，可以根据自然语言指令生成和修改代码。内核优化涉及改进对计算任务至关重要的底层例程的性能，通常需要深厚的硬件和编译器知识。分布外（OOD）输入是指与训练分布显著不同的数据，可能导致 AI 生成的解决方案失效。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://github.com/physicsrob/torchwright">physicsrob/torchwright: A compiler that transforms computation ...</a></li>
-<li><a href="https://www.doomwiki.org/wiki/Rendering_engine">Doom rendering engine - The Doom Wiki at DoomWiki.org</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OpenAI_Codex_(language_model)">OpenAI Codex (language model) - Wikipedia</a></li>
+<li><a href="https://www.envisioning.com/vocab/out-of-distribution">Out - of - Distribution (OOD) Data | Envisioning Vocab</a></li>
+<li><a href="https://github.com/openai/codex">GitHub - openai/codex: Lightweight coding agent that runs in your terminal · GitHub</a></li>
 
 </ul>
 </details>
 
-**标签**: `#transformer`, `#compilation`, `#Doom`, `#neural networks`, `#AI`
+**社区讨论**: 社区评论表达了既着迷又谨慎的态度。一些人欣赏这种新颖的、由人类撰写的叙述，而另一些人则强调过度拟合特定输入的风险，引用了竞赛结果中 AI 优化解决方案在 OOD 形状上失败的情况。还有人好奇为什么训练数据中 GPU 内核丰富，并分享了一些 AI 辅助优化的相关经验。
+
+**标签**: `#AI-assisted development`, `#kernel optimization`, `#GPU programming`, `#Codex`, `#performance engineering`
 
 ---
 
 <a id="item-2"></a>
-## [Qwen 3.8 27B：社区验证的强本地大模型](https://huggingface.co/Qwen/Qwen3.8-27B-FP8) ⭐️ 8.0/10
+## [BDH-CQ：循环潜在推理突破 ARC-AGI-1 成本-精度前沿](https://www.reddit.com/r/MachineLearning/comments/1vov5r5/bdhcq_incontext_learning_with_recurrent_latent/) ⭐️ 8.0/10
 
-Qwen 3.8 27B 是一款新发布的本地大语言模型，展现出强大的推理能力和性能，社区成员报告了成功的基准测试和在消费级硬件上的高效推理。它是 Qwen3.6-27B 的继任者，将 3.8 代的训练改进带到了可自托管的规模。 此次发布对本地大模型社区意义重大，因为它提供了一个可在消费级硬件上运行的高性能模型，可能使先进 AI 能力的获取更加民主化。社区的积极反响和关于推理引擎的实用见解表明其参与度和认可度很高，这可能影响未来模型的开发和应用。 社区基准测试显示相比上一版本有显著提升，Terminal-Bench 2.1 从 63.4 升至 73.0，DeepSWE 1.1 从 13.3 升至 42.2，OSWorld-Verified 从 63.9 升至 84.3，SWE-MM 从 25.7 升至 38.6。然而，阿里巴巴尚未公布架构细节（密集或 MoE）、上下文长度或许可证，且部分用户报告其 VRAM 使用效率低于其他模型。
+BDH-CQ 是一种新的推理系统，将记忆、适应和推理整合到循环潜在工作空间中，以 150M 参数模型在 ARC-AGI-1 上达到 29.5%的 pass@2，每任务计算成本为 0.00070 美元，突破了此前报告的成本-精度帕累托前沿。 这项工作表明，高效的、非语言推理可以在具有挑战性的基准上媲美更大模型，可能为实际应用带来经济高效的 AI 推理。同时，它也挑战了大型语言模型中逐 token 推理的主导地位。 BDH-CQ 不将中间推理解码为语言，而是在高维潜在空间中进行迭代计算。训练中不使用任务标识符或评估任务的演示对，推理时不更新任何参数。
 
-hackernews · erdaltoprak · 8月14日 15:00 · [社区讨论](https://news.ycombinator.com/item?id=49299605)
+reddit · r/MachineLearning · /u/moschles · 8月15日 06:18
 
-**背景**: Qwen 是阿里巴巴开发的一系列大语言模型，以其强大的性能和开源可用性而闻名。本地大模型是指可以在消费级硬件（如笔记本电脑或台式机 GPU）上运行、无需依赖云服务的模型。这通过量化技术和高效推理引擎等实现，这些技术减少了内存占用并提高了速度。
+**背景**: ARC-AGI-1 是一个旨在测试系统泛化和组合推理的基准，尽管 LLM 规模扩大，多年来一直未被攻克。BDH-CQ 扩展了先前在上下文学习和循环潜在推理方面的工作，将结构化潜在工作空间与循环计算相结合，从演示中学习视觉变换。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.yottalabs.ai/post/qwen-3-8-27b-specs-hardware-requirements-how-to-run-2026">Qwen 3.8 27B: Specs, Hardware Requirements, and How to Run It (2026) | Yotta Labs</a></li>
-<li><a href="https://kingy.ai/blog/qwen3-8-27b-specs-benchmarks-local-hardware/">Qwen3.8-27B: Specs, Benchmarks & Verdict</a></li>
-<li><a href="https://medium.com/practical-llm-systems/qwen-3-8-benchmarks-what-the-numbers-actually-say-4eeb8885ce70">Qwen 3.8 Benchmarks: What the Numbers Actually Say | by Rost Glukhov | Practical LLM Systems | Aug, 2026 | Medium</a></li>
+<li><a href="https://arxiv.org/html/2608.09888">BDH - CQ : In-Context Learning with Recurrent Latent Reasoning</a></li>
+<li><a href="https://www.remio.ai/post/bdh-cq-challenges-token-by-token-ai-reasoning-with-recurrent-latent-memory">BDH - CQ Challenges Token-by-Token AI Reasoning With Recurrent ...</a></li>
+<li><a href="https://pathway.com/research/introducing-bdh-cq">Reasoning at a Fraction of the Compute | Pathway</a></li>
+<li><a href="https://arcprize.org/arc-agi/1">ARC-AGI-1</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区成员普遍对该模型的推理能力印象深刻，一位用户指出它是第二个能正确通过其私人基准测试的本地模型。其他人报告使用替代推理引擎可获得较高的 token 生成速度，还有人观察到与之前版本相比，模型的思考轨迹风格发生了显著变化。同时也有对 VRAM 效率的担忧，以及推测独特的思考模式可能影响多 token 预测性能。
-
-**标签**: `#LLM`, `#local-models`, `#AI`, `#open-source`, `#benchmarks`
+**标签**: `#in-context learning`, `#recurrent neural networks`, `#ARC-AGI`, `#latent reasoning`, `#efficient AI`
 
 ---
 
 <a id="item-3"></a>
-## [走向黑暗与执法黑客的转变](https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark/) ⭐️ 8.0/10
+## [阿里开放权重 AI 模型下载量超 30 亿，超越 Meta 和谷歌](https://www.bloomberg.com/news/articles/2026-08-15/alibaba-ai-models-hit-3-billion-downloads-passing-meta-google) ⭐️ 8.0/10
 
-文章分析了“走向黑暗”问题，并指出执法机构正越来越多地转向黑客技术，如利用软件漏洞来访问加密通信。文章认为，通过合法请求进行大规模监控的时代可能正在结束，取而代之的是有针对性的黑客行动。 这种转变对隐私、安全以及政府与公民之间的权力平衡具有重大影响。随着执法黑客行为日益普遍，它引发了关于漏洞利用限度及滥用可能性的问题，影响政策制定者、安全研究人员和公众。 文章指出，有用的软件漏洞数量可能达到上限，从而限制黑客作为执法工具的有效性。文章还讨论了运行窃听的成本和实际挑战，将过去的物理窃听与现代数字监控进行对比。
+根据 Hugging Face 的数据，阿里巴巴的开放权重 AI 模型在过去六个月内全球下载量已超过 30 亿次。这一里程碑使阿里巴巴超越了 Meta 和谷歌，其中谷歌在 2026 年的下载量为 4.18 亿次，Meta 为 2.27 亿次。 这一里程碑标志着开源 AI 格局的重大转变，阿里巴巴的 Qwen 模型在全球范围内迅速获得采用。它凸显了中国 AI 公司日益增长的影响力，以及开发者社区对开放权重模型的偏好不断增强。 阿里巴巴已开源超过 460 个 Qwen 模型，并衍生出超过 30 万个版本。2025 年 4 月发布的 Qwen3 系列包括从 0.6B 到 32B 参数的密集模型，以及如 30B-A3B 的 MoE 模型，均采用 Apache 2.0 许可证。
 
-hackernews · vslira · 8月14日 20:52 · [社区讨论](https://news.ycombinator.com/item?id=49304447)
+telegram · zaihuapd · 8月15日 15:18
 
-**背景**: “走向黑暗”问题指的是执法机构即使拥有合法法院命令，也难以访问加密通信和数据。随着加密技术的普及，机构开始探索黑客技术，如部署恶意软件或利用漏洞来绕过加密。这一趋势是隐私与安全更广泛辩论的一部分，FBI 等机构主张合法访问，而隐私倡导者则警告不要削弱加密。
+**背景**: 开放权重 AI 模型是指其训练参数（权重）公开可下载和使用的模型，允许开发者进行定制和部署。阿里巴巴的 Qwen 系列由阿里云开发，包括大型语言模型（LLM）和多模态模型，已成为 Hugging Face 等平台上最受欢迎的开放权重模型系列之一。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.theiacp.org/resources/critical-issues-encryption-going-dark">Critical Issues: Encryption & Going Dark</a></li>
-<li><a href="https://carnegieendowment.org/research/2024/04/exploring-law-enforcement-hacking-as-a-tool-against-transnational-cyber-crime">Exploring Law Enforcement Hacking as a Tool Against Transnational Cyber ...</a></li>
-<li><a href="https://observed.org/can-police-use-hacking-techniques/">Can Police Use Hacking Techniques? | Know Your Rights</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Qwen">Qwen - Wikipedia</a></li>
+<li><a href="https://huggingface.co/Qwen">Qwen (Qwen)</a></li>
+<li><a href="https://allthings.how/what-is-an-open-weight-ai-model-and-how-to-use-one/">What is an Open Weight AI Model and How to Use One</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论者表达了不同观点：一些人强调了窃听的历史成本，而另一些人则怀疑软件漏洞并未减少，指出 AI 生成的代码引入了更多漏洞。一条讽刺评论批评了政府监控，另一条则指出复杂的执法黑客与许多组织糟糕的安全实践之间的对比。
-
-**标签**: `#encryption`, `#law enforcement`, `#surveillance`, `#security`, `#privacy`
+**标签**: `#AI`, `#Open Source`, `#Alibaba`, `#Qwen`, `#Model Downloads`
 
 ---
 
 <a id="item-4"></a>
-## [RustDesk 在 Wayland 上实现真正的无人值守访问](https://rustdesk.com/blog/unattended-remote-access-wayland/) ⭐️ 8.0/10
+## [斯坦福和 MIT 发布全球最大系统提示词库](https://news.google.com/rss/articles/CBMihAJBVV95cUxOYmcyVENkZXh5MlFpM3VZUmdPNkhlZVh1TjdWSXR2c1hpRDQ2TTcyeWdtNW9SMHhQTFUxbXA0YTBYcl94QUEydG5XSUR2dFBOZkNYUThVU1dOTVliUWpvOTNWQ1Y3YTBWRV9pUXVoY0Nuck9feF9MSHliblh6aXBGSVlodm5SY0lYTHdUZHNYNGhXWFVDcVE3SEwyOHBnRk9waUZoUjVPVG5FZ0FGT0Y3NDlsaWk3Ykc3Yy10Q2Z5OFlhY3F1bWVKMllCSmZPR0Iyb3V0Y2NISkRUQUw4Y2M3YW5od2x4UjB4Nm1RRFBHUnBBSWhVQ0RPMG90eG1XTTJQdUdXeg?oc=5) ⭐️ 8.0/10
 
-RustDesk 宣布支持在 Wayland 上实现真正的无人值守远程访问，这是 Linux 用户高度期待的功能。目前已经为基于 x86_64 Debian/Ubuntu 的系统提供了预览版，并支持多显示器。 此更新解决了依赖 Wayland 的 Linux 用户长期以来的痛点，因为之前的解决方案通常需要手动选择屏幕或在锁定会话中失效。它增强了 RustDesk 作为开源远程桌面工具的竞争力，可能吸引更多用户从 VNC 和专有替代方案转移过来。 该功能目前以预览版形式提供给基于 x86_64 Debian/Ubuntu 的系统，并支持多显示器。用户应注意这是预览版，因此在不同 Wayland 合成器上的稳定性和兼容性可能有所不同。
+斯坦福大学和麻省理工学院发布了全球最大的系统提示词库，这是一个面向 AI 助手和智能体的系统提示词综合集合。该资源旨在推动大语言模型的提示工程和系统设计。 该库为研究人员和开发者提供了宝贵的开放资源，可能规范并加速提示工程实践。它有望促进 AI 系统设计的创新，并提高各行业基于 LLM 的应用的有效性。 该库包含多样化的系统提示词，涵盖自主智能体、聊天机器人、专业助手以及各种 AI 驱动工具的配置。它是开源且免费提供的，并在 GitHub 和 Hugging Face 等平台上定期更新和导出。
 
-hackernews · rustdesk · 8月14日 16:12 · [社区讨论](https://news.ycombinator.com/item?id=49300759)
+google_news · 新浪网 · 8月15日 09:48
 
-**背景**: Wayland 是一种显示服务器协议，已成为许多现代 Linux 发行版的默认协议，取代了较旧的 X11。与 X11 不同，Wayland 限制应用程序在未经用户明确许可的情况下捕获整个屏幕，这历来使得无人值守远程访问变得困难。RustDesk 是一款开源远程桌面工具，允许用户远程访问和控制计算机，类似于 TeamViewer 或 AnyDesk。
+**背景**: 系统提示词是给 AI 模型的指令，用于定义其行为、角色和上下文，在提示工程中起着关键作用。提示工程是设计和优化生成式 AI 模型输入以产生期望输出的实践，已成为 AI 行业的关键技能。该库旨在整合和分享有效的系统提示词，以支持更广泛的 AI 社区。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://rustdesk.com/blog/unattended-remote-access-wayland/">Unattended Remote Access on Wayland with RustDesk</a></li>
-<li><a href="https://github.com/rustdesk/rustdesk/discussions/10016">Wayland: Select the screen to be shared (Operate on the peer ...</a></li>
-<li><a href="https://stackademic.com/blog/remote-desktop-on-wayland-in-2025-what-changed-for-linux-support-engineers">Remote Desktop on Wayland in 2025: What Changed for Linux ...</a></li>
+<li><a href="https://prompts.danielrosehill.com/">System Prompt Library - Daniel Rosehill</a></li>
+<li><a href="https://github.com/danielrosehill/System-Prompt-Library">GitHub - danielrosehill/System-Prompt-Library: System prompts for AI agents and assistants (automatically populated); periodic point in time exports are releases · GitHub</a></li>
+<li><a href="https://huggingface.co/datasets/danielrosehill/System-Prompt-Library">danielrosehill/System-Prompt-Library · Datasets at Hugging Face</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区成员对这一更新表示热情，一位用户提到他们两天前刚遇到这个问题。其他人则提出了关于自托管时 RustDesk 加密的疑问、与 VNC 在特定用例中的比较，以及它与通过 SSH 和 Tailscale 使用 Remmina 等解决方案的对比。
-
-**标签**: `#RustDesk`, `#Wayland`, `#remote desktop`, `#open source`, `#Linux`
+**标签**: `#AI`, `#LLM`, `#prompt engineering`, `#research`
 
 ---
 
 <a id="item-5"></a>
-## [Firefox 成为唯一支持 uBlock Origin 的主流浏览器](https://www.pcworld.com/article/3212428/firefox-is-now-the-last-major-browser-that-still-supports-ublock-origin.html) ⭐️ 8.0/10
+## [OpenAI Python SDK v3.1.0 新增 WebSocket ID、Ultrafast 层级，弃用 Sora](https://github.com/openai/openai-python/releases/tag/v3.1.0) ⭐️ 7.0/10
 
-随着 Chrome 转向 Manifest V3 并限制了该扩展的功能，Firefox 现在成为唯一仍完全支持 uBlock Origin 的主流浏览器。这一转变标志着广告拦截领域的一次重大变化。 这很重要，因为 uBlock Origin 被广泛认为是最强大的广告拦截器之一，其在 Chrome 上功能的削弱影响了数百万依赖它进行隐私保护和广告拦截的用户。这也凸显了浏览器厂商与用户对网页内容控制权之间日益加剧的紧张关系。 Manifest V3 将扩展的规则数量限制在 30,000 条以内，而有效的广告拦截器通常需要超过 300,000 条规则。uBlock Origin 依赖 webRequest API 和动态过滤，这些在 MV3 下受到严重限制，迫使 Chromium 浏览器使用功能削减的“uBlock Origin Lite”。
+OpenAI 于 2026 年 8 月 14 日发布了其官方 Python SDK 的 3.1.0 版本。此更新引入了 WebSocket 流 ID、工作负载身份访问令牌签发事件、Ultrafast 层级、结构化 MCP 支持，并弃用了 Sora 视频 API。 此版本反映了 OpenAI 在 API 能力上的持续演进，尤其是在实时通信和企业安全方面。使用该 SDK 的开发者将受益于改进的 WebSocket 处理和新的认证事件，而 Sora API 的弃用则标志着 OpenAI 视频生成策略的转变。 此更新包括独立的 WebSocket 事件和错误处理，以及结构化 MCP（模型上下文协议）支持。此外，SDK 移除了 Stainless 的归属和基础设施，表明其不再使用该代码生成工具。
 
-hackernews · DemiGuru · 8月14日 19:03 · [社区讨论](https://news.ycombinator.com/item?id=49303202)
+github · openai-sdks[bot] · 8月14日 23:48
 
-**背景**: Manifest V3 是基于 Chromium 的浏览器的最新扩展规范，定义了扩展能做什么和不能做什么。它用功能较弱的 declarativeNetRequest API 取代了强大的 webRequest API，限制了广告拦截器检查和阻止网络请求的方式。这一变化由谷歌引入，而谷歌本身也是大型广告业务的所有者，引发了利益冲突的担忧。
+**背景**: OpenAI Python SDK 是与 OpenAI API 交互的官方库，包括现在支持 WebSocket 模式的 Responses API，该模式适用于长时间运行、工具调用繁重的工作流。WebSocket 模式保持与 /v1/responses 的持久连接，流 ID 有助于管理这些连接。工作负载身份访问令牌用于 Microsoft Entra ID 等云环境中，以实现应用程序的安全认证。MCP（模型上下文协议）是连接 AI 助手与外部工具和数据源的标准。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://adblock-tester.com/ad-blockers/manifest-v3-ad-blocker-impact/">The Manifest V3 Changes — Did Google Just Break Your Ad Blocker? (And What to Do Next) - AdBlock Tester</a></li>
-<li><a href="https://www.techradar.com/pro/how-chromes-manifest-v3-will-change-the-game-for-ad-blockers">How Chrome’s Manifest V3 will change the game for ad blockers | TechRadar</a></li>
-<li><a href="https://nordvpn.com/blog/manifest-v3-ad-blockers/">Is Google's Manifest V3 the end of ad blockers? | NordVPN</a></li>
+<li><a href="https://github.com/openai/openai-python/blob/main/examples/responses/websocket.py">openai-python/examples/responses/websocket.py at main ...</a></li>
+<li><a href="https://developers.openai.com/api/docs/guides/websocket-mode">WebSocket Mode | OpenAI API</a></li>
+<li><a href="https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-continuous-access-evaluation-workload">Continuous access evaluation for workload identities in Microsoft Entra ID - Microsoft Entra ID | Microsoft Learn</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区评论对 Firefox 审查 uBlock Origin 等流行扩展表示赞赏，并批评谷歌受广告驱动的决策。一些用户表示 uBlock Origin Lite 对他们来说够用，而另一些用户则对 Chrome 上功能完整的广告拦截器的消失感到遗憾。
-
-**标签**: `#Firefox`, `#uBlock Origin`, `#ad-blocking`, `#Manifest V3`, `#privacy`
+**标签**: `#OpenAI`, `#Python SDK`, `#API`, `#WebSocket`, `#MCP`
 
 ---
 
 <a id="item-6"></a>
-## [AI 机器人实验室年测 300 万人体组织样本，有望终结动物测试](https://www.fastcompany.com/91589344/the-worlds-largest-biological-datacenter-could-help-make-animal-testing-obsolete) ⭐️ 8.0/10
+## [AI 更大的工作记忆改变了数学问题解决方式](https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians) ⭐️ 7.0/10
 
-Vivodyne 在旧金山南部启动了全球最大的人体生物数据中心，配备 12 个机器人“蜂巢”实验室，每年可对人体组织进行超过 300 万次受控实验。这一容量是美国所有临床试验总和的两倍。 这一进展可能显著减少药物开发中对动物测试的依赖，解决临床试验失败率高的问题（约 90%在动物测试后仍失败）。它可能加速药物发现，并提高药物在人体中疗效和安全性的可预测性。 Vivodyne 已筹集 4000 万美元的 A 轮融资，以扩大其机器人和 AI 方法。该系统利用 AI 设计的实验，在实验室培养的全功能人体组织上进行，旨在使人类生物学在 AI 规模上可计算。
+一篇论文认为，与人类相比，AI 拥有更大的工作记忆，这改变了数学问题解决的本质，尽管它可能不会超越数学家的思考。这篇文章在 Hacker News 上引发了广泛讨论，获得了 362 个点赞和 323 条评论。 这一观点挑战了关于 AI 智能的传统看法，表明 AI 的优势在于记忆容量而非原始推理能力。这对我们如何评估 AI 能力及其在数学研究和问题解决中的作用具有启示意义。 文章强调，AI 可以处理和保留大量信息，而人类的工作记忆有限。评论者指出，AI 具有持久性，并能处理人类数学家通常避免发表的负面结果，这可能加速发现过程。
 
-telegram · zaihuapd · 8月14日 01:48
+hackernews · rzk · 8月15日 18:13 · [社区讨论](https://news.ycombinator.com/item?id=49312845)
 
-**背景**: 动物测试长期以来一直是新药进入人体试验前的标准评估方法，但成本高昂且常常无法预测人体反应。组织工程和微流控芯片的进步催生了可能更好模拟人体生理的人体组织模型。现在，AI 和机器人技术被应用于自动化和规模化这些模型，可能提供一种更道德、更高效的动物测试替代方案。
+**背景**: 工作记忆是认知系统中暂时保存和处理信息的机制。像 GPT-4 这样的 LLM 具有可容纳数千个 token 的上下文窗口，实际上充当了更大的工作记忆。然而，研究表明 LLM 在某些任务中缺乏类似人类的工作记忆，其数学推理往往依赖于模式识别而非真正的理解。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://svdaily.com/2025/06/02/vivodyne-raises-40-million-to-open-lab-in-south-san-francisco/">Vivodyne Raises $40 Million to Open Lab in South San ...</a></li>
-<li><a href="https://finance.yahoo.com/healthcare/articles/vivodyne-launches-world-largest-human-130000478.html?fr=sycsrp_catchall">Vivodyne Launches the World’s Largest Human Biological ...</a></li>
-<li><a href="https://www.linkedin.com/pulse/vivodyne-lands-40m-replace-animal-testing-drug-phil-newman-gihge/">Vivodyne lands $40m to replace animal testing in drug development</a></li>
+<li><a href="https://research.ibm.com/blog/memory-augmented-LLMs">How memory augmentation can improve large language models - IBM Research</a></li>
+<li><a href="https://arxiv.org/html/2505.10571v1">LLMs Do Not Have Human-Like Working Memory</a></li>
+<li><a href="https://www.unite.ai/from-math-exams-to-machine-reasoning-ais-latest-struggles/">From Math Exams to Machine Reasoning : AI ’s Latest Struggles</a></li>
 
 </ul>
 </details>
 
-**标签**: `#AI`, `#biotech`, `#drug discovery`, `#lab automation`, `#animal testing`
+**社区讨论**: 评论者普遍同意文章的前提，分享了关于智力与记忆相关的个人轶事。一些人强调 AI 能够不知疲倦地坚持并发布负面结果，这可能是一个显著优势。其他人引用了关于增强长期记忆的相关文章，表明讨论深入且富有思考。
+
+**标签**: `#AI`, `#working memory`, `#mathematics`, `#cognitive science`, `#LLM`
 
 ---
 
 <a id="item-7"></a>
-## [别分类，去幻觉：一种新的标签生成技术](https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/) ⭐️ 7.0/10
+## [Unicode 幽灵字符：未知起源的谜团](https://www.dampfkraft.com/ghost-characters.html) ⭐️ 7.0/10
 
-Doug Turnbull 提出了一种技术，让 LLM 在不知道现有词汇的情况下生成新标签，然后通过向量嵌入将这些想象中的标签匹配到最接近的真实标签。Simon Willison 在他的博客上强调了这种方法，指出其对于给未标记内容打标签的实用性。 该技术解决了向 LLM 输入数千个标签的可扩展性问题，为大型内容库实现高效准确的标签生成。它利用了 LLM 的创造力和嵌入相似性，为信息检索和内容管理领域的开发者提供了一种实用方法。 示例提示包含标签形状示例以指导模型，例如“家具 / 客厅家具 / 咖啡桌和边桌 / 咖啡桌”。匹配步骤使用向量嵌入来找到最接近的现有标签，从而避免将整个标签列表输入 LLM。
+文章《Unicode 的幽灵》探讨了“幽灵字符”——即没有已知来源或含义的 Unicode 码点，例如日文字符“彁”。文章深入探讨了围绕这些字符的谜团以及追溯其起源的努力。 这一话题凸显了 Unicode 标准中的复杂性和不完善之处，而 Unicode 是全球数字通信的基础。了解幽灵字符有助于讨论编码标准、数字保存以及语言学与技术交叉领域的问题。 幽灵字符通常源于历史编码错误，如扫描错误或笔误，并被编入 Unicode。文章提到了“彁”和“閠”等具体例子，并指出一些起源已通过日本报纸档案被追溯。
 
-rss · Simon Willison · 8月14日 21:54
+hackernews · sensanaty · 8月15日 14:34 · [社区讨论](https://news.ycombinator.com/item?id=49310926)
 
-**背景**: LLM 幻觉通常指生成虚假或捏造的信息，但在这里被重新用作创造性生成步骤。向量嵌入将文本含义表示为数值向量，从而可以进行语义相似性比较。该技术结合了这些概念，将新标签映射到现有分类体系。
+**背景**: Unicode 是一种通用字符编码标准，为各种语言和文字中的每个字符分配唯一编号。幽灵字符是标准中存在但缺乏明确来源或含义的码点，通常源于历史编码错误或误认。它们给语言学家和数字档案工作者带来了挑战，他们致力于理解和保存文本遗产。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://arxiv.org/abs/2306.06085">Trapping LLM Hallucinations Using Tagged Context Prompts Trapping LLM “Hallucinations” Using Tagged Context Prompts Detecting and Correcting Hallucinations in LLMs via ... Detecting hallucinations in large language models using ... Detecting hallucinations with LLM-as-a-judge: Prompt ... 5 Practical Techniques to Detect and Mitigate LLM ... LLM Hallucinations: What They Are & How to Detect Them</a></li>
-<li><a href="https://hackernoon.com/automating-content-tagging-in-laravel-using-openai-embeddings-and-cron-jobs">Automating Content Tagging in Laravel Using OpenAI Embeddings ...</a></li>
-<li><a href="https://www.ibm.com/think/topics/vector-embedding">What is Vector Embedding ? | IBM</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ghost_characters">Ghost characters - Wikipedia</a></li>
+<li><a href="https://hackaday.com/2022/04/24/can-you-identify-this-mystery-unicode-glyph/">Can You Identify This Mystery Unicode Glyph? - Hackaday</a></li>
 
 </ul>
 </details>
 
-**标签**: `#LLM`, `#embeddings`, `#tagging`, `#information retrieval`, `#AI`
+**社区讨论**: Hacker News 的讨论赞扬了作者 Paul McCann 在日语自然语言处理方面的贡献，并分享了额外见解。一些评论者提出了特定幽灵字符的可能起源，例如“彁”可能是报纸扫描质量差的结果，而其他人则指出文章年代久远，并引用了徐冰的《天书》等相关作品。
+
+**标签**: `#Unicode`, `#Linguistics`, `#Japanese`, `#Encoding`, `#Digital Humanities`
+
+---
+
+<a id="item-8"></a>
+## [谷歌内部 AI 之争终于显现后果](https://news.google.com/rss/articles/CBMiowFBVV95cUxOZ1dyMjhZandTbVRndl9HSWdwa1VuTEVEa1FfdzhSbXBoYWFXSHNXaENZQmtMUnBLNUFxSHBoNUFhQjktbjB1QWpJY1duc25RenBfTkNXdmUzU0lLb244bnJjYjhmVWI3N09qeUpuT2V0c0Q3djc4aWlEZW1UbGJDSTY1TjRidndPSVd4cTU3UDZYNVdPYkRkbndZcjZHWFdueUVz?oc=5) ⭐️ 7.0/10
+
+最近一篇文章报道，谷歌在 AI 战略上长达十年的内部冲突现在正对其在科技行业的竞争地位产生负面影响。 这很重要，因为谷歌是 AI 领域的主要参与者，内部不和可能阻碍其创新能力，并削弱与 OpenAI 和微软等竞争对手的竞争力。结果可能影响 AI 发展的未来和市场格局。 这篇文章来自金融新闻聚合平台 Moomoo，侧重于战略和组织层面的挑战，而非技术细节。文章指出这些内部斗争已持续十年，如今正达到关键节点。
+
+google_news · Moomoo · 8月15日 12:00
+
+**背景**: 谷歌长期以来一直是 AI 研究的领导者，但在如何将 AI 商业化以及伦理问题上的内部分歧造成了摩擦。这使得竞争对手在生成式 AI 等领域得以抢占先机。
+
+**标签**: `#Google`, `#AI`, `#Tech Industry`, `#Competition`
 
 ---
