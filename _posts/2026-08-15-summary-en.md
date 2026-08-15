@@ -9,122 +9,98 @@ lang: en
 
 ---
 
-1. [Auto-research with Codex achieves 232x faster kernel](#item-1) ⭐️ 8.0/10
+1. [AI-Driven Kernel Optimization Achieves 232x Speedup](#item-1) ⭐️ 8.0/10
 2. [BDH-CQ: Recurrent Latent Reasoning Breaks ARC-AGI-1 Cost-Accuracy Frontier](#item-2) ⭐️ 8.0/10
-3. [Alibaba's Open-Weight AI Models Surpass 3B Downloads, Overtaking Meta and Google](#item-3) ⭐️ 8.0/10
-4. [Stanford and MIT Release World's Largest System Prompt Library](#item-4) ⭐️ 8.0/10
-5. [OpenAI Python SDK v3.1.0 Adds WebSocket IDs, Ultrafast Tier, Deprecates Sora](#item-5) ⭐️ 7.0/10
-6. [AI's Larger Working Memory Changes Math Problem-Solving](#item-6) ⭐️ 7.0/10
-7. [Unicode Ghost Characters: Mysteries of Unknown Origins](#item-7) ⭐️ 7.0/10
-8. [Google's Internal AI Battles Finally Catch Up](#item-8) ⭐️ 7.0/10
+3. [Largest Battery-Electric Aircraft Completes First Flight, Costs $5 in Electricity](#item-3) ⭐️ 8.0/10
+4. [OpenAI Python SDK v3.1.0 Adds WebSocket IDs, Ultrafast Tier, MCP](#item-4) ⭐️ 7.0/10
+5. [AI's Larger Working Memory Gives It an Edge over Human Mathematicians](#item-5) ⭐️ 7.0/10
+6. [Unicode's Ghost Characters: A Mystery Explored](#item-6) ⭐️ 7.0/10
+7. [Stanford, MIT Release World's Largest System Prompt Library](#item-7) ⭐️ 7.0/10
+8. [Google's Decade of Internal AI Battles Finally Takes Its Toll](#item-8) ⭐️ 7.0/10
 
 ---
 
 <a id="item-1"></a>
-## [Auto-research with Codex achieves 232x faster kernel](https://sankalp.bearblog.dev/autoresearch/) ⭐️ 8.0/10
+## [AI-Driven Kernel Optimization Achieves 232x Speedup](https://sankalp.bearblog.dev/autoresearch/) ⭐️ 8.0/10
 
-An engineer used OpenAI's Codex to automatically research and optimize a kernel, achieving a 232x speedup. The process involved an automated loop of benchmarking, profiling, and code improvement. This demonstrates the potential of AI-assisted development in performance engineering, potentially accelerating optimization tasks that traditionally require deep expertise. However, community discussion highlights that such AI-generated optimizations may overfit to specific inputs and fail on out-of-distribution data, underscoring the need for expert oversight. The optimization achieved a 232x speedup, but community comments note that in a related competition, 8 out of 10 top solutions that were AI-optimized broke on out-of-distribution inputs. The only robust solutions were crafted by GPU programming experts who kept changes within reasonable bounds.
+A developer used OpenAI's Codex to automatically research and optimize a GPU kernel, achieving a 232x speedup. The process involved an iterative loop of benchmarking, profiling, and code improvement guided by the AI. This demonstrates the potential of AI agents to significantly accelerate performance engineering, a task traditionally requiring deep expertise. It also sparks discussion about the reliability and generalization of AI-optimized code, which is crucial for production adoption. The optimization targeted a GPU kernel, likely in CUDA, and achieved a 232x speedup. However, community comments highlight that such AI-optimized solutions often fail on out-of-distribution inputs, and expert oversight remains important.
 
 hackernews · tosh · Aug 15, 11:00 · [Discussion](https://news.ycombinator.com/item?id=49309549)
 
-**Background**: Codex is an AI coding agent from OpenAI that can generate and modify code based on natural language instructions. Kernel optimization involves improving the performance of low-level routines that are critical for computational tasks, often requiring deep knowledge of hardware and compilers. Out-of-distribution (OOD) inputs refer to data that differs significantly from the training distribution, which can cause AI-generated solutions to fail.
+**Background**: Kernel optimization involves tuning low-level code for GPUs to maximize performance, often requiring deep knowledge of hardware and parallel computing. AI agents like Codex can automate parts of this process by generating and testing code variants, but they may overfit to specific benchmarks and fail on unseen inputs.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/OpenAI_Codex_(language_model)">OpenAI Codex (language model) - Wikipedia</a></li>
-<li><a href="https://www.envisioning.com/vocab/out-of-distribution">Out - of - Distribution (OOD) Data | Envisioning Vocab</a></li>
-<li><a href="https://github.com/openai/codex">GitHub - openai/codex: Lightweight coding agent that runs in your terminal · GitHub</a></li>
+<li><a href="https://www.linkedin.com/posts/algorithmic-research-group_study-failure-ai-driven-gpu-kernel-optimization-activity-7439362351524544513-ar-X">Study Failure: AI -driven GPU Kernel Optimization | Algorithmic...</a></li>
+<li><a href="https://milvus.io/ai-quick-reference/how-does-deepseeks-r1-model-handle-outofdistribution-inputs">How does DeepSeek's R1 model handle out - of - distribution inputs ?</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community comments express a mix of fascination and caution. Some appreciate the fresh, human-written narrative, while others highlight the risk of overfitting to specific inputs, citing competition results where AI-optimized solutions failed on OOD shapes. There is also curiosity about why training data is rich in GPU kernels, and some share related experiences with AI-assisted optimization.
+**Discussion**: Community comments highlight that in a recent competition, 8 out of 10 top AI-optimized solutions broke on out-of-distribution inputs, while expert-crafted solutions remained robust. Some users also note that training data for LLMs is rich in GPU kernels, and there is interest in applying similar techniques to other domains like query engines.
 
-**Tags**: `#AI-assisted development`, `#kernel optimization`, `#GPU programming`, `#Codex`, `#performance engineering`
+**Tags**: `#AI-assisted development`, `#kernel optimization`, `#GPU programming`, `#performance engineering`, `#LLM agents`
 
 ---
 
 <a id="item-2"></a>
 ## [BDH-CQ: Recurrent Latent Reasoning Breaks ARC-AGI-1 Cost-Accuracy Frontier](https://www.reddit.com/r/MachineLearning/comments/1vov5r5/bdhcq_incontext_learning_with_recurrent_latent/) ⭐️ 8.0/10
 
-BDH-CQ, a new reasoning system, integrates memory, adaptation, and inference in a recurrent latent workspace, achieving 29.5% pass@2 on ARC-AGI-1 with a 150M-parameter model at a computed cost of $0.00070 per task. This breaks the previously reported cost-accuracy Pareto frontier. This work demonstrates that efficient, non-verbal reasoning can rival larger models on a challenging benchmark, potentially enabling cost-effective AI reasoning for real-world applications. It also challenges the dominance of token-by-token reasoning in large language models. BDH-CQ does not decode intermediate reasoning into language; instead, it iteratively computes in a high-dimensional latent space. Neither task identifiers nor evaluation-task demonstration pairs are used in training, and no parameters are updated at inference time.
+BDH-CQ, a 150M-parameter reasoning model, achieves 29.5% pass@2 on ARC-AGI-1 at a computed cost of $0.00070 per task, surpassing the previously reported cost-accuracy Pareto frontier without decoding intermediate reasoning steps. This breakthrough demonstrates that recurrent latent reasoning can achieve superior cost-accuracy trade-offs compared to traditional token-by-token reasoning, potentially enabling more efficient and scalable AI systems for complex reasoning tasks. It also highlights the growing importance of latent reasoning in the pursuit of general intelligence. The model integrates in-context learning with recurrent latent reasoning, where demonstrations update recurrent memory and queries are solved via iterative computation in a high-dimensional latent space. Neither task identifiers nor evaluation-task demonstration pairs are used in training, and no parameters are updated at inference time.
 
 reddit · r/MachineLearning · /u/moschles · Aug 15, 06:18
 
-**Background**: ARC-AGI-1 is a benchmark designed to test systematic generalization and compositional reasoning, remaining unbeaten for years despite scaling of LLMs. BDH-CQ extends prior work on in-context learning and recurrent latent reasoning, combining a structured latent workspace with recurrent computation to learn visual transformations from demonstrations.
+**Background**: ARC-AGI-1 is a benchmark designed to measure progress toward general intelligence by testing a system's ability to adapt to novel tasks. Traditional large language models often rely on explicit token-by-token reasoning, which can be computationally expensive. Recurrent latent reasoning, as explored in models like Coconut and LaRS, processes hidden states iteratively without verbalizing intermediate steps, offering a potential efficiency advantage.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://arxiv.org/html/2608.09888">BDH - CQ : In-Context Learning with Recurrent Latent Reasoning</a></li>
-<li><a href="https://www.remio.ai/post/bdh-cq-challenges-token-by-token-ai-reasoning-with-recurrent-latent-memory">BDH - CQ Challenges Token-by-Token AI Reasoning With Recurrent ...</a></li>
-<li><a href="https://pathway.com/research/introducing-bdh-cq">Reasoning at a Fraction of the Compute | Pathway</a></li>
-<li><a href="https://arcprize.org/arc-agi/1">ARC-AGI-1</a></li>
+<li><a href="https://huggingface.co/papers/2608.09888">Paper page - BDH-CQ: In-Context Learning with Recurrent Latent Reasoning</a></li>
+<li><a href="https://arxiv.org/abs/2608.09888">[2608.09888] BDH-CQ: In-Context Learning with Recurrent Latent Reasoning</a></li>
+<li><a href="https://arcprize.org/arc-agi/1">ARC - AGI - 1</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#in-context learning`, `#recurrent neural networks`, `#ARC-AGI`, `#latent reasoning`, `#efficient AI`
+**Tags**: `#in-context learning`, `#recurrent neural networks`, `#ARC-AGI`, `#latent reasoning`, `#cost-accuracy Pareto`
 
 ---
 
 <a id="item-3"></a>
-## [Alibaba's Open-Weight AI Models Surpass 3B Downloads, Overtaking Meta and Google](https://www.bloomberg.com/news/articles/2026-08-15/alibaba-ai-models-hit-3-billion-downloads-passing-meta-google) ⭐️ 8.0/10
+## [Largest Battery-Electric Aircraft Completes First Flight, Costs $5 in Electricity](https://arstechnica.com/gadgets/2026/08/first-test-flight-of-largest-all-electric-aircraft-used-just-5-of-electricity/) ⭐️ 8.0/10
 
-Alibaba's open-weight AI models have surpassed 3 billion downloads globally in the past six months, according to Hugging Face data. This milestone places Alibaba ahead of Meta and Google, with Google at 418 million downloads and Meta at 227 million in 2026. This milestone signals a major shift in the open-source AI landscape, with Alibaba's Qwen models gaining rapid global adoption. It underscores the growing influence of Chinese AI companies and the increasing preference for open-weight models in the developer community. Alibaba has open-sourced over 460 Qwen models, which have spawned more than 300,000 derivative versions. The Qwen3 family, released in April 2025, includes dense models ranging from 0.6B to 32B parameters and MoE models like 30B-A3B, all under the Apache 2.0 license.
+Heart Aerospace's X1, the largest battery-electric aircraft ever flown, completed its first flight on August 12, 2026, at Plattsburgh International Airport in New York. The nearly half-hour flight consumed only $5 worth of electricity. This milestone demonstrates the feasibility of large-scale electric aviation and highlights dramatically lower operating costs compared to conventional aircraft. The X1's testing will inform the development of the ES-30 hybrid-electric regional airliner, potentially transforming short-haul air travel with more sustainable and economical options. The X1 features a 106-foot wingspan, a 76-foot fuselage length, and a takeoff weight exceeding 25,000 pounds. Heart Aerospace does not plan to commercialize the X1 directly; instead, it will use the X1 and a follow-on X2 demonstrator to develop the 30-seat ES-30, which will have a 125-mile all-electric range and a 500-mile hybrid range.
 
-telegram · zaihuapd · Aug 15, 15:18
+telegram · zaihuapd · Aug 15, 04:16
 
-**Background**: Open-weight AI models are models whose trained parameters (weights) are publicly available for download and use, allowing developers to customize and deploy them. Alibaba's Qwen family, developed by Alibaba Cloud, includes large language models (LLMs) and multimodal models, and has become one of the most popular open-weight model families on platforms like Hugging Face.
+**Background**: Electric aviation aims to reduce carbon emissions from air travel, which currently relies heavily on fossil fuels. Battery-electric aircraft face challenges such as energy density and weight, but hybrid-electric designs like the ES-30 combine batteries with conventional engines to extend range. Heart Aerospace, a Swedish startup, is developing the ES-30 for regional routes, targeting FAA Part 25 certification.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Qwen">Qwen - Wikipedia</a></li>
-<li><a href="https://huggingface.co/Qwen">Qwen (Qwen)</a></li>
-<li><a href="https://allthings.how/what-is-an-open-weight-ai-model-and-how-to-use-one/">What is an Open Weight AI Model and How to Use One</a></li>
+<li><a href="https://www.heartaerospace.com/x1">X1 First Flight — Heart Aerospace</a></li>
+<li><a href="https://www.ainonline.com/aviation-news/futureflight/2026-08-13/heart-aerospace-finally-makes-first-flight">Heart Aerospace Flies X1 Electric Demonstrator Aircraft</a></li>
+<li><a href="https://arstechnica.com/gadgets/2026/08/first-test-flight-of-largest-all-electric-aircraft-used-just-5-of-electricity/">First test flight of largest all-electric aircraft used just $5 of electricity - Ars Technica</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI`, `#Open Source`, `#Alibaba`, `#Qwen`, `#Model Downloads`
+**Tags**: `#electric aviation`, `#battery technology`, `#sustainable transport`, `#Heart Aerospace`, `#hybrid-electric aircraft`
 
 ---
 
 <a id="item-4"></a>
-## [Stanford and MIT Release World's Largest System Prompt Library](https://news.google.com/rss/articles/CBMihAJBVV95cUxOYmcyVENkZXh5MlFpM3VZUmdPNkhlZVh1TjdWSXR2c1hpRDQ2TTcyeWdtNW9SMHhQTFUxbXA0YTBYcl94QUEydG5XSUR2dFBOZkNYUThVU1dOTVliUWpvOTNWQ1Y3YTBWRV9pUXVoY0Nuck9feF9MSHliblh6aXBGSVlodm5SY0lYTHdUZHNYNGhXWFVDcVE3SEwyOHBnRk9waUZoUjVPVG5FZ0FGT0Y3NDlsaWk3Ykc3Yy10Q2Z5OFlhY3F1bWVKMllCSmZPR0Iyb3V0Y2NISkRUQUw4Y2M3YW5od2x4UjB4Nm1RRFBHUnBBSWhVQ0RPMG90eG1XTTJQdUdXeg?oc=5) ⭐️ 8.0/10
+## [OpenAI Python SDK v3.1.0 Adds WebSocket IDs, Ultrafast Tier, MCP](https://github.com/openai/openai-python/releases/tag/v3.1.0) ⭐️ 7.0/10
 
-Stanford and MIT have released the world's largest system prompt library, a comprehensive collection of system prompts for AI assistants and agents. This resource is designed to advance prompt engineering and system design for large language models. This library provides a valuable, open resource for researchers and developers, potentially standardizing and accelerating prompt engineering practices. It could foster innovation in AI system design and improve the effectiveness of LLM-based applications across industries. The library includes a diverse range of system prompts, covering configurations for autonomous agents, chatbots, specialized assistants, and various AI-powered tools. It is open source and freely available, with periodic updates and exports on platforms like GitHub and Hugging Face.
-
-google_news · 新浪网 · Aug 15, 09:48
-
-**Background**: System prompts are instructions given to AI models to define their behavior, role, and context, playing a crucial role in prompt engineering. Prompt engineering is the practice of designing and refining inputs to generative AI models to produce desired outputs, and it has become a key skill in the AI industry. This library aims to consolidate and share effective system prompts to support the broader AI community.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://prompts.danielrosehill.com/">System Prompt Library - Daniel Rosehill</a></li>
-<li><a href="https://github.com/danielrosehill/System-Prompt-Library">GitHub - danielrosehill/System-Prompt-Library: System prompts for AI agents and assistants (automatically populated); periodic point in time exports are releases · GitHub</a></li>
-<li><a href="https://huggingface.co/datasets/danielrosehill/System-Prompt-Library">danielrosehill/System-Prompt-Library · Datasets at Hugging Face</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#AI`, `#LLM`, `#prompt engineering`, `#research`
-
----
-
-<a id="item-5"></a>
-## [OpenAI Python SDK v3.1.0 Adds WebSocket IDs, Ultrafast Tier, Deprecates Sora](https://github.com/openai/openai-python/releases/tag/v3.1.0) ⭐️ 7.0/10
-
-OpenAI released version 3.1.0 of its official Python SDK on August 14, 2026. This update introduces WebSocket stream IDs, workload identity access token issued events, an Ultrafast tier, structured MCP support, and deprecates the Sora video APIs. This release reflects OpenAI's ongoing evolution of its API capabilities, particularly around real-time communication and enterprise security. Developers using the SDK will benefit from improved WebSocket handling and new authentication events, while the deprecation of Sora APIs signals a shift in OpenAI's video generation strategy. The update includes separate WebSocket events and error handling, as well as structured MCP (Model Context Protocol) support. Additionally, the SDK removed Stainless attribution and infrastructure, indicating a move away from that code generation tool.
+OpenAI released version 3.1.0 of its official Python SDK on August 14, 2026, introducing WebSocket stream IDs, workload identity access token issued events, an Ultrafast tier, structured MCP support, and separate WebSocket error events. The release also deprecates the Sora video APIs. This update is significant for developers building real-time applications with OpenAI's Responses API, as it enhances WebSocket functionality and adds new authentication and performance options. The deprecation of Sora video APIs signals a shift in OpenAI's product focus, which may affect existing integrations. The release includes a new 'Ultrafast' tier, likely offering lower latency for API requests, and structured MCP (Model Context Protocol) support, which standardizes tool integration. WebSocket stream IDs allow better tracking of individual streams, and workload identity access token events provide real-time notifications for token issuance. The removal of Stainless attribution indicates a move away from the code generation tool.
 
 github · openai-sdks[bot] · Aug 14, 23:48
 
-**Background**: The OpenAI Python SDK is the official library for interacting with OpenAI's APIs, including the Responses API which now supports WebSocket mode for long-running, tool-call-heavy workflows. WebSocket mode maintains a persistent connection to /v1/responses, and stream IDs help manage these connections. Workload identity access tokens are used in cloud environments like Microsoft Entra ID for secure authentication of applications. MCP (Model Context Protocol) is a standard for connecting AI assistants to external tools and data sources.
+**Background**: The OpenAI Python SDK is the official library for accessing OpenAI's REST API, providing type definitions and sync/async clients. WebSocket support is crucial for real-time applications like voice agents, and MCP is a protocol for connecting AI models to external tools. Workload identity is a concept from cloud security, allowing applications to authenticate without managing secrets.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://github.com/openai/openai-python/blob/main/examples/responses/websocket.py">openai-python/examples/responses/websocket.py at main ...</a></li>
-<li><a href="https://developers.openai.com/api/docs/guides/websocket-mode">WebSocket Mode | OpenAI API</a></li>
-<li><a href="https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-continuous-access-evaluation-workload">Continuous access evaluation for workload identities in Microsoft Entra ID - Microsoft Entra ID | Microsoft Learn</a></li>
+<li><a href="https://github.com/openai/openai-python">GitHub - openai / openai - python : The official Python library for the...</a></li>
+<li><a href="https://groundy.com/articles/openai-responses-api-websocket-is-production-ready-pydantic-ai-langchain-and/">OpenAI Responses API WebSocket Is Production-Ready... | Groundy</a></li>
+<li><a href="https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-continuous-access-evaluation-workload">Continuous access evaluation for workload identities</a></li>
 
 </ul>
 </details>
@@ -133,62 +109,93 @@ github · openai-sdks[bot] · Aug 14, 23:48
 
 ---
 
-<a id="item-6"></a>
-## [AI's Larger Working Memory Changes Math Problem-Solving](https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians) ⭐️ 7.0/10
+<a id="item-5"></a>
+## [AI's Larger Working Memory Gives It an Edge over Human Mathematicians](https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians) ⭐️ 7.0/10
 
-An essay argues that AI's vastly larger working memory compared to humans alters the nature of mathematical problem-solving, though it may not outthink mathematicians. The piece has sparked significant discussion on Hacker News with 362 points and 323 comments. This perspective challenges conventional views on AI intelligence, suggesting that AI's advantage lies in memory capacity rather than raw reasoning. It has implications for how we evaluate AI capabilities and its role in mathematical research and problem-solving. The essay highlights that AI can process and retain vast amounts of information, unlike humans with limited working memory. Commenters note AI's persistence and ability to handle negative results, which human mathematicians often avoid publishing, potentially accelerating discovery.
+An essay argues that AI's vastly larger working memory, compared to the human brain, gives it an advantage in mathematical research, even though it doesn't outthink humans. The piece sparked a high-engagement discussion on Hacker News with 364 points and 326 comments. This discussion highlights a key cognitive difference between AI and humans, with implications for the future of mathematical research and AI-assisted discovery. It challenges the notion that intelligence is solely about reasoning ability, suggesting that memory capacity plays a crucial role. The essay references the concept of working memory in AI as the context window, which can be expanded to millions of tokens, far exceeding human working memory limits. Community comments also point out that AI can tirelessly pursue research directions and publish negative results, which human mathematicians often cannot due to incentives and bandwidth.
 
 hackernews · rzk · Aug 15, 18:13 · [Discussion](https://news.ycombinator.com/item?id=49312845)
 
-**Background**: Working memory is the cognitive system that holds and manipulates information temporarily. LLMs like GPT-4 have context windows that can span thousands of tokens, effectively serving as a larger working memory. However, research shows LLMs lack human-like working memory in certain tasks, and their mathematical reasoning often relies on pattern recognition rather than true understanding.
+**Background**: Working memory in humans is limited, typically holding a few items at a time, while AI models like LLMs have context windows that can process thousands to millions of tokens simultaneously. This allows AI to consider vast amounts of information at once, potentially aiding in complex problem-solving. However, AI's mathematical reasoning still has limitations, as noted in recent research.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://research.ibm.com/blog/memory-augmented-LLMs">How memory augmentation can improve large language models - IBM Research</a></li>
-<li><a href="https://arxiv.org/html/2505.10571v1">LLMs Do Not Have Human-Like Working Memory</a></li>
-<li><a href="https://www.unite.ai/from-math-exams-to-machine-reasoning-ais-latest-struggles/">From Math Exams to Machine Reasoning : AI ’s Latest Struggles</a></li>
+<li><a href="https://www.illumio.com/blog/the-limits-of-working-memory-human-brains-vs-ai-models">The Limits of Working Memory: Human Brains vs. AI Models - Illumio Cybersecurity Blog | Illumio</a></li>
+<li><a href="https://www.llmcalcs.com/context-window-visualizer">LLM Context Window Sizes — Visual Comparison Tool</a></li>
+<li><a href="https://arxiv.org/pdf/2410.05229">GSM-Symbolic: Understanding the Limitations of Mathematical ...</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters generally agree with the essay's premise, sharing personal anecdotes about intelligence being linked to memory. Some highlight AI's ability to persist without fatigue and to publish negative results, which could be a significant advantage. Others reference related essays on augmenting long-term memory, indicating a thoughtful and engaged discussion.
+**Discussion**: The community discussion reflects a mix of agreement and additional insights. Some commenters agree that out-remembering others is a key aspect of perceived intelligence, while others highlight AI's ability to publish negative results and its tireless nature as advantages. There are also references to related essays on augmenting long-term memory, indicating a broader interest in the topic.
 
 **Tags**: `#AI`, `#working memory`, `#mathematics`, `#cognitive science`, `#LLM`
 
 ---
 
-<a id="item-7"></a>
-## [Unicode Ghost Characters: Mysteries of Unknown Origins](https://www.dampfkraft.com/ghost-characters.html) ⭐️ 7.0/10
+<a id="item-6"></a>
+## [Unicode's Ghost Characters: A Mystery Explored](https://www.dampfkraft.com/ghost-characters.html) ⭐️ 7.0/10
 
-The article 'A spectre is haunting Unicode' explores 'ghost characters'—Unicode codepoints with no known origin or meaning, such as the Japanese character '彁'. It delves into the mystery surrounding these characters and the efforts to trace their origins. This topic highlights the complexities and imperfections in the Unicode standard, which underpins global digital communication. Understanding ghost characters can inform discussions on encoding standards, digital preservation, and the intersection of linguistics and technology. Ghost characters often arise from historical encoding errors, such as mis-scans or miswritings, and have been codified into Unicode. The article mentions specific examples like '彁' and '閠', and notes that some origins have been traced through Japanese newspaper archives.
+The article 'A spectre is haunting Unicode' by Paul McCann (polm) explores the phenomenon of 'ghost characters' in Unicode—characters with no known origin—and discusses how they entered the standard through JIS standards and CJK unification. This matters because ghost characters are already embedded in international standards like Unicode, and modifying or removing them could cause compatibility issues. Understanding their origins is crucial for linguists, typographers, and digital humanities scholars who rely on accurate character data. The article notes that ghost characters entered Unicode through JIS standards and CJK unification, and that Unicode has its own set of ghost characters. Community comments suggest that the character '彁' may have originated from a poor scan of a newspaper article, and mention related artistic works like Xu Bing's 'A Book from the Sky'.
 
 hackernews · sensanaty · Aug 15, 14:34 · [Discussion](https://news.ycombinator.com/item?id=49310926)
 
-**Background**: Unicode is a universal character encoding standard that assigns a unique number to every character across languages and scripts. Ghost characters are codepoints that exist in the standard but lack a clear origin or meaning, often due to historical encoding mistakes or misidentifications. They pose challenges for linguists and digital archivists who seek to understand and preserve textual heritage.
+**Background**: Ghost characters are characters in character encoding standards like Unicode that have no known origin or meaning, often resulting from errors in encoding processes or historical artifacts. They have been adopted into international standards, making them difficult to remove due to compatibility concerns. The article likely explains how these characters came to be and the challenges they pose.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Ghost_characters">Ghost characters - Wikipedia</a></li>
-<li><a href="https://hackaday.com/2022/04/24/can-you-identify-this-mystery-unicode-glyph/">Can You Identify This Mystery Unicode Glyph? - Hackaday</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Angzarr">Angzarr - Wikipedia</a></li>
+<li><a href="https://www.dampfkraft.com/ghost-characters.html">A Spectre is Haunting Unicode - Dampfkraft</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The Hacker News discussion praised the author, Paul McCann, for his contributions to Japanese NLP, and shared additional insights. Some commenters suggested possible origins for specific ghost characters, such as '彁' being a result of a poor newspaper scan, while others noted the article's age and referenced related works like Xu Bing's 'A Book from the Sky'.
+**Discussion**: Community comments praise the author Paul McCann for his work in Japanese NLP, and suggest possible origins for ghost characters, such as '彁' being a result of a poor newspaper scan. There is also a mention of Xu Bing's book of invented characters, and a request to add '(2008)' to the title, indicating the article may be from that year.
 
-**Tags**: `#Unicode`, `#Linguistics`, `#Japanese`, `#Encoding`, `#Digital Humanities`
+**Tags**: `#Unicode`, `#typography`, `#linguistics`, `#digital humanities`, `#mystery`
+
+---
+
+<a id="item-7"></a>
+## [Stanford, MIT Release World's Largest System Prompt Library](https://news.google.com/rss/articles/CBMihAJBVV95cUxOYmcyVENkZXh5MlFpM3VZUmdPNkhlZVh1TjdWSXR2c1hpRDQ2TTcyeWdtNW9SMHhQTFUxbXA0YTBYcl94QUEydG5XSUR2dFBOZkNYUThVU1dOTVliUWpvOTNWQ1Y3YTBWRV9pUXVoY0Nuck9feF9MSHliblh6aXBGSVlodm5SY0lYTHdUZHNYNGhXWFVDcVE3SEwyOHBnRk9waUZoUjVPVG5FZ0FGT0Y3NDlsaWk3Ykc3Yy10Q2Z5OFlhY3F1bWVKMllCSmZPR0Iyb3V0Y2NISkRUQUw4Y2M3YW5od2x4UjB4Nm1RRFBHUnBBSWhVQ0RPMG90eG1XTTJQdUdXeg?oc=5) ⭐️ 7.0/10
+
+Stanford, MIT, and other institutions have released the world's largest system prompt library, a comprehensive collection of prompts for AI models. This resource is designed to support prompt engineering and model evaluation research. This library provides an unprecedented resource for researchers and developers to study and improve prompt engineering, potentially accelerating advancements in AI model performance and safety. It could become a standard benchmark for evaluating and comparing different prompting strategies. The library includes prompts from various sources, covering multiple LLM providers and use cases, such as ChatGPT, Claude, and Gemini. It is open source and freely accessible, aiming to foster collaboration and innovation in the AI community.
+
+google_news · 新浪网 · Aug 15, 09:48
+
+**Background**: System prompts are instructions given to AI models to guide their behavior and output. Prompt engineering is the practice of designing these prompts to achieve desired results, and it has become crucial for optimizing AI performance. Libraries like this help standardize and share effective prompting techniques.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://github.com/0xeb/TheBigPromptLibrary">GitHub - 0xeb/TheBigPromptLibrary: A collection of prompts ...</a></li>
+<li><a href="https://prompts.danielrosehill.com/">System Prompt Library - Daniel Rosehill</a></li>
+<li><a href="https://github.com/ncwilson78/System-Prompt-Library">GitHub - ncwilson78/System-Prompt-Library: A library of ...</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#AI`, `#LLM`, `#prompt engineering`, `#research`, `#open source`
 
 ---
 
 <a id="item-8"></a>
-## [Google's Internal AI Battles Finally Catch Up](https://news.google.com/rss/articles/CBMiowFBVV95cUxOZ1dyMjhZandTbVRndl9HSWdwa1VuTEVEa1FfdzhSbXBoYWFXSHNXaENZQmtMUnBLNUFxSHBoNUFhQjktbjB1QWpJY1duc25RenBfTkNXdmUzU0lLb244bnJjYjhmVWI3N09qeUpuT2V0c0Q3djc4aWlEZW1UbGJDSTY1TjRidndPSVd4cTU3UDZYNVdPYkRkbndZcjZHWFdueUVz?oc=5) ⭐️ 7.0/10
+## [Google's Decade of Internal AI Battles Finally Takes Its Toll](https://news.google.com/rss/articles/CBMiowFBVV95cUxOZ1dyMjhZandTbVRndl9HSWdwa1VuTEVEa1FfdzhSbXBoYWFXSHNXaENZQmtMUnBLNUFxSHBoNUFhQjktbjB1QWpJY1duc25RenBfTkNXdmUzU0lLb244bnJjYjhmVWI3N09qeUpuT2V0c0Q3djc4aWlEZW1UbGJDSTY1TjRidndPSVd4cTU3UDZYNVdPYkRkbndZcjZHWFdueUVz?oc=5) ⭐️ 7.0/10
 
-A recent article reports that Google's decade-long internal conflicts over AI strategy are now negatively impacting its competitive position in the tech industry. This is significant because Google is a major player in AI, and internal discord could hinder its ability to innovate and compete with rivals like OpenAI and Microsoft. The outcome may shape the future of AI development and market dynamics. The article is from Moomoo, a financial news aggregator, and focuses on the strategic and organizational challenges rather than technical specifics. It suggests that these internal battles have been ongoing for a decade and are now coming to a head.
+An analysis published on MarketWatch and Morningstar examines how Google's decade-long internal conflicts over AI strategy, particularly involving DeepMind, are now undermining its competitive position in the AI race. This matters because Google is a major player in AI, and its internal dysfunction could affect the pace of innovation and its ability to compete with rivals like OpenAI and Microsoft. The outcome will influence the broader AI industry's direction and competitive dynamics. The article highlights that DeepMind, acquired in 2014, has been both a cornerstone and a chronic source of internal friction. It suggests that these battles have led to strategic missteps and delayed product launches, giving competitors an edge.
 
 google_news · Moomoo · Aug 15, 12:00
 
-**Background**: Google has long been a leader in AI research, but internal disagreements over how to commercialize AI and ethical concerns have caused friction. This has allowed competitors to gain ground in areas like generative AI.
+**Background**: Google has been a leader in AI research for years, with DeepMind and Google Brain (now part of Google DeepMind) making significant breakthroughs. However, internal disagreements over research priorities, commercialization, and ethics have reportedly hampered progress. This analysis comes amid intense competition in generative AI, where Google has faced criticism for being slower to market than rivals.
 
-**Tags**: `#Google`, `#AI`, `#Tech Industry`, `#Competition`
+<details><summary>References</summary>
+<ul>
+<li><a href="https://www.marketwatch.com/story/a-decade-of-internal-ai-battles-is-finally-catching-up-to-google-7b3358a1">A decade of internal AI battles is finally catching up to Google</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_AI">Google AI - Wikipedia</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#Google`, `#AI`, `#Tech Industry`, `#Strategy`, `#Competition`
 
 ---

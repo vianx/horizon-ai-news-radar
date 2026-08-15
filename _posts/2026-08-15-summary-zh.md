@@ -9,122 +9,98 @@ lang: zh
 
 ---
 
-1. [使用 Codex 自动研究实现内核 232 倍加速](#item-1) ⭐️ 8.0/10
+1. [AI 驱动的内核优化实现 232 倍加速](#item-1) ⭐️ 8.0/10
 2. [BDH-CQ：循环潜在推理突破 ARC-AGI-1 成本-精度前沿](#item-2) ⭐️ 8.0/10
-3. [阿里开放权重 AI 模型下载量超 30 亿，超越 Meta 和谷歌](#item-3) ⭐️ 8.0/10
-4. [斯坦福和 MIT 发布全球最大系统提示词库](#item-4) ⭐️ 8.0/10
-5. [OpenAI Python SDK v3.1.0 新增 WebSocket ID、Ultrafast 层级，弃用 Sora](#item-5) ⭐️ 7.0/10
-6. [AI 更大的工作记忆改变了数学问题解决方式](#item-6) ⭐️ 7.0/10
-7. [Unicode 幽灵字符：未知起源的谜团](#item-7) ⭐️ 7.0/10
-8. [谷歌内部 AI 之争终于显现后果](#item-8) ⭐️ 7.0/10
+3. [最大电池电动飞机完成首飞，电费仅需 5 美元](#item-3) ⭐️ 8.0/10
+4. [OpenAI Python SDK v3.1.0 新增 WebSocket ID、Ultrafast 层级和 MCP](#item-4) ⭐️ 7.0/10
+5. [AI 更大的工作记忆使其在数学家中占据优势](#item-5) ⭐️ 7.0/10
+6. [Unicode 的幽灵字符：一个未解之谜](#item-6) ⭐️ 7.0/10
+7. [斯坦福、MIT 发布全球最大系统提示词库](#item-7) ⭐️ 7.0/10
+8. [谷歌十年内部 AI 斗争终显代价](#item-8) ⭐️ 7.0/10
 
 ---
 
 <a id="item-1"></a>
-## [使用 Codex 自动研究实现内核 232 倍加速](https://sankalp.bearblog.dev/autoresearch/) ⭐️ 8.0/10
+## [AI 驱动的内核优化实现 232 倍加速](https://sankalp.bearblog.dev/autoresearch/) ⭐️ 8.0/10
 
-一位工程师使用 OpenAI 的 Codex 自动研究和优化内核，实现了 232 倍的加速。该过程涉及基准测试、性能分析和代码改进的自动化循环。 这展示了 AI 辅助开发在性能工程中的潜力，可能加速传统上需要深厚专业知识的优化任务。然而，社区讨论指出，此类 AI 生成的优化可能过度拟合特定输入，并在分布外数据上失败，凸显了专家监督的必要性。 优化实现了 232 倍的加速，但社区评论指出，在相关竞赛中，10 个顶级解决方案中有 8 个经过 AI 优化的方案在分布外输入上失效。唯一稳健的解决方案是由 GPU 编程专家制定的，他们将改动控制在合理范围内。
+一位开发者使用 OpenAI 的 Codex 自动研究和优化 GPU 内核，实现了 232 倍的加速。该过程涉及由 AI 指导的基准测试、性能分析和代码改进的迭代循环。 这展示了 AI 代理在显著加速性能工程方面的潜力，而性能工程传统上需要深厚的专业知识。它也引发了关于 AI 优化代码的可靠性和泛化能力的讨论，这对生产环境的应用至关重要。 优化针对的是 GPU 内核（可能是 CUDA），并实现了 232 倍的加速。然而，社区评论指出，这类 AI 优化的解决方案在分布外输入上常常失败，专家的监督仍然很重要。
 
 hackernews · tosh · 8月15日 11:00 · [社区讨论](https://news.ycombinator.com/item?id=49309549)
 
-**背景**: Codex 是 OpenAI 的 AI 编程代理，可以根据自然语言指令生成和修改代码。内核优化涉及改进对计算任务至关重要的底层例程的性能，通常需要深厚的硬件和编译器知识。分布外（OOD）输入是指与训练分布显著不同的数据，可能导致 AI 生成的解决方案失效。
+**背景**: 内核优化涉及调整 GPU 底层代码以最大化性能，通常需要深厚的硬件和并行计算知识。像 Codex 这样的 AI 代理可以通过生成和测试代码变体来自动化部分过程，但它们可能过度适应特定基准，在未见过的输入上失败。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/OpenAI_Codex_(language_model)">OpenAI Codex (language model) - Wikipedia</a></li>
-<li><a href="https://www.envisioning.com/vocab/out-of-distribution">Out - of - Distribution (OOD) Data | Envisioning Vocab</a></li>
-<li><a href="https://github.com/openai/codex">GitHub - openai/codex: Lightweight coding agent that runs in your terminal · GitHub</a></li>
+<li><a href="https://www.linkedin.com/posts/algorithmic-research-group_study-failure-ai-driven-gpu-kernel-optimization-activity-7439362351524544513-ar-X">Study Failure: AI -driven GPU Kernel Optimization | Algorithmic...</a></li>
+<li><a href="https://milvus.io/ai-quick-reference/how-does-deepseeks-r1-model-handle-outofdistribution-inputs">How does DeepSeek's R1 model handle out - of - distribution inputs ?</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区评论表达了既着迷又谨慎的态度。一些人欣赏这种新颖的、由人类撰写的叙述，而另一些人则强调过度拟合特定输入的风险，引用了竞赛结果中 AI 优化解决方案在 OOD 形状上失败的情况。还有人好奇为什么训练数据中 GPU 内核丰富，并分享了一些 AI 辅助优化的相关经验。
+**社区讨论**: 社区评论指出，在最近的一次竞赛中，10 个 AI 优化的顶级解决方案中有 8 个在分布外输入上失效，而专家设计的解决方案仍然稳健。一些用户还指出，LLM 的训练数据在 GPU 内核方面很丰富，并且对将类似技术应用于查询引擎等其他领域感兴趣。
 
-**标签**: `#AI-assisted development`, `#kernel optimization`, `#GPU programming`, `#Codex`, `#performance engineering`
+**标签**: `#AI-assisted development`, `#kernel optimization`, `#GPU programming`, `#performance engineering`, `#LLM agents`
 
 ---
 
 <a id="item-2"></a>
 ## [BDH-CQ：循环潜在推理突破 ARC-AGI-1 成本-精度前沿](https://www.reddit.com/r/MachineLearning/comments/1vov5r5/bdhcq_incontext_learning_with_recurrent_latent/) ⭐️ 8.0/10
 
-BDH-CQ 是一种新的推理系统，将记忆、适应和推理整合到循环潜在工作空间中，以 150M 参数模型在 ARC-AGI-1 上达到 29.5%的 pass@2，每任务计算成本为 0.00070 美元，突破了此前报告的成本-精度帕累托前沿。 这项工作表明，高效的、非语言推理可以在具有挑战性的基准上媲美更大模型，可能为实际应用带来经济高效的 AI 推理。同时，它也挑战了大型语言模型中逐 token 推理的主导地位。 BDH-CQ 不将中间推理解码为语言，而是在高维潜在空间中进行迭代计算。训练中不使用任务标识符或评估任务的演示对，推理时不更新任何参数。
+BDH-CQ，一个 150M 参数推理模型，在 ARC-AGI-1 上达到 29.5%的 pass@2，每个任务的计算成本为 0.00070 美元，在不解码中间推理步骤的情况下，超越了先前报告的成本-精度帕累托前沿。 这一突破表明，与传统的逐 token 推理相比，循环潜在推理可以实现更优的成本-精度权衡，可能为复杂推理任务带来更高效、可扩展的 AI 系统。同时，它也凸显了潜在推理在追求通用智能过程中的日益重要性。 该模型将上下文学习与循环潜在推理相结合，演示样本更新循环记忆，查询通过高维潜在空间中的迭代计算解决。训练中不使用任务标识符或评估任务的演示对，推理时不更新任何参数。
 
 reddit · r/MachineLearning · /u/moschles · 8月15日 06:18
 
-**背景**: ARC-AGI-1 是一个旨在测试系统泛化和组合推理的基准，尽管 LLM 规模扩大，多年来一直未被攻克。BDH-CQ 扩展了先前在上下文学习和循环潜在推理方面的工作，将结构化潜在工作空间与循环计算相结合，从演示中学习视觉变换。
+**背景**: ARC-AGI-1 是一个旨在衡量通用智能进展的基准测试，通过测试系统适应新任务的能力来评估。传统大型语言模型通常依赖显式的逐 token 推理，这可能导致计算成本高昂。循环潜在推理，如 Coconut 和 LaRS 等模型所探索的，通过迭代处理隐藏状态而不显式输出中间步骤，提供了潜在的效率优势。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://arxiv.org/html/2608.09888">BDH - CQ : In-Context Learning with Recurrent Latent Reasoning</a></li>
-<li><a href="https://www.remio.ai/post/bdh-cq-challenges-token-by-token-ai-reasoning-with-recurrent-latent-memory">BDH - CQ Challenges Token-by-Token AI Reasoning With Recurrent ...</a></li>
-<li><a href="https://pathway.com/research/introducing-bdh-cq">Reasoning at a Fraction of the Compute | Pathway</a></li>
-<li><a href="https://arcprize.org/arc-agi/1">ARC-AGI-1</a></li>
+<li><a href="https://huggingface.co/papers/2608.09888">Paper page - BDH-CQ: In-Context Learning with Recurrent Latent Reasoning</a></li>
+<li><a href="https://arxiv.org/abs/2608.09888">[2608.09888] BDH-CQ: In-Context Learning with Recurrent Latent Reasoning</a></li>
+<li><a href="https://arcprize.org/arc-agi/1">ARC - AGI - 1</a></li>
 
 </ul>
 </details>
 
-**标签**: `#in-context learning`, `#recurrent neural networks`, `#ARC-AGI`, `#latent reasoning`, `#efficient AI`
+**标签**: `#in-context learning`, `#recurrent neural networks`, `#ARC-AGI`, `#latent reasoning`, `#cost-accuracy Pareto`
 
 ---
 
 <a id="item-3"></a>
-## [阿里开放权重 AI 模型下载量超 30 亿，超越 Meta 和谷歌](https://www.bloomberg.com/news/articles/2026-08-15/alibaba-ai-models-hit-3-billion-downloads-passing-meta-google) ⭐️ 8.0/10
+## [最大电池电动飞机完成首飞，电费仅需 5 美元](https://arstechnica.com/gadgets/2026/08/first-test-flight-of-largest-all-electric-aircraft-used-just-5-of-electricity/) ⭐️ 8.0/10
 
-根据 Hugging Face 的数据，阿里巴巴的开放权重 AI 模型在过去六个月内全球下载量已超过 30 亿次。这一里程碑使阿里巴巴超越了 Meta 和谷歌，其中谷歌在 2026 年的下载量为 4.18 亿次，Meta 为 2.27 亿次。 这一里程碑标志着开源 AI 格局的重大转变，阿里巴巴的 Qwen 模型在全球范围内迅速获得采用。它凸显了中国 AI 公司日益增长的影响力，以及开发者社区对开放权重模型的偏好不断增强。 阿里巴巴已开源超过 460 个 Qwen 模型，并衍生出超过 30 万个版本。2025 年 4 月发布的 Qwen3 系列包括从 0.6B 到 32B 参数的密集模型，以及如 30B-A3B 的 MoE 模型，均采用 Apache 2.0 许可证。
+Heart Aerospace 的 X1，有史以来最大的电池电动飞机，于 2026 年 8 月 12 日在纽约普拉茨堡国际机场完成首飞。近半小时的飞行仅消耗了 5 美元的电费。 这一里程碑证明了大型电动航空的可行性，并突显了与传统飞机相比大幅降低的运营成本。X1 的测试将为 ES-30 混合电动支线客机的开发提供参考，可能通过更可持续和经济的选择改变短途航空旅行。 X1 翼展 106 英尺，机身长 76 英尺，起飞重量超过 25,000 磅。Heart Aerospace 不打算直接商业化 X1；相反，它将利用 X1 和后续的 X2 验证机来开发 30 座的 ES-30，后者将拥有 125 英里的纯电航程和 500 英里的混合动力航程。
 
-telegram · zaihuapd · 8月15日 15:18
+telegram · zaihuapd · 8月15日 04:16
 
-**背景**: 开放权重 AI 模型是指其训练参数（权重）公开可下载和使用的模型，允许开发者进行定制和部署。阿里巴巴的 Qwen 系列由阿里云开发，包括大型语言模型（LLM）和多模态模型，已成为 Hugging Face 等平台上最受欢迎的开放权重模型系列之一。
+**背景**: 电动航空旨在减少航空旅行中的碳排放，而目前航空旅行严重依赖化石燃料。电池电动飞机面临能量密度和重量等挑战，但像 ES-30 这样的混合电动设计将电池与传统发动机结合以延长航程。瑞典初创公司 Heart Aerospace 正在开发用于支线航线的 ES-30，目标获得 FAA Part 25 认证。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Qwen">Qwen - Wikipedia</a></li>
-<li><a href="https://huggingface.co/Qwen">Qwen (Qwen)</a></li>
-<li><a href="https://allthings.how/what-is-an-open-weight-ai-model-and-how-to-use-one/">What is an Open Weight AI Model and How to Use One</a></li>
+<li><a href="https://www.heartaerospace.com/x1">X1 First Flight — Heart Aerospace</a></li>
+<li><a href="https://www.ainonline.com/aviation-news/futureflight/2026-08-13/heart-aerospace-finally-makes-first-flight">Heart Aerospace Flies X1 Electric Demonstrator Aircraft</a></li>
+<li><a href="https://arstechnica.com/gadgets/2026/08/first-test-flight-of-largest-all-electric-aircraft-used-just-5-of-electricity/">First test flight of largest all-electric aircraft used just $5 of electricity - Ars Technica</a></li>
 
 </ul>
 </details>
 
-**标签**: `#AI`, `#Open Source`, `#Alibaba`, `#Qwen`, `#Model Downloads`
+**标签**: `#electric aviation`, `#battery technology`, `#sustainable transport`, `#Heart Aerospace`, `#hybrid-electric aircraft`
 
 ---
 
 <a id="item-4"></a>
-## [斯坦福和 MIT 发布全球最大系统提示词库](https://news.google.com/rss/articles/CBMihAJBVV95cUxOYmcyVENkZXh5MlFpM3VZUmdPNkhlZVh1TjdWSXR2c1hpRDQ2TTcyeWdtNW9SMHhQTFUxbXA0YTBYcl94QUEydG5XSUR2dFBOZkNYUThVU1dOTVliUWpvOTNWQ1Y3YTBWRV9pUXVoY0Nuck9feF9MSHliblh6aXBGSVlodm5SY0lYTHdUZHNYNGhXWFVDcVE3SEwyOHBnRk9waUZoUjVPVG5FZ0FGT0Y3NDlsaWk3Ykc3Yy10Q2Z5OFlhY3F1bWVKMllCSmZPR0Iyb3V0Y2NISkRUQUw4Y2M3YW5od2x4UjB4Nm1RRFBHUnBBSWhVQ0RPMG90eG1XTTJQdUdXeg?oc=5) ⭐️ 8.0/10
+## [OpenAI Python SDK v3.1.0 新增 WebSocket ID、Ultrafast 层级和 MCP](https://github.com/openai/openai-python/releases/tag/v3.1.0) ⭐️ 7.0/10
 
-斯坦福大学和麻省理工学院发布了全球最大的系统提示词库，这是一个面向 AI 助手和智能体的系统提示词综合集合。该资源旨在推动大语言模型的提示工程和系统设计。 该库为研究人员和开发者提供了宝贵的开放资源，可能规范并加速提示工程实践。它有望促进 AI 系统设计的创新，并提高各行业基于 LLM 的应用的有效性。 该库包含多样化的系统提示词，涵盖自主智能体、聊天机器人、专业助手以及各种 AI 驱动工具的配置。它是开源且免费提供的，并在 GitHub 和 Hugging Face 等平台上定期更新和导出。
-
-google_news · 新浪网 · 8月15日 09:48
-
-**背景**: 系统提示词是给 AI 模型的指令，用于定义其行为、角色和上下文，在提示工程中起着关键作用。提示工程是设计和优化生成式 AI 模型输入以产生期望输出的实践，已成为 AI 行业的关键技能。该库旨在整合和分享有效的系统提示词，以支持更广泛的 AI 社区。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://prompts.danielrosehill.com/">System Prompt Library - Daniel Rosehill</a></li>
-<li><a href="https://github.com/danielrosehill/System-Prompt-Library">GitHub - danielrosehill/System-Prompt-Library: System prompts for AI agents and assistants (automatically populated); periodic point in time exports are releases · GitHub</a></li>
-<li><a href="https://huggingface.co/datasets/danielrosehill/System-Prompt-Library">danielrosehill/System-Prompt-Library · Datasets at Hugging Face</a></li>
-
-</ul>
-</details>
-
-**标签**: `#AI`, `#LLM`, `#prompt engineering`, `#research`
-
----
-
-<a id="item-5"></a>
-## [OpenAI Python SDK v3.1.0 新增 WebSocket ID、Ultrafast 层级，弃用 Sora](https://github.com/openai/openai-python/releases/tag/v3.1.0) ⭐️ 7.0/10
-
-OpenAI 于 2026 年 8 月 14 日发布了其官方 Python SDK 的 3.1.0 版本。此更新引入了 WebSocket 流 ID、工作负载身份访问令牌签发事件、Ultrafast 层级、结构化 MCP 支持，并弃用了 Sora 视频 API。 此版本反映了 OpenAI 在 API 能力上的持续演进，尤其是在实时通信和企业安全方面。使用该 SDK 的开发者将受益于改进的 WebSocket 处理和新的认证事件，而 Sora API 的弃用则标志着 OpenAI 视频生成策略的转变。 此更新包括独立的 WebSocket 事件和错误处理，以及结构化 MCP（模型上下文协议）支持。此外，SDK 移除了 Stainless 的归属和基础设施，表明其不再使用该代码生成工具。
+OpenAI 于 2026 年 8 月 14 日发布了其官方 Python SDK 的 3.1.0 版本，引入了 WebSocket 流 ID、工作负载身份访问令牌签发事件、Ultrafast 层级、结构化 MCP 支持以及独立的 WebSocket 错误事件。该版本还弃用了 Sora 视频 API。 此次更新对使用 OpenAI Responses API 构建实时应用的开发者意义重大，因为它增强了 WebSocket 功能，并新增了身份验证和性能选项。弃用 Sora 视频 API 标志着 OpenAI 产品重点的转变，可能会影响现有的集成。 该版本包含新的“Ultrafast”层级，可能为 API 请求提供更低的延迟，并支持结构化 MCP（模型上下文协议），该协议标准化了工具集成。WebSocket 流 ID 允许更好地跟踪单个流，而工作负载身份访问令牌事件则提供令牌签发的实时通知。移除 Stainless 归属表明其正在摆脱代码生成工具。
 
 github · openai-sdks[bot] · 8月14日 23:48
 
-**背景**: OpenAI Python SDK 是与 OpenAI API 交互的官方库，包括现在支持 WebSocket 模式的 Responses API，该模式适用于长时间运行、工具调用繁重的工作流。WebSocket 模式保持与 /v1/responses 的持久连接，流 ID 有助于管理这些连接。工作负载身份访问令牌用于 Microsoft Entra ID 等云环境中，以实现应用程序的安全认证。MCP（模型上下文协议）是连接 AI 助手与外部工具和数据源的标准。
+**背景**: OpenAI Python SDK 是访问 OpenAI REST API 的官方库，提供类型定义和同步/异步客户端。WebSocket 支持对于语音代理等实时应用至关重要，而 MCP 是一种将 AI 模型连接到外部工具的协议。工作负载身份是云安全中的一个概念，允许应用程序在无需管理机密的情况下进行身份验证。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://github.com/openai/openai-python/blob/main/examples/responses/websocket.py">openai-python/examples/responses/websocket.py at main ...</a></li>
-<li><a href="https://developers.openai.com/api/docs/guides/websocket-mode">WebSocket Mode | OpenAI API</a></li>
-<li><a href="https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-continuous-access-evaluation-workload">Continuous access evaluation for workload identities in Microsoft Entra ID - Microsoft Entra ID | Microsoft Learn</a></li>
+<li><a href="https://github.com/openai/openai-python">GitHub - openai / openai - python : The official Python library for the...</a></li>
+<li><a href="https://groundy.com/articles/openai-responses-api-websocket-is-production-ready-pydantic-ai-langchain-and/">OpenAI Responses API WebSocket Is Production-Ready... | Groundy</a></li>
+<li><a href="https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-continuous-access-evaluation-workload">Continuous access evaluation for workload identities</a></li>
 
 </ul>
 </details>
@@ -133,62 +109,93 @@ github · openai-sdks[bot] · 8月14日 23:48
 
 ---
 
-<a id="item-6"></a>
-## [AI 更大的工作记忆改变了数学问题解决方式](https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians) ⭐️ 7.0/10
+<a id="item-5"></a>
+## [AI 更大的工作记忆使其在数学家中占据优势](https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians) ⭐️ 7.0/10
 
-一篇论文认为，与人类相比，AI 拥有更大的工作记忆，这改变了数学问题解决的本质，尽管它可能不会超越数学家的思考。这篇文章在 Hacker News 上引发了广泛讨论，获得了 362 个点赞和 323 条评论。 这一观点挑战了关于 AI 智能的传统看法，表明 AI 的优势在于记忆容量而非原始推理能力。这对我们如何评估 AI 能力及其在数学研究和问题解决中的作用具有启示意义。 文章强调，AI 可以处理和保留大量信息，而人类的工作记忆有限。评论者指出，AI 具有持久性，并能处理人类数学家通常避免发表的负面结果，这可能加速发现过程。
+一篇论文认为，AI 相比人脑拥有大得多的工作记忆，这使其在数学研究中占据优势，尽管它并没有超越人类的思维。这篇文章在 Hacker News 上引发了高参与度的讨论，获得了 364 分和 326 条评论。 这一讨论凸显了 AI 与人类之间的关键认知差异，对数学研究和 AI 辅助发现的未来具有启示意义。它挑战了智力仅关乎推理能力的观念，表明记忆容量起着至关重要的作用。 该文章将 AI 中的工作记忆概念引用为上下文窗口，其可扩展至数百万个 token，远超人类工作记忆的限制。社区评论还指出，AI 可以不知疲倦地探索研究方向并发布负面结果，而人类数学家由于激励和带宽限制往往无法做到。
 
 hackernews · rzk · 8月15日 18:13 · [社区讨论](https://news.ycombinator.com/item?id=49312845)
 
-**背景**: 工作记忆是认知系统中暂时保存和处理信息的机制。像 GPT-4 这样的 LLM 具有可容纳数千个 token 的上下文窗口，实际上充当了更大的工作记忆。然而，研究表明 LLM 在某些任务中缺乏类似人类的工作记忆，其数学推理往往依赖于模式识别而非真正的理解。
+**背景**: 人类的工作记忆是有限的，通常一次只能容纳几个项目，而像 LLM 这样的 AI 模型拥有上下文窗口，可以同时处理数千到数百万个 token。这使得 AI 能够一次性考虑大量信息，可能有助于解决复杂问题。然而，正如最近的研究所指出的，AI 的数学推理仍存在局限性。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://research.ibm.com/blog/memory-augmented-LLMs">How memory augmentation can improve large language models - IBM Research</a></li>
-<li><a href="https://arxiv.org/html/2505.10571v1">LLMs Do Not Have Human-Like Working Memory</a></li>
-<li><a href="https://www.unite.ai/from-math-exams-to-machine-reasoning-ais-latest-struggles/">From Math Exams to Machine Reasoning : AI ’s Latest Struggles</a></li>
+<li><a href="https://www.illumio.com/blog/the-limits-of-working-memory-human-brains-vs-ai-models">The Limits of Working Memory: Human Brains vs. AI Models - Illumio Cybersecurity Blog | Illumio</a></li>
+<li><a href="https://www.llmcalcs.com/context-window-visualizer">LLM Context Window Sizes — Visual Comparison Tool</a></li>
+<li><a href="https://arxiv.org/pdf/2410.05229">GSM-Symbolic: Understanding the Limitations of Mathematical ...</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论者普遍同意文章的前提，分享了关于智力与记忆相关的个人轶事。一些人强调 AI 能够不知疲倦地坚持并发布负面结果，这可能是一个显著优势。其他人引用了关于增强长期记忆的相关文章，表明讨论深入且富有思考。
+**社区讨论**: 社区讨论反映了赞同与额外见解的混合。一些评论者同意，记忆超越他人是感知智力的关键方面，而另一些则强调 AI 发布负面结果和不知疲倦的特性是优势。还有评论引用了关于增强长期记忆的相关文章，表明对该话题有更广泛的兴趣。
 
 **标签**: `#AI`, `#working memory`, `#mathematics`, `#cognitive science`, `#LLM`
 
 ---
 
-<a id="item-7"></a>
-## [Unicode 幽灵字符：未知起源的谜团](https://www.dampfkraft.com/ghost-characters.html) ⭐️ 7.0/10
+<a id="item-6"></a>
+## [Unicode 的幽灵字符：一个未解之谜](https://www.dampfkraft.com/ghost-characters.html) ⭐️ 7.0/10
 
-文章《Unicode 的幽灵》探讨了“幽灵字符”——即没有已知来源或含义的 Unicode 码点，例如日文字符“彁”。文章深入探讨了围绕这些字符的谜团以及追溯其起源的努力。 这一话题凸显了 Unicode 标准中的复杂性和不完善之处，而 Unicode 是全球数字通信的基础。了解幽灵字符有助于讨论编码标准、数字保存以及语言学与技术交叉领域的问题。 幽灵字符通常源于历史编码错误，如扫描错误或笔误，并被编入 Unicode。文章提到了“彁”和“閠”等具体例子，并指出一些起源已通过日本报纸档案被追溯。
+Paul McCann（polm）的文章《A spectre is haunting Unicode》探讨了 Unicode 中“幽灵字符”的现象——即那些来源不明的字符，并讨论了它们如何通过 JIS 标准和 CJK 统一进入 Unicode 标准。 这很重要，因为幽灵字符已经嵌入 Unicode 等国际标准中，修改或删除它们可能会引发兼容性问题。对于依赖准确字符数据的语言学家、字体设计师和数字人文学者来说，了解它们的起源至关重要。 文章指出，幽灵字符通过 JIS 标准和 CJK 统一进入 Unicode，并且 Unicode 自身也有一批幽灵字符。社区评论提到“彁”可能源于报纸文章的扫描错误，并提及徐冰的《天书》等相关艺术作品。
 
 hackernews · sensanaty · 8月15日 14:34 · [社区讨论](https://news.ycombinator.com/item?id=49310926)
 
-**背景**: Unicode 是一种通用字符编码标准，为各种语言和文字中的每个字符分配唯一编号。幽灵字符是标准中存在但缺乏明确来源或含义的码点，通常源于历史编码错误或误认。它们给语言学家和数字档案工作者带来了挑战，他们致力于理解和保存文本遗产。
+**背景**: 幽灵字符是 Unicode 等字符编码标准中那些来源不明或含义不明的字符，通常源于编码过程中的错误或历史遗留问题。它们已被纳入国际标准，由于兼容性问题而难以移除。文章可能解释了这些字符的由来及其带来的挑战。
 
 <details><summary>参考链接</summary>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Ghost_characters">Ghost characters - Wikipedia</a></li>
-<li><a href="https://hackaday.com/2022/04/24/can-you-identify-this-mystery-unicode-glyph/">Can You Identify This Mystery Unicode Glyph? - Hackaday</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Angzarr">Angzarr - Wikipedia</a></li>
+<li><a href="https://www.dampfkraft.com/ghost-characters.html">A Spectre is Haunting Unicode - Dampfkraft</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: Hacker News 的讨论赞扬了作者 Paul McCann 在日语自然语言处理方面的贡献，并分享了额外见解。一些评论者提出了特定幽灵字符的可能起源，例如“彁”可能是报纸扫描质量差的结果，而其他人则指出文章年代久远，并引用了徐冰的《天书》等相关作品。
+**社区讨论**: 社区评论称赞作者 Paul McCann 在日语自然语言处理方面的工作，并提出了幽灵字符的可能来源，例如“彁”可能是报纸扫描错误的结果。还有人提到徐冰的《天书》，并建议在标题中加上“(2008)”，表明文章可能发表于那一年。
 
-**标签**: `#Unicode`, `#Linguistics`, `#Japanese`, `#Encoding`, `#Digital Humanities`
+**标签**: `#Unicode`, `#typography`, `#linguistics`, `#digital humanities`, `#mystery`
+
+---
+
+<a id="item-7"></a>
+## [斯坦福、MIT 发布全球最大系统提示词库](https://news.google.com/rss/articles/CBMihAJBVV95cUxOYmcyVENkZXh5MlFpM3VZUmdPNkhlZVh1TjdWSXR2c1hpRDQ2TTcyeWdtNW9SMHhQTFUxbXA0YTBYcl94QUEydG5XSUR2dFBOZkNYUThVU1dOTVliUWpvOTNWQ1Y3YTBWRV9pUXVoY0Nuck9feF9MSHliblh6aXBGSVlodm5SY0lYTHdUZHNYNGhXWFVDcVE3SEwyOHBnRk9waUZoUjVPVG5FZ0FGT0Y3NDlsaWk3Ykc3Yy10Q2Z5OFlhY3F1bWVKMllCSmZPR0Iyb3V0Y2NISkRUQUw4Y2M3YW5od2x4UjB4Nm1RRFBHUnBBSWhVQ0RPMG90eG1XTTJQdUdXeg?oc=5) ⭐️ 7.0/10
+
+斯坦福、MIT 等机构发布了全球最大的系统提示词库，这是一个面向 AI 模型的综合提示词集合。该资源旨在支持提示工程和模型评估研究。 该库为研究人员和开发者提供了前所未有的资源，用于研究和改进提示工程，可能加速 AI 模型性能和安全性方面的进步。它可能成为评估和比较不同提示策略的标准基准。 该库包含来自多个来源的提示词，覆盖多种 LLM 提供商和用例，如 ChatGPT、Claude 和 Gemini。它是开源且免费访问的，旨在促进 AI 社区的协作与创新。
+
+google_news · 新浪网 · 8月15日 09:48
+
+**背景**: 系统提示词是给 AI 模型的指令，用于引导其行为和输出。提示工程是设计这些提示词以达到预期结果的实践，对于优化 AI 性能至关重要。像这样的库有助于标准化和分享有效的提示技术。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://github.com/0xeb/TheBigPromptLibrary">GitHub - 0xeb/TheBigPromptLibrary: A collection of prompts ...</a></li>
+<li><a href="https://prompts.danielrosehill.com/">System Prompt Library - Daniel Rosehill</a></li>
+<li><a href="https://github.com/ncwilson78/System-Prompt-Library">GitHub - ncwilson78/System-Prompt-Library: A library of ...</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI`, `#LLM`, `#prompt engineering`, `#research`, `#open source`
 
 ---
 
 <a id="item-8"></a>
-## [谷歌内部 AI 之争终于显现后果](https://news.google.com/rss/articles/CBMiowFBVV95cUxOZ1dyMjhZandTbVRndl9HSWdwa1VuTEVEa1FfdzhSbXBoYWFXSHNXaENZQmtMUnBLNUFxSHBoNUFhQjktbjB1QWpJY1duc25RenBfTkNXdmUzU0lLb244bnJjYjhmVWI3N09qeUpuT2V0c0Q3djc4aWlEZW1UbGJDSTY1TjRidndPSVd4cTU3UDZYNVdPYkRkbndZcjZHWFdueUVz?oc=5) ⭐️ 7.0/10
+## [谷歌十年内部 AI 斗争终显代价](https://news.google.com/rss/articles/CBMiowFBVV95cUxOZ1dyMjhZandTbVRndl9HSWdwa1VuTEVEa1FfdzhSbXBoYWFXSHNXaENZQmtMUnBLNUFxSHBoNUFhQjktbjB1QWpJY1duc25RenBfTkNXdmUzU0lLb244bnJjYjhmVWI3N09qeUpuT2V0c0Q3djc4aWlEZW1UbGJDSTY1TjRidndPSVd4cTU3UDZYNVdPYkRkbndZcjZHWFdueUVz?oc=5) ⭐️ 7.0/10
 
-最近一篇文章报道，谷歌在 AI 战略上长达十年的内部冲突现在正对其在科技行业的竞争地位产生负面影响。 这很重要，因为谷歌是 AI 领域的主要参与者，内部不和可能阻碍其创新能力，并削弱与 OpenAI 和微软等竞争对手的竞争力。结果可能影响 AI 发展的未来和市场格局。 这篇文章来自金融新闻聚合平台 Moomoo，侧重于战略和组织层面的挑战，而非技术细节。文章指出这些内部斗争已持续十年，如今正达到关键节点。
+MarketWatch 和 Morningstar 发布的一篇分析文章指出，谷歌在 AI 战略上长达十年的内部冲突，尤其是涉及 DeepMind 的争斗，如今正在削弱其在 AI 竞赛中的竞争地位。 这很重要，因为谷歌是 AI 领域的主要参与者，其内部问题可能影响创新速度及其与 OpenAI 和微软等竞争对手的竞争能力。结果将影响整个 AI 行业的方向和竞争格局。 文章指出，2014 年被收购的 DeepMind 既是谷歌 AI 战略的基石，也是长期内部摩擦的根源。这些争斗导致了战略失误和产品发布延迟，使竞争对手获得了优势。
 
 google_news · Moomoo · 8月15日 12:00
 
-**背景**: 谷歌长期以来一直是 AI 研究的领导者，但在如何将 AI 商业化以及伦理问题上的内部分歧造成了摩擦。这使得竞争对手在生成式 AI 等领域得以抢占先机。
+**背景**: 谷歌多年来一直是 AI 研究的领导者，DeepMind 和 Google Brain（现为 Google DeepMind 的一部分）取得了重大突破。然而，据报道，内部在研究优先级、商业化和伦理方面的分歧阻碍了进展。这篇分析发布之际，生成式 AI 竞争激烈，谷歌因比竞争对手更慢进入市场而受到批评。
 
-**标签**: `#Google`, `#AI`, `#Tech Industry`, `#Competition`
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.marketwatch.com/story/a-decade-of-internal-ai-battles-is-finally-catching-up-to-google-7b3358a1">A decade of internal AI battles is finally catching up to Google</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_AI">Google AI - Wikipedia</a></li>
+
+</ul>
+</details>
+
+**标签**: `#Google`, `#AI`, `#Tech Industry`, `#Strategy`, `#Competition`
 
 ---
