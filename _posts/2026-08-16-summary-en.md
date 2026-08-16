@@ -5,194 +5,223 @@ date: 2026-08-16
 lang: en
 ---
 
-> From 33 items, 8 important content pieces were selected
+> From 33 items, 9 important content pieces were selected
 
 ---
 
-1. [Stripe Acquires AI Firm OpenRouter for Over $7 Billion](#item-1) ⭐️ 9.0/10
-2. [Anthropic Publishes Claude System Prompts for Public Scrutiny](#item-2) ⭐️ 8.0/10
-3. [AI Models Are Getting Dumber on Purpose](#item-3) ⭐️ 8.0/10
-4. [Cloudflare silently injects analytics on nameserver switch](#item-4) ⭐️ 8.0/10
-5. [Qwen 3.8 27B Impresses but Defaults to Overthinking](#item-5) ⭐️ 8.0/10
-6. [SSOG-Attention: Sub-Quadratic Attention via Separable Gaussians](#item-6) ⭐️ 8.0/10
-7. [Anthropic Q2 Revenue Surges 14x to Over $11.5B](#item-7) ⭐️ 8.0/10
-8. [Amodei: AI Distrust Is a Crisis of Trust, Not Marketing](#item-8) ⭐️ 7.0/10
+1. [Stripe to Acquire AI Firm OpenRouter for Over $7 Billion](#item-1) ⭐️ 9.0/10
+2. [Anthropic Publishes Claude System Prompts, Sparking Transparency Debate](#item-2) ⭐️ 8.0/10
+3. [AI Models Are Intentionally Getting Dumber to Fight Hallucinations](#item-3) ⭐️ 8.0/10
+4. [Qwen 3.8 27B: Excellent Open-Weight LLM but Defaults to Overthinking](#item-4) ⭐️ 8.0/10
+5. [SSOG-Attention: Sub-Quadratic Attention via Separable Gaussians](#item-5) ⭐️ 8.0/10
+6. [Anthropic Q2 Revenue Surges 14-Fold to $11.5B, First Profit](#item-6) ⭐️ 8.0/10
+7. [Embedded Engineer from Developing Country Defends RISC-V's Cost Benefits](#item-7) ⭐️ 7.0/10
+8. [Anthropic CEO: AI Distrust Is a Crisis of Trust, Not Marketing](#item-8) ⭐️ 7.0/10
+9. [Stanford, MIT Release World's Largest System Prompt Library](#item-9) ⭐️ 7.0/10
 
 ---
 
 <a id="item-1"></a>
-## [Stripe Acquires AI Firm OpenRouter for Over $7 Billion](https://www.bloomberg.com/news/articles/2026-08-16/stripe-nears-deal-to-buy-ai-firm-openrouter-for-over-7-billion) ⭐️ 9.0/10
+## [Stripe to Acquire AI Firm OpenRouter for Over $7 Billion](https://www.bloomberg.com/news/articles/2026-08-16/stripe-nears-deal-to-buy-ai-firm-openrouter-for-over-7-billion) ⭐️ 9.0/10
 
-Stripe has finalized an agreement to acquire OpenRouter, a startup that helps companies switch between AI models, for more than $7 billion. This deal comes just months after OpenRouter raised money at a reported $1.3 billion valuation. This acquisition signals Stripe's strategic move to dominate AI infrastructure and payment rails, potentially reshaping how AI services are monetized and accessed. It also validates the AI API gateway market and could impact the broader fintech and AI ecosystem. OpenRouter raised money at a $1.3 billion valuation a few months ago, making the $7 billion exit a significant return for investors. The deal highlights Stripe's ambition to abstract the rails for LLMs, similar to its role in payments, and comes amid OpenAI's recent switch to Adyen as its payment provider.
+Stripe is acquiring OpenRouter, an AI API gateway and marketplace, for over $7 billion. The deal, reported by Bloomberg, marks one of the largest acquisitions in the AI infrastructure space. This acquisition positions Stripe to dominate AI API payment and routing infrastructure, potentially reshaping how developers access and pay for AI models. It also signals a strategic response to the loss of OpenAI as a payment customer and the growing importance of AI-driven payment volume. OpenRouter was valued at $1.3 billion just a few months ago, making the $7 billion exit a significant jump. The deal comes shortly after OpenAI chose Adyen as its payment provider, previously a Stripe customer, and OpenRouter handles a large share of AI payment volume for major labs.
 
 hackernews · zacharyozer · Aug 16, 20:31 · [Discussion](https://news.ycombinator.com/item?id=49323381)
 
-**Background**: Stripe is a leading online payment processing platform that has been expanding into AI infrastructure, offering monetization tools for AI companies. OpenRouter provides a unified API that allows developers to access and switch between various AI models, acting as a gateway for AI API calls. The acquisition aligns with Stripe's strategy to embed intelligence into payment routing and orchestration, and to build economic infrastructure for AI.
+**Background**: OpenRouter is a unified API gateway and marketplace that routes requests across over 400 AI models from more than 60 providers, offering developers a single API to access various models while consolidating billing. Stripe is a leading payment processing platform known for its developer-friendly APIs and infrastructure for handling high-volume, latency-sensitive requests.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://fortune.com/2026/08/16/stripe-7-billion-deal-ai-firm-openrouter-acquisition/">Stripe clinches over $7 billion deal to buy AI firm OpenRouter</a></li>
-<li><a href="https://www.bloomberg.com/news/articles/2026-08-16/stripe-nears-deal-to-buy-ai-firm-openrouter-for-over-7-billion">Stripe Clinches Over $7 Billion Deal to Buy AI Firm OpenRouter</a></li>
-<li><a href="https://stripe.com/newsroom/news/sessions-2026">Stripe builds out the economic infrastructure for AI with 288 launches</a></li>
+<li><a href="https://www.codecademy.com/article/what-is-openrouter">What is OpenRouter? A Guide with Practical Examples</a></li>
+<li><a href="https://openrouter.ai/about">About - The Unified Interface For LLMs | OpenRouter</a></li>
+<li><a href="https://aiwiki.ai/wiki/openrouter">OpenRouter - AI Wiki</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community comments express mixed reactions: some see the acquisition as a strategic fit for Stripe's API expertise and ambition to own AI rails, while others question the high valuation and the potential loss of OpenAI's payment volume to Adyen. There is also discussion about the rapid valuation increase from $1.3 billion to $7 billion and whether Stripe overpaid.
+**Discussion**: Community comments highlight strategic motivations, such as Stripe's ambition to abstract LLM rails and secure payment volume, with some noting the deal's high valuation compared to OpenRouter's recent $1.3 billion round. Concerns were raised about the impact on customers, with one user suggesting looking for alternatives, while others pointed out the potential benefits of Stripe's infrastructure expertise.
 
-**Tags**: `#acquisition`, `#AI`, `#Stripe`, `#OpenRouter`, `#fintech`
+**Tags**: `#AI`, `#acquisition`, `#Stripe`, `#OpenRouter`, `#fintech`
 
 ---
 
 <a id="item-2"></a>
-## [Anthropic Publishes Claude System Prompts for Public Scrutiny](https://platform.claude.com/docs/en/release-notes/system-prompts) ⭐️ 8.0/10
+## [Anthropic Publishes Claude System Prompts, Sparking Transparency Debate](https://platform.claude.com/docs/en/release-notes/system-prompts) ⭐️ 8.0/10
 
-Anthropic has published the system prompts used by its Claude models on the official platform documentation, allowing public access and analysis. This move, highlighted by a June 2026 release note, marks a significant step toward transparency in AI model instructions. This transparency initiative sets a new precedent in the AI industry, enabling researchers and users to understand and scrutinize model behavior. It pressures other major AI labs to follow suit, especially as regulators demand explainability and accountability in AI systems. The published prompts include instructions on tone, sensitive topics, and tool use, as seen in Claude Opus 4.7. Notably, the prompts are quite lengthy, and Simon Willison has created a git history to track changes between versions, such as the addition of references to 'Claude Fable 5' and 'Claude Mythos 5'.
+Anthropic has publicly released the system prompts for its Claude models, including Opus 4.8 and Claude Fable 5. This marks a significant transparency move, allowing external analysis of the model's underlying instructions. This release provides unprecedented insight into the design of a leading AI model, enabling researchers and developers to better understand and improve prompt engineering. It also fuels broader discussions about AI transparency, governance, and the balance between model capability and instruction complexity. The system prompts are notably long, which some experts argue may distract the model. Simon Willison created a git history of prompt changes, highlighting additions like references to 'Claude Fable 5' and 'Claude Mythos 5'. The prompts include instructions for Claude to verify image presence itself, rather than assuming an image is attached.
 
 hackernews · tosh · Aug 16, 12:48 · [Discussion](https://news.ycombinator.com/item?id=49319556)
 
-**Background**: System prompts are foundational instructions given to large language models (LLMs) that define their role, behavior, and response characteristics before user interaction. They are typically hidden from end-users but shape the model's conduct throughout a conversation. Anthropic's publication of these prompts is a rare move toward transparency in the AI industry, where such details are often kept proprietary.
+**Background**: System prompts are foundational instructions given to large language models (LLMs) before user interaction, defining their role, behavior, and response characteristics. They are typically hidden from end-users but shape the model's output. Anthropic's decision to publish these prompts is part of a broader trend toward AI transparency, though it also raises questions about the optimal length and specificity of such prompts.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://platform.claude.com/docs/en/release-notes/system-prompts">System Prompts - Claude Platform Docs - Anthropic</a></li>
-<li><a href="https://startupfortune.com/anthropic-publishes-claude-system-prompts-setting-new-ai-transparency-bar/">Anthropic publishes Claude system prompts, setting new AI ...</a></li>
+<li><a href="https://techcrunch.com/2024/08/26/anthropic-publishes-the-system-prompt-that-makes-claude-tick/">Anthropic publishes the ' system prompts ' that make Claude tick</a></li>
+<li><a href="https://tetrate.io/learn/ai/system-prompts-guide">System Prompts: Design Patterns and Best Practices</a></li>
 <li><a href="https://www.promptlayer.com/glossary/system-prompt/">What is a System prompt? | PromptLayer</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The community response is mixed: Simon Willison praised the transparency and created a git history for tracking changes, while others like SwellJoe questioned the excessive length of the prompts, suggesting shorter prompts might be more effective. Some users also expressed concerns about potential censorship of negative AI stories on the forum, unrelated to the main topic.
+**Discussion**: Community reactions are mixed. Simon Willison provided a useful git history tool for tracking changes, while others like SwellJoe questioned the excessive length of the prompts, suggesting shorter prompts might be more effective. Some commenters also raised concerns about potential censorship of negative AI stories on the platform, adding a governance dimension to the discussion.
 
-**Tags**: `#AI`, `#LLM`, `#Anthropic`, `#System Prompts`, `#Transparency`
+**Tags**: `#AI`, `#LLM`, `#Transparency`, `#System Prompts`, `#Anthropic`
 
 ---
 
 <a id="item-3"></a>
-## [AI Models Are Getting Dumber on Purpose](https://w4g1.dev/blog/models-are-getting-dumber-on-purpose) ⭐️ 8.0/10
+## [AI Models Are Intentionally Getting Dumber to Fight Hallucinations](https://w4g1.dev/blog/models-are-getting-dumber-on-purpose) ⭐️ 8.0/10
 
-The article argues that AI models are intentionally becoming 'dumber' by shifting factual recall to external tools and knowledge bases, a trend that could change how model capabilities are evaluated and used. This shift could reduce hallucinations and make models more adaptable, but it also challenges traditional benchmarks that assume models store facts internally. It may lead to new evaluation methods and model designs focused on tool integration and reasoning. The article cites SimpleQA, where Gemini 2.5 Pro scores 53%, showing that even the best factual recall misses half the questions. It suggests that future model cards may no longer list a knowledge cutoff, as weights become less relevant for up-to-date facts.
+The article argues that AI models are deliberately shifting from storing knowledge in their weights to relying on external tools and retrieval, effectively making them 'dumber' in terms of parametric knowledge. This trend is reshaping model design and aims to reduce hallucination. This shift has major implications for the AI/ML community, as it challenges the traditional focus on scaling parametric knowledge and instead emphasizes tool use and retrieval. It could lead to more reliable, up-to-date models and change how benchmarks and model capabilities are evaluated. The article cites SimpleQA, a factual recall benchmark, where the current leader Gemini 2.5 Pro scores only 53%, highlighting the limits of parametric knowledge. It also suggests a future where model cards no longer list knowledge cutoffs, as weights become stale on a scale of years instead of weeks.
 
 hackernews · hruvhwe · Aug 16, 19:04 · [Discussion](https://news.ycombinator.com/item?id=49322695)
 
-**Background**: Large language models (LLMs) traditionally store factual knowledge in their parameters, which can become outdated and lead to hallucinations. Retrieval-augmented generation (RAG) and external knowledge bases are emerging as alternatives, allowing models to access current information without storing it in weights.
+**Background**: Large language models (LLMs) traditionally store knowledge in their parameters during pretraining, known as parametric knowledge. However, this approach leads to hallucinations and outdated information. Retrieval-augmented generation (RAG) and tool use allow models to access external data at inference time, reducing reliance on static weights. This trend is part of a broader movement toward more dynamic and reliable AI systems.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://theresanaiforthat.com/ai/recall/">Recall v2 - AI Tool For Knowledge Bases</a></li>
-<li><a href="https://arxiv.org/html/2603.17872v1">Mitigating LLM Hallucinations through Domain-Grounded Tiered...</a></li>
-<li><a href="https://advance.sagepub.com/doi/full/10.22541/au.174222554.47389246/v1">Analysing the potential solutions to LLM hallucinations in abstractive...</a></li>
+<li><a href="https://milvus.io/ai-quick-reference/in-what-scenario-might-it-be-better-to-rely-on-the-llms-parametric-knowledge-rather-than-retrieving-from-an-external-source-eg-very-simple-common-knowledge-questions-and-how-to-detect-those">In what scenario might it be better to rely on the LLM’s parametric knowledge rather than retrieving from an external source (e.g., very simple common knowledge questions), and how to detect those?</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Retrieval-augmented_generation">Retrieval - augmented generation - Wikipedia</a></li>
+<li><a href="https://arxiv.org/abs/2510.02370">[2510.02370] How Training Data Shapes the Use of Parametric and In-Context Knowledge in Language Models</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters expressed interest in pluggable knowledge bases, allowing models to be customized with specific domains. Some noted that the article's data is outdated, and others debated whether reasoning and facts can truly be separated, especially for understanding human behavior.
+**Discussion**: Community comments express a mix of enthusiasm and skepticism. Some praise the article's insights, while others critique outdated benchmarks and suggest alternative approaches like pluggable knowledge bases. There is also debate about whether reasoning and facts can truly be separated, and whether pure reasoning can handle complex human contexts.
 
-**Tags**: `#AI`, `#LLM`, `#knowledge bases`, `#model design`, `#hallucination`
+**Tags**: `#AI`, `#LLM`, `#model design`, `#tool use`, `#retrieval`
 
 ---
 
 <a id="item-4"></a>
-## [Cloudflare silently injects analytics on nameserver switch](https://news.ycombinator.com/item?id=49322107) ⭐️ 8.0/10
+## [Qwen 3.8 27B: Excellent Open-Weight LLM but Defaults to Overthinking](https://simonwillison.net/2026/Aug/16/qwen-38-27b/) ⭐️ 8.0/10
 
-A user reported that after switching nameservers to Cloudflare to enable R2 bucket serving, Cloudflare silently injected its analytics JavaScript snippet into their HTML-only, JS-free site textlog.cc. The user had to manually disable it via the Analytics dashboard, highlighting an opt-out rather than opt-in approach. This raises significant privacy and consent concerns, as Cloudflare injects third-party scripts without explicit user consent, potentially violating user trust and web standards. It affects all Cloudflare users who switch nameservers, especially those with strict Content Security Policies, and could lead to regulatory scrutiny or backlash. The injected script is from static.cloudflareinsights.com/beacon.min.js with a data-cf-beacon attribute, and it appears even when Web Analytics is disabled in the dashboard. Users can mitigate this by setting a Content-Security-Policy header that restricts script sources, or by disabling Web Analytics for the site.
-
-hackernews · stagas · Aug 16, 17:49
-
-**Background**: Cloudflare is a major CDN and DNS provider that also offers web analytics. When users switch their nameservers to Cloudflare, they may also enable Cloudflare's proxy, which allows Cloudflare to modify HTML responses. Web Analytics is a feature that injects a JavaScript beacon to track visitors, but it appears to be enabled by default in some cases, contrary to user expectations of opt-in consent.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://news.ycombinator.com/item?id=49322107">Tell HN: Cloudflare silently injects its analytics when you switch ...</a></li>
-<li><a href="https://notifire.in/infra/cloudflare-may-be-adding-code-to-your-website">Cloudflare Analytics Script Injected Without User Consent</a></li>
-<li><a href="https://ideaverse.ai/blog/cloudflare-dns-change-triggered-hidden-analytics-script-injection-mswbamkg">Cloudflare DNS Change Triggered Hidden Analytics Script Injection</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Community comments show mixed reactions: some users confirmed the injection and suggested CSP as a workaround, while others questioned how injection occurs if not using Cloudflare's proxy, noting that DNS-only setups do not exhibit the issue. There is also debate about the ethics of opt-out tracking and whether Cloudflare's behavior violates laws like the Computer Fraud and Abuse Act.
-
-**Tags**: `#Cloudflare`, `#privacy`, `#analytics`, `#DNS`, `#web security`
-
----
-
-<a id="item-5"></a>
-## [Qwen 3.8 27B Impresses but Defaults to Overthinking](https://simonwillison.net/2026/Aug/16/qwen-38-27b/) ⭐️ 8.0/10
-
-Alibaba's Qwen lab released Qwen 3.8 27B, an Apache 2 licensed 27B parameter vision-capable LLM, on Friday, Aug 14, 2026. The model shows significant benchmark improvements over its predecessor and even the closed-weight Qwen 3.7-Plus, but defaults to an 'xhigh' reasoning effort that causes excessive token usage and slow generation. This release is significant for the open-source LLM community as 27B is an ideal size for local deployment on consumer hardware, and the Apache 2 license allows broad commercial use. The default overthinking behavior highlights a practical challenge for users, potentially limiting real-world usability unless adjusted. Simon Willison tested the model on a 128GB M5 Max MacBook Pro and an NVIDIA DGX Spark using LM Studio's 17GB Q4_K_M quantized build. He found that the default 'xhigh' reasoning effort consumed the entire 8,192-token context limit on mundane tasks, and even with the full 262,144-token context, generating a simple SVG took 21 minutes and 22,276 reasoning tokens.
+Qwen 3.8 27B, an Apache 2.0 licensed 27B parameter vision-capable LLM from Alibaba's Qwen lab, was released, showing significant benchmark improvements over its predecessor and even the closed-weight Qwen 3.7-Plus. The model defaults to an 'xhigh' reasoning effort, which leads to excessive token usage and long generation times. This release is significant because it offers a high-performing open-weights model that can run on consumer hardware, potentially democratizing access to advanced AI capabilities. The overthinking default, however, highlights practical challenges that users must address to achieve efficient local inference. The model is available in a 17GB Q4_K_M quantized build for LM Studio, and the author tested it on a 128GB M5 Max MacBook Pro and an NVIDIA DGX Spark. With the default 8,192-token context, the model exhausts the limit on mundane tasks; increasing to the full 262,144-token context resolved this, but generating a simple SVG took 21 minutes and 22,276 reasoning tokens.
 
 rss · Simon Willison · Aug 16, 22:00
 
-**Background**: Qwen 3.8 27B is a dense vision-language model built on the Qwen3.5 architecture, designed for deployment-friendly performance across coding, professional work, research, and agentic tasks. It supports a 'reasoning_effort' parameter to control reasoning depth, with options like 'xhigh', 'medium', and 'low', but defaults to 'xhigh' for thorough analysis. The Apache 2 license permits commercial use, redistribution, and modification without usage caps, making it attractive for businesses and developers.
+**Background**: Qwen is a series of large language models developed by Alibaba, with open-weights versions released under permissive licenses like Apache 2.0, allowing commercial use and local deployment. Vision-capable LLMs can process images and videos as input, enabling multimodal tasks. The 'reasoning_effort' parameter controls how much computation the model spends on reasoning, with higher values leading to more thorough but slower responses.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://huggingface.co/Qwen/Qwen3.8-27B">Qwen/Qwen3.8-27B · Hugging Face</a></li>
-<li><a href="https://lmstudio.ai/models/qwen/qwen3.8-27b">qwen/qwen3.8-27b • LM Studio</a></li>
-<li><a href="https://aireleasetracker.com/model/qwen/qwen3.8-27b">Qwen3.8-27B — Benchmarks, Specs & Release Date</a></li>
+<li><a href="https://www.yottalabs.ai/post/qwen-3-8-27b-specs-hardware-requirements-how-to-run-2026">Qwen 3.8 27B: Specs, Hardware Requirements, and How to Run It (2026) | Yotta Labs</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#LLM`, `#Qwen`, `#open-source`, `#AI`, `#benchmarks`
+**Tags**: `#LLM`, `#Qwen`, `#open-weights`, `#AI benchmarks`, `#model release`
+
+---
+
+<a id="item-5"></a>
+## [SSOG-Attention: Sub-Quadratic Attention via Separable Gaussians](https://www.reddit.com/r/MachineLearning/comments/1vpt6ay/ssogattention_sum_of_separable_gaussians_as_a/) ⭐️ 8.0/10
+
+SSOG-Attention introduces a novel attention mechanism that replaces scaled dot-product attention (SDPA) with a sum of separable Gaussians, reducing complexity from O(N²·d) to O(N·√N·d). Experiments show it outperforms SDPA on CIFAR-100 and matches performance on ImageNet-1k with faster convergence and better efficiency. This addresses the scalability bottleneck of transformer attention, which is quadratic in sequence length. A sub-quadratic alternative that maintains or improves performance could enable longer contexts and larger inputs in vision and language models, reducing computational and memory costs. The method learns a few Gaussian atoms per head and steers them based on the query token, leveraging the separability of Gaussians for efficient factorization. The blog post and repository provide ablations and additional results, with code available on GitHub.
+
+reddit · r/MachineLearning · /u/4rtemi5 · Aug 16, 10:06
+
+**Background**: Scaled dot-product attention (SDPA) computes attention scores between all query-key pairs, leading to O(N²) complexity, which becomes prohibitive for long sequences. Various approaches like linear attention and sparse attention aim to reduce this, but often trade off accuracy. SSOG-Attention offers a novel angle by approximating the attention distribution with separable Gaussians, which can be computed more efficiently.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://d2l.ai/chapter_attention-mechanisms-and-transformers/attention-scoring-functions.html">11.3. Attention Scoring Functions — Dive into Deep Learning 1.0.3 documentation</a></li>
+<li><a href="https://leetllm.com/learn/scaled-dot-product-attention">Scaled Dot - Product Attention | LeetLLM</a></li>
+<li><a href="https://kkrampis.github.io/blog/ai-models-architecture/attention/index.html">Attention Explained :: Prof. Krampis Blog</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#attention`, `#efficiency`, `#machine learning`, `#scalability`, `#transformer`
 
 ---
 
 <a id="item-6"></a>
-## [SSOG-Attention: Sub-Quadratic Attention via Separable Gaussians](https://www.reddit.com/r/MachineLearning/comments/1vpt6ay/ssogattention_sum_of_separable_gaussians_as_a/) ⭐️ 8.0/10
+## [Anthropic Q2 Revenue Surges 14-Fold to $11.5B, First Profit](https://www.cnbc.com/2026/08/15/anthropic-revenue-jumps-to-over-11point5-billion-in-q2-report.html) ⭐️ 8.0/10
 
-SSOG-Attention introduces a novel attention mechanism that replaces standard scaled dot-product attention (SDPA) with a sum of separable Gaussians, reducing complexity from O(N²·d) to O(N·√N·d). The method demonstrates competitive performance on CIFAR-100 and ImageNet, with faster convergence and improved memory efficiency at scale. This work addresses the quadratic scaling bottleneck of standard attention, which limits the application of transformers to long sequences and high-resolution images. By offering a sub-quadratic alternative with comparable accuracy, SSOG-Attention could enable more efficient vision transformers and potentially extend to other domains like NLP, making large-scale models more accessible. The method learns a few Gaussian atoms per head and steers them geometrically based on the query token, allowing factorization into a separable sum. Experiments show SSOG clearly outperforms SDPA on CIFAR-100 and matches performance on ImageNet while being faster and more memory-efficient. The author provides a blog post and open-source code for verification.
+Anthropic reported preliminary Q2 2026 revenue exceeding $11.5 billion, a more than 14-fold increase year-over-year, and posted its first-ever positive adjusted operating profit. The figures are preliminary and ahead of a potential IPO this fall. This revenue surge demonstrates Anthropic's strong commercial traction in the AI market, positioning it as a major competitor to OpenAI and Google. The positive operating profit and potential IPO could reshape the AI industry's financial landscape and attract significant investor attention. The Q2 revenue compares to $787 million in the same period last year and $4.73 billion in Q1 2026. Anthropic's revenue growth has been rapid: from an $87 million annualized rate in January 2024 to a $30 billion run rate by April 2026, with the company now approaching profitability.
 
-reddit · r/MachineLearning · /u/4rtemi5 · Aug 16, 10:06
+telegram · zaihuapd · Aug 16, 07:26
 
-**Background**: Scaled dot-product attention (SDPA) computes attention scores between all query-key pairs, leading to O(N²) complexity, which becomes prohibitive for long sequences. Various efficient attention mechanisms have been proposed to reduce this complexity, such as sparse attention, low-rank approximations, and kernel-based methods. SSOG-Attention falls into this category by using a sum of separable Gaussians to approximate the attention computation, achieving sub-quadratic complexity while maintaining performance.
+**Background**: Anthropic is an AI company known for its Claude model, competing in the rapidly growing generative AI market. The company has seen explosive demand for its AI services, with revenue growing from $1 billion in December 2024 to $9 billion by end of 2025. The reported figures are preliminary and may be adjusted, but they signal a major milestone for the company as it prepares for a possible IPO.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://x.com/AllAboutJoeX/status/2088933013635596613">Attention needs another path. SSOG-Attention proposes a sum ...</a></li>
-<li><a href="https://www.linkedin.com/posts/rpisoni_a-few-gaussians-is-all-you-need-ssog-attention-activity-7494799597622525952-mgd2">A Few Gaussians Is All You Need: SSOG-Attention That Steers ...</a></li>
-<li><a href="https://neelmishra.github.io/blog/dl/transformers/attention/scaled-dot.html">Scaled Dot-Product Attention | Neel Mishra</a></li>
+<li><a href="https://www.bloomberg.com/news/articles/2026-08-14/anthropic-revenue-ahead-of-ipo-surges-over-14-fold-in-second-quarter">Anthropic Revenue Ahead of IPO Surges Over 14-Fold in Second Quarter - Bloomberg</a></li>
+<li><a href="https://cryptobriefing.com/preliminary-q2-2026-revenue-at-anthropic-exceeded-115-billion-company-reported/">Preliminary Q2 2026 revenue at Anthropic exceeded $11.5 billion; company reported positive adjusted operating profit</a></li>
+<li><a href="https://awesomeagents.ai/news/anthropic-first-profit-q2-2026/">Anthropic Nears First Profit as Q 2 Revenue Hits... | Awesome Agents</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The Reddit discussion includes technical feedback and questions. One commenter on X (Twitter) notes that while the approach is worth testing, the real question is what long-range recall gets traded for speed. The author is actively engaging with the community, providing additional results and clarifications.
-
-**Tags**: `#efficient attention`, `#transformer`, `#machine learning`, `#scalability`, `#computer vision`
+**Tags**: `#Anthropic`, `#AI industry`, `#revenue`, `#IPO`, `#business news`
 
 ---
 
 <a id="item-7"></a>
-## [Anthropic Q2 Revenue Surges 14x to Over $11.5B](https://www.cnbc.com/2026/08/15/anthropic-revenue-jumps-to-over-11point5-billion-in-q2-report.html) ⭐️ 8.0/10
+## [Embedded Engineer from Developing Country Defends RISC-V's Cost Benefits](https://rvembedded.com/blog_post/12/) ⭐️ 7.0/10
 
-Anthropic's preliminary Q2 revenue exceeded $11.5 billion, a 14-fold year-over-year increase from $787 million, and the company reported positive adjusted operating income for the quarter. The figures are preliminary and may be adjusted as the company prepares for a potential IPO this fall. This revenue surge and profitability signal strong commercial traction for Anthropic, positioning it as a major player in the AI industry. It also sets the stage for a highly anticipated IPO, which could reshape the AI investment landscape. The revenue growth is sequential as well: Q2 2026 revenue of $11.5 billion compares to $4.73 billion in Q1 2026. The company's adjusted operating income turned positive, a key milestone for a capital-intensive AI firm.
+An embedded engineer from a developing country published a response article to 'RISC-V They Should Have Known Better', arguing that RISC-V's cost advantages make it more accessible for engineers in resource-limited regions. The article highlights how the open-source ISA reduces costs compared to proprietary alternatives like ARM. This perspective challenges the predominantly US/Europe-centric discourse on RISC-V, emphasizing its potential to democratize hardware development in developing countries. It underscores the importance of cost and accessibility in technology adoption, which could influence how RISC-V is positioned in global markets. The author notes that shipping costs for low-cost chips can be $60-$200 to his location, yet claims RISC-V parts arrive at ten cents each, a discrepancy that commenters have questioned. The article focuses on embedded applications where RISC-V's lower cost per part is critical, despite potential performance trade-offs compared to ARM64.
 
-telegram · zaihuapd · Aug 16, 07:26
+hackernews · Narishma · Aug 16, 17:01 · [Discussion](https://news.ycombinator.com/item?id=49321717)
 
-**Background**: Anthropic is an AI safety and research company known for its Claude models, competing with OpenAI and others. Revenue growth in the AI sector has been rapid due to enterprise adoption and demand for generative AI services. An IPO would provide public market access to AI investment, following trends of other tech companies.
-
-**Tags**: `#Anthropic`, `#AI industry`, `#revenue`, `#IPO`, `#business`
-
----
-
-<a id="item-8"></a>
-## [Amodei: AI Distrust Is a Crisis of Trust, Not Marketing](https://simonwillison.net/2026/Aug/16/dario-amodei/) ⭐️ 7.0/10
-
-Dario Amodei, CEO of Anthropic, publicly stated that public distrust in AI is fundamentally a crisis of trust in institutions, not primarily caused by AI leaders' warnings about risks. He argued that rebuilding trust requires tangible results, such as actually curing cancer, rather than marketing campaigns. This statement from a leading AI figure challenges the common narrative that AI risk warnings are the main driver of public backlash. It highlights a broader societal issue of institutional distrust, which could influence how AI companies approach communication and accountability, potentially shaping industry strategies and public policy discussions. Amodei specifically criticized the idea of a 'glitzy marketing campaign with a positive spin,' calling it ineffective and potentially deceptive. He also acknowledged that the most accurate criticism of AI companies, including Anthropic, is that they haven't yet delivered on their big promises to benefit the world, and he urged critics to focus on that instead of messaging.
-
-rss · Simon Willison · Aug 16, 15:05
-
-**Background**: Public trust in AI has been declining amid concerns about job displacement, privacy, and existential risks, with many attributing this to warnings from AI leaders. However, Amodei argues that this distrust is part of a decades-long erosion of trust in companies, governments, and the tech industry, with AI being the latest focus. This perspective aligns with broader research on institutional trust, such as OECD surveys showing public resistance to AI in government due to distrust in institutions.
+**Background**: RISC-V is an open-source instruction set architecture (ISA) that allows companies to design processors without paying licensing fees, unlike proprietary architectures like ARM. This cost advantage is particularly significant for embedded systems, where even small per-unit savings can have a large impact. The original article criticized RISC-V's design decisions and fragmentation, but this response argues that for many developers in developing countries, cost and accessibility outweigh these concerns.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://fortune.com/2026/08/16/dario-amodei-anthropic-ai-trust-crisis-regulation-frontier-open-models-negative-views/">Dario Amodei admits AI suffers from a crisis of trust, saying people worry companies or governments are 'cooking up some new way to screw them over' | Fortune</a></li>
-<li><a href="https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/">Anthropic CEO says AI backlash is ‘fundamentally a crisis of trust’ | TechCrunch</a></li>
-<li><a href="https://cryptobriefing.com/anthropic-amodei-ai-crisis-of-trust/">Anthropic CEO Dario Amodei addresses AI backlash as crisis of trust, not crisis of communication</a></li>
+<li><a href="https://en.wikipedia.org/wiki/RISC-V">RISC-V - Wikipedia</a></li>
+<li><a href="https://www.stromasys.com/resources/risc-v-vs-arm-processors-comparative-analysis/">RISC - V vs ARM : Complete Architecture Comparison Guide 2026</a></li>
+<li><a href="https://alpinumconsulting.com/blogs/risc-v-what-you-need-to-know/">RISC-V Architecture: What Engineers Need to Know in 2026</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI ethics`, `#public trust`, `#Anthropic`, `#Dario Amodei`, `#AI industry`
+**Discussion**: Commenters generally appreciate the fresh perspective but raise logical inconsistencies, particularly regarding shipping costs versus the claimed low cost of RISC-V parts. Some also note that shipping costs to countries like Nigeria and Bangladesh may not be as high as the author suggests, questioning the universality of his experience.
+
+**Tags**: `#RISC-V`, `#embedded systems`, `#cost analysis`, `#developing countries`, `#hardware`
+
+---
+
+<a id="item-8"></a>
+## [Anthropic CEO: AI Distrust Is a Crisis of Trust, Not Marketing](https://simonwillison.net/2026/Aug/16/dario-amodei/) ⭐️ 7.0/10
+
+Dario Amodei, CEO of Anthropic, publicly argued that public distrust in AI stems from a broader crisis of trust in institutions, not primarily from AI leaders' warnings about risks. He stated that rebuilding trust requires tangible results, such as actually curing cancer, rather than glitzy marketing campaigns. This perspective from a leading AI figure challenges the common narrative that AI safety warnings cause public backlash, potentially shifting how AI companies approach communication and trust-building. It underscores the importance of delivering real-world benefits to regain public confidence, which is critical for the industry's long-term adoption and social license. Amodei acknowledged that AI companies, including Anthropic, have not yet delivered on their big promises to benefit the world, calling this the most accurate criticism. He dismissed the idea that a positive-spin marketing campaign would work, noting that claims like 'AI will cure cancer' are now clichés and often perceived as deceptive.
+
+rss · Simon Willison · Aug 16, 15:05
+
+**Background**: Anthropic is an American AI company focused on AI safety, founded with the goal of promoting responsible AI development. Public trust in AI has been declining, with reports showing widespread skepticism and opposition to AI infrastructure, partly due to concerns about risks and corporate motives. Amodei's comments come amid ongoing debates about AI's societal impact and the role of AI leaders in shaping public perception.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Anthropic">Anthropic - Wikipedia</a></li>
+<li><a href="https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/">Anthropic CEO says AI backlash is ‘fundamentally a crisis of trust ’</a></li>
+<li><a href="https://crene.com/articles/44930-gemini-3-pros-real-world-reality-check-69-trust-in-blind-testing-but-what-does-it-mean/">Gemini 3 Pro's Real-World Reality Check: 69% Trust in Blind... - Crene</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#AI`, `#public trust`, `#Anthropic`, `#AI ethics`, `#industry commentary`
+
+---
+
+<a id="item-9"></a>
+## [Stanford, MIT Release World's Largest System Prompt Library](https://news.google.com/rss/articles/CBMiiAFBVV95cUxOeXlXY1hnRGxuUVlVVzlJaDFDWlB1MXNUT2JpSko0SW4zM3dGOVBtUjZBZGNxWi1jcll3aUkwNGVGTndLdHRITlg1VTA5QURRcDVpZDFtMUhiVGtkY0F0WmJQRjl1VE9Sa3VYXzlhWE5OWkJjbjB6aVBSMF9ZZTdCbnFYTlBGMi1y?oc=5) ⭐️ 7.0/10
+
+Stanford, MIT, and other institutions have released the world's largest system prompt library, a comprehensive collection of system prompts for AI models. This resource is designed to support AI research and development by providing a wide range of tested prompts. This library provides a standardized, extensive resource for researchers and developers, potentially accelerating progress in prompt engineering and AI application development. It could also serve as a benchmark for evaluating system prompt effectiveness across different models. The library includes prompts for various models and use cases, and is likely open-source or freely accessible. Specific details such as the exact number of prompts and the hosting platform were not provided in the news summary.
+
+google_news · 搜狐网 · Aug 16, 05:56
+
+**Background**: System prompts are instructions given to AI models to guide their behavior and output. They are crucial for fine-tuning model responses in applications like chatbots and content generation. A large, curated library of such prompts can help standardize practices and reduce the need for trial-and-error.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://veprompts.com/prompts/system/">System Prompt Library — 100+ Expert Prompts | VePrompts</a></li>
+<li><a href="https://prompts.danielrosehill.com/">System Prompt Library - Daniel Rosehill</a></li>
+<li><a href="https://github.com/danielrosehill/System-Prompt-Library">GitHub - danielrosehill/ System - Prompt - Library : System prompts for...</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#AI`, `#system prompts`, `#research`, `#NLP`, `#datasets`
 
 ---
