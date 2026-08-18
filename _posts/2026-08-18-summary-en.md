@@ -5,135 +5,156 @@ date: 2026-08-18
 lang: en
 ---
 
-> From 37 items, 12 important content pieces were selected
+> From 36 items, 12 important content pieces were selected
 
 ---
 
 1. [Mojo Programming Language Goes Open Source Under Apache 2](#item-1) ⭐️ 9.0/10
-2. [Bricked Framework Laptop Fixed with $20 Tools, Raising Repair Concerns](#item-2) ⭐️ 8.0/10
-3. [Linux 7.3 Boosts Performance When VRAM Runs Out](#item-3) ⭐️ 8.0/10
-4. [OpenAI launches initiative for democratic oversight in national security AI](#item-4) ⭐️ 8.0/10
-5. [Asana Completes 5 Years of Engineering Work in 2 Weeks with OpenAI Codex](#item-5) ⭐️ 8.0/10
-6. [Qwen 3.8 27B Matches GPT-5.6 Luna on Intelligence Index](#item-6) ⭐️ 8.0/10
-7. [China Orders State Agencies to Uninstall Custom Windows 10 Ahead of Schedule](#item-7) ⭐️ 8.0/10
-8. [Amazon's Ad-Driven Search Results Impose a Hidden 'Tax'](#item-8) ⭐️ 7.0/10
-9. [Turbovec: Google's TurboQuant for Vector Search in Rust](#item-9) ⭐️ 7.0/10
+2. [Turbovec: Rust Implementation of Google's TurboQuant for Vector Search](#item-2) ⭐️ 8.0/10
+3. [Bricked Framework Laptop Fixed with $20 Tools, Raising BIOS Update Concerns](#item-3) ⭐️ 8.0/10
+4. [Linux 7.3 Boosts Performance When VRAM Runs Out](#item-4) ⭐️ 8.0/10
+5. [OpenAI Paces Model Development with New Cyber Safeguards](#item-5) ⭐️ 8.0/10
+6. [Asana completes 5 years of engineering work in 2 weeks with Codex](#item-6) ⭐️ 8.0/10
+7. [Qwen 3.8 27B Matches GPT-5.6 Luna on Intelligence Index](#item-7) ⭐️ 8.0/10
+8. [Chinese AI Chips to Dominate Domestic Market by 2026](#item-8) ⭐️ 8.0/10
+9. [Amazon's Ad-Driven Search Results Impose Hidden Costs](#item-9) ⭐️ 7.0/10
 10. [Iceland Foods Satirizes Management Consultants](#item-10) ⭐️ 7.0/10
-11. [OpenAI Strengthens Safeguards for Frontier AI Development](#item-11) ⭐️ 7.0/10
-12. [OpenAI Partners with CodeAI to Bring AI Education to Millions of Teens](#item-12) ⭐️ 6.0/10
+11. [OpenAI Partners with CodeAI to Bring AI Education to Millions of Teens](#item-11) ⭐️ 6.0/10
+12. [NVIDIA Scales AI Expertise with ChatGPT Work](#item-12) ⭐️ 6.0/10
 
 ---
 
 <a id="item-1"></a>
 ## [Mojo Programming Language Goes Open Source Under Apache 2](https://simonwillison.net/2026/Aug/18/mojo-is-now-open-source/) ⭐️ 9.0/10
 
-Modular has open-sourced the Mojo programming language, releasing its compiler and toolchain under the Apache 2 license. This follows the release of Mojo 1.0 last week and fulfills a promise made in May 2023. This is a major milestone for the developer community, as Mojo aims to combine Python's ease of use with C-like performance, particularly for GPU and AI workloads. Open-sourcing under a permissive license could accelerate adoption and community contributions, potentially reshaping high-performance computing and AI development. Mojo was originally intended to be a superset of Python, but that goal was abandoned or postponed indefinitely around August 2025. The language now focuses on GPU programming with Python-inspired syntax, and it builds on the MLIR compiler framework rather than directly on LLVM.
+Modular has open-sourced the Mojo programming language, releasing its compiler and toolchain under the Apache 2 license. This follows the release of Mojo 1.0 the previous week, fulfilling a promise made in May 2023. Mojo is a highly anticipated language for AI and high-performance computing, and its open sourcing under a permissive license could accelerate adoption and community contributions. This move may also influence the Python ecosystem and the development of AI tooling, as Mojo aims to provide Python-like syntax with systems-level performance. Mojo was originally intended to be a superset of Python, but this goal was abandoned or postponed around August 2025, and it is now its own language. It is built on the MLIR compiler framework, allowing it to target CPUs, GPUs, TPUs, and other accelerators, and it incorporates features like static typing and a borrow checker inspired by Rust.
 
 rss · Simon Willison · Aug 18, 21:39
 
-**Background**: Mojo is a systems programming language developed by Modular Inc., designed for high-performance AI infrastructure and heterogeneous hardware. It uses a syntax reminiscent of Python but includes static typing and a borrow checker inspired by Rust. The Apache 2 license is a permissive open-source license that allows users to use, modify, and distribute the software freely, with minimal restrictions.
+**Background**: Mojo is a programming language developed by Modular, designed to combine Python's ease of use with the performance of systems languages like C++ and Rust. It leverages the MLIR compiler framework to enable efficient code generation for diverse hardware, making it particularly suited for AI workloads. The Apache 2 license is a permissive open-source license that allows users to use, modify, and distribute the software freely, with minimal restrictions.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Mojo_(programming_language)">Mojo (programming language)</a></li>
-<li><a href="https://www.apache.org/licenses/LICENSE-2.0.html">Apache License, Version 2.0 | Apache Software Foundation</a></li>
-<li><a href="https://www.infoworld.com/article/4081105/revisiting-mojo-a-faster-python.html">Revisiting Mojo : A faster Python? | InfoWorld</a></li>
+<li><a href="https://www.modular.com/blog/the-path-to-mojo-1-0">Modular: The path to Mojo 1.0</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_License">Apache License</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The Lobste.rs discussion highlights excitement about the open-sourcing, with many noting the fulfillment of the long-awaited promise. Some commenters express curiosity about the language's evolution away from Python superset compatibility and its potential impact on GPU programming.
+**Discussion**: The discussion on Lobste.rs is likely to be positive, given the long-awaited open sourcing. Community members may express excitement about the potential for community-driven development and improvements, while some might discuss the implications of Mojo no longer being a Python superset and its impact on Python compatibility.
 
-**Tags**: `#Mojo`, `#open source`, `#programming language`, `#compiler`, `#high-performance computing`
+**Tags**: `#Mojo`, `#open source`, `#programming language`, `#AI/ML`, `#compiler`
 
 ---
 
 <a id="item-2"></a>
-## [Bricked Framework Laptop Fixed with $20 Tools, Raising Repair Concerns](https://quantum5.ca/2026/08/16/fixing-bricked-amd-7040-series-framework-13-laptop-with-20-tools/) ⭐️ 8.0/10
+## [Turbovec: Rust Implementation of Google's TurboQuant for Vector Search](https://github.com/RyanCodrai/turbovec) ⭐️ 8.0/10
 
-A detailed blog post by quantum5.ca documents how a bricked Framework Laptop 13 (AMD Ryzen 7040 series) was successfully repaired using only $20 worth of tools, after a BIOS update failure rendered the device unusable. The post highlights the prevalence of BIOS update failures and calls for better manufacturer accountability. This story underscores the fragility of modern laptops during BIOS updates and the importance of right-to-repair. It shows that with accessible tools and knowledge, consumers can fix devices that manufacturers might otherwise deem irreparable, potentially reducing e-waste and challenging warranty practices. The repair involved using a $20 toolset, likely including a chip programmer and clips, to reflash the BIOS chip directly. The author notes that BIOS update failures remain common across PC manufacturers, and the process requires technical skill but is feasible for determined users.
+Turbovec is a new Rust library that brings Google's TurboQuant vector search algorithm to the Rust ecosystem, offering efficient memory usage and potential for local, privacy-focused applications. It was recently released on GitHub and has gained significant community attention. This is significant because it brings a state-of-the-art vector search algorithm to Rust, enabling developers to build high-performance, memory-efficient search applications in a systems language. It could accelerate the adoption of local, privacy-preserving search solutions and provide a Rust-native alternative to existing vector databases. The library reportedly uses only 4GB of memory for 10 million documents, showcasing its efficiency. Community members have discussed compiling it to WASM for browser extensions and noted that Qdrant has been integrating TurboQuant for months, suggesting potential competition or collaboration opportunities.
 
-hackernews · jp_sc · Aug 18, 13:18 · [Discussion](https://news.ycombinator.com/item?id=49345220)
+hackernews · fittingopposite · Aug 18, 18:07 · [Discussion](https://news.ycombinator.com/item?id=49349898)
 
-**Background**: A 'bricked' laptop is one that becomes completely non-functional, often due to a failed BIOS/UEFI firmware update. BIOS (Basic Input/Output System) is firmware that initializes hardware during boot; if corrupted, the system cannot start. Framework Laptop is a modular, repairable laptop brand, but even it can suffer from such failures. Right-to-repair advocates argue that manufacturers should provide tools and documentation to enable user repairs, reducing e-waste.
+**Background**: TurboQuant is a compression method developed by Google that achieves high reduction in model size with zero accuracy loss, and is used for both KV cache compression and vector search. Vector search, particularly approximate nearest neighbor (ANN) search, is a technique used in vector databases to find data points closest to a query point efficiently, which is essential for applications like image and text retrieval. Rust is a systems programming language known for its performance and memory safety, making it a suitable choice for implementing such algorithms.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://community.frame.work/t/fw16-laptop-bois-update-failed-but-not-4-0-1-4-0-2-successfull-but-not-on-first-try/79151">FW16 Laptop BOIS Update failed but not... 4.0.1 -> 4.0.2 (Successfull...</a></li>
-<li><a href="https://quantum5.ca/2026/08/16/fixing-bricked-amd-7040-series-framework-13-laptop-with-20-tools/">Fixing a bricked AMD 7040 series Framework 13” laptop with $20 tools</a></li>
-<li><a href="https://thetechylife.com/can-a-bricked-pc-be-fixed/">Reviving a Bricked PC: Is It Possible to Fix a Dead Computer?</a></li>
+<li><a href="https://en.wikipedia.org/wiki/TurboQuant">TurboQuant - Wikipedia</a></li>
+<li><a href="https://research.google/blog/turboquant-redefining-ai-efficiency-with-extreme-compression/">TurboQuant: Redefining AI efficiency with extreme compression</a></li>
+<li><a href="https://www.mongodb.com/resources/basics/ann-search">What is Approximate Nearest Neighbor (ANN) Search? | MongoDB</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters expressed frustration with manufacturers, with some suggesting legal action for faulty BIOS updates and noting that such failures are still common. Others regretted buying Framework due to limited parts availability and stock issues, while one user proposed that installing official updates should extend warranties.
+**Discussion**: Community sentiment is largely positive, with users praising the memory efficiency and potential for local, privacy-first search. Some users suggested improvements to the README for better adoption, while others debated alternatives like Qdrant, which has already integrated TurboQuant. There is also curiosity about compiling the library to WASM for browser use.
 
-**Tags**: `#hardware`, `#repair`, `#Framework Laptop`, `#BIOS`, `#right-to-repair`
+**Tags**: `#vector search`, `#Rust`, `#TurboQuant`, `#ANN`, `#privacy`
 
 ---
 
 <a id="item-3"></a>
-## [Linux 7.3 Boosts Performance When VRAM Runs Out](https://pixelcluster.dev/VRAM-Overcommit/) ⭐️ 8.0/10
+## [Bricked Framework Laptop Fixed with $20 Tools, Raising BIOS Update Concerns](https://quantum5.ca/2026/08/16/fixing-bricked-amd-7040-series-framework-13-laptop-with-20-tools/) ⭐️ 8.0/10
 
-Linux kernel version 7.3 introduces a performance improvement specifically for handling out-of-vRAM situations, addressing a long-standing issue where the system would struggle when GPU memory is exhausted. The change has generated significant community discussion and anticipation. This improvement is significant for gamers, content creators, and developers using GPUs with limited VRAM, as it can reduce stuttering and improve overall system responsiveness. It also highlights the Linux kernel's proactive approach to memory management, contrasting with Windows updates that users often dread. The improvement likely involves better handling of VRAM overcommit, possibly through more efficient eviction policies or improved interaction with GTT (Graphics Translation Table). Community comments mention the need for Nvidia support, as Nvidia currently lacks paging support, and discuss potential memory defragmentation strategies.
+A detailed guide was published on August 16, 2026, showing how to fix a Framework 13 laptop bricked by a failed BIOS update (version 3.20) using only $20 worth of tools. The guide highlights the recovery process and broader issues with BIOS update reliability. This matters because BIOS update failures can brick expensive laptops, leading to e-waste and consumer frustration. It underscores the need for better manufacturer accountability, reliable update mechanisms, and accessible repair options, especially for modular laptops like Framework that promote repairability. The guide uses inexpensive tools (around $20) to recover the laptop, likely involving a hardware programmer to reflash the BIOS chip. The failed update was version 3.20, which Framework recommended via newsletter, and the system hung with a corrupt image during the flash.
 
-hackernews · flaburgan · Aug 18, 07:51 · [Discussion](https://news.ycombinator.com/item?id=49342719)
+hackernews · jp_sc · Aug 18, 13:18 · [Discussion](https://news.ycombinator.com/item?id=49345220)
 
-**Background**: VRAM (Video RAM) is dedicated memory on a GPU used for storing textures, framebuffers, and other graphics data. When VRAM is full, the kernel must decide whether to evict data to system RAM (via GTT) or fail the allocation, which can cause crashes. Linux has been working on improving VRAM management, with recent patches from Valve engineer Natalie Vock focusing on protecting foreground applications and using cgroups for dynamic prioritization.
+**Background**: BIOS (Basic Input/Output System) is firmware that initializes hardware during boot. A failed BIOS update can 'brick' a device, making it unusable. Many manufacturers provide recovery methods, but they often require technical expertise or specific hardware. Framework is known for its modular, repairable laptops, yet this incident shows even such devices can suffer from BIOS update issues.
 
 <details><summary>References</summary>
 <ul>
+<li><a href="https://blog.adafruit.com/2026/08/18/fixing-a-bricked-framework-laptop/">Fixing a bricked Framework laptop - Adafruit Industries</a></li>
+<li><a href="https://community.frame.work/t/two-bricked-devices-after-bios-updates-how-can-i-escalate-my-support-request/84047">Two bricked devices after BIOS updates - how can I escalate ...</a></li>
+<li><a href="https://www.dell.com/support/kbdoc/en-us/000132453/how-to-recover-the-bios-on-a-dell-computer-or-tablet">Recover BIOS on Dell Computer or Tablet After Boot or POST ...</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Community comments express frustration with manufacturers, with some suggesting legal action (e.g., small claims court) for faulty BIOS updates. Others share similar experiences with other brands, and some regret buying Framework due to lack of competitive parts market and stock issues. There is also a call for warranty extensions when official updates cause problems.
+
+**Tags**: `#hardware`, `#repair`, `#BIOS`, `#Framework`, `#consumer-rights`
+
+---
+
+<a id="item-4"></a>
+## [Linux 7.3 Boosts Performance When VRAM Runs Out](https://pixelcluster.dev/VRAM-Overcommit/) ⭐️ 8.0/10
+
+Linux kernel 7.3 introduces a performance improvement for handling out-of-VRAM situations, with the kernel patchset merged upstream and queued for release. This enhancement focuses on better background VRAM management, particularly benefiting GPUs with 8 GB or less VRAM. This improvement addresses a common pain point for gamers and professionals with limited VRAM, reducing stutters and crashes when VRAM is exhausted. It also highlights Linux's proactive kernel development, contrasting with Windows' update model, and could influence GPU memory management standards. The patchset consists of six patches that improve VRAM overcommit handling, and userspace utilities like dmemcg-booster are still required. The kernel may occasionally defragment virtual memory in place, which could cause a noticeable hitch but improve overall performance.
+
+hackernews · flaburgan · Aug 18, 07:51 · [Discussion](https://news.ycombinator.com/item?id=49342719)
+
+**Background**: VRAM (video RAM) is dedicated memory on a GPU, and when it runs out, the system must fall back to system RAM, which is slower and can cause performance drops. Linux kernel developers have been working on better VRAM management, especially for GPUs with limited VRAM, to improve gaming and compute performance. The TTM (Translation Table Maps) subsystem manages memory placement and eviction in the kernel.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=49342719">Linux 7.3 improves performance when running out of vRAM | Hacker News</a></li>
 <li><a href="http://pixelcluster.dev/VRAM-Mgmt-fixed/">Fixing AMDGPU's VRAM management for low-end GPUs | pixelcluster's GPU blog</a></li>
-<li><a href="https://www.xda-developers.com/a-valve-engineer-just-stopped-linux-from-stealing-vram-from-your-8gb-gpu/">A Valve engineer just stopped Linux from stealing VRAM from your 8GB GPU</a></li>
 <li><a href="https://www.techpowerup.com/348178/valve-engineer-improves-linux-memory-management-for-gpus-with-8-gb-vram-or-less">Valve Engineer Improves Linux Memory Management for GPUs with 8 GB VRAM or Less | TechPowerUp</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community sentiment is largely positive, with users praising the improvement and expressing excitement for the upcoming release. Some users hope for similar fixes for RAM exhaustion, while others note Nvidia's lack of paging support and suggest kernel-level memory defragmentation. There is also appreciation for the developers' efforts and a contrast drawn with Windows update culture.
+**Discussion**: The community is enthusiastic about the improvement, with users praising the kernel development pace and the author's work. Some users on Nvidia hardware express frustration over lack of paging support, while others discuss potential memory fragmentation and the role of applications in memory allocation.
 
 **Tags**: `#Linux`, `#VRAM`, `#performance`, `#kernel`, `#memory management`
 
 ---
 
-<a id="item-4"></a>
-## [OpenAI launches initiative for democratic oversight in national security AI](https://openai.com/index/strengthening-democratic-oversight-in-national-security) ⭐️ 8.0/10
+<a id="item-5"></a>
+## [OpenAI Paces Model Development with New Cyber Safeguards](https://openai.com/index/pacing-model-development-cyber-capabilities) ⭐️ 8.0/10
 
-OpenAI has launched an initiative to strengthen democratic oversight of AI in national security, providing government institutions with tools, training, and expertise. This announcement follows earlier efforts like the Democratic Inputs to AI program, which funded experiments in democratic processes for AI rule-setting. This initiative is significant because it addresses the growing need for governance frameworks as AI becomes more integrated into national security. It could set a precedent for how private AI companies collaborate with governments to ensure accountability and democratic oversight, impacting policy and public trust. The initiative includes providing tools, training, and expertise to government institutions, though specific details are not yet disclosed. It builds on OpenAI's earlier Democratic Inputs to AI program, which awarded ten $100,000 grants for experiments in democratic processes for AI rule-setting.
+OpenAI announced new safeguards to guide the pace of frontier AI model development, focusing on enhanced monitoring, alignment, and security. This initiative also includes supporting government institutions with tools and training for democratic oversight of AI in national security. This signals a significant shift in how frontier AI developers manage cyber-critical capabilities, potentially setting an industry precedent for responsible pacing. It could influence AI policy and safety practices across the ecosystem, affecting developers, policymakers, and the public. The safeguards include more detailed monitoring during model development and greater emphasis on alignment and security during post-training, as noted in a recent TechCrunch report. OpenAI also launched an initiative to strengthen democratic oversight of AI in national security, providing government institutions with tools, training, and expertise.
 
-rss · OpenAI Blog · Aug 18, 19:00
+rss · OpenAI Blog · Aug 18, 11:00
 
-**Background**: AI governance in national security is a pressing issue, as AI systems are increasingly used in defense and intelligence, raising concerns about accountability and democratic control. OpenAI's initiative aims to address these concerns by supporting democratic oversight mechanisms. The broader context includes debates about private AI companies defining operational boundaries in national defense, as seen with Anthropic's AI being labeled a national security risk.
+**Background**: Frontier AI models are advanced systems with capabilities that could pose risks if misused, especially in cybersecurity. AI alignment ensures these systems pursue human-intended goals, and monitoring helps detect misalignment. OpenAI's Frontier Governance Framework, announced in May 2026, outlines safety practices aligned with emerging regulations, and this new announcement builds on that foundation.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://openai.com/index/democratic-inputs-to-ai/">Democratic inputs to AI | OpenAI</a></li>
-<li><a href="https://time.com/6684266/openai-democracy-artificial-intelligence/">time.com/6684266/ openai - democracy -artificial-intelligence</a></li>
-<li><a href="https://www.linkedin.com/posts/openai_democratic-inputs-to-ai-activity-7067584596900548608-fefq">Democratic inputs to AI | OpenAI | 416 comments</a></li>
+<li><a href="https://openai.com/index/pacing-model-development-cyber-capabilities/">Pacing model development in an era of cyber-critical ... - OpenAI</a></li>
+<li><a href="https://techcrunch.com/2026/08/18/openai-institutes-new-safeguards-after-hugging-face-breach/">OpenAI institutes new safeguards after Hugging Face breach</a></li>
+<li><a href="https://openai.com/index/openai-frontier-governance-framework/">OpenAI’s Frontier Governance Framework</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community comments on OpenAI's related Democratic Inputs to AI program were largely positive, praising the initiative as groundbreaking and inspiring for democratizing AI steering. Some highlighted the importance of binding processes over advisory consultations, as noted by a Chatham House member.
-
-**Tags**: `#AI governance`, `#national security`, `#OpenAI`, `#policy`
+**Tags**: `#AI safety`, `#OpenAI`, `#frontier models`, `#cybersecurity`, `#AI policy`
 
 ---
 
-<a id="item-5"></a>
-## [Asana Completes 5 Years of Engineering Work in 2 Weeks with OpenAI Codex](https://openai.com/index/asana) ⭐️ 8.0/10
+<a id="item-6"></a>
+## [Asana completes 5 years of engineering work in 2 weeks with Codex](https://openai.com/index/asana) ⭐️ 8.0/10
 
-Asana used OpenAI Codex to replace an outdated testing system in just two weeks, completing work that was expected to take five years, at a cost of approximately $12,000. This case study demonstrates the transformative potential of AI-assisted coding, showing that complex engineering tasks can be drastically accelerated with significant cost savings. It highlights a growing trend where AI agents like Codex are becoming essential tools for software development teams. The project involved replacing an outdated testing system, a task that would typically require extensive manual effort. The cost of about $12K includes the usage of Codex, which is available through ChatGPT, CLI, desktop apps, and IDE integrations.
+Asana used OpenAI Codex to replace an outdated testing system in just two weeks, completing work that was estimated to take five years, at a cost of approximately $12,000. This case study highlights the transformative potential of AI coding agents in software engineering, demonstrating dramatic productivity gains and cost savings. It could encourage more companies to adopt AI-driven development tools, reshaping how engineering teams approach legacy system migrations. The project involved replacing an outdated testing system, a task that was originally estimated to take five years. The work was completed in two weeks for about $12,000, showcasing Codex's ability to handle large-scale, complex engineering tasks efficiently.
 
 rss · OpenAI Blog · Aug 18, 07:00
 
-**Background**: OpenAI Codex is an AI coding agent designed for software engineering tasks such as writing code and fixing bugs. It was released in April 2025 as Codex CLI and is available through multiple interfaces, enabling developers to automate coding workflows. This case study illustrates how AI agents can handle large-scale refactoring and modernization projects that were previously time-consuming and resource-intensive.
+**Background**: OpenAI Codex is a lightweight coding agent that runs locally on a developer's computer, capable of automating coding tasks. It is part of a broader trend of AI-assisted development tools that aim to boost programmer productivity by handling repetitive or complex coding work. Asana is a project management software company that likely used Codex to modernize its testing infrastructure, which is a common challenge for growing tech companies.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://openai.com/index/asana/">Asana cleared 5 years of engineering work in 2 weeks with Codex | OpenAI</a></li>
-<li><a href="https://en.wikipedia.org/wiki/OpenAI_Codex_(AI_agent)">OpenAI Codex (AI agent) - Wikipedia</a></li>
-<li><a href="https://openai.com/codex/">Codex in ChatGPT | AI Coding Agents for Software Engineering | OpenAI</a></li>
+<li><a href="https://github.com/openai/codex">GitHub - openai / codex : Lightweight coding agent that runs in your...</a></li>
+<li><a href="https://chatgpt.com/ru-RU/codex/">Codex в ChatGPT | ИИ-агенты для написания кода и разработки ПО</a></li>
 
 </ul>
 </details>
@@ -142,157 +163,131 @@ rss · OpenAI Blog · Aug 18, 07:00
 
 ---
 
-<a id="item-6"></a>
+<a id="item-7"></a>
 ## [Qwen 3.8 27B Matches GPT-5.6 Luna on Intelligence Index](https://simonwillison.net/2026/Aug/17/qwen-38-27b-scores-52/) ⭐️ 8.0/10
 
-Qwen 3.8 27B, a 27-billion-parameter model, scored 52 on the Artificial Analysis Intelligence Index, matching GPT-5.6 Luna (max) and just one point behind GLM-5.2 (max) and DeepSeek V4 Pro 0813 (max). This result was reported by Simon Willison on August 17, 2026. This is significant because a relatively small 27B model achieves performance comparable to much larger models (GLM-5.2 is 753B, DeepSeek V4 Pro is 1.7T), highlighting a major efficiency breakthrough in AI. It could democratize access to high-quality AI, enabling deployment on consumer hardware and reducing costs. The Artificial Analysis Intelligence Index v4.1.1 includes benchmarks such as GDPval-AA v2, Terminal-Bench v2.1, SciCode, Humanity's Last Exam, GPQA Diamond, and others. Qwen 3.8 27B is an instruction-tuned model from Alibaba's Qwen family, designed for vision, text generation, and agentic workloads.
+Qwen 3.8 27B, a 27-billion-parameter model, scored 52 on the Artificial Analysis Intelligence Index, matching GPT-5.6 Luna (max) and just one point behind GLM-5.2 (753B) and DeepSeek V4 Pro (1.7T). This was reported by Simon Willison on August 17, 2026. This is significant because a relatively small 27B model achieving performance comparable to models with tens or hundreds of times more parameters marks a major milestone in AI efficiency. It could democratize access to high-quality AI, enabling deployment on consumer hardware and reducing costs for enterprises. The Artificial Analysis Intelligence Index v4.1.1 includes benchmarks such as GDPval-AA v2, Terminal-Bench v2.1, and Humanity's Last Exam. Qwen 3.8 27B generated 160M tokens during evaluation, which is notably verbose compared to the median of 43M tokens.
 
 rss · Simon Willison · Aug 17, 23:58
 
-**Background**: The Artificial Analysis Intelligence Index is a synthesized metric for model 'smartness' that has evolved to include agentic capabilities and long-context reasoning. Qwen 3.8 27B is part of Alibaba's open-weight Qwen series, which has been gaining attention for its strong performance relative to size. The model's self-reported benchmarks show improvements over previous versions, and independent benchmarks are now confirming its capabilities.
+**Background**: The Artificial Analysis Intelligence Index is a synthesized metric for model 'smartness' that has evolved to include agentic capabilities and long-context reasoning. Qwen 3.8 27B is an open-weight model from Alibaba's Qwen team, known for strong performance at relatively small sizes. GLM-5.2 and DeepSeek V4 Pro are much larger open-weight models, with GLM-5.2 using a Mixture-of-Experts architecture with 753B total parameters but only 40B active per token.
 
 <details><summary>References</summary>
 <ul>
+<li><a href="https://artificialanalysis.ai/models/qwen3-8-27b">Qwen 3 . 8 27 B - Intelligence, Performance & Price Analysis</a></li>
 <li><a href="https://artificialanalysis.ai/">AI Model & API Providers Analysis | Artificial Analysis</a></li>
-<li><a href="https://huggingface.co/Qwen/Qwen3.8-27B">Qwen/Qwen3.8-27B · Hugging Face</a></li>
-<li><a href="https://simonwillison.net/2026/Aug/16/qwen-38-27b/">Qwen 3.8 27B is excellent, but it defaults to wildly ...</a></li>
+<li><a href="https://huggingface.co/Qwen/Qwen3.8-27B">Qwen / Qwen 3 . 8 - 27 B · Hugging Face</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The Hacker News discussion (referenced in the article) likely expresses surprise and excitement about the efficiency of Qwen 3.8 27B, with some users noting the implications for local deployment and cost reduction. However, without direct comments, the sentiment is inferred from the article's tone and the model's reception.
+**Discussion**: The Hacker News discussion (item 49334544) likely highlights the impressive efficiency of Qwen 3.8 27B and its implications for local AI deployment. Some commenters may express skepticism about benchmark reliability or note the high token generation verbosity.
 
-**Tags**: `#AI`, `#LLMs`, `#Qwen`, `#model efficiency`, `#benchmark`
-
----
-
-<a id="item-7"></a>
-## [China Orders State Agencies to Uninstall Custom Windows 10 Ahead of Schedule](https://www.bloomberg.com/news/articles/2026-08-18/china-axing-microsoft-windows-from-state-agencies-ahead-of-plan) ⭐️ 8.0/10
-
-China's Ministry of State Security has ordered some government-linked agencies to uninstall the customized version of Windows 10, moving the planned decommissioning date from February 2027 to an earlier, unspecified time. This directive comes amid data security concerns, though no specific vulnerabilities were cited. This move accelerates China's efforts to reduce reliance on US technology, potentially impacting Microsoft's presence in the Chinese government sector and signaling heightened data security scrutiny. It could also influence other countries' procurement decisions and intensify geopolitical tech tensions. The customized Windows 10, developed by Microsoft China and C&W Information Technology, was introduced in 2016 to meet China's security requirements. Microsoft stated it has found no security incidents affecting the product and that it continues to receive regular security updates.
-
-telegram · zaihuapd · Aug 18, 06:22
-
-**Background**: China has been pushing for technological self-reliance, especially in government and state-linked sectors, to reduce dependence on foreign technology. The customized Windows 10 was part of a compromise to allow Microsoft to operate in China while addressing local security concerns. This order aligns with broader efforts to promote domestic alternatives like Kylin and UOS operating systems.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://www.tomshardware.com/software/operating-systems/china-reportedly-orders-state-agencies-to-uninstall-its-government-only-edition-of-windows-10">China reportedly orders state agencies to uninstall ... | Tom's Hardware</a></li>
-<li><a href="https://www.straitstimes.com/asia/east-asia/china-removes-microsoft-windows-at-state-users-ahead-of-plan">China removes Microsoft Windows at state users... | The Straits Times</a></li>
-<li><a href="https://wccftech.com/china-state-agencies-uninstall-windows-10-cmit-government-edition/">China ’s State-Linked Firms Are Moving Away From Windows 10 Due...</a></li>
-
-</ul>
-</details>
-
-**Discussion**: The provided comments are sparse, but the Telegram post highlights that this is another setback for Microsoft in China, emphasizing the joint development with C&W Information Technology. No detailed community discussion is available.
-
-**Tags**: `#cybersecurity`, `#geopolitics`, `#Microsoft`, `#Windows 10`, `#data security`
+**Tags**: `#AI`, `#LLMs`, `#Qwen`, `#model efficiency`, `#benchmarks`
 
 ---
 
 <a id="item-8"></a>
-## [Amazon's Ad-Driven Search Results Impose a Hidden 'Tax'](https://seths.blog/2026/08/the-amazon-tax/) ⭐️ 7.0/10
+## [Chinese AI Chips to Dominate Domestic Market by 2026](https://www.tomshardware.com/tech-industry/artificial-intelligence/chinas-homegrown-ai-accelerators-to-supply-90-percent-of-the-countrys-domestic-market-analysts-suggest-cambricon-and-huawei-expected-to-be-the-biggest-winners-in-the-shift-away-from-nvidia-and-amd) ⭐️ 8.0/10
 
-Seth Godin argues that Amazon's search ads, which generate nearly a billion dollars in weekly profit, distort search results and act as a hidden 'tax' on consumers by prioritizing sponsored products over the best options. The article sparked a substantial community discussion with 842 points and 509 comments. This critique highlights a growing concern about the ethics of advertising in e-commerce, where consumer trust and choice are compromised for profit. It could influence regulatory scrutiny and consumer behavior, as well as prompt discussions about legal remedies for deceptive advertising practices. Amazon makes nearly a billion dollars in profit from search ads every week, according to Godin. Community members note that sorting by 'Best Sellers' can eliminate ads, and some suggest legal avenues such as trademark infringement and fraud claims.
+TrendForce forecasts that Chinese domestic AI accelerators will supply nearly 90% of the domestic market by 2026, up from 45% last year. Cambricon and Huawei are expected to be the biggest winners in this shift away from Nvidia and AMD. This marks a significant strategic shift in China's AI chip market, reducing reliance on foreign suppliers amid US export controls. It could reshape the global AI chip landscape and boost domestic players like Cambricon and Huawei. In 2025, Nvidia held 55% of the Chinese market with 2.2 million units, while Huawei shipped 812,000 units for a 20.3% share. To meet the 2026 target, China must increase high-end AI chip production by 2.2 times to about 1.96 million units, raising questions about production capacity.
 
-hackernews · herbertl · Aug 18, 13:22 · [Discussion](https://news.ycombinator.com/item?id=49345263)
+telegram · zaihuapd · Aug 18, 13:03
 
-**Background**: Amazon is a major e-commerce platform where sponsored products are common. Sponsored Products are pay-per-click ads that appear in search results, often at the top, which can push down organic results. This practice has been criticized for misleading consumers and potentially inflating prices, as sellers pass ad costs to buyers.
+**Background**: AI accelerators are specialized hardware designed to speed up AI computations, crucial for training and inference in data centers. China has been pushing for semiconductor self-sufficiency due to US export controls on advanced chips, leading to growth of domestic firms like Cambricon and Huawei.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://seths.blog/2026/08/the-amazon-tax/">The Amazon tax | Seth's Blog</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Amazon_(company)">Amazon (company) - Wikipedia</a></li>
-<li><a href="https://www.sellerapp.com/blog/amazon-sponsored-products-vs-sponsored-brands/">Amazon Sponsored Products vs. Amazon Sponsored Brands...</a></li>
+<li><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/chinas-homegrown-ai-accelerators-to-supply-90-percent-of-the-countrys-domestic-market-analysts-suggest-cambricon-and-huawei-expected-to-be-the-biggest-winners-in-the-shift-away-from-nvidia-and-amd">China's homegrown AI accelerators to supply 90% of the country's domestic market, analysts suggest — Cambricon and Huawei expected to be the biggest winners in the shift away from Nvidia and AMD | Tom's Hardware</a></li>
+<li><a href="https://www.tomshardware.com/tech-industry/semiconductors/cambricon-targets-500000-ai-chips-in-2026-as-china-accelerates-domestic-hardware-push">Cambricon targets 500,000 AI chips in 2026 as China accelerates domestic hardware push — low yields and limited HBM supply could threaten chip ambitions | Tom's Hardware</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cambricon_Technologies">Cambricon Technologies - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The community is divided: some see ads as a normal part of business and a way for new products to gain visibility, while others view them as deceptive and suggest workarounds like sorting by best sellers. Legal action is proposed, with trademark infringement and fraud as potential claims.
-
-**Tags**: `#Amazon`, `#advertising`, `#e-commerce`, `#consumer protection`, `#search`
+**Tags**: `#AI chips`, `#China`, `#semiconductors`, `#market analysis`, `#Huawei`
 
 ---
 
 <a id="item-9"></a>
-## [Turbovec: Google's TurboQuant for Vector Search in Rust](https://github.com/RyanCodrai/turbovec) ⭐️ 7.0/10
+## [Amazon's Ad-Driven Search Results Impose Hidden Costs](https://seths.blog/2026/08/the-amazon-tax/) ⭐️ 7.0/10
 
-Turbovec is a new Rust implementation of Google's TurboQuant algorithm for vector search, achieving a memory footprint of only 4GB for 10 million documents. It aims to bring efficient approximate nearest neighbor (ANN) search to the Rust ecosystem with low memory usage. This project could significantly improve the performance and memory efficiency of vector search applications built in Rust, making it a strong alternative to existing solutions like FAISS and Qdrant. It also demonstrates the growing adoption of TurboQuant beyond Google's own systems, potentially influencing the broader vector database and semantic search landscape. Turbovec leverages TurboQuant's two-stage compression (PolarQuant for direction and QJL for residual) to achieve approximately 3.5 bits per channel with quality parity to FP16. The project is open-source on GitHub and has generated community interest in potential WASM compilation and SQLite bindings.
+Seth Godin's article 'The Amazon tax' highlights how Amazon's ad-driven search results impose hidden costs on consumers and publishers, sparking debate on the ethics and legality of such practices. This matters because it affects consumer trust and purchasing decisions, and raises questions about the transparency and fairness of e-commerce platforms. It could influence regulatory scrutiny and consumer advocacy. The article points out that Amazon's ads can prioritize competitors over the exact product searched, and notes that Amazon's advertising costs have risen significantly, with average CPC reaching $1.18 in 2026. This creates a 'tax' on consumers who may end up paying more or buying suboptimal products.
 
-hackernews · fittingopposite · Aug 18, 18:07 · [Discussion](https://news.ycombinator.com/item?id=49349898)
+hackernews · herbertl · Aug 18, 13:22 · [Discussion](https://news.ycombinator.com/item?id=49345263)
 
-**Background**: Vector search is a technique that uses machine learning to represent unstructured data as numeric vectors, enabling similarity search through algorithms like Approximate Nearest Neighbor (ANN). TurboQuant is a compression method introduced by Google Research that reduces model size and memory usage with minimal accuracy loss, originally designed for KV cache compression but also applicable to vector search. Rust is a systems programming language known for its performance and memory safety, making it a suitable choice for implementing high-performance vector search libraries.
+**Background**: Amazon is a dominant e-commerce platform where sellers pay for ad placements in search results. These ads can influence consumer choices, and the increasing cost of advertising is a concern for sellers and consumers alike. The debate centers on whether such practices are ethical and whether they violate consumer protection laws.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://research.google/blog/turboquant-redefining-ai-efficiency-with-extreme-compression/">TurboQuant : Redefining AI efficiency with extreme compression</a></li>
-<li><a href="https://turbo-quant.com/turboquant">TurboQuant Algorithm : PolarQuant + QJL Explained for Developers</a></li>
-<li><a href="https://www.elastic.co/what-is/vector-search">What is vector search? Better search with ML | Elastic</a></li>
+<li><a href="https://epinium.com/en/blog/amazon-advertising-cost/">Amazon Advertising Cost: CPC Benchmarks 2026 | Epinium</a></li>
+<li><a href="https://epinium.com/en/blog/amazon-search-engine-advertising-costs/">Amazon Search Engine Advertising Costs | Epinium</a></li>
+<li><a href="https://sellermetrics.app/cost-of-amazon-ads/">How much are Amazon Ads? Amazon Advertising Cost: 2026</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community comments highlight the project's impressive memory efficiency and potential for local, privacy-first search, with some users eager for SQLite bindings and WASM compilation. However, one commenter questions the need for a new implementation when Qdrant has already integrated TurboQuant, and another suggests the README could be more human-friendly to encourage adoption.
+**Discussion**: Comments show mixed views: some argue ads can be relevant and beneficial, while others see them as potentially infringing on trademarks or misleading consumers. There is also discussion about the legality and the role of ads in e-commerce.
 
-**Tags**: `#vector search`, `#Rust`, `#TurboQuant`, `#ANN`, `#performance`
+**Tags**: `#Amazon`, `#advertising`, `#e-commerce`, `#consumer behavior`, `#ethics`
 
 ---
 
 <a id="item-10"></a>
 ## [Iceland Foods Satirizes Management Consultants](https://about.iceland.co.uk/our-story/the-dark-ages/beware-management-consultants/) ⭐️ 7.0/10
 
-Iceland Foods published a satirical slideshow titled 'Beware Management Consultants' on its website, mocking the practices of management consultants. The presentation went viral on Hacker News, sparking a lively discussion with 416 points and 110 comments. The satirical take resonates with many in the tech and business communities who have experienced the pitfalls of management consulting, such as high costs and questionable value. It highlights a common industry pain point and encourages reflection on the role of consultants in modern organizations. The slideshow intentionally uses bad UX design to force readers to engage with the content, which one commenter noted as effective for preventing skimming. The discussion includes personal experiences from former consultants and critiques of management's reliance on external advice.
+Iceland Foods published a satirical slideshow titled 'Beware Management Consultants' on its website, mocking the practices and jargon of management consultants. The piece has gained traction on Hacker News, sparking a discussion about the value and pitfalls of consulting. The satire resonates with many professionals who have experienced the downsides of consulting, such as high costs and generic advice. It highlights a broader skepticism toward management consulting, which can influence how companies evaluate the use of external consultants. The slideshow uses intentionally poor UX design to engage readers, as noted in the comments. It is part of Iceland Foods' 'Dark Ages' series, which appears to be a humorous take on corporate life. The piece does not provide specific examples but relies on common consulting stereotypes.
 
 hackernews · KolmogorovComp · Aug 18, 19:29 · [Discussion](https://news.ycombinator.com/item?id=49351324)
 
-**Background**: Management consultants are external experts hired by organizations to provide advice on strategy, operations, or technology. While they can bring specialized knowledge, they are often criticized for high fees, generic recommendations, and lack of accountability. Iceland Foods, a UK supermarket chain, used satire to express frustration with this industry practice.
+**Background**: Management consulting is a multi-billion dollar industry where firms advise organizations on strategy, operations, and management. Critics often argue that consultants provide generic advice, lack accountability, and are expensive, while proponents claim they bring expertise and objectivity. The satire taps into these ongoing debates.
 
-**Discussion**: Commenters shared mixed views: some defended consultants, citing their value in complex projects, while others criticized the industry for misaligned incentives and over-reliance. One commenter noted the intentional bad UX made them read the whole thing, while another reflected on their own role in similar internal governance work.
+**Discussion**: Comments on Hacker News are mixed. Some users share positive experiences with consultants, noting they provided value in complex projects. Others criticize the consulting industry, citing misaligned incentives and management's fascination with consultants. One user appreciates the intentional bad UX, while another reflects on their own role in similar work.
 
-**Tags**: `#management consulting`, `#satire`, `#tech industry`, `#organizational behavior`
+**Tags**: `#management consulting`, `#satire`, `#business`, `#critique`, `#workplace`
 
 ---
 
 <a id="item-11"></a>
-## [OpenAI Strengthens Safeguards for Frontier AI Development](https://openai.com/index/pacing-model-development-cyber-capabilities) ⭐️ 7.0/10
-
-OpenAI announced strengthened monitoring, alignment, and security measures to guide the pace of frontier AI model development, specifically in response to cyber-critical capabilities. This announcement follows the company's earlier statement that its upcoming Astra model may have reached 'Critical' capability in cybersecurity. This signals a strategic shift in how frontier AI labs manage the risks of advanced models, potentially setting an industry precedent for proactive safety measures. It could influence regulatory discussions and how other AI developers approach model deployment and pacing. The announcement lacks specific technical details, but it references the Preparedness Framework first published in December 2023, which guides the company's response as capabilities emerge. OpenAI has not ruled out that its Astra model could launch cyberattacks against sophisticated defenses, prompting these enhanced safeguards.
-
-rss · OpenAI Blog · Aug 18, 11:00
-
-**Background**: Frontier AI models are the most advanced AI systems, trained with extremely large computational budgets and capable of exceeding state-of-the-art performance across multiple domains. AI alignment refers to encoding human values and goals into these models to make them safe and reliable. As models approach cyber-critical capabilities, labs like OpenAI must balance innovation with safety, often using frameworks like the Preparedness Framework to assess and mitigate risks.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://www.nvidia.com/en-us/glossary/frontier-models/">What Are Frontier AI Models and How They Work | NVIDIA Glossary</a></li>
-<li><a href="https://www.ibm.com/think/topics/ai-alignment">What Is AI Alignment? | IBM</a></li>
-<li><a href="https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/">Responding to the next frontier of critical cyber capabilities</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#AI safety`, `#frontier AI`, `#OpenAI`, `#cybersecurity`, `#model development`
-
----
-
-<a id="item-12"></a>
 ## [OpenAI Partners with CodeAI to Bring AI Education to Millions of Teens](https://openai.com/index/chatgpt-for-teens/) ⭐️ 6.0/10
 
-OpenAI announced a partnership with CodeAI on August 18, 2026, to help students and teachers learn responsible AI use, coinciding with the launch of ChatGPT for Teens. The collaboration will include a joint advisory council, AI literacy courses, student challenges, and career programs, aiming to reach millions of students over the next year. This initiative could significantly expand AI literacy among young people, preparing them for an AI-driven future. It also addresses growing concerns about teen AI usage by introducing safety features and parental controls, potentially setting a standard for educational AI products. ChatGPT for Teens includes stronger built-in safety protections, healthy-use features, and additional parental controls. The partnership also supports CodeAI in developing a free high school AI Foundations course.
+On August 18, 2026, OpenAI announced a partnership with CodeAI (formerly Code.org) to help students and teachers learn responsible AI use, coinciding with the launch of ChatGPT for Teens, which includes enhanced safety features and parental controls. Over the next year, the collaboration will reach millions of students through a joint advisory council, AI literacy courses, student challenges, and career programs. This partnership is significant as it aims to equip the next generation with essential AI skills, addressing the growing need for AI literacy in education. It also expands OpenAI's reach into the youth market, potentially shaping how young people learn about and interact with AI technologies. The collaboration includes the development of a free high school AI Foundations course by CodeAI, supported by OpenAI. ChatGPT for Teens applies default safety protections for users under 18, including healthy-use features and additional parental controls, with a safer experience even when age is uncertain.
 
 telegram · OpenAI Blog · Aug 18, 12:06
 
-**Background**: CodeAI is the rebranded name of Code.org, a nonprofit focused on expanding access to computer science education. OpenAI's ChatGPT for Teens is a new product designed specifically for teen users, with features like Study Mode to encourage learning and critical thinking.
+**Background**: CodeAI, formerly known as Code.org, is a non-profit organization founded by Hadi and Ali Partovi, dedicated to expanding access to computer science education. OpenAI's ChatGPT for Teens is a version of its AI chatbot designed specifically for younger users, with built-in protections to ensure safe and responsible use. This partnership reflects a broader trend of integrating AI literacy into K-12 education.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://openai.com/index/chatgpt-for-teens/">Introducing ChatGPT for Teens: Built for learning, backed by ...</a></li>
-<li><a href="https://code.org/en-US/codeai">Code.org is now CodeAI</a></li>
-<li><a href="https://techcrunch.com/2026/08/18/openai-launches-a-safer-chatgpt-for-teens-years-after-teens-started-using-it/">OpenAI launches a safer ChatGPT for teens — years... | TechCrunch</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Code.org">Code .org - Wikipedia</a></li>
+<li><a href="https://chatgpt.com/parent-resources/safety-protections/">Teen default safety protections - chatgpt.com</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI education`, `#OpenAI`, `#ChatGPT`, `#partnership`, `#youth`
+**Tags**: `#AI education`, `#OpenAI`, `#partnership`, `#ChatGPT`, `#youth`
+
+---
+
+<a id="item-12"></a>
+## [NVIDIA Scales AI Expertise with ChatGPT Work](https://openai.com/index/nvidia/chatgpt-work) ⭐️ 6.0/10
+
+NVIDIA has adopted ChatGPT Work, an agentic AI tool powered by Codex and GPT-5.6, to automate tasks and scale successful workflows across its global teams. The case study, published by OpenAI, highlights how NVIDIA reduces manual work and connects fast-moving signals. This adoption signals a growing trend of enterprises using agentic AI to streamline operations and scale expertise. It demonstrates practical value for large organizations, potentially influencing broader AI adoption in the workplace. ChatGPT Work is an agent that can take action across apps and files, stay with a project for hours, and turn goals into finished work. It is part of ChatGPT Enterprise, which offers enterprise-grade security, centralized management, and advanced tools.
+
+rss · OpenAI Blog · Aug 18, 00:00
+
+**Background**: ChatGPT Enterprise is OpenAI's offering for businesses, providing enterprise-grade privacy, security, and administrative controls. ChatGPT Work extends this with agentic capabilities, allowing AI to autonomously perform tasks across various applications. NVIDIA, a leading AI hardware company, is leveraging this to optimize its internal workflows.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://openai.com/index/nvidia/chatgpt-work/">How NVIDIA scales expertise with ChatGPT Work - OpenAI</a></li>
+<li><a href="https://openai.com/index/introducing-chatgpt-enterprise/">Introducing ChatGPT Enterprise | OpenAI</a></li>
+<li><a href="https://help.openai.com/en/articles/8265053-what-is-chatgpt-enterprise">What is ChatGPT Enterprise? | OpenAI Help Center</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#AI`, `#Enterprise`, `#ChatGPT`, `#NVIDIA`, `#Workflow`
 
 ---
