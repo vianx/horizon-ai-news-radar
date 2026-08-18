@@ -5,229 +5,290 @@ date: 2026-08-18
 lang: zh
 ---
 
-> 从 39 条内容中筛选出 10 条重要资讯。
+> 从 37 条内容中筛选出 12 条重要资讯。
 
 ---
 
-1. [Rust GPU 卸载：安全、快速、可移植](#item-1) ⭐️ 8.0/10
-2. [DuckDB v2.0 预览发布，引入服务器模式等新特性](#item-2) ⭐️ 8.0/10
-3. [AI 生成的 Copilot 自动修复在 Snowflake 的 Jira 中引入严重漏洞](#item-3) ⭐️ 8.0/10
-4. [AI;DR：AI 生成内容的兴起及其对真实性的影响](#item-4) ⭐️ 8.0/10
-5. [AirTag 追踪稀有书籍至亚马逊 AI 训练设施](#item-5) ⭐️ 8.0/10
-6. [内部人士批评：如何让稀疏注意力/KV 压缩看起来效果好](#item-6) ⭐️ 8.0/10
-7. [Stripe 以超 70 亿美元收购 OpenRouter](#item-7) ⭐️ 8.0/10
-8. [OpenAI 阐述 AI 驱动的网络安全防御策略](#item-8) ⭐️ 7.0/10
-9. [OpenAI 加入俄亥俄州 PORTS-Pike 项目](#item-9) ⭐️ 6.0/10
-10. [OpenAI 资助 14 个智能时代 AI 政策项目](#item-10) ⭐️ 6.0/10
+1. [Mojo 编程语言以 Apache 2 协议开源](#item-1) ⭐️ 9.0/10
+2. [Turbovec：谷歌 TurboQuant 向量搜索的 Rust 实现](#item-2) ⭐️ 8.0/10
+3. [用 20 美元工具修复变砖的 Framework 笔记本，引发保修争议](#item-3) ⭐️ 8.0/10
+4. [Linux 7.3 提升 VRAM 超量分配性能](#item-4) ⭐️ 8.0/10
+5. [Asana 借助 Codex 在两周内完成五年工程工作量](#item-5) ⭐️ 8.0/10
+6. [Qwen 3.8 27B 在智能指数上追平 GPT-5.6 Luna](#item-6) ⭐️ 8.0/10
+7. [中国要求政府机构提前卸载定制版 Windows 10](#item-7) ⭐️ 8.0/10
+8. [Seth Godin 批评亚马逊搜索和用户体验下降](#item-8) ⭐️ 7.0/10
+9. [火车窗变平板扫描仪：创意狭缝扫描项目](#item-9) ⭐️ 7.0/10
+10. [OpenAI 发起倡议，加强国家安全中人工智能的民主监督](#item-10) ⭐️ 7.0/10
+11. [OpenAI 加强保障措施以调控前沿模型开发节奏](#item-11) ⭐️ 7.0/10
+12. [OpenAI 与 CodeAI 合作推动青少年 AI 教育](#item-12) ⭐️ 6.0/10
 
 ---
 
 <a id="item-1"></a>
-## [Rust GPU 卸载：安全、快速、可移植](https://arxiv.org/abs/2608.13759) ⭐️ 8.0/10
+## [Mojo 编程语言以 Apache 2 协议开源](https://simonwillison.net/2026/Aug/18/mojo-is-now-open-source/) ⭐️ 9.0/10
 
-提出了一种在 GPU 上运行 Rust 代码的新方法，旨在提供安全、便捷且快速的编程接口，无需维护绑定。该项目正在积极开发中，最终将允许 Rust 开发者在 GPU 上运行 Rust 代码，并自动进行数据移动。 这一进展可以显著简化 Rust 开发者的 GPU 编程，减少编写和维护绑定的开销。它符合使用 Rust 进行高性能计算和系统编程的增长趋势，可能使 GPU 加速对 Rust 生态系统更加可及。 该方法利用 LLVM 的 GPU 后端（如 NVPTX 和 AMDGPU）将 Rust 代码编译到 GPU 上。该项目旨在提供安全接口（自动数据移动）以及后续更高级的不安全接口（更精细的控制）。根据社区评论，目前尚未发布代码。
+Modular 已将 Mojo 编程语言（包括其编译器和工具链）以 Apache 2 许可证开源。此举紧随上周 Mojo 1.0 的发布，并兑现了 2023 年 5 月做出的承诺。 这对 AI/ML 生态系统来说是一个重要里程碑，因为 Mojo 旨在将 Python 的易用性与异构硬件的高性能相结合。在宽松许可证下开源可能会加速采用和社区贡献，可能使 Mojo 成为 AI 基础设施的关键语言。 Mojo 基于 MLIR 编译器框架构建，能够针对 CPU、GPU、TPU 和其他加速器。最初成为 Python 超集的目标在 2025 年 8 月左右被放弃，Mojo 现在是一种拥有 Python 风格语法的独立语言。
 
-hackernews · linggen · 8月17日 17:54 · [社区讨论](https://news.ycombinator.com/item?id=49334991)
+rss · Simon Willison · 8月18日 21:39
 
-**背景**: Rust 是一种以内存安全和性能著称的系统编程语言。传统的 GPU 编程需要学习 CUDA 或 OpenCL 等专用语言，或者使用现有库的绑定。像 rust-gpu 和 wgpu 这样的项目已经探索了将 Rust 编译到 GPU 目标，但通常需要学习新的抽象或维护绑定。这种新方法旨在利用 LLVM 现有的 GPU 后端，提供更无缝的体验。
+**背景**: Mojo 是由 Modular Inc. 开发的系统编程语言，专为高性能 AI 基础设施而设计。它采用类似 Python 的语法，但包含受 Rust 启发的静态类型和借用检查等功能。Apache 2 许可证是一种宽松的开源许可证，允许用户自由使用、修改和分发软件。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://rust-gpu.github.io/">Rust GPU</a></li>
-<li><a href="https://llvm.org/docs/NVPTXUsage.html">User Guide for NVPTX Back-end - LLVM</a></li>
-<li><a href="https://llvm.org/docs/AMDGPUUsage.html">User Guide for AMDGPU Backend - LLVM</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mojo_(programming_language)">Mojo (programming language) - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_License">Apache License</a></li>
+<li><a href="https://mojolang.org/">Mojo - Modular</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区成员表达了浓厚的兴趣，一位用户强调了维护绑定的痛苦，并期待尝试。另一位用户质疑选择 LLVM 而不是直接针对 PTX/HIP，建议使用 Vulkan 等现有解决方案。其他人询问代码是否可用，以及是否针对 HPC 工作负载。
-
-**标签**: `#Rust`, `#GPU`, `#LLVM`, `#systems programming`, `#HPC`
+**标签**: `#Mojo`, `#open source`, `#programming language`, `#AI/ML`, `#compiler`
 
 ---
 
 <a id="item-2"></a>
-## [DuckDB v2.0 预览发布，引入服务器模式等新特性](https://duckdb.org/2026/08/17/duckdb-20-highlights) ⭐️ 8.0/10
+## [Turbovec：谷歌 TurboQuant 向量搜索的 Rust 实现](https://github.com/RyanCodrai/turbovec) ⭐️ 8.0/10
 
-DuckDB 宣布了即将于 2026 年秋季发布的 v2.0 版本的预览。预览重点介绍了多项主要特性，包括 DuckDB 作为服务器、触发器、VARIANT 类型、异步 I/O、新的 SQL 解析器以及新的存储格式。 这一主要版本发布对分析型数据库生态系统意义重大，因为 DuckDB 被广泛用于嵌入式分析和数据处理。新特性，尤其是服务器模式和异步 I/O，可能扩展 DuckDB 的用例，并提升实时和大规模工作负载的性能。 预览中提到了新的 SQL 解析器和存储格式，这可能会对现有用户带来破坏性变更。此外，社区讨论指出 DuckDB 仍缺少增量物化视图，这一功能未来可能会加入。
+Turbovec 是一个新的 Rust 向量索引，带有 Python 绑定，实现了谷歌研究院的 TurboQuant 算法，提供了一种数据无关的量化器，具有接近最优的失真且无需单独的训练阶段。它支持在线数据摄入，并显著减少了向量搜索的内存占用。 这很重要，因为它将最先进的压缩算法带到了 Rust 生态系统中，为本地和隐私优先的应用实现了更快、更节省内存的向量搜索。它还开启了 WASM 编译的可能性，这可能使向量搜索直接在浏览器中运行。 Turbovec 声称与传统方法相比内存使用减少 87%，并且比 FAISS 更快，提供了基准测试。它用 Rust 构建，带有 Python 绑定，社区热切期待 SQLite 绑定的推出以便更容易集成。
 
-hackernews · ibotty · 8月17日 13:46 · [社区讨论](https://news.ycombinator.com/item?id=49330781)
+hackernews · fittingopposite · 8月18日 18:07 · [社区讨论](https://news.ycombinator.com/item?id=49349898)
 
-**背景**: DuckDB 是一个开源的嵌入式 SQL OLAP 数据库，专为分析工作负载设计，常被用作传统数据库服务器的进程内替代方案。它以其高性能、易用性以及在消费级硬件上处理大于内存数据的能力而闻名。v2.0 版本是一个重要里程碑，此前一系列 1.x 版本已稳步增加了功能和改进。
+**背景**: 向量搜索是一种通过将项目表示为高维向量来查找相似项目的技术，常用于推荐系统和语义搜索等 AI 应用中。TurboQuant 是谷歌研究院提出的一种压缩算法，可减少向量量化中的内存开销，从而更高效地存储和搜索大型数据集。Turbovec 用 Rust 实现了该算法，Rust 是一种以性能和安全著称的系统编程语言，适合本地和注重隐私的部署。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://duckdb.org/docs/lts/guides/performance/overview">Performance Guide – DuckDB</a></li>
+<li><a href="https://github.com/RyanCodrai/turbovec">GitHub - RyanCodrai/ turbovec : A vector index built on TurboQuant...</a></li>
+<li><a href="https://research.google/blog/turboquant-redefining-ai-efficiency-with-extreme-compression/">TurboQuant: Redefining AI efficiency with extreme compression</a></li>
+<li><a href="https://medium.com/data-science-in-your-pocket/turbovec-googles-turboquant-makes-vector-search-smaller-faster-and-simpler-fdea72674aad">turbovec : Google’s TurboQuant Makes Vector Search Smaller, Faster, and Simpler | by Mehul Gupta | Data Science in Your Pocket | Medium</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区情绪总体非常积极，用户对新特性表示兴奋，并分享了在生产管道中使用 DuckDB 的真实成功案例。然而，一些用户对高提交数量以及 AI 在开发中的潜在作用表示担忧，另一些用户则指出缺少增量物化视图这一功能。
+**社区讨论**: 社区对 Turbovec 的潜力充满热情，评论强调其内存效率（1000 万文档仅需 4GB）以及构建更快反向索引的可能性。一些用户认为它非常适合本地、隐私优先的搜索，并询问 WASM 编译情况，而另一些用户指出 Qdrant 已经集成了 TurboQuant，质疑新库的必要性。还有反馈称 README 可以更人性化一些。
 
-**标签**: `#DuckDB`, `#database`, `#release`, `#analytics`, `#open-source`
+**标签**: `#vector-search`, `#Rust`, `#TurboQuant`, `#AI/ML`, `#open-source`
 
 ---
 
 <a id="item-3"></a>
-## [AI 生成的 Copilot 自动修复在 Snowflake 的 Jira 中引入严重漏洞](https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug) ⭐️ 8.0/10
+## [用 20 美元工具修复变砖的 Framework 笔记本，引发保修争议](https://quantum5.ca/2026/08/16/fixing-bricked-amd-7040-series-framework-13-laptop-with-20-tools/) ⭐️ 8.0/10
 
-Wiz 的 AI 代理 Red Agent 自主发现并利用了 Snowflake 公共仓库中的一个 GitHub Actions 漏洞，该漏洞是由 AI 生成的 GitHub Copilot 自动修复引入的。该缺陷允许通过脚本注入访问 Snowflake 的内部 Jira 环境。 此事件凸显了 AI 辅助编码的安全风险，AI 生成的修复可能无意中引入漏洞。它强调了在 CI/CD 管道中进行严格监督和静态分析的必要性，尤其是对于像 Snowflake 这样的大公司。 该漏洞是 GitHub Actions 工作流文件（jira_issue.yml）中的模板注入，问题标题可以突破 echo 字符串并通过带外回调泄露 Jira 凭据。自动修复由 Copilot 生成，但静态分析工具未发现此问题。
+一位用户仅用价值 20 美元的工具成功修复了一台变砖的 AMD 7040 系列 Framework 13 笔记本电脑，并在博客中详细记录了整个过程。文章指出，尽管 Framework 鼓励用户进行 BIOS 更新，但对这台过保设备未提供任何支持。 这一事件凸显了笔记本电脑行业中对固件更新可靠性和制造商责任的日益关注。它也引发了关于维修权以及公司是否应对软件导致的硬件故障负责的讨论。 修复过程涉及使用廉价工具直接刷写 BIOS 芯片，无需昂贵设备或专业服务。作者批评 Framework 未提供恢复解决方案，并指出该笔记本其他方面均完好无损。
 
-hackernews · galnagli · 8月17日 14:18 · [社区讨论](https://news.ycombinator.com/item?id=49331423)
+hackernews · jp_sc · 8月18日 13:18 · [社区讨论](https://news.ycombinator.com/item?id=49345220)
 
-**背景**: GitHub Copilot Autofix 是一个 AI 驱动的功能，为代码扫描警报建议修复，但如果未经适当审查，它可能生成不安全的代码。像 zizmor 这样的静态分析工具可以检测 GitHub Actions 工作流中的此类漏洞。此事件表明将 AI 编码工具与安全检查相结合的重要性。
+**背景**: “变砖”的笔记本电脑是指因固件更新失败等原因而完全无法使用的设备。BIOS 更新对系统稳定性和安全性至关重要，但如果中断或出错，可能导致设备无法使用。Framework 以其模块化、可维修的笔记本电脑而闻名，但此案例凸显了其在固件相关问题支持上的局限性。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug">Red Agent Exploits Snowflake Vuln Missed by Github Copilot | Wiz Blog</a></li>
-<li><a href="https://www.theregister.com/security/2026/08/17/an-ai-broke-snowflakes-code-then-another-ai-agent-exploited-it/5288666">An AI broke Snowflake's code. Then another AI agent exploited it</a></li>
-<li><a href="https://www.forbes.com/sites/timkeary/2026/08/17/github-copilot-missed-a-vulnerability-that-wizs-ai-agent-found/">Wiz’s AI Agent Finds A Vulnerability In Snowflake’s Internal Systems</a></li>
+<li><a href="https://community.frame.work/t/framework-laptop-16-firmware-update-bricked-my-notebook/77722">Framework laptop 16 firmware update bricked my notebook</a></li>
+<li><a href="https://quantum5.ca/2026/08/16/fixing-bricked-amd-7040-series-framework-13-laptop-with-20-tools/">Fixing a bricked AMD 7040 series Framework 13” laptop with $20 tools</a></li>
+<li><a href="https://technewst.com/the-framework-laptop-has-a-firmware-update-problem-but-maybe-not-for-long/">Framework Laptop Update Woes (But Hope Remains) | TechNewst</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区评论强调在 CI 中进行静态分析的必要性，一位用户推荐使用 zizmor。其他人讨论更广泛的问题，即 AI 降低了引入变更的成本，而审查成本仍然很高，将瓶颈转移到代码验证上。一些人还批评 YAML 的复杂性是一个促成因素。
+**社区讨论**: 评论者对制造商缺乏责任感表示不满，有人建议通过小额索赔法庭采取法律行动。其他人分享了在其他品牌上的类似经历，也有人因零部件供应有限和库存问题而后悔购买 Framework 产品。
 
-**标签**: `#AI security`, `#GitHub Actions`, `#vulnerability`, `#supply chain`, `#YAML`
+**标签**: `#hardware`, `#firmware`, `#repair`, `#laptop`, `#consumer rights`
 
 ---
 
 <a id="item-4"></a>
-## [AI;DR：AI 生成内容的兴起及其对真实性的影响](https://www.rickmanelius.com/p/aidr-ai-didnt-read) ⭐️ 8.0/10
+## [Linux 7.3 提升 VRAM 超量分配性能](https://pixelcluster.dev/VRAM-Overcommit/) ⭐️ 8.0/10
 
-文章《AI;DR（AI；没读）》批评了 AI 生成内容的日益普及及其对真实沟通和代码可读性的负面影响，引发了关于 AI 时代真实性的热烈讨论。它强调了内容消费和生产方式的范式转变，尤其是在软件开发和在线讨论中。 这很重要，因为它解决了一个及时且重要的问题：AI 生成内容的日益普及及其对在线阅读和代码库的影响。高参与度（531 分，323 条评论）以及关于智力懒惰、可读性和真实性的深思熟虑的社区评论提升了其重要性，反映了内容消费和软件开发实践的范式转变。 文章和讨论聚焦于 AI 生成内容的负面影响，如智力懒惰、冗长、术语和过度自信，使阅读体验感觉虚假和令人恼火。社区成员还强调了代码库中 AI 生成的文档和评论的问题，导致软件开发进入“后可读性”状态。
+Linux 内核 7.3 引入了处理 VRAM 超量分配的性能改进，在 GPU 内存超出时减少卡顿并改善内存管理。这项工作由 Valve 工程师 Natalie Vock 主导，并将在即将发布的内核版本中落地。 这一改进对于使用有限 VRAM 的 GPU 的游戏玩家和专业人士意义重大，因为它增强了内存压力下的系统稳定性和性能。这也凸显了 Linux 内核在内存管理方面的前瞻性，与 Windows 形成对比，并可能影响未来的 GPU 驱动开发。 内核工作侧重于改善视频内存管理行为，特别是针对 VRAM 为 8 GB 或更少的 GPU。该实现旨在减少 VRAM 超量分配时的性能下降，并且在 7.3 的初始更改之外还在追求进一步的改进。
 
-hackernews · mooreds · 8月17日 19:47 · [社区讨论](https://news.ycombinator.com/item?id=49336573)
+hackernews · flaburgan · 8月18日 07:51 · [社区讨论](https://news.ycombinator.com/item?id=49342719)
 
-**背景**: 这篇文章是关于大型语言模型（LLM）对内容创作和消费影响的更广泛讨论的一部分。随着 GPT-4 等 AI 工具的普及，人们越来越担心在线内容的真实性和质量，以及读者和开发者可能产生的智力懒惰。讨论反映了 AI 生成内容的效率与人类作者细致入微的沟通价值之间的紧张关系。
+**背景**: Linux 内核支持内存超量分配，允许进程分配超过物理可用内存的内存，具有启发式和始终超量分配等模式。VRAM 超量分配发生在 GPU 内存使用超过物理 VRAM 时，需要内核管理内存分页或交换，如果处理效率不高可能会导致卡顿。这一改进正是为了解决这一挑战。
 
-**社区讨论**: 社区评论表达了对 AI 生成回复未被普遍厌恶的惊讶，有些人表示他们更喜欢阅读人类撰写的内容来学习或说服。其他人则对代码库中 AI 生成的文档和评论表示沮丧，描述了一种“后可读性”状态。然而，有些人认为质量是最终标准，只要内容高质量且有洞察力，他们不介意是否由 AI 撰写。
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.phoronix.com/news/Linux-7.3-Improving-vRAM-Mgmt">Linux 7.3 To Land Initial Code Improving vRAM Management ...</a></li>
+<li><a href="https://www.nitin-rachabathuni.com/blog/linux-kernel-vram-overcommit-performance">Optimizing VRAM Overcommit: How Linux Kernel Improvements ...</a></li>
+<li><a href="https://www.techpowerup.com/348178/valve-engineer-improves-linux-memory-management-for-gpus-with-8-gb-vram-or-less">Valve Engineer Improves Linux Memory Management for GPUs with ...</a></li>
 
-**标签**: `#AI`, `#content quality`, `#software development`, `#online discourse`, `#LLM`
+</ul>
+</details>
+
+**社区讨论**: 社区评论对这一改进表示热情，用户注意到与 Windows 更新的对比，并称赞内核开发工作。一些使用 Nvidia 硬件的用户对缺乏分页支持表示沮丧，而其他人则讨论虚拟内存的碎片整理以及应用程序在告知内核内存粘性方面的作用。
+
+**标签**: `#Linux`, `#VRAM`, `#performance`, `#kernel`, `#memory management`
 
 ---
 
 <a id="item-5"></a>
-## [AirTag 追踪稀有书籍至亚马逊 AI 训练设施](https://simonwillison.net/2026/Aug/17/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-tra/) ⭐️ 8.0/10
+## [Asana 借助 Codex 在两周内完成五年工程工作量](https://openai.com/index/asana) ⭐️ 8.0/10
 
-404 Media 利用藏在稀有书籍中的 Apple AirTag 追踪了一笔来自 Biblio 的大订单，发现它被送到了拉斯维加斯亚马逊 LAS8 设施的 VGT3 区域，那里的工人确认了为 AI 训练进行的破坏性书籍扫描。 这项调查提供了确凿证据，表明亚马逊正在获取稀有书籍用于 AI 训练数据，证实了长期以来对大规模书籍扫描的怀疑。它凸显了 AI 数据获取的不透明性和潜在破坏性，引发了出版商和作者的伦理与法律担忧。 AirTag 被放置在 7 月通过 Biblio 订购的约 1000 本书中的一本里。这本书最终到达了 LAS8 设施的 VGT3 区域，那里展示着一个恐龙拿着书的标志，亚马逊工人的在线论坛确认了破坏性扫描操作。
+Asana 使用 OpenAI Codex 在两周内替换了一个过时的测试系统，完成了预计需要五年才能完成的工作，成本约为 1.2 万美元。 这一案例研究展示了 AI 编程代理在现代化遗留系统方面的变革潜力，带来了显著的时间和成本节省。它凸显了 AI 工具正成为软件工程不可或缺的一部分的趋势，可能重塑团队对大规模重构任务的优先级和执行方式。 该项目涉及替换一个过时的测试系统，这一任务通常需要五年的工程工作量。然而，这项工作在短短两周内完成，成本约为 1.2 万美元，展示了 Codex 在处理复杂、耗时任务方面的高效性。
 
-rss · Simon Willison · 8月17日 15:21
+rss · OpenAI Blog · 8月18日 07:00
 
-**背景**: 多年来，书商一直收到来自匿名客户的大额、对价格不敏感的订单，这些客户被怀疑是扫描书籍用于训练数据的 AI 公司。Apple 的 AirTag 是一种小型追踪设备，利用 Find My 网络报告其位置，使调查性追踪成为可能。Biblio 是一个由独立卖家提供二手书和稀有书籍的在线市场。
+**背景**: OpenAI Codex 是 OpenAI 于 2025 年 4 月发布的 AI 编程代理，可通过 ChatGPT、命令行工具和 IDE 集成使用。它旨在自动化软件工程任务，如编写代码、修复错误和重构，使开发者能够将常规或大规模工作委托给 AI。Asana 作为项目管理平台，利用 Codex 对其测试基础设施进行现代化改造，展示了 AI 在遗留系统现代化中的实际应用。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.apple.com/airtag/">AirTag - Apple</a></li>
-<li><a href="https://www.biblio.com/">Used Books and Rare Books from Antiquarian Booksellers - Biblio</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OpenAI_Codex_(AI_agent)">OpenAI Codex (AI agent) - Wikipedia</a></li>
+<li><a href="https://openai.com/codex/">Codex in ChatGPT | AI Coding Agents for Software ... - OpenAI</a></li>
 
 </ul>
 </details>
 
-**标签**: `#AI training data`, `#data provenance`, `#investigative journalism`, `#Amazon`, `#rare books`
+**标签**: `#AI coding`, `#software engineering`, `#productivity`, `#OpenAI`, `#case study`
 
 ---
 
 <a id="item-6"></a>
-## [内部人士批评：如何让稀疏注意力/KV 压缩看起来效果好](https://www.reddit.com/r/MachineLearning/comments/1vqqqcs/how_to_make_any_sparse_attention_kv_compression/) ⭐️ 8.0/10
+## [Qwen 3.8 27B 在智能指数上追平 GPT-5.6 Luna](https://simonwillison.net/2026/Aug/17/qwen-38-27b-scores-52/) ⭐️ 8.0/10
 
-一位经验丰富的研究人员 Piotr Nawrot 在 X（推特）上分享了对稀疏注意力和 KV 压缩研究中常见评估陷阱的详细批评，随后在 Reddit 上引发了讨论。该帖子概述了具体策略——例如使用合成任务、避免隔离贡献、依赖聚合指标——这些策略可能使方法看起来比实际更有效。 这一批评意义重大，因为它揭露了可能夸大结果的普遍评估实践，损害了高效注意力研究的可重复性和诚实进展。它为研究人员和审稿人提供了警示，可能促使该领域采用更严格的基准测试和更公平的比较。 该帖子强调了具体的陷阱：使用带有重复或不相关上下文的“大海捞针”任务，不隔离贡献（通过与超参数欠佳的基线比较），以及仅报告 RULER 等基准的聚合指标，同时隐藏个别任务上的失败。它还提到，LLM 现在可以编写自定义 Triton 内核，这可用于不公平地优化自己的方法，同时保持基线未优化。
+Qwen 3.8 27B，一个 270 亿参数的开源权重模型，在 Artificial Analysis 智能指数上获得 52 分，与 GPT-5.6 Luna（最高）持平，仅落后 GLM-5.2（753B）和 DeepSeek V4 Pro（1.7T）一分。该结果由 Simon Willison 于 2026 年 8 月 17 日报道。 这一里程碑表明，紧凑的开源权重模型可以与更大的专有模型相媲美，可能使高性能 AI 的获取更加民主化，并降低计算成本。它标志着 AI 开发向效率和可及性发展的趋势，惠及依赖开源模型的研究人员、初创企业和开发者。 Artificial Analysis 智能指数 v4.1.1 包含 GDPval-AA v2、Terminal-Bench v2.1、SciCode 和 GPQA Diamond 等基准。Qwen 3.8 27B 针对视觉、文本生成和智能体工作负载进行了指令微调，其自我报告的基准显示相对于 Qwen 3.6 27B 和闭源权重的 Qwen 3.7-Plus 均有提升。
 
-reddit · r/MachineLearning · /u/korec1234 · 8月17日 12:18
+rss · Simon Willison · 8月17日 23:58
 
-**背景**: 稀疏注意力和 KV 缓存压缩是降低 Transformer 模型计算和内存成本的技术，尤其是在长上下文场景中。然而，公平评估这些方法具有挑战性，因为许多基准已经饱和或包含不能真正测试方法能力的任务。作者 Piotr Nawrot 一直致力于高效注意力和 KV 缓存压缩，并维护了一个名为“sparse-frontier”的 GitHub 仓库，用于评估免训练稀疏注意力方法。
+**背景**: Artificial Analysis 智能指数是一个综合基准，通过多种任务评估 AI 模型，提供单一分数以便比较。像 Qwen 这样的开源权重模型公开发布其训练参数，允许开发者进行微调和本地部署，而专有模型通常只能通过 API 访问。这种透明度促进了 AI 研究的创新和可复现性。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://github.com/PiotrNawrot/sparse-frontier">GitHub - PiotrNawrot/sparse-frontier: The evaluation ...</a></li>
-<li><a href="https://arxiv.org/abs/2407.01527">[2407.01527] KV Cache Compression, But What Must We Give in Return? A Comprehensive Benchmark of Long Context Capable Approaches</a></li>
-<li><a href="https://research.nvidia.com/labs/eai/blogs/kv-cache-compression-and-its-infra-problems/">KV Cache Compression and Its Infra Problems | Efficient AI</a></li>
+<li><a href="https://artificialanalysis.ai/">AI Model & API Providers Analysis | Artificial Analysis</a></li>
+<li><a href="https://huggingface.co/Qwen/Qwen3.8-27B">Qwen/Qwen3.8-27B · Hugging Face</a></li>
+<li><a href="https://simonwillison.net/2026/Aug/16/qwen-38-27b/">Qwen 3.8 27B is excellent, but it defaults to wildly ...</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: Reddit 上的讨论可能包含赞同和争论，一些用户欣赏这种坦诚的批评，而另一些用户则为某些评估实践辩护。一些人可能指出，虽然批评是合理的，但并非总是故意的，并且该领域正在朝着更标准化的基准发展。
+**社区讨论**: Hacker News 上的讨论（条目 49334544）可能庆祝这一成就，同时争论指数的有效性以及小模型匹配大模型的实际意义。有些人可能质疑基准的全面性，或指出实际性能可能有所不同，但鉴于高分，总体情绪似乎是积极的。
 
-**标签**: `#sparse attention`, `#KV compression`, `#evaluation`, `#research methodology`, `#efficient attention`
+**标签**: `#AI`, `#LLMs`, `#Qwen`, `#open-weights`, `#model-efficiency`
 
 ---
 
 <a id="item-7"></a>
-## [Stripe 以超 70 亿美元收购 OpenRouter](https://www.bloomberg.com/news/articles/2026-08-16/stripe-nears-deal-to-buy-ai-firm-openrouter-for-over-7-billion) ⭐️ 8.0/10
+## [中国要求政府机构提前卸载定制版 Windows 10](https://www.bloomberg.com/news/articles/2026-08-18/china-axing-microsoft-windows-from-state-agencies-ahead-of-plan) ⭐️ 8.0/10
 
-据知情人士透露，Stripe 已敲定收购 AI 模型聚合平台 OpenRouter 的协议，金额超过 70 亿美元。该消息由彭博社报道，最终价格仍可能变动。 此次收购标志着 AI 基础设施市场的重大整合，验证了 AI 模型聚合平台的重要性。它可能重塑开发者获取和支付 AI 模型的方式，并巩固 Stripe 在 AI 经济中的地位。 OpenRouter 成立于 2023 年，提供超过 400 个 AI 模型的访问服务，并称截至今年 5 月已服务 800 万名开发者。据报道，交易金额超过 70 亿美元，有消息称可能超过 80 亿美元（现金加股票），但最终价格尚未确定。
+中国国家安全部已要求部分政府相关机构提前卸载定制版 Windows 10，原定 2027 年 2 月的停用计划被提前，理由是数据安全担忧。微软表示，未发现影响该产品的安全事件，该产品仍在定期获得安全更新。 此举标志着中国与西方科技供应商之间的数据安全紧张局势升级，可能加速中国向国产软件替代品的转变。这可能影响微软的政府相关收入，并为其他国家审查国家系统中的外国软件树立先例。 该指令适用于与中国标准软件（CMIT）合作开发的定制版 Windows 10，具体安全漏洞未披露。加速措施将停用日期提前至原定 2027 年 2 月之前，尽管微软坚称该产品安全且受支持。
 
-telegram · zaihuapd · 8月17日 01:19
+telegram · zaihuapd · 8月18日 06:22
 
-**背景**: OpenRouter 是一个 AI 模型聚合器，为开发者提供统一 API，以便访问数百种大型语言模型，简化模型比较和切换的过程。Stripe 是一家主要的在线支付处理平台，一直在扩展 AI 相关服务，此次收购将使其能够将 AI 模型访问与其支付基础设施整合。
+**背景**: 中国一直在推动技术领域的进口替代，旨在减少政府和关键部门对外国软件的依赖。定制版 Windows 10 专为中国政府使用而定制，其提前移除反映了对数据安全和潜在间谍活动的日益担忧。这与中国在软硬件方面实现自力更生的更广泛努力一致。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/">Stripe will reportedly acquire AI gateway startup OpenRouter for $7B+ | TechCrunch</a></li>
-<li><a href="https://www.bloomberg.com/news/articles/2026-08-16/stripe-nears-deal-to-buy-ai-firm-openrouter-for-over-7-billion">Stripe Finalizes Deal to Acquire AI Startup OpenRouter for Over $7 Billion - Bloomberg</a></li>
-<li><a href="https://www.axios.com/2026/08/17/stripe-openrouter-paypal">Stripe strikes mega-deal for OpenRouter</a></li>
+<li><a href="https://www.kommersant.ru/doc/8891857">Китай отказывается от специальной версии Windows 10 для госучреждений</a></li>
+<li><a href="https://3dnews.ru/1146995/gosudarstvennim-strukturam-knr-veleno-dosrochno-otkazatsya-ot-ispolzovaniya-adaptirovannoy-versii-microsoft-windows-10">Государственным структурам КНР велено досрочно отказаться от использования адаптированной версии Microsoft Windows 10</a></li>
+<li><a href="https://www.vedomosti.ru/politics/news/2026/08/18/1221904-kitai-prekraschaet">Китай прекращает поддержку Windows для госорганов - Ведомости</a></li>
 
 </ul>
 </details>
 
-**标签**: `#acquisition`, `#AI infrastructure`, `#Stripe`, `#OpenRouter`, `#business`
+**标签**: `#China`, `#Microsoft`, `#Windows 10`, `#cybersecurity`, `#government policy`
 
 ---
 
 <a id="item-8"></a>
-## [OpenAI 阐述 AI 驱动的网络安全防御策略](https://openai.com/index/the-defenders-window) ⭐️ 7.0/10
+## [Seth Godin 批评亚马逊搜索和用户体验下降](https://seths.blog/2026/08/the-amazon-tax/) ⭐️ 7.0/10
 
-OpenAI 发布了一篇题为《防御者的窗口》的文章，讨论 AI 如何重塑网络安全，并为安全团队概述了防御策略。文章详细说明了 OpenAI 如何加强自身防御，并为组织提供了可操作的建议。 这很重要，因为 AI 越来越多地被攻击者和防御者使用，而像 OpenAI 这样的领先 AI 公司提供的指导可以帮助安全团队适应。它强调了组织迫切需要发展其安全实践以应对 AI 驱动的威胁。 这篇文章可能涵盖了具体的防御措施，如 AI 驱动的威胁检测、自动化响应以及人工监督的重要性。它还可能讨论 AI 在安全领域的挑战，包括对抗性攻击和对强大 AI 治理的需求。
+Seth Godin 于 2026 年 8 月发表了一篇题为《The Amazon tax》的博客文章，批评亚马逊搜索质量和用户体验的下降。这篇文章在 Hacker News 上引发了广泛讨论，获得了 834 个点赞和 506 条评论。 这一批评凸显了亚马逊平台的重大转变，搜索结果日益被广告和不相关建议充斥，影响了数百万购物者。它强调了用户不满情绪的加剧，以及替代平台可能获得更多关注。 评论者报告称，亚马逊搜索结果中高达四分之三是赞助广告，使得寻找特定产品变得困难。一些用户正在转向 Etsy 和本地商店等替代平台，还有人建议就搜索广告中的商标侵权采取法律行动。
 
-rss · OpenAI Blog · 8月17日 05:30
+hackernews · herbertl · 8月18日 13:22 · [社区讨论](https://news.ycombinator.com/item?id=49345263)
 
-**背景**: AI 正在通过实现更快的威胁检测和响应来改变网络安全，但它也为攻击者提供了复杂的工具。作为主要的 AI 开发者，OpenAI 对风险和机遇都有独特的视角。这篇文章旨在教育安全团队如何利用 AI 进行防御，同时降低其风险。
+**背景**: 亚马逊是最大的电子商务平台，但其搜索功能已从简单的产品定位器演变为优先展示赞助内容的语义搜索引擎。这一转变反映了大型科技公司中普遍存在的趋势，即为了广告收入而牺牲用户体验。
 
-**标签**: `#AI`, `#cybersecurity`, `#OpenAI`, `#defense`
+**社区讨论**: 社区讨论大多批评亚马逊，用户分享了搜索质量下降和广告泛滥的个人经历。一些人建议使用 Geizhals.de 等价格比较网站作为替代，另一些人则讨论针对搜索广告中商标滥用的潜在法律补救措施。
+
+**标签**: `#Amazon`, `#e-commerce`, `#search`, `#user experience`, `#platform criticism`
 
 ---
 
 <a id="item-9"></a>
-## [OpenAI 加入俄亥俄州 PORTS-Pike 项目](https://openai.com/index/openai-joins-ports-pike-project) ⭐️ 6.0/10
+## [火车窗变平板扫描仪：创意狭缝扫描项目](https://philo.gay/linecam/) ⭐️ 7.0/10
 
-OpenAI 宣布参与位于俄亥俄州派克县的 PORTS-Pike 项目，这是一个耗资 672 亿美元的人工智能技术园区。该公司将利用该数据中心的能力，并向社区福利基金捐赠 4000 万美元，与 SB Energy 的 4000 万美元承诺相匹配。 这项投资表明 OpenAI 致力于区域经济发展和基础设施扩展，而不仅仅局限于其核心 AI 研究。这也凸显了大型科技公司与能源和基础设施提供商合作以确保 AI 工作负载计算能力的日益增长趋势。 PORTS-Pike 园区已获得 FAST-41 地位以加快联邦许可审批，OpenAI 正与美国能源部合作利用现有的现场水系统。该项目预计将创造数万个就业机会，并包括初始 8000 万美元的社区福利基金，其中 OpenAI 的 4000 万美元将用于当地优先事项。
+一个名为“将铁路网络用作平板扫描仪”（linecam）的创意项目展示了利用火车车窗和线阵相机实现平板扫描仪效果。该项目在 Hacker News 上分享，引发了讨论和参与。 该项目突显了狭缝扫描成像技术在日常生活场景中的创意应用，激励他人尝试类似概念。它连接了艺术与技术，鼓励社区参与和成像领域的创新。 该项目使用安装在火车车窗上的线阵相机，在火车移动时连续捕捉线条，从而有效扫描风景。社区成员指出，类似实验中每条“线”的宽度约为 15 像素，并分享了如 slitscan.space 等工具供实践尝试。
 
-rss · OpenAI Blog · 8月17日 05:00
+hackernews · otherayden · 8月18日 12:43 · [社区讨论](https://news.ycombinator.com/item?id=49344825)
 
-**背景**: PORTS-Pike 项目是俄亥俄州南部的一个大型 AI 数据中心开发项目，由 SB Energy 和 NVIDIA 支持，其中 NVIDIA 向 SB Energy 投资 15 亿美元。该项目旨在通过提供电力基础设施和社区投资来重振该地区的工业传统。OpenAI 的参与为该计划增加了另一个主要参与者，强化了该地区在 AI 经济中的作用。
+**背景**: 狭缝扫描摄影是一种在长时间曝光期间将狭缝置于相机与被摄体之间的技术，产生拉伸或抽象的图像。线阵相机常用于工业检测，随着被摄体移动逐行捕捉以构建完整图像。该项目创造性地将这些原理应用于火车旅程，将车窗变成扫描仪。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://openai.com/index/openai-joins-ports-pike-project/">OpenAI joins PORTS-Pike project | OpenAI</a></li>
-<li><a href="https://constructionreviewonline.com/67-2b-ports-technology-campus-gains-fast-41-status-advancing-ohio-ai-megaproject/">$67.2B PORTS Technology Campus Gains FAST-41 Status ...</a></li>
-<li><a href="https://sciotocountydailynews.com/openai-makes-massive-southern-ohio-investment">OpenAI Makes Massive Southern Ohio Investment – Scioto County Daily News</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Slit-scan_photography">Slit-scan photography - Wikipedia</a></li>
+<li><a href="https://www.lomography.com/magazine/283280-making-a-slit-scan-camera">Making a Slit Scan Camera · Lomography</a></li>
+<li><a href="https://handsonfilmhistoryproject.uoregon.edu/slit-scan-photography/">Slit-Scan Photography – THE HANDS-ON FILM HISTORY PROJECT</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 来自 Scioto County Daily News 和社交媒体的社区评论反映出对就业创造和经济增长的乐观态度，但一些人担心用水和环境影响。4000 万美元的社区赠款基金被视为积极举措，但长期可持续性问题仍然存在。
+**社区讨论**: 社区成员分享了类似经历，如 2008 年使用 iSight 相机在铁路轨道附近进行的实验，以及其他人通过手动拼接帧创建动画。一些人表示有兴趣将这项技术应用于锯木厂等新场景，另一些人则提供了狭缝扫描的工具和资源。总体情绪积极且鼓舞人心，赞赏其实用性与艺术性的结合。
 
-**标签**: `#OpenAI`, `#community investment`, `#economic development`, `#Ohio`
+**标签**: `#imaging`, `#creative-coding`, `#slit-scan`, `#hardware`, `#hacker-news`
 
 ---
 
 <a id="item-10"></a>
-## [OpenAI 资助 14 个智能时代 AI 政策项目](https://openai.com/index/new-policy-ideas-for-the-intelligence-age) ⭐️ 6.0/10
+## [OpenAI 发起倡议，加强国家安全中人工智能的民主监督](https://openai.com/index/strengthening-democratic-oversight-in-national-security) ⭐️ 7.0/10
 
-OpenAI 宣布资助 14 个独立项目，探索新的 AI 政策思路，提供 100 万美元赠款和高达 100 万美元的 API 积分，以在智能时代扩大经济机会并增强社会韧性。 这一举措表明，一家主要 AI 实验室正积极参与塑造先进 AI 社会影响的政策，可能影响政府和组织如何为经济转型和韧性做准备。它凸显了政策创新与技术发展并重的重要性日益增长。 该资助计划紧随 OpenAI 于 2026 年 4 月发布的《智能时代产业政策》白皮书，包括财务赠款和 API 积分，以支持独立组织。这些项目旨在探索社会如何应对日益强大的 AI，重点关注经济机会和社会韧性。
+2026 年 8 月 18 日，OpenAI 宣布了一项新倡议，旨在加强国家安全中人工智能的民主监督，承诺投入 500 万美元用于培训、技术支持和 OpenAI 积分，以支持政府监督机构。 该倡议回应了政府机构在国家安全领域理解并监督人工智能使用的日益增长的需求，可能为负责任的人工智能治理树立先例。它有望增强公众信任，确保在敏感领域部署人工智能符合民主价值观。 该倡议包括向政府监督机构提供工具、培训和专业知识，并承诺投入 500 万美元。其重点是支持民主机构履行监督职责，但具体的工具和培训项目尚未详细说明。
 
-rss · OpenAI Blog · 8月17日 03:15
+rss · OpenAI Blog · 8月18日 19:00
 
-**背景**: “智能时代”指的是一个未来时期，预计 AI 能力将极大地改变经济和社会。OpenAI 的政策举措旨在解决劳动力转型和不平等等潜在干扰，补充其技术进步。此举反映了 AI 公司参与公共政策讨论的更广泛趋势。
+**背景**: 人工智能在国家安全领域（如情报分析和军事规划）的应用日益增多，引发了对问责制和公民自由的担忧。民主监督机制对于确保人工智能的使用符合法律和道德标准至关重要。OpenAI 的倡议旨在为政府机构提供必要的知识和资源，以有效监督这些应用。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://openai.com/index/new-policy-ideas-for-the-intelligence-age/">New policy ideas for the Intelligence Age - OpenAI</a></li>
-<li><a href="https://toolhunt.io/openai-funds-new-policy-projects-for-the-intelligence-age/">OpenAI Funds New Policy Projects for the “Intelligence Age”</a></li>
+<li><a href="https://openai.com/index/strengthening-democratic-oversight-in-national-security/">Strengthening Democratic Oversight in National Security - OpenAI</a></li>
+<li><a href="https://www.unite.ai/openai-puts-5m-behind-ai-training-and-tools-for-national-security-oversight-bodies/">OpenAI Puts $5M Behind AI Training and Tools for National ...</a></li>
+<li><a href="https://www.gao.gov/blog/how-artificial-intelligence-transforming-national-security">How Artificial Intelligence Is Transforming National Security | U.S. GAO</a></li>
 
 </ul>
 </details>
 
-**标签**: `#AI policy`, `#OpenAI`, `#economic opportunity`, `#societal resilience`
+**标签**: `#AI governance`, `#national security`, `#OpenAI`, `#policy`, `#democratic oversight`
+
+---
+
+<a id="item-11"></a>
+## [OpenAI 加强保障措施以调控前沿模型开发节奏](https://openai.com/index/pacing-model-development-cyber-capabilities) ⭐️ 7.0/10
+
+OpenAI 宣布在监控、对齐和安全方面采取新的保障措施，以引导前沿模型的开发节奏，回应关于网络关键能力的担忧。该公司正在更新其安全流程，以适应前沿模型更快的发展速度。 此举表明 OpenAI 在 AI 安全方面采取主动态度，可能为其他实验室树立先例。它回应了人们对先进 AI 双重用途（尤其是在网络安全领域）日益增长的担忧，并可能影响政策和行业标准。 该公告侧重于加强监控、对齐和安全，但缺乏具体的技术细节或指标。OpenAI 正在根据模型的潜在能力调整开发速度，在以前的速度继续之前需要额外的保障措施。
+
+rss · OpenAI Blog · 8月18日 11:00
+
+**背景**: 前沿 AI 模型是能力极强的系统，如果被滥用可能带来风险，尤其是在网络安全领域。AI 对齐是 AI 安全的一个子领域，专注于确保这些系统按预期行为。监控和安全是这一努力的关键组成部分，有助于检测和防止有害行为。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://openai.com/index/pacing-model-development-cyber-capabilities/">Pacing model development in an era of cyber-critical... | OpenAI</a></li>
+<li><a href="https://techbeat.co/story/openai-tightens-frontier-ai-safeguards-to-pace-model-development">OpenAI Tightens Frontier AI Safeguards to Pace Model Development</a></li>
+<li><a href="https://cyberinsider.com/openai-slows-model-development-over-concerns-about-cyber-capabilities/">OpenAI slows model development over concerns about cyber...</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI safety`, `#OpenAI`, `#frontier models`, `#cybersecurity`, `#AI policy`
+
+---
+
+<a id="item-12"></a>
+## [OpenAI 与 CodeAI 合作推动青少年 AI 教育](https://openai.com/index/chatgpt-for-teens/) ⭐️ 6.0/10
+
+2026 年 8 月 18 日，OpenAI 宣布与 CodeAI（原 Code.org）合作，推动学生和教师负责任地使用 AI，并同步推出 ChatGPT for Teens。该合作计划在未来一年通过联合咨询委员会、AI 素养课程、学生挑战赛和职业项目，覆盖数百万学生。 此次合作显著扩大了 K-12 学生的 AI 教育覆盖面，回应了学校对 AI 素养日益增长的需求。同时，它展示了 OpenAI 对年轻用户安全部署 AI 的承诺，可能为 AI 公司与教育非营利组织的合作树立先例。 ChatGPT for Teens 包含针对青少年的引导流程、更强的内置保护、健康使用功能以及额外的家长控制。合作还支持 CodeAI 开发免费的高中 AI Foundations 课程，并将成立联合咨询委员会来指导该计划。
+
+telegram · OpenAI Blog · 8月18日 12:06
+
+**背景**: Code.org 是一家专注于 K-12 学生计算机科学教育的非营利组织，于 2026 年 6 月更名为 CodeAI，以反映其向 AI 教育的转型。ChatGPT for Teens 是 OpenAI 聊天机器人的新模式，可自动限制某些对话以更好地保护 13-17 岁用户，此举正值对 AI 影响青少年的担忧日益加剧之际。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Code.org">Code.org - Wikipedia</a></li>
+<li><a href="https://code.org/en-US/codeai">Code.org is now CodeAI</a></li>
+<li><a href="https://www.geekwire.com/2026/solidifying-its-shift-to-ai-education-code-org-rebrands-as-codeai/">Code.org rebrands as CodeAI, solidifying its shift to AI education – GeekWire</a></li>
+<li><a href="https://help.openai.com/en/articles/20001421-chatgpt-for-teens">ChatGPT for Teens | OpenAI Help Center</a></li>
+<li><a href="https://9to5mac.com/2026/08/18/chatgpt-for-teens-openai/">ChatGPT for Teens launches with protections and features ... - 9to5Mac</a></li>
+<li><a href="https://www.nytimes.com/2026/08/18/technology/chatgpt-for-teens-openai.html">OpenAI Introduces ‘ ChatGPT for Teens ’ as Safety Concerns Grow</a></li>
+
+</ul>
+</details>
+
+**标签**: `#OpenAI`, `#AI education`, `#ChatGPT for Teens`, `#partnership`, `#youth`
 
 ---
