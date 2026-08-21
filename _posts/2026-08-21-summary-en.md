@@ -10,286 +10,287 @@ lang: en
 ---
 
 1. [US Citizen Faces Felony for Deleting Phone Data at Border](#item-1) ⭐️ 8.0/10
-2. [Scientists Release Largest 2D Map of the Universe](#item-2) ⭐️ 8.0/10
-3. [Researcher Accidentally Hijacks ENUM Queries for Military Bases](#item-3) ⭐️ 8.0/10
-4. [Developer Describes Becoming 'AI-Blind' to Generated Text](#item-4) ⭐️ 8.0/10
+2. [Largest 2D Map of Universe Released with Interactive Viewer](#item-2) ⭐️ 8.0/10
+3. [Researcher Accidentally Hijacks e164.arpa ENUM Queries](#item-3) ⭐️ 8.0/10
+4. [DeepSeek Launches Vision-Capable V4 Flash Model](#item-4) ⭐️ 8.0/10
 5. [DeepMind Partners with Game Studios to Prototype AI Gameplay](#item-5) ⭐️ 8.0/10
-6. [Nvidia reportedly develops China-specific B30A AI chip, more powerful than H20](#item-6) ⭐️ 8.0/10
-7. [China's Chang'e-7 to Launch Aug 24, Hunt for Lunar South Pole Water Ice](#item-7) ⭐️ 8.0/10
-8. [Stop Making TUIs: Build Native UIs with AI Agents](#item-8) ⭐️ 7.0/10
-9. [Matt Webb: ChatGPT as Interactive Tutor for Learning Quaternions](#item-9) ⭐️ 7.0/10
-10. [ChatGPT Search Dramatically Increases site: Operator Usage](#item-10) ⭐️ 7.0/10
-11. [llm-openrouter 0.7 adds server-side tools and LLM 0.32 support](#item-11) ⭐️ 6.0/10
-12. [China Encourages Tech Startups to List Domestically](#item-12) ⭐️ 6.0/10
+6. [China Tightens Outbound Investment Rules with New Draft](#item-6) ⭐️ 8.0/10
+7. [Kobo Cobalt Project Enables Apps on E-Readers](#item-7) ⭐️ 7.0/10
+8. [Stop Making TUIs: Build Native UIs with Coding Agents](#item-8) ⭐️ 7.0/10
+9. [ChatGPT Search Surges in site: Operator Usage](#item-9) ⭐️ 7.0/10
+10. [llm-openrouter 0.7 Adds LLM 0.32 Support and Server-Side Tools](#item-10) ⭐️ 6.0/10
+11. [Matt Webb: ChatGPT as Patient Tutor for Learning Quaternions](#item-11) ⭐️ 6.0/10
+12. [China Encourages Tech Startups to List Domestically, Shifting Capital Flow Eastward](#item-12) ⭐️ 6.0/10
 
 ---
 
 <a id="item-1"></a>
 ## [US Citizen Faces Felony for Deleting Phone Data at Border](https://www.nytimes.com/2026/08/21/us/politics/samuel-tunick-deleted-phone-felony.html) ⭐️ 8.0/10
 
-Samuel Tunick, a US citizen, was charged with a felony for providing a 'duress code' that wiped his phone during a border search. The Department of Justice filed charges in late 2025 under a statute that prohibits knowingly destroying property to prevent seizure. This case highlights the legal risks of using data-wiping measures to protect privacy at US borders, potentially deterring travelers from safeguarding sensitive information. It raises significant concerns about digital privacy rights and the extent of border search authority. Tunick was allowed to leave but later indicted for destroying evidence, not for refusing a search. The charges rely on a little-used statute, and the case has sparked debate over whether such actions constitute obstruction of justice.
+Samuel Tunick, a US citizen, faces felony charges for deleting his phone's data during a customs search at an airport, using a 'duress' password. This incident highlights the legal consequences of data deletion during border searches. This case raises critical questions about digital privacy and legal rights at US borders, potentially setting a precedent for how data deletion is treated during border searches. It affects all travelers, especially US citizens, who may face similar charges for protecting their data. The charges stem from Tunick's use of a 'duress' password on GrapheneOS, which wipes the device. The case is notable because US citizens cannot be denied re-entry for refusing to unlock a device, but deletion may lead to felony charges.
 
 hackernews · floathub · Aug 21, 12:10 · [Discussion](https://news.ycombinator.com/item?id=49386895)
 
-**Background**: US border agents have broad authority to search electronic devices at ports of entry, which has been upheld as critical for border security. Travelers often face a dilemma between protecting their data and complying with searches, as refusing to provide passwords can lead to detention or device seizure. The legal landscape for digital privacy at borders is evolving, creating uncertainty for travelers.
+**Background**: The border search exception allows US customs officials to search and seize devices without a warrant. While US citizens cannot be denied entry for refusing to unlock, they may face device seizure and prolonged inspection. Deleting data during a search can be considered obstruction of justice, leading to criminal charges.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://news.ycombinator.com/item?id=49386895">Felony charges for citizen deleting phone data at US Border | Hacker News</a></li>
-<li><a href="https://arstechnica.com/gadgets/2026/07/activist-charged-with-felony-after-giving-border-agent-duress-code-that-wiped-his-phone/">Activist charged with felony after giving border agent "duress code" that wiped his phone - Ars Technica</a></li>
-<li><a href="https://techcrunch.com/2026/07/24/us-accuses-american-of-allegedly-wiping-his-phone-using-a-duress-password-during-border-search/">US accuses American of allegedly wiping his phone using a 'duress' password during border search | TechCrunch</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Border_search_exception">Border search exception - Wikipedia</a></li>
+<li><a href="https://berardiimmigrationlaw.com/what-cbp-can-and-cant-do-with-your-devices-at-the-u-s-border/">CBP Can Search Your Phone at the Border | Berardi Immigration</a></li>
+<li><a href="https://yro.slashdot.org/story/26/08/21/202201/american-who-wiped-his-phone-with-duress-password-during-border-search-gets-felony-charges">American Who Wiped His Phone With 'Duress' Password... - Slashdot</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters discussed technical workarounds such as decoy passcodes that boot into a separate partition and erase data, and imaging phones before crossing borders. Some noted that the charge was for destroying evidence, not refusing a search, and suggested that remaining silent could have avoided prosecution. Others expressed concerns about government overreach and the blocking of archive pages in some countries.
+**Discussion**: Community comments suggest technical workarounds like decoy passcodes and device imaging to protect data, but also express concerns about the legality and practicality. Some users note the difficulty of traveling with minimal data, while others highlight the government's overreach.
 
-**Tags**: `#privacy`, `#border search`, `#legal`, `#digital rights`, `#security`
+**Tags**: `#privacy`, `#legal`, `#border search`, `#digital rights`, `#security`
 
 ---
 
 <a id="item-2"></a>
-## [Scientists Release Largest 2D Map of the Universe](https://newscenter.lbl.gov/2026/08/10/scientists-release-biggest-2d-map-of-the-universe/) ⭐️ 8.0/10
+## [Largest 2D Map of Universe Released with Interactive Viewer](https://newscenter.lbl.gov/2026/08/10/scientists-release-biggest-2d-map-of-the-universe/) ⭐️ 8.0/10
 
-Scientists have released the largest 2D map of the universe, an interactive tool built from the Legacy Survey data. The map, accessible via the Legacy Survey Sky Viewer, is expected to remain the most comprehensive of its kind for years. This milestone provides an unprecedented resource for astronomers and the public, enabling detailed exploration of the cosmos. It also highlights the value of large-scale astronomical surveys and may influence future investment in space observation. The map is based on data from the Legacy Survey, which covers a significant portion of the sky. The interactive viewer allows users to zoom into specific regions, revealing galaxies and other celestial objects in remarkable detail.
+Scientists have released the largest 2D map of the universe, created from over 263,000 telescope exposures, featuring nearly 4 billion celestial objects and an interactive viewer. The map covers roughly three-quarters of the sky in visible and near-infrared light. This map provides an unprecedented resource for astronomers to explore the universe and search for rare phenomena, potentially leading to new discoveries. It also offers the public an engaging way to visualize the cosmos, fostering scientific curiosity. The map is based on data from the DESI Legacy Imaging Surveys, combining observations from multiple telescopes. The interactive viewer, available at viewer.legacysurvey.org, allows users to zoom into specific regions and access detailed imagery.
 
 hackernews · NKosmatos · Aug 21, 18:36 · [Discussion](https://news.ycombinator.com/item?id=49392200)
 
-**Background**: The Legacy Survey is a multi-observatory effort that has mapped hundreds of millions of celestial objects. 2D maps like this one show the positions of objects on the sky but not their distances, which require additional measurements like redshift. The interactive viewer makes this data accessible to both researchers and the general public.
+**Background**: The DESI Legacy Imaging Surveys are a series of ground-based surveys that map the extragalactic sky in optical and infrared wavelengths. The surveys combine data from telescopes like the Mayall 4-meter telescope and the Blanco 4-meter telescope, producing a comprehensive catalog of galaxies, quasars, and stars. This 2D map records the positions of objects on the sky but not their distances, which would require additional spectroscopic observations for a 3D map.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.legacysurvey.org/viewer">Legacy Survey Sky Browser</a></li>
-<li><a href="https://viewer.legacysurvey.org/?ra=18.5803&dec=-0.9650&layer=ls-dr9&zoom=12">Legacy Survey Sky Browser</a></li>
-<li><a href="https://www.legacysurvey.org/svtips/">Sky Viewer Tips & Tricks - Legacy Survey</a></li>
+<li><a href="https://newscenter.lbl.gov/2026/08/10/scientists-release-biggest-2d-map-of-the-universe/">Scientists Release Biggest 2D Map of the Universe</a></li>
+<li><a href="https://www.space.com/astronomy/scientists-create-largest-2d-map-of-the-universe-with-5-6-trillion-pixels-and-nearly-4-billion-cosmic-objects">Scientists create largest 2D map of the universe with 5.6 ...</a></li>
+<li><a href="https://www.independent.co.uk/space/astronomy-two-dimensional-map-universe-scientists-b3031325.html">Scientists just released the biggest two-dimensional map of ...</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters expressed excitement about the interactive map, with some joking about the universe looking like a brick wall. Others raised questions about the possibility of a 3D map and the computational challenges involved, while one commenter speculated about future funding for astronomy given economic and strategic priorities.
+**Discussion**: Community comments express excitement about the interactive viewer, with some joking about the map's appearance. Users also discuss the potential for a 3D map, noting that distance measurements are possible but computationally intensive. One commenter expresses skepticism about future investment in astronomy due to economic and geopolitical factors.
 
-**Tags**: `#astronomy`, `#universe`, `#map`, `#science`, `#data`
+**Tags**: `#astronomy`, `#universe`, `#data visualization`, `#science`, `#map`
 
 ---
 
 <a id="item-3"></a>
-## [Researcher Accidentally Hijacks ENUM Queries for Military Bases](https://lina.sh/blog/hijacking-e164-arpa) ⭐️ 8.0/10
+## [Researcher Accidentally Hijacks e164.arpa ENUM Queries](https://lina.sh/blog/hijacking-e164-arpa) ⭐️ 8.0/10
 
-A security researcher accidentally hijacked ENUM queries for hundreds of thousands of phone numbers, including those belonging to military bases, by taking control of an abandoned e164.arpa subdomain. The incident exposed a critical flaw in the public e164.arpa infrastructure, which is used for telephone number mapping. This discovery highlights a significant vulnerability in the ENUM/e164.arpa system, with potential implications for privacy and national security. It underscores the risks of neglected internet infrastructure and the importance of proper maintenance and oversight. The researcher took over an abandoned subdomain under e164.arpa, which was still delegated in the DNS, and began receiving ENUM queries for a large number of phone numbers. The incident reveals that despite ENUM being largely non-public, some private services still rely on it, and the lack of oversight allowed the hijack to go unnoticed for a period.
+A security researcher accidentally hijacked e164.arpa ENUM queries, logging hundreds of thousands of phone calls to military bases. The incident reveals a long-standing vulnerability in the ENUM infrastructure that could allow call routing manipulation. This highlights a significant security and privacy flaw in the global telephony infrastructure, potentially allowing attackers to intercept or misroute sensitive communications. It underscores the need for better oversight and security measures in ENUM and related systems. The researcher did not set up a SIP server to test actual call termination, but the logs showed a high volume of queries. The vulnerability stems from the lack of authentication and public accessibility of e164.arpa, which is operated by RIPE NCC under IAB instructions.
 
 hackernews · gavide · Aug 21, 13:11 · [Discussion](https://news.ycombinator.com/item?id=49387570)
 
-**Background**: ENUM (Telephone Number Mapping) is a protocol that maps E.164 telephone numbers to Internet addresses, enabling services like VoIP routing. The e164.arpa domain is a special top-level domain used for this mapping, managed by IANA. While ENUM was designed for public use, it never gained widespread adoption, and much of its infrastructure has been neglected or repurposed for private use.
+**Background**: ENUM (Telephone Number Mapping) is a protocol that translates E.164 telephone numbers into Internet addresses, bridging the PSTN and the Internet. The e164.arpa zone is the top-level domain for ENUM, managed by RIPE NCC, and is intended for public use, but its lack of access controls makes it vulnerable to abuse.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Telephone_number_mapping">Telephone number mapping - Wikipedia</a></li>
-<li><a href="https://en.wikipedia.org/wiki/.arpa">.arpa - Wikipedia</a></li>
-<li><a href="https://www.iana.org/domains/arpa">.ARPA Domain - Internet Assigned Numbers Authority</a></li>
+<li><a href="https://www.ripe.net/about-us/news/revised-operating-instructions-for-e164-arpa-enum/">Revised Operating Instructions for e164.arpa (ENUM) — RIPE Network Coordination Centre</a></li>
+<li><a href="https://datatracker.ietf.org/doc/html/rfc5527">RFC 5527 - Combined User and Infrastructure ENUM in the e164.arpa Tree</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters expressed amazement that the researcher wasn't jailed for reporting the issue, and noted that such holes can remain for years. Some suggested the researcher should have gone further by setting up a SIP server to test call termination, while others lamented that the issue was only addressed once military involvement was discovered.
+**Discussion**: Commenters expressed amazement that the researcher avoided legal repercussions, and noted that such holes often go unnoticed for years. Some suggested the researcher should have tested call termination, while others lamented that the issue was only addressed after military involvement.
 
-**Tags**: `#security`, `#ENUM`, `#telephony`, `#privacy`, `#vulnerability`
+**Tags**: `#security`, `#telephony`, `#ENUM`, `#privacy`, `#infrastructure`
 
 ---
 
 <a id="item-4"></a>
-## [Developer Describes Becoming 'AI-Blind' to Generated Text](https://cymerys.com/w/im-becoming-ai-blind) ⭐️ 8.0/10
+## [DeepSeek Launches Vision-Capable V4 Flash Model](https://api-docs.deepseek.com/guides/vision/) ⭐️ 8.0/10
 
-A developer published a post titled 'I'm becoming AI-blind,' describing an inability to extract value from AI-generated text, and the community discussion (238 points, 239 comments) resonated widely, with commenters sharing similar experiences in code review and learning contexts. This highlights a growing cognitive fatigue with AI-generated content, which could impact productivity and learning in developer workflows and beyond. As AI tools become ubiquitous, understanding this phenomenon is crucial for designing better human-AI interaction and mitigating negative effects on critical thinking. Commenters report that AI-generated text, despite being polished, often feels informationally empty and requires significant mental effort to parse, sometimes leading to requests for manual rewrites in code reviews. The phenomenon is linked to cognitive load and 'technostress,' where AI shifts rather than reduces mental burden.
+DeepSeek has released an experimental multimodal model, deepseek-v4-flash-vision-exp, now live on the DeepSeek API platform. This model adds image understanding to the existing V4-Flash text model, with images tokenized for billing at up to 384 tokens each, at the same V4-Flash pricing. This release addresses a known limitation of DeepSeek's V4 model, which was previously text-only, by enabling vision capabilities for developers and enterprises. It provides a cost-effective multimodal option that matches the text performance of V4-Flash, potentially impacting the competitive landscape of multimodal AI models. The model supports Chat Completions, Messages, and Responses APIs, and handles mixed text and image inputs. Images are automatically resized to roughly 384x384 or 800x800 pixels depending on size, which may limit fine-grained detail recognition, as noted in community feedback.
 
-hackernews · rcymerys · Aug 21, 11:48 · [Discussion](https://news.ycombinator.com/item?id=49386699)
+hackernews · dares2573 · Aug 21, 10:33 · [Discussion](https://news.ycombinator.com/item?id=49386163)
 
-**Background**: Generative AI tools like ChatGPT and Claude are increasingly used for writing and coding assistance, but their outputs can be verbose and formulaic. Research indicates that reliance on such tools can increase cognitive load and potentially erode critical thinking, especially in educational settings. The 'AI-blind' experience may stem from the brain's adaptation to the predictable patterns of AI-generated language, making it harder to extract novel information.
+**Background**: DeepSeek is an AI research company known for its open-weight language models. The V4-Flash model is a fast and cost-efficient text model, and the new vision-exp variant extends it with image understanding, targeting tasks like document parsing, chart reading, and screenshot analysis. However, the model has limitations in high-resolution or fine-detail visual tasks, and the visual primitives mode must be triggered explicitly.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://cmr.berkeley.edu/2026/01/ai-productivity-blind-spot/">AI Productivity Blind Spot | California Management Review</a></li>
-<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12611650/">Cognitive load scale for AI-assisted L2 writing: scale development and validation - PMC</a></li>
-<li><a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1666974/full">Frontiers | Cognitive load scale for AI-assisted L2 writing: scale development and validation</a></li>
+<li><a href="https://x.com/deepseek_ai/status/2090730032574631962">DeepSeek on X: "DeepSeek-V4-Flash-Vision-Exp is now live on the DeepSeek API Platform! 🚀 🔹 This experimental multimodal model matches DeepSeek-V4-Flash on text capabilities—including agents, reasoning, and world knowledge. 🔹 On multimodal agent benchmarks, V4-Flash-Vision-Exp makes a major" / X</a></li>
+<li><a href="https://officechai.com/ai/deepseek-releases-v4-flash-vision-exp-matches-opus-4-8-on-some-multimodal-benchmarks/">DeepSeek Releases V4-Flash-Vision-Exp, Matches Opus 4.8 On Some Multimodal Benchmarks</a></li>
+<li><a href="https://www.intelligentliving.co/deepseek-image-input-v4-flash-vision/">DeepSeek Image Input: How to Use the New V4 Flash Vision Model</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The community largely agrees with the author, sharing personal anecdotes of struggling to parse AI-generated comments and learning materials. Some express concern about the impact on code review quality and the extra effort required to rewrite AI output, while others note the phenomenon may be a natural response to low-information-density text.
+**Discussion**: Community comments are generally positive, with users appreciating the new vision capability, especially for tasks like viewing Playwright screenshots. However, some users report failures in specific tests, such as reading a clock correctly, and note that the image resolution may be insufficient for OCR or full-page documents. There is also anecdotal feedback that previous V4-Flash versions falsely claimed vision capabilities, making this upgrade welcome.
 
-**Tags**: `#AI`, `#LLM`, `#communication`, `#cognitive-load`, `#developer-experience`
+**Tags**: `#DeepSeek`, `#vision model`, `#AI/ML`, `#model release`, `#LLM`
 
 ---
 
 <a id="item-5"></a>
 ## [DeepMind Partners with Game Studios to Prototype AI Gameplay](https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/) ⭐️ 8.0/10
 
-Google DeepMind announced a partnership with game studios to prototype breakthrough AI gameplay, building on 15 years of AI research in games. The collaboration aims to develop generalist agents like SIMA 2 and unlock new experiences across persistent worlds. This partnership signals a shift from narrow game mastery to open-ended, long-horizon AI that can handle complex tasks in persistent worlds. It could revolutionize game design and AI research, impacting both the gaming industry and the broader AI ecosystem. The announcement highlights DeepMind's history with games like Atari, Go, and StarCraft, and its recent work on SIMA, a generalist AI agent for 3D virtual environments. The partnership with CCP Games (EVE Online) focuses on long-horizon AI research, suggesting a move toward agents that can plan and act over extended periods.
+Google DeepMind announced partnerships with game studios to prototype breakthrough AI gameplay, building on 15 years of AI research in games. This initiative aims to develop generalist agents like SIMA 2 that can operate across persistent game worlds. This marks a significant step in applying AI research to real-world gaming, potentially transforming how games are designed and played. It signals a new direction for AI in games, with potential industry-wide impact on player experiences and game development. The announcement lacks technical depth and detailed results, but highlights the creation of generalist agents like SIMA 2. These agents are designed to understand natural-language instructions and perform tasks in 3D virtual environments, as demonstrated in earlier research.
 
 rss · Google DeepMind Blog · Aug 21, 11:59
 
-**Background**: Games have long been a benchmark for AI research, providing controlled environments to test and develop algorithms. DeepMind's AlphaGo and AlphaStar achieved superhuman performance in Go and StarCraft, respectively. SIMA is a recent project that aims to create an agent capable of following natural-language instructions in various game worlds, moving beyond single-game mastery.
+**Background**: Google DeepMind has been researching AI in games for 15 years, starting with Atari games and progressing to complex environments like EVE Online. Their work includes developing interactive agents that can follow human instructions and perform actions in open-ended conditions, such as the SIMA agent introduced in 2024. This new partnership aims to bring these research advances into commercial game development.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/">Exploring new frontiers of AI and games research — Google DeepMind</a></li>
 <li><a href="https://deepmind.google/discover/blog/sima-generalist-ai-agent-for-3d-virtual-environments/">A generalist AI agent for 3D virtual environments — Google DeepMind</a></li>
-<li><a href="https://www.kucoin.com/news/flash/deepmind-partners-with-ccp-games-on-long-horizon-ai-research">DeepMind Partners With CCP Games on Long-Horizon AI ... | KuCoin</a></li>
+<li><a href="https://deepmind.google/discover/blog/building-interactive-agents-in-video-game-worlds/">Building interactive agents in video game worlds — Google DeepMind</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI`, `#gaming`, `#DeepMind`, `#research`, `#partnership`
+**Tags**: `#AI`, `#gaming`, `#DeepMind`, `#research`, `#industry`
 
 ---
 
 <a id="item-6"></a>
-## [Nvidia reportedly develops China-specific B30A AI chip, more powerful than H20](https://www.theinformation.com/articles/nvidia-plots-china-comeback-new-ai-chip) ⭐️ 8.0/10
+## [China Tightens Outbound Investment Rules with New Draft](https://yyglxxbsgw.ndrc.gov.cn/htmls/article/article.html?articleId=2c97d16c-9ff00a63-01a0-230bacc4-0001) ⭐️ 8.0/10
 
-Nvidia is reportedly developing a new AI chip for the Chinese market, codenamed B30A, based on its Blackwell architecture. The chip is said to be more powerful than the current China-specific H20 but less powerful than the flagship B300, with samples possibly delivered as early as next month. This development is significant because it represents Nvidia's strategic response to US export controls, aiming to maintain its presence in the lucrative Chinese AI chip market. The B30A could help Chinese companies access more advanced AI capabilities, potentially impacting the competitive landscape of AI hardware and geopolitics. The B30A reportedly uses a single-chip design with high-bandwidth memory, and its performance is expected to be between the H20 and B300. However, Nvidia has denied the report, and the final specifications and approval from US authorities remain uncertain.
+China's National Development and Reform Commission (NDRC) released a draft revision of the Outbound Investment Management Measures, proposing stricter capital outflow controls, expanded security reviews, and enhanced penalties. The draft introduces new requirements for reporting round-trip investments and mandates immediate reporting of forced asset transfers by foreign parties. This draft signals a significant tightening of China's outbound investment regime, affecting Chinese companies, VCs, and financial institutions engaged in cross-border deals. It could reshape global investment flows and increase compliance burdens, while also impacting foreign investors' access to Chinese assets. Key changes include: financial institutions face penalties for facilitating unapproved investments; security reviews now cover transfers and disposal of existing assets; round-trip investments require prior reporting; and the 'substance over form' principle is applied to definitions. Exemptions remain for QDII, Stock Connect, and Cross-boundary Wealth Management Connect, unless control or 10% equity thresholds are crossed.
 
-telegram · zaihuapd · Aug 21, 00:00
+telegram · zaihuapd · Aug 21, 13:05
 
-**Background**: The US has imposed export controls on advanced AI chips to China, restricting Nvidia from selling its most powerful chips there. To comply, Nvidia has developed China-specific versions like the H20, which is less powerful but legally exportable. The B30A would be a successor to the H20, offering better performance while staying within export limits.
+**Background**: The draft replaces the 2017 Enterprise Overseas Investment Management Measures. It aligns with China's broader efforts to manage capital outflows and national security risks, as seen in recent foreign investment security reviews. The term 'round-trip investment' refers to Chinese residents investing overseas and then bringing capital back into China, often through special purpose vehicles.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.datacenterdynamics.com/en/news/nvidia-developing-b30a-blackwell-based-gpu-for-chinese-market-report/">Nvidia developing 'B30A' Blackwell-based GPU for Chinese market - report - DCD</a></li>
-<li><a href="https://www.jonpeddie.com/news/nvidias-new-b30a-chip/">Nvidia’s new B30A chip</a></li>
-<li><a href="https://www.reuters.com/technology/nvidia-resume-h20-gpu-sales-china-2025-07-15/">reuters.com/technology/ nvidia -resume- h 20 -gpu-sales-china-2025-07-15</a></li>
+<li><a href="https://baike.baidu.com/item/返程投资/1172095">返程投资_百度百科</a></li>
+<li><a href="https://www.safe.gov.cn/tianjin/2025/0108/2694.html">国家外汇管理局关于境内居民通过特殊目的公司境外投融资及返程投资外...</a></li>
+<li><a href="https://www.gov.cn/gongbao/content/2021/content_5582626.htm">中 华人民共和 国 国 家 发 展和 改 革 委 员会 中 华人民共和 国 商务部令（第37...</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#Nvidia`, `#AI chip`, `#China`, `#export controls`, `#hardware`
+**Tags**: `#regulation`, `#China`, `#investment`, `#capital controls`, `#policy`
 
 ---
 
 <a id="item-7"></a>
-## [China's Chang'e-7 to Launch Aug 24, Hunt for Lunar South Pole Water Ice](https://www.space.com/astronomy/moon/chinas-change-7-moon-probe-will-launch-this-weekend-on-the-most-ambitious-lunar-mission-in-history) ⭐️ 8.0/10
+## [Kobo Cobalt Project Enables Apps on E-Readers](https://bandarlabs.github.io/Cobalt/) ⭐️ 7.0/10
 
-China's Chang'e-7 lunar probe is scheduled to launch on August 24, 2026, from Wenchang aboard a Long March 5 Y14 rocket. The mission will deploy an orbiter, lander, rover, and a flying probe to explore the lunar south pole, targeting the rim of Shackleton Crater for water ice. This mission is a major milestone in China's lunar exploration program, potentially making China the first country to find water on the Moon. It will advance planetary science and demonstrate complex technologies like flying probes and precision landing in challenging polar terrain, with international cooperation payloads enhancing its significance. The lander will attempt to touch down by the end of the year after the spacecraft orbits the Moon for several months. The flying probe will travel between sunlit areas and shadowed craters to search for water ice, and the mission includes several international experiments, including a US-supported payload.
+A new open-source project called Cobalt has been released, providing an SDK, a declarative UI layer, a runtime, and a signed App Store for Kobo e-readers like the Clara BW. It is installable via USB and can be updated over Wi-Fi. This significantly expands the customization possibilities for Kobo e-readers, allowing users to run third-party apps beyond the native reading experience. It could foster a new ecosystem of apps tailored for e-ink displays, benefiting the niche community of Kobo enthusiasts. Cobalt includes a Rust SDK, a declarative UI layer, a runtime that temporarily borrows the hardware and always returns it, a browser simulator, and a CLI. The project is hosted on GitHub under BandarLabs, and the App Store is signed to ensure security.
 
-telegram · zaihuapd · Aug 21, 03:19
+hackernews · thepoet · Aug 21, 16:25 · [Discussion](https://news.ycombinator.com/item?id=49390427)
 
-**Background**: The lunar south pole is of great interest because permanently shadowed craters like Shackleton may harbor water ice. Chang'e-7 is part of China's lunar exploration program, which has previously included Chang'e-4 (first far-side landing) and Chang'e-5 (sample return). The mission will conduct 'orbit, land, rove, and fly' integrated exploration, requiring breakthroughs in technologies such as high-precision soft landing on complex terrain and in-situ sampling of water ice and volatiles.
+**Background**: Kobo e-readers run a Linux-based system, and the community has long used tools like NickelMenu and KOReader to enhance functionality. Cobalt builds on this by providing a more formalized way to develop and distribute apps, potentially lowering the barrier for developers.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://zh.wikipedia.org/wiki/嫦娥七號">嫦娥七號 - 维基百科，自由的百科全书</a></li>
-<li><a href="https://jdse.bit.edu.cn/sktcxb/article/doi/10.15982/j.issn.2096-9287.2023.20230119">“嫦娥七号”探测器任务综述</a></li>
-<li><a href="https://zh.wikipedia.org/wiki/沙克尔顿陨石坑">沙 克 尔 顿 陨 石 坑 - 维基百科，自由的百科全书</a></li>
+<li><a href="https://elsolitario.org/en/2026/08/21/cobalt-app-store-sdk-kobo-ereaders/">Cobalt : App Store and Rust SDK for Kobo E-Readers</a></li>
+<li><a href="https://github.com/BandarLabs/cobalt">BandarLabs/ Cobalt : An SDK for building real apps for your Kobo ...</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#航天`, `#月球探测`, `#嫦娥七号`, `#行星科学`, `#国际合作`
+**Discussion**: Community members noted existing alternatives like NickelMenu and KOReader, with some questioning the need for a full app platform. Others expressed interest in specific use cases like a dedicated OPDS client, while some preferred keeping their e-reader focused solely on reading. A few mentioned that some Kobos can run PostmarketOS, offering even broader possibilities.
+
+**Tags**: `#Kobo`, `#e-reader`, `#customization`, `#open-source`, `#hacking`
 
 ---
 
 <a id="item-8"></a>
-## [Stop Making TUIs: Build Native UIs with AI Agents](https://simonwillison.net/2026/Aug/21/stop-making-tuis/) ⭐️ 7.0/10
+## [Stop Making TUIs: Build Native UIs with Coding Agents](https://simonwillison.net/2026/Aug/21/stop-making-tuis/) ⭐️ 7.0/10
 
-Thomas Ptacek argues that coding agents have made building native user interfaces cheap enough that developers should stop creating TUIs and instead build real GUIs for even small personal tools. Simon Willison echoes this, noting he has already created macOS task bar apps using vibe coding and uses them daily. This shift could change how developers approach tooling, making native UIs more accessible and potentially improving user experience across the developer ecosystem. It highlights the growing impact of AI-assisted development on everyday programming practices. Ptacek's post is titled 'Stop Making TUIs' and was published on August 20, 2026. Simon Willison references his own March 2026 blog post about vibe-coding SwiftUI apps for bandwidth and GPU monitoring, which he still uses daily.
+Thomas Ptacek argues that developers should build native user interfaces for even the smallest personal tools, because coding agents have made GUI development nearly as cheap as CLI development. He encourages developers to convert their throwaway CLIs into native apps, suggesting it will change the way they think. This shift could lead to more user-friendly developer tools and a broader adoption of GUI development in the developer community. It highlights the impact of coding agents on lowering barriers to UI development, potentially changing how developers approach tooling. Simon Willison references his own experience with vibe-coded macOS task bar apps for bandwidth and GPU monitoring, which he still uses daily. The post is tagged with topics like AI, generative AI, LLMs, vibe-coding, and coding agents, indicating a focus on AI-assisted development.
 
 rss · Simon Willison · Aug 21, 16:07
 
-**Background**: TUI (Text User Interface) is a terminal-based interface, while GUI (Graphical User Interface) uses windows and icons. Vibe coding is an AI-assisted development approach where developers describe tasks in natural language and accept AI-generated code, often without deep review. Coding agents are AI tools that can autonomously generate or modify code, reducing the effort required to build software.
+**Background**: TUI (Terminal User Interface) apps run in the terminal and offer interactivity, but they are less user-friendly than GUI applications. Coding agents, such as OpenCode and Claude Code, are AI tools that can generate code, significantly reducing the effort required to build GUIs. This makes native UI development more accessible to developers who traditionally relied on CLIs.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Vibe_coding">Vibe coding</a></li>
+<li><a href="https://itsfoss.com/gui-cli-tui/">GUI, CLI and TUI: What are They and What's the Difference?</a></li>
+<li><a href="https://opencode.ai/">OpenCode | The open source AI coding agent</a></li>
+<li><a href="https://github.com/bradAGI/awesome-cli-coding-agents">GitHub - bradAGI/awesome-cli-coding-agents: Curated directory of terminal-native AI coding agents and the harnesses that orchestrate them. Covers open-source tools (Pi, OpenCode, Aider, Goose), platform agents (Claude Code, Codex, Gemini CLI), parallel runners, autonomous loops, and agent infrastructure. · GitHub</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#UI/UX`, `#AI-assisted development`, `#Developer tools`, `#Native apps`, `#Coding agents`
+**Tags**: `#UI development`, `#developer tools`, `#coding agents`, `#native apps`, `#opinion`
 
 ---
 
 <a id="item-9"></a>
-## [Matt Webb: ChatGPT as Interactive Tutor for Learning Quaternions](https://simonwillison.net/2026/Aug/21/matt-webb/) ⭐️ 7.0/10
+## [ChatGPT Search Surges in site: Operator Usage](https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/) ⭐️ 7.0/10
 
-Matt Webb, in a blog post about Galactic Compass 2, describes using ChatGPT as an interactive tutor to learn quaternions for his app's rotation features, rather than having it write the code. He emphasizes that this approach enabled him to learn the math just enough to make the app work, something he hadn't achieved through books or mathematician friends. This highlights a growing trend where AI serves as a personalized educational tool, potentially transforming how people learn complex subjects. It counters the fear that AI replaces learning, suggesting instead that it can motivate and enable deeper understanding, which is significant for educators, learners, and the AI community. Webb specifically used ChatGPT to learn quaternions, a mathematical concept used for 3D rotations, which are essential for augmented reality features in his app. He notes that the interactive, patient nature of the AI tutor was key to his success, and he appreciates that AI pushes him to learn more rather than making him reliant on it.
+According to Promptwatch tracking data, the percentage of ChatGPT Search queries containing the site: operator jumped from around 0.3-0.5% to 16-17% on August 8, 2026, coinciding with the GPT-5.6 rollout. This indicates a significant shift in how ChatGPT generates search results. This change has major implications for SEO and the emerging field of Generative Engine Optimization (GEO), as content discovery in AI chatbots becomes more dependent on explicit site restrictions. It also signals that OpenAI is prioritizing factual reliability and focused answers, potentially reshaping how websites gain visibility in AI-driven search. Promptwatch's data shows the share dipped to 0.15% on August 3-5, suggesting a staged rollout or pre-launch experiment. Simon Willison notes that OpenAI's system prompts are obscured, but he suspects the search tool now uses a shape like search(query, recency, domains) rather than directly encouraging the site: operator.
 
-rss · Simon Willison · Aug 21, 15:06
+rss · Simon Willison · Aug 20, 23:57
 
-**Background**: Quaternions are a number system that extends complex numbers, and unit quaternions are widely used in computer graphics and robotics to represent 3D rotations without the problem of gimbal lock, which can occur with Euler angles. Learning quaternions typically requires understanding abstract mathematical concepts, which can be challenging without interactive guidance. AI chatbots like ChatGPT can provide personalized, step-by-step explanations, making such topics more accessible to non-experts.
+**Background**: The site: operator is a search engine command that restricts results to a specific domain, commonly used in Google Search. Generative Engine Optimization (GEO) is an emerging practice focused on improving a website's visibility in AI-generated answers from tools like ChatGPT, building on traditional SEO. Promptwatch is a company that tracks prompts and responses in AI chat products to provide insights into design changes.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation">Quaternions and spatial rotation - Wikipedia</a></li>
-<li><a href="https://www.tutorialspoint.com/computer_graphics/computer_graphics_rotation_quaternions.htm">Rotation with Quaternions in Computer Graphics</a></li>
-<li><a href="https://www.compu-tools.com/blog/2026-01-31-3d-rotation/">Understanding 3D Rotation: A Practical Guide to Quaternions ...</a></li>
+<li><a href="https://ahrefs.com/blog/google-advanced-search-operators/">Google Search Operators : The Complete List (44 Advanced Operators )</a></li>
+<li><a href="https://developers.google.com/search/docs/monitor-debug/search-operators/all-search-site">How To Use the Site Search Operator | Google Search Central</a></li>
+<li><a href="https://www.hostinger.com/tutorials/what-is-seo">What is SEO? Understanding search engine optimization in 2026</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI-assisted learning`, `#ChatGPT`, `#Generative AI`, `#Education`, `#Quaternions`
+**Tags**: `#ChatGPT`, `#search`, `#SEO`, `#GEO`, `#AI`
 
 ---
 
 <a id="item-10"></a>
-## [ChatGPT Search Dramatically Increases site: Operator Usage](https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/) ⭐️ 7.0/10
+## [llm-openrouter 0.7 Adds LLM 0.32 Support and Server-Side Tools](https://simonwillison.net/2026/Aug/21/llm-openrouter/) ⭐️ 6.0/10
 
-According to Promptwatch's tracking, the percentage of ChatGPT Search fanout queries containing the site: operator jumped from around 0.3-0.5% to 16-17% on August 8, 2026, coinciding with the GPT-5.6 rollout. This indicates a significant shift in how ChatGPT handles site-specific queries. This change is significant for SEO and GEO practitioners, as it suggests ChatGPT is more frequently using explicit domain restrictions in its search tool, which could affect how websites are cited and ranked in AI-generated responses. It also reflects OpenAI's ongoing efforts to improve factuality and focus in ChatGPT search, potentially reshaping the competitive landscape of AI-assisted search. Promptwatch's data shows the share hovered between 0.3% and 0.5% for weeks, dipped to 0.15% on August 3-5 (consistent with a staged rollout), then jumped to 16-17% on August 8. The figures only reflect prompts for which Promptwatch has automated tracking enabled, and OpenAI's system prompts remain obscured, making it difficult to confirm the exact mechanism.
-
-rss · Simon Willison · Aug 20, 23:57
-
-**Background**: The site: operator is a search query parameter that restricts results to a specific domain, commonly used in traditional search engines like Google. Generative Engine Optimization (GEO) is an emerging practice aimed at improving content visibility in AI-generated responses, and tools like Promptwatch track AI search behavior to provide insights for GEO. OpenAI's GPT-5.6 update, announced on August 6, 2026, promised more reliable facts and focused answers, which may explain the increased use of the site: operator.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://www.linkedin.com/pulse/understanding-site-operator-usage-chatgpt-56-fan-outs-david-konitzny-sycce">Understanding site operator usage in ChatGPT 5.6 Fan-outs</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Generative_engine_optimization">Generative engine optimization - Wikipedia</a></li>
-<li><a href="https://openai.com/index/introducing-operator/">Introducing Operator | OpenAI</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#ChatGPT`, `#SEO`, `#GEO`, `#search`, `#AI`
-
----
-
-<a id="item-11"></a>
-## [llm-openrouter 0.7 adds server-side tools and LLM 0.32 support](https://simonwillison.net/2026/Aug/21/llm-openrouter/) ⭐️ 6.0/10
-
-llm-openrouter 0.7 has been released, updated for compatibility with LLM 0.32. It now uses OpenRouter's Responses API and introduces three new server-side tools: Shell, WebFetch, and WebSearch, which can be enabled with options like -T WebSearch. This release improves the plugin's compatibility with reasoning LLMs available through OpenRouter, enhancing the user experience for LLM CLI users. The addition of server-side tools expands the plugin's functionality, allowing models to perform web searches and fetch content directly, which is valuable for many use cases. The plugin now leverages OpenRouter's implementation of the Responses API, which supports reasoning, tool calling, and web search. The new server-side tools are executed by OpenRouter on the server side, and users can enable them via command-line options.
+llm-openrouter 0.7 has been released, updating the plugin for compatibility with LLM 0.32. It now uses OpenRouter's implementation of the Responses API and adds three new server-side tools: Shell, WebFetch, and WebSearch. This update improves the plugin's functionality with reasoning LLMs available through OpenRouter, making it more useful for developers who rely on these models. The addition of server-side tools expands the plugin's capabilities, allowing for more complex workflows directly from the command line. The plugin now uses OpenRouter's Responses API, which supports reasoning, tool calling, and web search. The new server-side tools can be enabled with options like '-T WebSearch'. This release is a minor version bump, focusing on compatibility and new features rather than breaking changes.
 
 rss · Simon Willison · Aug 21, 16:58
 
-**Background**: LLM is a command-line utility and Python library for interacting with large language models from various providers. OpenRouter is a platform that provides unified access to many LLMs through a single API. Server-side tools are model-callable tools that OpenRouter executes automatically, such as web search and web fetch, allowing models to access real-time information.
+**Background**: LLM is a command-line tool for interacting with various large language models, and plugins like llm-openrouter extend its functionality to specific providers. OpenRouter is a gateway that provides access to multiple AI models through a single API. The Responses API is an OpenAI-compatible interface that supports advanced features like reasoning and tool calling.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://openrouter.ai/docs/api_reference/responses/overview">OpenRouter Responses API - OpenAI-Compatible Documentation</a></li>
-<li><a href="https://openrouter.ai/docs/guides/features/server-tools">Server Tools - Model-Callable Tools by OpenRouter</a></li>
-<li><a href="https://github.com/simonw/llm-openrouter">LLM plugin for models hosted by OpenRouter - GitHub Release: llm-openrouter 0.7 - simonwillison.net Server Tools - llmspy.org Web Search Server Tool - Real-Time Web Search for Any Model 7 Best Open-Source LLM Orchestration & Routing Tools (2026) Best LLM Router in 2026: OpenRouter, LiteLLM, and Portkey</a></li>
+<li><a href="https://github.com/simonw/llm-openrouter">GitHub - simonw/ llm - openrouter : LLM plugin for models hosted by...</a></li>
+<li><a href="https://llm.datasette.io/_/downloads/en/latest/pdf/">LLM documentation</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#LLM`, `#OpenRouter`, `#plugin`, `#release`, `#tools`
+**Tags**: `#LLM`, `#OpenRouter`, `#plugin`, `#release`, `#AI`
+
+---
+
+<a id="item-11"></a>
+## [Matt Webb: ChatGPT as Patient Tutor for Learning Quaternions](https://simonwillison.net/2026/Aug/21/matt-webb/) ⭐️ 6.0/10
+
+Matt Webb, in a blog post about his app Galactic Compass 2, describes using ChatGPT as a patient, interactive tutor to learn quaternions for implementing rotations himself, rather than having the AI write the code. He emphasizes that outsourcing thinking to AI encouraged him to learn more, not less. This highlights a positive and often overlooked outcome of generative AI: it can serve as an accessible, personalized tutor that lowers barriers to learning complex technical concepts. It challenges the fear that AI outsourcing diminishes human learning, suggesting instead that it can spark curiosity and deeper engagement, particularly for developers and hobbyists. Webb specifically used ChatGPT to learn quaternions, a mathematical system for representing 3D rotations, which he needed for the augmented reality mode of his app. He notes that he had previously failed to learn this through books and mathematician friends, but succeeded with the AI's patient, interactive tutoring, learning 'just enough' to make the app work.
+
+rss · Simon Willison · Aug 21, 15:06
+
+**Background**: Quaternions are a number system that extends complex numbers, and unit quaternions are widely used in 3D graphics and robotics to represent rotations without the problem of gimbal lock encountered with Euler angles. Traditionally, learning quaternions requires grappling with abstract mathematical formulas, which can be intimidating. ChatGPT and similar AI models can act as interactive tutors, explaining concepts at the learner's pace and adapting to their level, which can make such topics more approachable.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation">Quaternions and spatial rotation - Wikipedia</a></li>
+<li><a href="https://www.opengl-tutorial.org/intermediate-tutorials/tutorial-17-quaternions/">Tutorial 17 : Rotations</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#generative-ai`, `#chatgpt`, `#education`, `#learning`, `#AI-assistance`
 
 ---
 
 <a id="item-12"></a>
-## [China Encourages Tech Startups to List Domestically](https://news.google.com/rss/articles/CBMidEFVX3lxTE5pOC1sZTVjajhrdG1KRlZQcGtFRnV6YmRXTW5zQUFHSmcwMFBKSVdSQzNSRVdmZlZnR3VOY0dSOW5XMTNtamdreHlxdHVIQ3lYQnpzWE5SS2ZwVkg0Q0x2a0YtS1Q2RUZUQ0lBdElJZGxEYndp?oc=5) ⭐️ 6.0/10
+## [China Encourages Tech Startups to List Domestically, Shifting Capital Flow Eastward](https://news.google.com/rss/articles/CBMidEFVX3lxTE5pOC1sZTVjajhrdG1KRlZQcGtFRnV6YmRXTW5zQUFHSmcwMFBKSVdSQzNSRVdmZlZnR3VOY0dSOW5XMTNtamdreHlxdHVIQ3lYQnpzWE5SS2ZwVkg0Q0x2a0YtS1Q2RUZUQ0lBdElJZGxEYndp?oc=5) ⭐️ 6.0/10
 
-China is actively encouraging its technology startups to go public on domestic stock exchanges, marking a shift in capital flows toward the East. This policy trend is highlighted by the recent market debuts of companies like ChangXin Memory and Unitree Robotics. This move reflects Beijing's strategy to fund its AI ambitions through domestic investors and reduce reliance on Wall Street. It could reshape the global capital markets landscape and affect how tech companies worldwide choose their listing venues. The policy includes measures such as establishing a 'tech board' in the bond market and increasing tech loan intensity to support 'hard tech' enterprises. Additionally, Hong Kong's 18C reform provides a new listing channel for unprofitable hard tech companies with market cap thresholds of 4 billion or 8 billion HKD.
+China is actively encouraging its technology startups to list on domestic stock exchanges, as highlighted by the recent IPOs of ChangXin Memory and Unitree Technology in Shanghai. This marks a notable shift in the orientation of global tech capital flows, moving from a traditional 'westward' direction to an 'eastward' one. This policy shift could reshape global capital markets by attracting more tech companies to list in China, potentially reducing the dominance of Western exchanges like NASDAQ. It also reflects China's broader strategy to strengthen its domestic capital markets and support homegrown tech innovation, which may have significant implications for international investors and the global tech industry. The article cites a Global Times editorial that uses the IPOs of ChangXin Memory and Unitree Technology in Shanghai as signals of this shift. Unitree Technology's stock surged nearly fivefold on its first trading day, highlighting strong investor interest in Chinese tech IPOs.
 
 google_news · 纽约时报中文网 · Aug 21, 03:12
 
-**Background**: China has been pushing for technological self-reliance and financial autonomy, aiming to reduce dependence on foreign capital markets. The government has introduced various policies to support tech financing, including the recent joint policy measures by multiple ministries to build a tech finance system. These efforts are part of a broader trend of 'capital flows looking eastward,' as China seeks to attract and retain high-growth tech companies domestically.
+**Background**: Historically, many Chinese tech companies chose to list on overseas exchanges like NASDAQ or the Hong Kong Stock Exchange to access international capital. However, recent regulatory changes and geopolitical tensions have prompted China to encourage domestic listings, aiming to keep high-growth companies within its own capital markets. The 'eastward' shift refers to the increasing flow of tech capital toward China's domestic exchanges, such as the Shanghai and Shenzhen stock markets.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.gov.cn/zhengce/202505/content_7024950.htm">加大对科技型企业的融资支持_政策解读_中国政府网</a></li>
-<li><a href="https://www.gov.cn/zhengce/zhengceku/202505/content_7023765.htm">科技部 中国人民银行 金融监管总局 中国证监会 国家发展改革委 财政部...</a></li>
-<li><a href="https://www.ingstart.com/blog/44511.html">港股18C改革深度解读：40亿/80亿市值门槛，中国硬科技上市新通道 - in...</a></li>
+<li><a href="https://cn.nytimes.com/business/20260821/unitree-ipo-trading/">资本流动“向东看”？中国鼓励科技新贵在国内上市 - 纽约时报中文网</a></li>
+<li><a href="https://www.bbc.com/zhongwen/articles/c5yrnedq47go/simp">宇树 科 技 ： 上 市 首天涨价近五倍的 中 国 机械人 公 司 甚么来头？ - BBC...</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#China`, `#tech IPO`, `#capital markets`, `#policy`
+**Tags**: `#China`, `#IPO`, `#tech policy`, `#capital markets`
 
 ---
