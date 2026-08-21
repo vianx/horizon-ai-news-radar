@@ -5,238 +5,293 @@ date: 2026-08-21
 lang: en
 ---
 
-> From 40 items, 10 important content pieces were selected
+> From 44 items, 12 important content pieces were selected
 
 ---
 
-1. [Malicious Rust Crate Arrayref Executes Build-Time Payload](#item-1) ⭐️ 9.0/10
-2. [GitHub's August 17 Outage: Retry Loops and VS Code Bug](#item-2) ⭐️ 8.0/10
-3. [AliExpress silent WebAudio fingerprinting disrupts Bluetooth multipoint](#item-3) ⭐️ 8.0/10
-4. [On-Device Piano Autocomplete with 125M Transformer](#item-4) ⭐️ 8.0/10
-5. [Linux 7.2 Released with HDMI 2.1 Support](#item-5) ⭐️ 8.0/10
-6. [Bun 1.4's WebView Enables JSON API for Browser Automation](#item-6) ⭐️ 8.0/10
-7. [Stripe Agrees to Acquire OpenRouter, Covering 400+ Models from 80+ Providers](#item-7) ⭐️ 8.0/10
-8. [OpenAI Launches AI Futures Blog Series](#item-8) ⭐️ 7.0/10
-9. [Alibaba Q1 FY2026 Sales Up 9%, AI Spending Hits Profit](#item-9) ⭐️ 5.0/10
-10. [Shanghai Lingang Aims to Become Global Token Services Hub](#item-10) ⭐️ 5.0/10
+1. [US Citizen Faces Felony for Deleting Phone Data at Border](#item-1) ⭐️ 8.0/10
+2. [Scientists Release Largest 2D Map of the Universe with 1 Billion Galaxies](#item-2) ⭐️ 8.0/10
+3. [Researcher Accidentally Hijacks Dead ENUM Zone, Logs Military Calls](#item-3) ⭐️ 8.0/10
+4. [LLM 'Be Concise' Saves Costs, Input Compression Doesn't](#item-4) ⭐️ 8.0/10
+5. [China's Chang'e 7 to Launch Aug 24, Hunt Lunar South Pole Water Ice](#item-5) ⭐️ 8.0/10
+6. [DeepSeek Launches Vision Model deepseek-v4-flash-vision-exp on API](#item-6) ⭐️ 8.0/10
+7. [DeepMind Partners with Game Studios to Prototype AI Gameplay](#item-7) ⭐️ 7.0/10
+8. [Stop Making TUIs: Native UIs Now Cheap with Coding Agents](#item-8) ⭐️ 7.0/10
+9. [ChatGPT Search Adopts site: Operator at Scale](#item-9) ⭐️ 7.0/10
+10. [llm-openrouter 0.7 Adds LLM 0.32 Support and New Tools](#item-10) ⭐️ 6.0/10
+11. [Matt Webb Uses ChatGPT as Tutor to Learn Quaternions](#item-11) ⭐️ 6.0/10
+12. [China Encourages Tech Startups to List Domestically as Capital Flows 'Eastward'](#item-12) ⭐️ 6.0/10
 
 ---
 
 <a id="item-1"></a>
-## [Malicious Rust Crate Arrayref Executes Build-Time Payload](https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/) ⭐️ 9.0/10
+## [US Citizen Faces Felony for Deleting Phone Data at Border](https://www.nytimes.com/2026/08/21/us/politics/samuel-tunick-deleted-phone-felony.html) ⭐️ 8.0/10
 
-On August 20, 2026, a compromised release of the popular Rust crate 'arrayref' (version 0.3.10) was published on crates.io, adding a dependency on a typosquatted crate named 'proc-macro1' whose build script downloads and runs a remote binary during compilation. The Rust Project has since deleted the malicious versions from crates.io. This attack highlights significant supply-chain risks in the Rust ecosystem, as simply compiling a project that depends on the affected crate can trigger the malicious payload. It underscores the need for improved security measures in package managers like crates.io and Cargo, and affects a wide range of projects that rely on this widely-used crate. The malicious version 0.3.10 of arrayref added a dependency on 'proc-macro1', a typosquatted crate whose build script downloads and executes a remote binary. The attack runs at build time, so no runtime execution is needed, and the malicious versions have been removed from crates.io without a clear indication of yanking or a security advisory.
+Samuel Tunick, a US citizen, faces felony charges for allegedly using a 'duress' passcode to wipe his phone during a border search at Atlanta's Hartsfield-Jackson airport on January 24, 2025. His attorneys have filed a motion to suppress evidence, claiming unlawful detention and seizure. This case could set a precedent for how the government treats data deletion during border searches, impacting digital privacy rights for all travelers. It highlights the tension between border security powers and civil liberties, and may influence future legal standards and technical countermeasures. The indictment contains a typo ('Untied States Code') and accuses Tunick of providing a passcode that caused the phone to 'delete the digital contents' before seizure. His attorneys argue the search was a pretext to investigate his association with the Defend the Atlanta Forest movement, and that he was denied legal counsel.
 
-hackernews · abhisek · Aug 20, 13:23 · [Discussion](https://news.ycombinator.com/item?id=49374269)
+hackernews · floathub · Aug 21, 12:10 · [Discussion](https://news.ycombinator.com/item?id=49386895)
 
-**Background**: Rust's package manager, Cargo, allows crates to include build scripts (build.rs) that run arbitrary code during compilation. This feature is powerful but can be abused for supply-chain attacks, as seen here. The Rust ecosystem relies heavily on crates.io for dependency management, making such attacks particularly impactful. The community has previously discussed sandboxing build scripts, but no robust solution has been implemented yet.
+**Background**: US Customs and Border Protection (CBP) has broad authority to search electronic devices at ports of entry, and can retain data for up to 15 years. Travelers often use technical measures like encryption or decoy passcodes to protect sensitive information, but this case tests the legality of such actions when they obstruct a search.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/">Malicious Rust Crate arrayref Runs a Build-Time Payload - Real-time Open Source Software Supply Chain Security</a></li>
-<li><a href="https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html">Rust Supply Chain Attack Puts Build-Time Malware in Crates with...</a></li>
-<li><a href="https://news.ycombinator.com/item?id=49374269">Malicious Rust Crate Arrayref Runs a Build-Time Payload | Hacker News</a></li>
+<li><a href="https://techcrunch.com/2026/07/24/us-accuses-american-of-allegedly-wiping-his-phone-using-a-duress-password-during-border-search/">US accuses American of allegedly wiping his phone using a 'duress' password during border search | TechCrunch</a></li>
+<li><a href="https://www.cbp.gov/travel/cbp-search-authority/border-search-electronic-devices">Border Search of Electronic Devices at Ports of Entry | U.S. Customs and Border Protection</a></li>
+<li><a href="https://www.theguardian.com/technology/2025/mar/26/phone-search-privacy-us-border-immigration">How to protect your phone and data privacy at the US border | US immigration | The Guardian</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community comments express concerns about crates.io's handling of the incident, noting the lack of a security advisory and unclear yanking status. Some users call for better sandboxing of build scripts in Cargo, while others suggest a 'batteries included' approach to reduce dependency on third-party crates. There is also discussion about the need for finer-grained responses from GitHub when repositories are taken down.
+**Discussion**: Commenters discussed technical workarounds like decoy passcodes that boot into a separate partition and erase data, or imaging the phone before crossing the border. Some expressed concerns about government overreach and the blocking of archive pages in Italy, while others debated the ethics of such countermeasures.
 
-**Tags**: `#supply-chain security`, `#Rust`, `#malware`, `#crates.io`, `#open source`
+**Tags**: `#privacy`, `#border search`, `#legal`, `#digital rights`, `#security`
 
 ---
 
 <a id="item-2"></a>
-## [GitHub's August 17 Outage: Retry Loops and VS Code Bug](https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/) ⭐️ 8.0/10
+## [Scientists Release Largest 2D Map of the Universe with 1 Billion Galaxies](https://newscenter.lbl.gov/2026/08/10/scientists-release-biggest-2d-map-of-the-universe/) ⭐️ 8.0/10
 
-GitHub published a post-mortem of the August 17 outage that lasted 7 hours and 47 minutes, affecting github.com, authentication, Actions, APIs, pull requests, issues, and Copilot. The root cause involved network saturation in the Central US region, a faulty autoscaling policy, and a latent retry bug in Visual Studio Code that amplified traffic to the Copilot Token Service by approximately 10x. This outage highlights the fragility of large-scale infrastructure under rapid AI-driven growth, as GitHub's monthly commits doubled from 1.4 billion to 2.9 billion since April. It underscores the need for robust retry handling and autoscaling policies, and the cascading impact of client-side bugs on service recovery. The outage began with network saturation in the Central US region, which delayed replies to an internal endpoint, triggering the VS Code retry bug. GitHub's migration to Azure is only 58% complete, which may have contributed to the complexity of the incident.
+Scientists have released the largest 2D map of the universe, featuring over 1 billion galaxies and an interactive viewer. The map is based on data from the Legacy Survey and is accessible via the Legacy Survey Sky Viewer. This milestone provides an unprecedented detailed view of the cosmos, enabling astronomers and the public to explore the universe in new ways. It is expected to remain the most comprehensive 2D map for years, serving as a foundation for future research and potentially inspiring new discoveries. The map includes over 1 billion galaxies and is accessible through an interactive viewer at viewer.legacysurvey.org. The data comes from the Legacy Survey, which combines observations from multiple telescopes, and the map is expected to remain the most comprehensive 2D map for years to come.
 
-hackernews · 0xedb · Aug 20, 19:22 · [Discussion](https://news.ycombinator.com/item?id=49378957)
+hackernews · NKosmatos · Aug 21, 18:36 · [Discussion](https://news.ycombinator.com/item?id=49392200)
 
-**Background**: GitHub is a widely used platform for software development and collaboration, hosting millions of repositories. Retry loops occur when clients automatically retry failed requests, which can amplify traffic during outages. Autoscaling policies adjust resources based on demand, but faulty policies can fail to scale appropriately. The outage affected developers worldwide, disrupting critical workflows.
+**Background**: The Legacy Survey is a project that combines data from telescopes like the Dark Energy Camera and the Mayall 4-meter telescope to create detailed maps of the sky. A 2D map records the positions of celestial objects in the sky but not their distances from Earth, which would require additional measurements like redshift to create a 3D map. The interactive viewer allows users to zoom and pan across the map, exploring galaxies and other objects.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/">The August 17 outage , and the work ahead - The GitHub Blog</a></li>
-<li><a href="https://www.techzine.eu/news/devops/143731/github-outage-escalates-due-to-a-bug-in-vs-code/">GitHub outage escalates due to a bug in VS Code - Techzine Global</a></li>
+<li><a href="https://www.legacysurvey.org/viewer">Legacy Survey Sky Browser</a></li>
+<li><a href="https://viewer.legacysurvey.org/?ra=18.5803&dec=-0.9650&layer=ls-dr9&zoom=12">Legacy Survey Sky Browser</a></li>
+<li><a href="https://mapoftheuniverse.net/">The Map of the Universe — 200,000 galaxies from the Milky Way to...</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community comments expressed frustration with the outage's duration and the trend of hiding errors from users, as well as skepticism about the slow Azure migration progress. Some noted the dramatic growth in commits as evidence of AI-driven productivity panic, while others pointed out Microsoft's incentive to keep AI-heavy usage on GitHub.
+**Discussion**: Community comments express excitement about the interactive viewer, with some joking about the universe looking like a brick wall. Others discuss the potential for a 3D map and the challenges of calculating distances, while one commenter expresses skepticism about future astronomy funding due to economic and strategic priorities.
 
-**Tags**: `#outage`, `#reliability`, `#GitHub`, `#post-mortem`, `#infrastructure`
+**Tags**: `#astronomy`, `#universe mapping`, `#scientific data`, `#interactive visualization`
 
 ---
 
 <a id="item-3"></a>
-## [AliExpress silent WebAudio fingerprinting disrupts Bluetooth multipoint](https://blog.laserphile.com/2026/08/aliexpress-webpage-keeping-multipoint.html) ⭐️ 8.0/10
+## [Researcher Accidentally Hijacks Dead ENUM Zone, Logs Military Calls](https://lina.sh/blog/hijacking-e164-arpa) ⭐️ 8.0/10
 
-AliExpress has been found to use silent WebAudio fingerprinting on its website, which creates hidden AudioContexts to track users. This technique inadvertently disrupts Bluetooth multipoint connections, causing audio devices to malfunction. This highlights a privacy-invasive technique that operates invisibly and cannot be easily blocked by users, unlike cookies. The practical side effect of breaking Bluetooth multipoint affects real users and underscores the need for better browser protections against such fingerprinting. The fingerprinting works by playing silent audio through WebAudio, which is not indicated by the browser's speaker icon. This technique can also allow websites to continue running in the background on mobile browsers, potentially draining battery or causing other issues.
+A security researcher accidentally took control of the abandoned e164.arpa DNS zone, which is used for ENUM (telephone number mapping), and logged hundreds of thousands of phone call routing queries, including those to military bases. This incident highlights a critical oversight in the management of a legacy protocol. This discovery reveals a significant vulnerability in the global telephony infrastructure, with potential national security implications due to the exposure of military-related queries. It underscores the need for better oversight of legacy protocols and raises questions about responsible disclosure and the relevance of ENUM in modern communications. The researcher did not set up a SIP server to test if queries led to actual call terminations, as noted in community comments. The e164.arpa zone is not completely dead; it is used privately for number porting services over VPN, according to a commenter.
 
-hackernews · emctech · Aug 20, 10:08 · [Discussion](https://news.ycombinator.com/item?id=49372583)
+hackernews · gavide · Aug 21, 13:11 · [Discussion](https://news.ycombinator.com/item?id=49387570)
 
-**Background**: WebAudio fingerprinting is a method of tracking users by exploiting the unique characteristics of their audio hardware and software through the Web Audio API. Bluetooth multipoint allows a single headset to maintain simultaneous connections to multiple devices, such as a phone and a laptop. The interference occurs because the silent audio playback may trigger the headset to switch audio sources, disrupting the multipoint connection.
+**Background**: ENUM (Telephone Number Mapping) is a system that maps telephone numbers to Internet addresses using DNS, with the e164.arpa domain reserved for this purpose. It was designed to unify the PSTN with the Internet, but it never gained widespread public adoption and has largely fallen into disuse. The e164.arpa zone is managed by the IETF and is intended to be maintained by national authorities, but lapses in oversight can lead to such vulnerabilities.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://news.ycombinator.com/item?id=49372583">AliExpress runs silent WebAudio fingerprinting that breaks Bluetooth multipoint | Hacker News</a></li>
-<li><a href="https://elsolitario.org/2026/08/20/aliexpress-webaudio-fingerprinting-bluetooth/">Fingerprinting con WebAudio: el caso AliExpress - El Solitario</a></li>
-<li><a href="https://www.soundguys.com/bluetooth-multipoint-explained-28601/">What is Bluetooth multipoint? - SoundGuys</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Telephone_number_mapping">Telephone number mapping - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/E164.arpa">E164.arpa</a></li>
+<li><a href="https://www.cloudns.net/enum-dns-zones/">What is ENUM ? | ENUM (E.164) DNS Services | ClouDNS</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community members shared personal experiences of Bluetooth disruptions on various sites and with the AliExpress app, confirming the issue. Some noted that Firefox has mitigations for WebAudio fingerprinting, while others expressed skepticism about Apple's App Store protection, questioning why such apps are not removed.
+**Discussion**: Community comments expressed amazement that the researcher wasn't jailed for reporting the issue, and some suggested setting up a SIP server to test call terminations. Others noted that such holes can remain unnoticed for years and that the military involvement prompted action, while praising the story for highlighting how things can fall through the cracks.
 
-**Tags**: `#privacy`, `#web security`, `#fingerprinting`, `#WebAudio`, `#Bluetooth`
+**Tags**: `#security`, `#DNS`, `#telephony`, `#vulnerability`, `#ENUM`
 
 ---
 
 <a id="item-4"></a>
-## [On-Device Piano Autocomplete with 125M Transformer](https://simedw.com/2026/08/20/midi-autocomplete/) ⭐️ 8.0/10
+## [LLM 'Be Concise' Saves Costs, Input Compression Doesn't](https://www.reddit.com/r/MachineLearning/comments/1vulfei/does_telling_an_llm_to_be_concise_actually_save/) ⭐️ 8.0/10
 
-A developer trained a 125M-parameter transformer model to autocomplete piano performances in real time on an iPhone 15, achieving about 108 notes per second. The model runs entirely on-device using Core ML, and the app is available for free. This demonstrates that small transformer models can perform real-time music generation on consumer hardware, opening possibilities for interactive creative tools that respect user privacy and work offline. It also highlights the growing trend of on-device AI, reducing reliance on cloud computing. The project involved finding the right MIDI representation, aggressive data cleaning, and DPO post-training to improve performance. The model is optimized for Core ML, which automatically dispatches to the Neural Engine, GPU, or CPU as available.
+An empirical study across 9 LLMs found that instructing models to be concise in outputs saves about 1.5x cost on average (up to 3x) without significant accuracy loss, while compressing input prompts increases costs by up to 96% and reduces accuracy. This provides actionable, data-driven guidance for developers and enterprises optimizing LLM API costs, showing that output-side compression is effective while input-side compression can backfire. It also validates the recent trend of providers like Claude Code offering concise output styles. The study tested five reduction levels across nine models (including GPT-4o, Claude Haiku 4.5, Qwen2.5-VL-7B, DeepSeek-R1-Distill) on five short-answer datasets, an eleven-language output run, and a longer summarization test. Notably, when shortened outputs are correct, about half the time the text no longer matches the model's unconstrained reasoning, which may be acceptable if only the final answer matters.
 
-hackernews · simedw · Aug 20, 12:04 · [Discussion](https://news.ycombinator.com/item?id=49373456)
+reddit · r/MachineLearning · /u/ibubbles34 · Aug 21, 16:38
 
-**Background**: Transformers are a type of neural network architecture that excels at sequence prediction, making them suitable for music generation. MIDI is a standard protocol for representing musical notes digitally, and Core ML is Apple's framework for on-device machine learning inference. This project applies the concept of code autocomplete (like GitHub Copilot) to music, where the model continues a musical phrase based on input notes.
+**Background**: LLM API costs are largely token-based, with output tokens typically priced higher than input tokens. Prompt compression is a common cost-saving technique, but this study shows it can be counterproductive because models may generate longer outputs to compensate for missing context. Output styles, like Claude Code's 'Concise' mode, are emerging as a user-friendly way to control verbosity.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://simedw.com/2026/08/20/midi-autocomplete/">Training a 125M-parameter Model to Autocomplete Piano</a></li>
-<li><a href="https://blakecrosley.com/blog/core-ml-on-device-inference">Core ML On-Device Inference: The Patterns That Actually Ship</a></li>
-<li><a href="https://developer.apple.com/videos/play/wwdc2024/10161/">Deploy machine learning and AI models on-device with Core ML - WWDC24 - Videos - Apple Developer</a></li>
+<li><a href="https://code.claude.com/docs/en/output-styles">Output styles - Claude Code Docs</a></li>
+<li><a href="https://arxiv.org/abs/2603.23527">Compression Method Matters: Benchmark-Dependent Output ... Prompt Compression for LLM Generation Optimization and Cost ... LLM Cost Optimization: How to Cut Spend 50–90% - leanlm.ai GitHub - pleasedodisturb/awesome-llm-token-optimization: A ... LLM Cost Optimization — Token Management, Caching & Model ... LLM Cost Optimization: 8 Production Techniques | Prodinit</a></li>
+<li><a href="https://machinelearningmastery.com/prompt-compression-for-llm-generation-optimization-and-cost-reduction/">Prompt Compression for LLM Generation Optimization and Cost ...</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters praised the project and drew parallels to classical composition training and AI design tools. Some suggested making it a VST or Max for Live device, while others asked about training data size and noted the value of the learning experience beyond the deliverable.
+**Discussion**: The Reddit discussion likely includes practitioners sharing experiences with concise output styles and debating the trade-offs between cost savings and output fidelity. Some may question the generalizability of the results across different tasks and models, while others may appreciate the empirical validation of a common assumption.
 
-**Tags**: `#machine learning`, `#music generation`, `#on-device AI`, `#transformer`, `#Core ML`
+**Tags**: `#LLM`, `#cost optimization`, `#prompt engineering`, `#empirical study`, `#efficiency`
 
 ---
 
 <a id="item-5"></a>
-## [Linux 7.2 Released with HDMI 2.1 Support](https://www.igalia.com/2026/08/19/Linux-72-Released.html) ⭐️ 8.0/10
+## [China's Chang'e 7 to Launch Aug 24, Hunt Lunar South Pole Water Ice](https://www.space.com/astronomy/moon/chinas-change-7-moon-probe-will-launch-this-weekend-on-the-most-ambitious-lunar-mission-in-history) ⭐️ 8.0/10
 
-Linux kernel 7.2 has been released, featuring notable improvements including HDMI 2.1 support and cache-aware scheduling. The release also adds support for several new hardware devices and enables booting on certain 2023 MacBooks. This release addresses a long-standing community issue with HDMI 2.1 support in open-source drivers, potentially improving desktop and media experiences for Linux users. It also brings performance improvements through cache-aware scheduling, benefiting a wide range of workloads. The HDMI 2.1 support is particularly notable because it was previously blocked by the HDMI Forum, and the community is curious about what changed. The kernel also includes cache-aware scheduling, a feature that took over a year to develop, and will be the default kernel for Ubuntu 26.10.
+China's Chang'e 7 lunar probe is scheduled to launch on August 24, 2026, aboard a Long March 5 Y14 rocket from Wenchang. The mission will deploy an orbiter, lander, rover, and a flying probe to explore water ice at the lunar south pole. This mission is one of the most ambitious lunar explorations, potentially making China the first country to find water on the Moon. It will advance our understanding of lunar resources and support future lunar bases and deep-space exploration. The lander will target the rim of Shackleton Crater, and the flying probe will hop between sunlit areas and shadowed craters to search for water ice. The mission also carries several international cooperative payloads, including one supported by the United States.
 
-hackernews · mariuz · Aug 20, 15:46 · [Discussion](https://news.ycombinator.com/item?id=49376265)
+telegram · zaihuapd · Aug 21, 03:19
 
-**Background**: HDMI 2.1 is a display interface standard that supports higher resolutions and refresh rates, but its adoption in open-source drivers has been hindered by licensing restrictions from the HDMI Forum. Linux kernel releases are periodic updates that introduce new features, hardware support, and performance improvements, and are widely used across servers, desktops, and embedded devices.
+**Background**: The lunar south pole is of great scientific interest because permanently shadowed craters may contain water ice, which is crucial for future human exploration and resource utilization. Chang'e 7 is part of China's lunar exploration program, following the Chang'e 5 sample-return mission, and will perform integrated 'orbit, land, rove, and fly' exploration. The mission faces challenges such as complex terrain landing and sampling in extreme cold environments.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://itsfoss.com/news/linux-kernel-7-2-release/">Linux 7 . 2 Arrives With Cache Aware Scheduling After More Than...</a></li>
-<li><a href="https://www.phoronix.com/news/Linux-7.2-rc7-Released">Linux 7 . 2 -rc7 Released Following Another Exhausting... - Phoronix</a></li>
-<li><a href="https://www.hdmi.org/spec/index">HDMI Technology: Specifications and Programs</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/嫦娥七號">嫦娥七號 - 维基百科，自由的百科全书</a></li>
+<li><a href="https://jdse.bit.edu.cn/sktcxb/article/doi/10.15982/j.issn.2096-9287.2023.20230119">“嫦娥七号”探测器任务综述</a></li>
+<li><a href="https://news.hsw.cn/system/2026/0318/1916263.shtml">news.hsw.cn/system/2026/0318/1916263.shtml</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community members expressed curiosity about how HDMI 2.1 support was unblocked, with some questioning the target audience of the news and comparing it to LWN coverage. Others showed excitement about updating their Raspberry Pi 4 and debated the merits of HDMI versus DisplayPort for desktop use.
-
-**Tags**: `#Linux`, `#kernel`, `#HDMI 2.1`, `#open source`
+**Tags**: `#space exploration`, `#lunar mission`, `#Chang'e 7`, `#science`
 
 ---
 
 <a id="item-6"></a>
-## [Bun 1.4's WebView Enables JSON API for Browser Automation](https://simonwillison.net/2026/Aug/20/bun-webview-json-api/) ⭐️ 8.0/10
+## [DeepSeek Launches Vision Model deepseek-v4-flash-vision-exp on API](https://api-docs.deepseek.com/zh-cn/guides/vision/) ⭐️ 8.0/10
 
-Bun 1.4 was released, featuring a Rust rewrite and new Bun.WebView API. Simon Willison demonstrated building a shot-scraper-style JSON API using Bun.WebView, which loads web pages and executes JavaScript against them. This matters because Bun.WebView provides first-class browser automation within the runtime, potentially simplifying tooling and services that need to scrape or interact with web pages. The performance improvements in Bun 1.4 (faster startup, lower memory) make such services more efficient. Bun.WebView uses macOS WebKit or controls a local Chromium via Chrome DevTools Protocol (CDP). The prototype server, written in TypeScript, requires a 192MB-256MB container to run a full Chrome against complex web pages, as tested with cgroups.
+DeepSeek has released a new experimental vision-language model, deepseek-v4-flash-vision-exp, now available via its API as of August 21, 2026. The official documentation and pricing have been updated to reflect this addition. This release fills a gap for developers who need vision capabilities in DeepSeek's models, enabling tasks like image description, OCR, and chart analysis. It strengthens DeepSeek's competitive position against other multimodal models like Anthropic's Sonnet. The model accepts images alongside text, with images converted into tokens based on dimensions and billed with text tokens. Images are automatically resized to roughly 384×384 or 800×800 pixels, and the model supports a context length of 1 million tokens with a maximum output of 384,000 tokens.
 
-rss · Simon Willison · Aug 20, 15:37
+telegram · zaihuapd · Aug 21, 08:38
 
-**Background**: Bun is a fast JavaScript runtime that has been rewritten from Zig to Rust in version 1.4. shot-scraper is a CLI tool by Simon Willison for taking screenshots and scraping websites using JavaScript. Bun.WebView is a new API that enables headless browser automation directly within Bun, eliminating the need for separate browser automation tools.
+**Background**: DeepSeek is a Chinese AI company known for its open-source language models. This new vision model is an experimental addition to its API, allowing developers to combine text and image inputs for multimodal understanding. The model is also available through OpenRouter, providing an OpenAI-compatible interface.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://bun.sh/blog/bun-v1.4">Bun 1 . 4 | Bun Blog</a></li>
-<li><a href="https://bun.sh/docs/runtime/webview">WebView - Bun</a></li>
-<li><a href="https://github.com/simonw/shot-scraper">GitHub - simonw/shot-scraper: A CLI utility for taking screenshots of websites, recording video demos and scraping sites using JavaScript · GitHub</a></li>
+<li><a href="https://api-docs.deepseek.com/guides/vision/">Vision | DeepSeek API Docs</a></li>
+<li><a href="https://zenmux.ai/deepseek/deepseek-v4-flash-vision-exp">deepseek / deepseek -v4-flash- vision -exp - ZenMux</a></li>
+<li><a href="https://openrouter.ai/deepseek/deepseek-v4-flash-vision-exp">DeepSeek V 4 Flash Vision Exp - API Pricing & Providers | OpenRouter</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#Bun`, `#WebView`, `#JSON API`, `#JavaScript`, `#Rust`
+**Discussion**: Community members expressed cautious optimism, noting that the model addresses a previous lack of vision capabilities, though some reported failures on simple tasks like reading a clock. Others highlighted the need for higher resolution for OCR tasks and shared benchmark links.
+
+**Tags**: `#DeepSeek`, `#API`, `#vision model`, `#AI release`
 
 ---
 
 <a id="item-7"></a>
-## [Stripe Agrees to Acquire OpenRouter, Covering 400+ Models from 80+ Providers](https://stripe.com/en-jp/newsroom/news/stripe-agrees-to-acquire-openrouter) ⭐️ 8.0/10
+## [DeepMind Partners with Game Studios to Prototype AI Gameplay](https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/) ⭐️ 7.0/10
 
-Stripe announced on August 19, 2026, that it has agreed to acquire OpenRouter, an AI model gateway and routing platform. OpenRouter dynamically allocates requests across 400+ models from 80+ providers based on task complexity, price, speed, and reliability. This acquisition signals consolidation in the AI infrastructure space, as a major payments company moves into AI model routing and cost optimization. It could significantly impact developers and businesses by integrating AI model access with Stripe's payment and billing infrastructure, potentially lowering costs and simplifying workflows. OpenRouter provides a unified API and marketplace, offering features like auto-routing, fallback models, and a free models router. The acquisition is expected to optimize token usage and cost for enterprises, leveraging Stripe's existing financial infrastructure.
+Google DeepMind announced partnerships with game studios, including Fenris Creations (the studio behind EVE Online), to prototype breakthrough AI gameplay, building on 15 years of AI research in games. This marks a significant step in applying advanced AI research to commercial game development, potentially leading to more immersive and adaptive gameplay experiences. It also signals growing collaboration between AI labs and the gaming industry, which could accelerate innovation in both fields. The announcement highlights DeepMind's history of using games like Atari, Go, and StarCraft as testbeds for AI. The partnership with Fenris Creations aims to develop general-purpose AI agents, and the blog post outlines the 15-year arc of research leading to this collaboration.
 
-telegram · zaihuapd · Aug 20, 07:00
+rss · Google DeepMind Blog · Aug 21, 11:59
 
-**Background**: OpenRouter is a platform that gives developers access to hundreds of AI models from multiple providers through a single interface, simplifying API management. It supports auto-routing and fallback models to ensure reliability and cost efficiency. Stripe is a major online payment processing company, and this move reflects a trend of payments and AI infrastructure converging.
+**Background**: Games have long served as benchmarks for AI research because they provide constrained yet rich environments to test and develop intelligent agents. DeepMind, founded in 2010, has used games to drive breakthroughs in reinforcement learning and general AI. The gaming industry is increasingly adopting AI tools, with surveys showing that a majority of studios already use AI in development.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://openrouter.ai/">OpenRouter</a></li>
-<li><a href="https://www.codecademy.com/article/what-is-openrouter">What is OpenRouter? A Guide with Practical Examples | Codecademy</a></li>
+<li><a href="https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/">Exploring new frontiers of AI and games research — Google ...</a></li>
+<li><a href="https://www.startuphub.ai/ai-news/ai-research/2026/deepmind-s-game-ai-evolves">DeepMind's Game AI Evolves - startuphub.ai</a></li>
+<li><a href="https://www.unite.ai/google-deepmind-outlines-how-15-years-of-game-research-led-to-eve-online/">Google DeepMind Outlines How 15 Years of Game Research Led to ...</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI`, `#acquisition`, `#Stripe`, `#OpenRouter`, `#model routing`
+**Tags**: `#AI`, `#gaming`, `#DeepMind`, `#research`
 
 ---
 
 <a id="item-8"></a>
-## [OpenAI Launches AI Futures Blog Series](https://openai.com/index/introducing-ai-futures) ⭐️ 7.0/10
+## [Stop Making TUIs: Native UIs Now Cheap with Coding Agents](https://simonwillison.net/2026/Aug/21/stop-making-tuis/) ⭐️ 7.0/10
 
-OpenAI has announced the launch of 'AI Futures', a new blog series dedicated to exploring how transformative AI could reshape power, governance, the economy, and individual freedom. The series aims to foster discussion on the societal implications of advanced AI. This initiative signals OpenAI's commitment to engaging with broader societal and policy discussions, which is crucial as AI technologies become more powerful and pervasive. It could influence how policymakers, researchers, and the public think about AI governance and its long-term impacts. The blog series is part of OpenAI's ongoing efforts to address the societal implications of AI, complementing its technical research. The announcement does not provide specific dates or authors for the series, but it is expected to feature contributions from various experts and thought leaders.
+Thomas Ptacek argues that developers should build native user interfaces for even small personal tools, because coding agents have made GUI development nearly free. Simon Willison agrees, citing his own vibe-coded macOS task bar apps for bandwidth and GPU monitoring that he still uses daily. This signals a shift in developer tooling practices: as AI coding agents lower the cost of UI development, the traditional trade-off favoring TUIs for small tools may no longer hold. It could lead to more accessible and user-friendly tools for non-technical users, and change how developers approach personal projects. Ptacek's post is titled 'Stop Making TUIs' and includes a quote urging developers to try turning a throwaway CLI into a native app. Willison references his March 2026 blog post about vibe-coding SwiftUI apps, and notes he is 'running out of excuses' not to build UIs for other projects.
 
-rss · OpenAI Blog · Aug 20, 07:00
+rss · Simon Willison · Aug 21, 16:07
 
-**Background**: OpenAI is a leading artificial intelligence research organization known for developing advanced models like GPT-4 and ChatGPT. As AI capabilities grow, there is increasing concern about its impact on society, including issues of power concentration, economic disruption, and individual rights. The AI Futures series appears to be a platform for exploring these topics in depth.
+**Background**: TUI (Text User Interface) is a terminal-based interface that uses text and keyboard navigation, often preferred for its speed and low resource usage. GUI (Graphical User Interface) provides visual elements like windows and buttons. Vibe coding is an AI-assisted development approach where developers describe a project in natural language and let an LLM generate code, often without deep review. Coding agents are AI tools that can autonomously write and modify code, reducing the effort required to build software.
 
-**Tags**: `#OpenAI`, `#AI policy`, `#AI impact`, `#governance`, `#economics`
+<details><summary>References</summary>
+<ul>
+<li><a href="https://itsfoss.com/gui-cli-tui/">GUI, CLI and TUI: What are They and What's the Difference?</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Vibe_coding">Vibe coding</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#UI`, `#developer-tools`, `#coding-agents`, `#native-apps`
 
 ---
 
 <a id="item-9"></a>
-## [Alibaba Q1 FY2026 Sales Up 9%, AI Spending Hits Profit](https://news.google.com/rss/articles/CBMi4wFBVV95cUxOS3J2dThHdVdSVV92ZHF0bGxxZHVuYlpkb2QtX3BRVWtYeVhiQzZkaGNJalNYQVBPUU1UMmpQOGctcDRzNE9PYWxSTVJQcFFONTYxRFFFZFhBa1cyODNKVDNQUUtfS3ZiQXY0ZGdoTUh5UG9NTFk0X3hTZnhNN3ZKckI5Wldla3ZYeTlrNk8tS2xyOXpaM25ENm9hSE1ibzJ3VDhRei1fWVhvMnBlSG53REVzVms4NVpON0xZbW1oRTlXbWF0SktYMk9SbElHQWhXalhsN0o1MTdrTVFQNk1GR3VOQQ?oc=5) ⭐️ 5.0/10
+## [ChatGPT Search Adopts site: Operator at Scale](https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/) ⭐️ 7.0/10
 
-Alibaba reported a 9% year-over-year increase in sales for Q1 FY2026, but net profit plunged 75% to roughly $1.6 billion due to heavy AI infrastructure spending. The earnings call transcript was released on August 29, 2025. This highlights the significant financial trade-off tech giants face when investing heavily in AI, as Alibaba prioritizes long-term growth in cloud and AI over short-term profitability. It also signals intensifying competition in the AI and cloud market, particularly between China and the US. Alibaba's AI spending reached $9.98 billion in the June quarter, while its cloud unit, which benefits from this investment, turned a segment profit up 133%. The company's revenue beat estimates, but the profit drop was steeper than expected.
+According to Promptwatch tracking, the percentage of ChatGPT Search queries containing the site: operator jumped from around 0.3-0.5% to 16-17% on August 8, 2026, coinciding with the GPT-5.6 rollout. This indicates a significant shift in how ChatGPT handles domain-specific searches. This change signals that AI search engines are increasingly adopting traditional web search operators, which could impact SEO and GEO strategies. Websites may need to optimize for site: queries, and the shift could alter how content is surfaced in AI-driven search results. The data from Promptwatch shows a brief dip to 0.15% on August 3-5, suggesting a staged rollout or pre-launch experiment. Simon Willison speculates that the underlying search tool may now use a structure like search(query, recency, domains) rather than directly encouraging the site: operator. Additionally, a follow-up report on August 18 indicates ChatGPT has reduced Reddit citations in search results.
 
-google_news · Investing.com South Africa · Aug 20, 02:26
+rss · Simon Willison · Aug 20, 23:57
 
-**Background**: Alibaba is a major Chinese e-commerce and technology conglomerate that has been expanding into cloud computing and artificial intelligence. The company's Q1 FY2026 results reflect a strategic pivot toward AI infrastructure, which requires massive capital expenditure but is expected to drive future growth in its cloud and AI offerings.
+**Background**: The site: operator is a standard web search operator that restricts results to a specific domain, commonly used in Google and other search engines. Generative Engine Optimization (GEO) is an emerging field focused on improving a website's visibility in AI-generated responses, similar to traditional SEO. Promptwatch is a tool that tracks prompts across AI chat products to provide insights into otherwise opaque product changes.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://finance.yahoo.com/quote/BABA/earnings/BABA-Q1-2026-earnings_call-346878.html?fr=sycsrp_catchall">Alibaba Group Holding Limited (BABA) Q1 FY2026 earnings call ...</a></li>
-<li><a href="https://apnews.com/article/china-alibaba-earnings-ai-cloud-8a30302d23a96fc7b9aab664b9c1897d">Alibaba quarterly profit drops 75% as AI investment spending ...</a></li>
-<li><a href="https://thenextweb.com/news/alibaba-ai-spending-profit-falls-75-percent-cloud">Alibaba’s profit fell 75% as quarterly AI spending hit ...</a></li>
+<li><a href="https://ahrefs.com/blog/google-advanced-search-operators/">Google Search Operators : The Complete List (44 Advanced Operators )</a></li>
+<li><a href="https://developers.google.com/search/docs/monitor-debug/search-operators/all-search-site">How To Use the Site Search Operator | Google Search Central</a></li>
+<li><a href="https://www.hostinger.com/tutorials/what-is-seo">What is SEO? Understanding search engine optimization in 2026</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#Alibaba`, `#earnings`, `#AI spending`, `#financial results`
+**Tags**: `#ChatGPT`, `#search`, `#SEO`, `#GEO`, `#AI`
 
 ---
 
 <a id="item-10"></a>
-## [Shanghai Lingang Aims to Become Global Token Services Hub](https://news.google.com/rss/articles/CBMitAFBVV95cUxQd3NmbXppeDV1cUJ1Y3NQdERlcGlJbG1KRV9ER1BUamtPZXVNVWE1VWIwMXBLTWJSVGZESmhCdW80X0diLWVScy1iVDNuanNhMXV5V3Z5eEtEU185aHFWVFh2a3pEWjVXR2RseGNxZDlpQUFjMGQ4a2J0LWw5aUExamk3VmxPS1Zfb1JWRFlRcFBVOElfODZRbzMyMmY4UUl2LUZTUWZNb1ZtVlZvcTliMXBHWFQ?oc=5) ⭐️ 5.0/10
+## [llm-openrouter 0.7 Adds LLM 0.32 Support and New Tools](https://simonwillison.net/2026/Aug/21/llm-openrouter/) ⭐️ 6.0/10
 
-Shanghai's Lingang Special Area within the China (Shanghai) Pilot Free Trade Zone has announced plans to become a globally influential hub for token services export. The initiative includes building a one-stop compliance service platform to assist companies with data security assessments, standard contract generation, cross-border rule queries, and automatic adaptation. This policy signals China's continued interest in blockchain and tokenization despite previous crackdowns on cryptocurrencies, potentially positioning Shanghai as a key player in the global token services market. It could attract fintech and blockchain companies to the area, fostering innovation and cross-border trade in digital assets. The one-stop compliance service platform will provide services such as data security assessments, standard contract generation, cross-border rule queries, and automatic adaptation, as announced by Chen (likely a local official). The area is also making strides in offshore trade and reinsurance, with policies like stamp duty exemption extension for offshore trade and a comprehensive reform pilot for offshore trade financial services.
+llm-openrouter 0.7 has been released, adding compatibility with LLM 0.32 and switching to OpenRouter's Responses API. It also introduces three new server-side tools: Shell, WebFetch, and WebSearch. This update improves the plugin's functionality with reasoning models available through OpenRouter, benefiting developers who use the LLM CLI. The new server-side tools expand the plugin's capabilities, making it more versatile for automation and data retrieval tasks. The plugin now uses OpenRouter's implementation of the Responses API, which is OpenAI-compatible and serves as a drop-in replacement. The new tools can be enabled with options like `-T WebSearch`, and the release addresses compatibility with LLM 0.32, which includes fixes for tool-calling conversation restoration.
 
-google_news · 一财全球Yicai Global · Aug 20, 07:08
+rss · Simon Willison · Aug 21, 16:58
 
-**Background**: The Lingang Special Area is a new area within the Shanghai Pilot Free Trade Zone, offering tax incentives and favorable policies to attract businesses in sectors like AI, integrated circuits, biomedicine, and high-end manufacturing. Token services refer to the creation, management, and exchange of digital tokens representing assets or rights, often built on blockchain technology. This initiative aligns with China's broader exploration of legal digital currencies and tokenization while maintaining strict controls on speculative cryptocurrency trading.
+**Background**: LLM is a command-line tool by Simon Willison for running large language models. OpenRouter provides a unified API to access multiple AI models. The Responses API is a newer OpenAI-compatible interface that supports advanced features like reasoning and server-side tools.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.yicaiglobal.com/news/shanghai-ftzs-lingang-special-area-to-become-global-hub-for-token-services-export">Shanghai FTZ's Lingang Special Area to Become Global Hub for ...</a></li>
-<li><a href="https://en.lingang.gov.cn/">Lin - gang Special Area</a></li>
-<li><a href="https://english.shanghai.gov.cn/en-TradeInvestmentInstitutionalInnovation/20250820/3101d24cd33e42618a11c85036da8908.html">Lin-gang Special Area pioneers reform, openness through ...</a></li>
+<li><a href="https://openrouter.ai/docs/api_reference/responses/overview">OpenRouter Responses API - OpenAI-Compatible Documentation</a></li>
+<li><a href="https://github.com/simonw/llm-openrouter">GitHub - simonw/ llm - openrouter : LLM plugin for models hosted by...</a></li>
+<li><a href="https://simonwillison.net/2025/Sep/21/llm-openrouter/">llm - openrouter 0.5 | Simon Willison’s Weblog</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#blockchain`, `#fintech`, `#Shanghai`, `#policy`, `#tokenization`
+**Tags**: `#LLM`, `#OpenRouter`, `#plugin`, `#CLI`, `#AI`
+
+---
+
+<a id="item-11"></a>
+## [Matt Webb Uses ChatGPT as Tutor to Learn Quaternions](https://simonwillison.net/2026/Aug/21/matt-webb/) ⭐️ 6.0/10
+
+Matt Webb, in a blog post about his app Galactic Compass 2, describes using ChatGPT as an interactive tutor to learn quaternions for implementing 3D rotations himself, rather than having the AI write the code. He emphasizes that this AI-assisted learning motivated him to learn more, contrary to the fear that outsourcing thinking to AI would stop learning. This anecdote highlights a positive outcome of AI in education and developer workflows, showing that AI can serve as a patient, interactive tutor that enhances learning rather than replacing it. It challenges the narrative that AI outsourcing leads to skill atrophy, suggesting instead that it can push individuals to learn more deeply. Webb used ChatGPT to educate himself on quaternions, a mathematical concept used for 3D rotations, which he had previously struggled to learn from books and mathematician friends. He notes that after releasing version 1.0 of his app, he needed to implement rotations himself, and the interactive tutoring enabled him to learn 'just enough' to make the app work.
+
+rss · Simon Willison · Aug 21, 15:06
+
+**Background**: Quaternions are a mathematical system used to represent 3D rotations, widely applied in computer graphics, robotics, and aerospace. They are often considered unintuitive and difficult to learn from traditional resources. ChatGPT, a large language model, can act as an interactive tutor by answering questions and explaining concepts in a conversational manner, which can be more effective for some learners than static texts or human experts who may not be readily available.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation">Quaternions and spatial rotation - Wikipedia</a></li>
+<li><a href="https://scienceinsights.org/what-is-a-quaternion-the-math-behind-3d-rotation/">What Is a Quaternion? The Math Behind 3D Rotation</a></li>
+<li><a href="https://www.timeshighereducation.com/campus/how-make-chatgpt-work-teaching-assistant-case-study-law">How to make ChatGPT work as a teaching assistant | THE Campus...</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#AI-assisted learning`, `#ChatGPT`, `#quaternions`, `#developer experience`, `#generative AI`
+
+---
+
+<a id="item-12"></a>
+## [China Encourages Tech Startups to List Domestically as Capital Flows 'Eastward'](https://news.google.com/rss/articles/CBMidEFVX3lxTE5pOC1sZTVjajhrdG1KRlZQcGtFRnV6YmRXTW5zQUFHSmcwMFBKSVdSQzNSRVdmZlZnR3VOY0dSOW5XMTNtamdreHlxdHVIQ3lYQnpzWE5SS2ZwVkg0Q0x2a0YtS1Q2RUZUQ0lBdElJZGxEYndp?oc=5) ⭐️ 6.0/10
+
+China is actively encouraging its tech startups, such as ChangXin Memory and Unitree Robotics, to list on domestic stock exchanges like the Shanghai Stock Exchange, marking a shift in global tech capital flows from 'westward' to 'eastward.' This policy shift could reshape global capital markets, reducing reliance on U.S. and Hong Kong listings and potentially boosting China's domestic capital markets. It also reflects broader geopolitical tensions and China's push for technological self-sufficiency. The article cites a Global Times editorial highlighting the IPOs of ChangXin Memory and Unitree Robotics in Shanghai as signals of this shift. Unitree Robotics' stock surged nearly fivefold on its first trading day, underscoring strong investor interest in domestic tech listings.
+
+google_news · 纽约时报中文网 · Aug 21, 03:12
+
+**Background**: Historically, Chinese tech companies often sought listings on U.S. or Hong Kong exchanges to access international capital. However, recent U.S. restrictions on foreign robotics and other tech sectors, coupled with China's regulatory push to keep strategic companies domestic, have accelerated the trend of domestic listings.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://cn.nytimes.com/business/20260821/unitree-ipo-trading/">资本流动“向东看”？中国鼓励科技新贵在国内上市 - 纽约时报中文网</a></li>
+<li><a href="https://www.bbc.com/zhongwen/articles/c5yrnedq47go/simp">宇树 科 技 ： 上 市 首天涨价近五倍的 中 国 机械人 公 司 甚么来头？ - BBC...</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#China`, `#tech IPO`, `#capital markets`, `#policy`
 
 ---
