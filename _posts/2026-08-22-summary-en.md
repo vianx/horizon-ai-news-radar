@@ -9,77 +9,53 @@ lang: en
 
 ---
 
-1. [SGLang v0.5.18: New Models, Faster Startup, and Performance Gains](#item-1) ⭐️ 8.0/10
-2. [Munder Difflin: Deterministic Local Multi-Agent Harness](#item-2) ⭐️ 8.0/10
-3. [Linus Torvalds Praises AI for Debugging Linux Kernel](#item-3) ⭐️ 8.0/10
-4. [Developer Trains 250M LLM from Scratch, Deploys in 60 MB](#item-4) ⭐️ 8.0/10
-5. [DelveRL: Open-Source Roguelike for Training Game-Playing Agents](#item-5) ⭐️ 8.0/10
-6. [Open Models Halve Time to Catch Up Each Generation](#item-6) ⭐️ 8.0/10
-7. [US Groups Urge FTC to Probe AI Firms Over Book Destruction](#item-7) ⭐️ 8.0/10
-8. [Coding Agents: Beyond Line-by-Line Code Review](#item-8) ⭐️ 7.0/10
-9. [LLM 0.33 Release: OpenAI 3.x Upgrade and New Embedding Key Support](#item-9) ⭐️ 6.0/10
+1. [SGLang v0.5.18 Released with New Models and Performance Boosts](#item-1) ⭐️ 8.0/10
+2. [Linus Torvalds Credits AI for Helping in 'Debug Session from Hell'](#item-2) ⭐️ 8.0/10
+3. [Developer Trains 250M LLM from Scratch, Deploys in 60MB](#item-3) ⭐️ 8.0/10
+4. [DelveRL: Open-Source Roguelike for Training Game-Playing Agents](#item-4) ⭐️ 8.0/10
+5. [Nintendo Removes 400+ Switch Emulator Repos in One Day](#item-5) ⭐️ 8.0/10
+6. [Open-Source Models Catch Up Faster, Halving Gap Each Generation](#item-6) ⭐️ 8.0/10
+7. [Why Local LLMs Seem Dumber Than They Are](#item-7) ⭐️ 7.0/10
+8. [llm 0.33 Released with OpenAI Library and httpx2 Upgrades](#item-8) ⭐️ 7.0/10
+9. [Beyond Code Review: The Real Skill for Coding Agents](#item-9) ⭐️ 7.0/10
 
 ---
 
 <a id="item-1"></a>
-## [SGLang v0.5.18: New Models, Faster Startup, and Performance Gains](https://github.com/sgl-project/sglang/releases/tag/v0.5.18) ⭐️ 8.0/10
+## [SGLang v0.5.18 Released with New Models and Performance Boosts](https://github.com/sgl-project/sglang/releases/tag/v0.5.18) ⭐️ 8.0/10
 
-SGLang v0.5.18 was released with 710 PRs from 212 contributors, adding support for several new models including Muse Glimmer, Intern-S2-Mobius, SANA-Video, and others. It also introduces overlapped checkpoint staging, TP LMHead with All-to-All, and FlashInfer MNNVL for pure allreduce, among other optimizations. This release significantly expands SGLang's model coverage, including diffusion and multimodal models, making it a more versatile inference engine. The performance improvements, such as faster startup and reduced LMHead latency, benefit production deployments of large models like DeepSeek and Qwen. Key optimizations include overlapped checkpoint staging (up to 2.38x faster startup for Qwen3-32B on H100), TP LMHead with All-to-All (LMHead time reduced from 320us to 169us on DeepSeek-V4-Pro B200), and FlashInfer MNNVL for pure allreduce (up to +6.9% decode performance on Blackwell). Dependencies were updated to torch 2.13.0, flashinfer 0.6.17, and sgl-kernel 0.4.6.post1.
+SGLang v0.5.18 has been released, incorporating 710 pull requests from 212 contributors. This release adds support for several new models including Muse Glimmer, Intern-S2-Mobius, SANA-Video, and others, along with performance optimizations such as overlapped checkpoint staging and TP LMHead with All-to-All. This release significantly expands SGLang's model coverage and improves serving efficiency, which is crucial for developers deploying large language models in production. The performance enhancements, such as faster startup and reduced latency, directly benefit users running high-throughput inference workloads. Notable optimizations include overlapped checkpoint staging that speeds up Qwen3-32B startup by up to 2.38x, and TP LMHead with All-to-All reducing LMHead time from 320us to 169us on DeepSeek-V4-Pro. The release also unifies compiled-kernel caches under SGLANG_CACHE_DIR and updates dependencies to torch 2.13.0, flashinfer 0.6.17, and sgl-kernel 0.4.6.post1.
 
 github · Fridge003 · Aug 22, 00:09
 
-**Background**: SGLang is a high-performance serving framework for large language models and multimodal models, known for its RadixAttention technique that speeds up inference. This release continues its evolution by adding support for a wider range of model architectures, including diffusion models for video generation, and improving performance through advanced communication and caching strategies.
+**Background**: SGLang is an open-source framework for serving large language models and other AI models, designed for high performance and flexibility. It supports both autoregressive and diffusion models, and this release adds support for several new models, including Meta's Muse Glimmer, an agentic model optimized for local deployment, and NVIDIA's SANA-Video, a diffusion model for efficient video generation.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://github.com/sgl-project/sglang/releases">Releases · sgl-project/ sglang</a></li>
-<li><a href="https://pypi.org/project/sglang/">SGLang is a fast serving framework for large language models and...</a></li>
-<li><a href="https://huggingface.co/internlm/Intern-S2-Mobius">internlm/ Intern - S 2 - Mobius · Hugging Face</a></li>
+<li><a href="https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model">Introducing Muse Glimmer: An Open Agentic Model That Runs on Your Device | Meta AI Research</a></li>
+<li><a href="https://huggingface.co/internlm/Intern-S2-Mobius">internlm/Intern-S2-Mobius · Hugging Face</a></li>
+<li><a href="https://nvlabs.github.io/Sana/Video/">SANA Video - nvlabs.github.io</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#SGLang`, `#inference`, `#LLM`, `#release`, `#AI infrastructure`
+**Tags**: `#SGLang`, `#LLM serving`, `#release`, `#AI/ML`, `#open source`
 
 ---
 
 <a id="item-2"></a>
-## [Munder Difflin: Deterministic Local Multi-Agent Harness](https://munderdiffl.in/) ⭐️ 8.0/10
+## [Linus Torvalds Credits AI for Helping in 'Debug Session from Hell'](https://simonwillison.net/2026/Aug/22/linus-torvalds/) ⭐️ 8.0/10
 
-Munder Difflin, a local multi-agent harness that orchestrates coding agents like Claude Code and Codex deterministically without consuming tokens, has gained over 20,000 users within a week of its release. The tool wraps existing agent subscriptions and supports most harnesses and coding agents. This tool addresses a key pain point in multi-agent orchestration by being deterministic and token-efficient, which could significantly reduce costs and improve reliability for developers using AI coding agents. Its rapid adoption indicates strong demand for more controllable and efficient agent coordination in the developer community. Munder Difflin is a local harness that wraps existing subscriptions to Claude Code and Codex, supporting almost all harnesses and coding agents. Simulations are deterministic and do not consume tokens; in fact, most users report reduced token consumption. The tool has gained over 20,000 users in a week.
-
-hackernews · simonpure · Aug 22, 09:49 · [Discussion](https://news.ycombinator.com/item?id=49398152)
-
-**Background**: Agent harnesses are structural layers that control when agents run, what input they receive, how outputs flow, and what is returned to the caller. They are crucial for building reliable multi-agent systems. Claude Code and Codex are popular AI coding agents that help developers write and fix code, but orchestrating them can be token-intensive and non-deterministic. Munder Difflin aims to solve these issues by providing a deterministic, token-efficient local harness.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://medium.com/@kyeg/multi-agent-harness-engineering-d577846a24cc">Multi-Agent Harness Engineering. A single agent is powerful. A… | by Kye Gomez | Medium</a></li>
-<li><a href="https://developer.nvidia.com/blog/six-agent-harness-capabilities-for-higher-model-performance/">Six Agent Harness Capabilities for Higher Model Performance | NVIDIA Technical Blog</a></li>
-<li><a href="https://www.langchain.com/blog/the-anatomy-of-an-agent-harness">The Anatomy of an Agent Harness</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Community comments show a mix of enthusiasm and constructive criticism. Users appreciate the Office-themed humor and the tool's potential, but some critique the design, preferring pipelines and roles over defined agents. The creator, Chaitanya, is actively engaging with users and answering questions.
-
-**Tags**: `#multi-agent`, `#LLM`, `#developer-tools`, `#automation`, `#AI-agents`
-
----
-
-<a id="item-3"></a>
-## [Linus Torvalds Praises AI for Debugging Linux Kernel](https://simonwillison.net/2026/Aug/22/linus-torvalds/) ⭐️ 8.0/10
-
-Linus Torvalds publicly credited an AI for significantly aiding a difficult Linux kernel debugging session, even letting the AI write the commit message. The fix addressed a bug in the Xe driver where flat CCS storage was incorrectly handed out as usable VRAM. This endorsement from a highly influential figure signals practical value of AI in kernel development, potentially encouraging broader adoption. It also highlights AI's strengths in repetitive tasks while acknowledging its limitations in persistence and judgment. The debugging required 24 debug patches and 18 kernel boots, ultimately finding a single line where round_up() should have been round_down(). The AI repeatedly expressed pessimism, suggesting giving up, but continued to add debug code and analyze results when pushed.
+Linus Torvalds publicly credited an AI for assisting in a difficult Linux kernel debugging session, and even let the AI write the commit message for the fix. The commit, 818bebeb63dd, addresses a drm/xe driver issue related to flat CCS storage. This acknowledgment from a prominent figure like Torvalds signals that AI-assisted development is becoming practically useful even in complex kernel work. It may encourage broader adoption of AI tools in low-level systems programming and spark discussions about AI's role and limitations. The AI repeatedly stated the problem was impossible to solve, but Torvalds pushed it to continue adding debug code and analyzing results. The commit message was written by the AI, and the fix is for the drm/xe driver, which supports Intel graphics hardware.
 
 rss · Simon Willison · Aug 22, 21:04
 
-**Background**: The Linux kernel is the core of many operating systems, and debugging it can be extremely complex. AI coding assistants, such as large language models, are increasingly used to help with code generation and debugging, though their reliability and persistence can vary.
+**Background**: The Linux kernel is a complex open-source operating system kernel, and debugging it often requires deep expertise and persistence. AI-assisted programming tools, such as large language models, can help with code generation and analysis, but they may not always be reliable or persistent. Torvalds' experience highlights both the potential and the limitations of such tools in demanding technical contexts.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://itsfoss.com/news/torvalds-used-ai-fix-kernel-bug/">Linux Creator Linus Torvalds Just Used AI to Fix a Kernel Bug</a></li>
-<li><a href="https://www.phoronix.com/news/Linus-Torvalds-Debug-AI">Linus Torvalds Endures A Debug Session From Hell, "Enormously Helped" By AI - Phoronix</a></li>
+<li><a href="https://lists.freedesktop.org/archives/dri-devel/2026-August/590630.html">drm: xe: Kernel-submitted job timed out</a></li>
+<li><a href="https://www.kernel.org/doc/html/latest/gpu/xe/index.html">drm/xe Intel GFX Driver — The Linux Kernel documentation</a></li>
 
 </ul>
 </details>
@@ -88,134 +64,158 @@ rss · Simon Willison · Aug 22, 21:04
 
 ---
 
-<a id="item-4"></a>
-## [Developer Trains 250M LLM from Scratch, Deploys in 60 MB](https://www.reddit.com/r/MachineLearning/comments/1vv2nkh/i_developed_my_own_quantized_llm_from_scratch/) ⭐️ 8.0/10
+<a id="item-3"></a>
+## [Developer Trains 250M LLM from Scratch, Deploys in 60MB](https://www.reddit.com/r/MachineLearning/comments/1vv2nkh/i_developed_my_own_quantized_llm_from_scratch/) ⭐️ 8.0/10
 
-A developer trained a 250M parameter LLM from scratch on 30B tokens of fineweb, quantized to under 2 bits, achieving a 60 MB deployment that runs at 400 tok/s on CPU. The model also features a novel disk-based long-context cache, compressing older tokens to 1 bit and storing them on disk. This demonstrates that extreme quantization and efficient deployment are feasible for small models, potentially enabling on-device and edge applications without GPUs. The disk-based long-context approach offers a practical solution for handling very long contexts, which is a significant challenge in LLM inference. The model uses a fixed 512-bit code for each token instead of a learned embedding table, with zero trained parameters for the vocabulary. The long-context mechanism keeps the most recent 2048 tokens in fp16, while older tokens are compressed to 1 bit (about 320 bytes per token), allowing up to 100M tokens of history on disk. The base model achieves a perplexity of 23.3 on held-out English web text.
+A developer trained a 250M parameter LLM from scratch on 30B tokens of fineweb, quantized it to under 2 bits, and deployed it in 60MB with CPU inference at 400 tok/s. The model also features a disk-based long-context mechanism supporting up to 100M tokens. This demonstrates that extremely low-bit quantization and disk-based long-context can be combined in a small model, making LLMs deployable on resource-constrained devices without GPUs. It could inspire more efficient on-device AI applications and research into ultra-low-bit quantization. The model uses a fixed 512-bit code per token instead of a trained embedding table, saving 8.4MB for 131k tokens. The long-context mechanism keeps the most recent 2048 tokens in fp16, compresses older tokens to 1 bit (320 bytes per token), and writes them to disk, enabling retrieval from up to 100M tokens. The base model achieves a perplexity of 23.3 on held-out English web text.
 
 reddit · r/MachineLearning · /u/Final-Data-1410 · Aug 22, 04:39
 
-**Background**: Quantization reduces the precision of model weights to lower bit widths, such as 2-bit, to shrink model size and speed up inference, often at some cost to accuracy. Traditional LLMs use learned embedding tables to map tokens to vectors, but this model uses fixed random codes, which is unconventional. Long-context handling typically relies on KV caches that store key and value vectors for all tokens, which can become memory-intensive; offloading to disk is a strategy to manage this.
+**Background**: LLM quantization reduces model size and memory usage by representing weights with fewer bits, but extreme low-bit quantization (e.g., under 2 bits) often degrades accuracy. Long-context handling typically relies on KV caches that grow with context length, which can exceed memory limits; disk-based offloading is an emerging solution. This project combines both techniques in a small model, showing feasibility for on-device deployment.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://github.com/pprp/Awesome-LLM-Quantization">GitHub - pprp/Awesome- LLM - Quantization : Awesome list for LLM ...</a></li>
-<li><a href="https://symphony.rakuten.com/blog/why-an-nvme-drive-can-outrun-a-flagship-gpu-in-long-context-inference">Why NVMe Beats GPUs in Long - Context LLM Inference</a></li>
-<li><a href="https://sampathkumaran.medium.com/llms-simplified-tokens-and-embeddings-f275e6ce016e">LLM’s Simplified — Tokens and Embeddings | by Sampath Kumaran Ganesan | Medium</a></li>
+<li><a href="https://arxiv.org/abs/2508.05571">[2508.05571] iFairy: the First 2-bit Complex LLM with All Parameters in $\{\pm1, \pm i\}$</a></li>
+<li><a href="https://arxiv.org/html/2511.11907v1">KVSwap: Disk-aware KV Cache Offloading for Long-Context On ...</a></li>
+<li><a href="https://deepwiki.com/kvcache-ai/ktransformers/6.5-long-context-inference">Long Context Inference | kvcache-ai/ktransformers | DeepWiki</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The Reddit community responded positively, with users expressing curiosity and helpfulness, which surprised the author who expected criticism. The project gained traction, reaching 7 stars on GitHub, and the discussion likely included technical questions about the quantization and long-context methods.
+**Discussion**: The Reddit community responded positively, with comments described as curious and helpful, contrary to the author's fear of being roasted. The author expressed gratitude and noted the repo reached 7 stars on GitHub.
 
-**Tags**: `#LLM`, `#quantization`, `#model compression`, `#efficient inference`, `#long context`
+**Tags**: `#LLM`, `#quantization`, `#efficient inference`, `#long context`, `#from-scratch training`
+
+---
+
+<a id="item-4"></a>
+## [DelveRL: Open-Source Roguelike for Training Game-Playing Agents](https://www.reddit.com/r/MachineLearning/comments/1vvii1j/i_built_an_opensource_roguelike_specifically_for/) ⭐️ 8.0/10
+
+DelveRL, an open-source roguelike game designed specifically for training game-playing agents, has been released. It features a structured API, deterministic simulation, procedural levels, and partial observability, with a baseline agent reaching a median floor of 18 and extended runs reaching floor 33. This addresses a practical gap in reinforcement learning environments by providing a purpose-built, human-playable game that is easy to integrate with agent harnesses. It enables researchers and hobbyists to benchmark and improve agents in a challenging, partially observable environment, potentially accelerating progress in game-playing AI. The game is deterministic after reset, procedurally generated, and renderer-independent, allowing for batched renderer-free environments. It includes a recurrent PPO trainer, and all code, checkpoints, and benchmarks are open source on GitHub.
+
+reddit · r/MachineLearning · /u/SnyderConsulting · Aug 22, 17:32
+
+**Background**: Roguelikes are a genre of games characterized by procedural generation, turn-based gameplay, and permadeath, making them suitable for testing agent exploration and resource management. Reinforcement learning (RL) agents often require environments that are fast, deterministic, and provide a clear API, but many existing games are difficult to integrate with RL frameworks. DelveRL aims to bridge this gap by offering a game built from the ground up for agent training, with features like partial observability and strategic depth.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://github.com/SnyderConsulting/DelveRL">GitHub - SnyderConsulting/DelveRL: A human-playable turn ...</a></li>
+<li><a href="https://kblip.com/products/delverl-open-source-roguelike-for-training-game-playing-T3Sm12A">DelveRL: Open-source roguelike for training game-playing ...</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#reinforcement learning`, `#open-source`, `#game environment`, `#agent training`, `#procedural generation`
 
 ---
 
 <a id="item-5"></a>
-## [DelveRL: Open-Source Roguelike for Training Game-Playing Agents](https://www.reddit.com/r/MachineLearning/comments/1vvii1j/i_built_an_opensource_roguelike_specifically_for/) ⭐️ 8.0/10
+## [Nintendo Removes 400+ Switch Emulator Repos in One Day](https://torrentfreak.com/nintendo-wipes-out-400-switch-emulator-repos-in-single-day-github-sweep/) ⭐️ 8.0/10
 
-The author released DelveRL, an open-source roguelike game designed specifically for reinforcement learning agent training, featuring a structured API, deterministic simulation, procedural levels, and partial observability. It includes a recurrent PPO trainer and baseline results, with the median floor reached being 18 and extended runs reaching floor 33. DelveRL addresses a gap in agent training environments by providing a human-playable game that is easy to integrate with agent harnesses, unlike many existing games that are difficult to interface with. This could accelerate research in game AI and reinforcement learning, offering a benchmark for testing new algorithms and approaches. The game is an endless turn-based roguelike where agents must explore, manage resources, fight enemies, and escape each floor. Everything runs locally, including batched renderer-free environments and a recurrent PPO trainer, and the game, training code, checkpoint, bridge documentation, and raw benchmarks are all open source.
+Nintendo filed seven DMCA anti-circumvention notices with GitHub on the same day, targeting over 400 Switch emulator repositories and their forks. The takedown included 311 repositories for suyu and 29 for the discontinued Android emulator Skyline. This is one of the largest single-day takedown actions against Switch emulators, potentially setting a precedent for future legal actions. It significantly impacts the emulation community and raises concerns about the legality of emulator development and distribution. The notices cite the Yuzu settlement as precedent, but neither case has been fully adjudicated in court. The takedowns specifically target repositories that use unauthorized keys to decrypt games, which Nintendo argues violates the DMCA.
 
-reddit · r/MachineLearning · /u/SnyderConsulting · Aug 22, 17:32
+telegram · zaihuapd · Aug 22, 00:28
 
-**Background**: Reinforcement learning (RL) agents often require specialized environments that are both challenging and easy to interface with. Many existing games are not designed for RL integration, making it difficult to test algorithms. PPO (Proximal Policy Optimization) is a popular RL algorithm known for its stability and simplicity, and partial observability is a common challenge in game AI where agents must make decisions with incomplete information.
+**Background**: Nintendo has a history of aggressive legal action against emulators, such as the Yuzu case which ended in a $2.4 million settlement and the shutdown of the project. Suyu is a fork of Yuzu that emerged after its demise, openly challenging Nintendo. DMCA anti-circumvention provisions prohibit bypassing technological protection measures, which is a key legal basis for these takedowns.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Proximal_policy_optimization">Proximal policy optimization - Wikipedia</a></li>
-<li><a href="https://arxiv.org/abs/1707.06347">[1707.06347] Proximal Policy Optimization Algorithms</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Partially_observable_system">Partially observable system - Wikipedia</a></li>
+<li><a href="https://www.oschina.net/news/281690/yuzu-fork-suyu">倒了一个 Yuzu，还有千千万万个“转世”开源模拟器 - OSCHINA - 开源 × AI · 开发者生态社区</a></li>
+<li><a href="https://baike.baidu.com/item/Yuzu/22352467">Yuzu_百度百科</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#reinforcement learning`, `#open-source`, `#game AI`, `#agent training`, `#roguelike`
+**Tags**: `#Nintendo`, `#DMCA`, `#emulation`, `#GitHub`, `#legal`
 
 ---
 
 <a id="item-6"></a>
-## [Open Models Halve Time to Catch Up Each Generation](https://newsletter.semianalysis.com/p/are-open-models-catching-up) ⭐️ 8.0/10
+## [Open-Source Models Catch Up Faster, Halving Gap Each Generation](https://newsletter.semianalysis.com/p/are-open-models-catching-up) ⭐️ 8.0/10
 
-SemiAnalysis reports that open-source AI models are catching up to closed-source ones at an accelerating rate, with each generation halving the time to parity. In the agentic era, Kimi K2.6 surpassed Opus 4.5 in 4.8 months, and GLM-5.2 exceeded GPT-5.2 in 6 months. This trend signals potential commoditization of the model layer, as open models can now handle many coding and agentic tasks that previously drove significant revenue for closed-source leaders like Anthropic. It could reshape competitive dynamics and affect the business models of AI labs. SemiAnalysis divides model history into three eras: early scaling, reasoning, and agentic, noting that the capability gap between open and closed models fluctuates cyclically. Despite benchmarks, Anthropic's productization capabilities remain a key advantage, and open models like GLM 5.3 and Kimi K3 are already competitive in agentic tasks.
+SemiAnalysis reports that open-source models are closing the gap with closed-source frontier models at an accelerating pace, with the catch-up time halving each generation. In the agent era, Kimi K2.6 surpassed Opus 4.5 in 4.8 months, and GLM-5.2 surpassed GPT-5.2 in 6 months. This trend suggests that the model layer is becoming commoditized, potentially undermining the competitive advantage of closed-source labs like Anthropic. It could reshape the AI industry, shifting value from model capabilities to productization and distribution. SemiAnalysis divides the history of large models into three eras: early scaling, inference, and agentic, and finds that the capability gap between open and closed source fluctuates cyclically. The article notes that open-source models like GLM 5.3 and Kimi K3 can already handle many coding and agentic tasks that helped Anthropic achieve over $65 billion in annualized revenue, but benchmarks are not everything, and Anthropic's productization remains an advantage.
 
 telegram · zaihuapd · Aug 22, 08:26
 
-**Background**: Open-source AI models are developed with publicly available weights, allowing broader access and customization, while closed-source models are proprietary and typically accessed via APIs. Historically, closed models led in performance, but recent open models like GLM and Kimi have narrowed the gap, especially in coding and agentic tasks. SemiAnalysis is a well-known analytics firm that provides in-depth industry analysis.
+**Background**: Open-source models are AI models whose weights are publicly released, allowing anyone to use, modify, and deploy them, while closed-source models are proprietary and only accessible via APIs. The 'agent era' refers to a phase where AI models are increasingly used to autonomously perform tasks, such as coding and tool use, rather than just generating text. SemiAnalysis is a research firm that provides in-depth analysis of the AI and semiconductor industries.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.bannedbook.org/bnews/itnews/20260822/2351567.html">SemiAnalysis：开源模型加速追赶，每代追平时间减半 - 禁闻网</a></li>
-<li><a href="https://www.techflowpost.com/article/32636">播客笔记 | SemiAnalysis 拆解 Kimi k3: 中国终于有了前沿模型，AI 实验室卖 token 可能比 SaaS 还赚钱</a></li>
-<li><a href="https://news.qiniu.com/archives/1783996369018">开源模型最全盘点（2026 年 7 月版）：中美 14 家厂商 30+ 模型全景图 | 七牛云</a></li>
+<li><a href="https://semianalysis.com/semianalysis-models/">SemiAnalysis Models: Institutional Data for the AI Buildout</a></li>
+<li><a href="https://llm-stats.com/models/compare/glm-5.2-vs-kimi-k2.6">GLM-5.2 vs Kimi K2.6: Benchmarks, Pricing & Which Is Better ...</a></li>
+<li><a href="https://www.anthropic.com/">Home \\ Anthropic</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI`, `#open-source`, `#closed-source`, `#model competition`, `#SemiAnalysis`
+**Tags**: `#open-source`, `#AI models`, `#SemiAnalysis`, `#model comparison`, `#agent era`
 
 ---
 
 <a id="item-7"></a>
-## [US Groups Urge FTC to Probe AI Firms Over Book Destruction](https://www.axios.com/2026/08/21/ftc-ai-companies-book-destruction-investigate) ⭐️ 8.0/10
+## [Why Local LLMs Seem Dumber Than They Are](https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917) ⭐️ 7.0/10
 
-On August 21, over a dozen US advocacy groups, including Demand Progress Education Fund and the Consumer Federation of America, sent a joint letter to the Federal Trade Commission (FTC) urging an investigation into AI companies that buy, scan, and destroy physical books for training data, alleging this constitutes unfair competition under Section 5 of the FTC Act. This move extends the AI training data debate from copyright to antitrust and competition law, potentially leading to FTC action that could reshape how AI companies acquire data. If the FTC takes up the case, it could set a precedent for regulating AI training practices beyond copyright infringement, affecting major players like Anthropic, Google, Microsoft, and OpenAI. The letter specifically cites Anthropic's practice of spending millions of dollars to purchase books, cutting off spines, and scanning pages for its Claude model. The groups argue that this 'hoarding and destroying' approach removes key materials from the market, potentially causing rare books to disappear permanently, and raises rivals' costs, but they do not advocate restricting AI training itself.
+A forum post explains that local LLMs often appear less capable than they truly are due to suboptimal inference settings and tool choices, and community members share real-world examples of successful deployments using tools like Ollama, vLLM, and sglang. This matters because many users may abandon local LLMs after underwhelming experiences, missing out on their potential for privacy, customization, and cost savings. Understanding the impact of inference engines and quantization can help users achieve better performance and make more informed tool choices. The post emphasizes that comparisons should not use low-bit quantized models (e.g., 2.58-bit GGUF) with simple test prompts. Community members report high token rates, such as 150+ tokens per second on a 5090 using sglang, and successful use of Qwen3.8 27B on a MacBook Pro via MLX.
 
-telegram · zaihuapd · Aug 22, 15:40
+hackernews · felineflock · Aug 22, 18:14 · [Discussion](https://news.ycombinator.com/item?id=49402232)
 
-**Background**: Section 5 of the FTC Act prohibits unfair or deceptive acts or practices, and the FTC has used it to enforce competition policy. AI companies have been scanning books to train large language models, a practice that has led to copyright lawsuits from authors and publishers. Anthropic's destructive scanning, which uses hydraulic cutters to remove pages, has been documented as unusually large in scale compared to other digitization efforts.
+**Background**: Local LLMs are large language models that run on a user's own hardware rather than in the cloud. Their performance can be significantly affected by the inference engine (e.g., Ollama, vLLM, sglang), quantization level, and hardware capabilities. For instance, vLLM is designed for high-throughput production use, while Ollama is more user-friendly for local development, leading to different performance characteristics.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://futurism.com/artificial-intelligence/ai-companies-destroying-rare-books">AI Companies Are Buying Antique Books , Ingesting Their Contents to...</a></li>
-<li><a href="https://arstechnica.com/ai/2025/06/anthropic-destroyed-millions-of-print-books-to-build-its-ai-models/">Anthropic destroyed millions of print books to build its... - Ars Technica</a></li>
-<li><a href="https://www.ftc.gov/system/files/ftc_gov/pdf/disparate+Impact-policy-statement.pdf">Federal Trade Commission Policy Statement Regarding...</a></li>
+<li><a href="https://developers.redhat.com/articles/2025/08/08/ollama-vs-vllm-deep-dive-performance-benchmarking">Ollama vs. vLLM: A deep dive into performance benchmarking</a></li>
+<li><a href="https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/">Mastering LLM Techniques: Inference Optimization | NVIDIA Technical Blog</a></li>
+<li><a href="https://www.snowflake.com/en/fundamentals/llm-inference/">LLM Inference: Optimization Techniques & Metrics</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI regulation`, `#FTC`, `#antitrust`, `#training data`, `#competition`
+**Discussion**: Community members share positive experiences, such as being 'blown away' by Qwen3.8 27B on a MacBook Pro and successfully using Qwen3.8 for CTF challenges where Codex refused to participate. There is also a genuine question about whether Ollama has fundamental issues, with one user considering switching to vLLM after learning about potential inference quality differences.
+
+**Tags**: `#local-llm`, `#llm-inference`, `#ollama`, `#vllm`, `#qwen`
 
 ---
 
 <a id="item-8"></a>
-## [Coding Agents: Beyond Line-by-Line Code Review](https://simonwillison.net/2026/Aug/22/more-than-just-code-review/) ⭐️ 7.0/10
+## [llm 0.33 Released with OpenAI Library and httpx2 Upgrades](https://simonwillison.net/2026/Aug/22/llm/) ⭐️ 7.0/10
 
-Simon Willison argues that the key skill for using coding agents is confidently instructing and verifying changes, which may not always require line-by-line code review. He suggests that other validation methods can be more effective than eyeballing every line. This perspective is significant for developers adopting AI coding agents, as it shifts the focus from exhaustive code review to higher-level verification strategies. It could influence how teams integrate agents into their workflows, emphasizing confidence and validation over manual inspection. Willison notes that while sometimes reviewing every line is necessary, it has never been the most effective way to validate a change. He implies that alternative methods, such as testing or behavioral verification, can be more efficient.
+llm 0.33 has been released, upgrading to the OpenAI Python library 3.x and switching the HTTP client dependency from httpx to httpx2. It also adds --key options for embedding commands and allows repeating -t/--template to combine templates. This release ensures compatibility with the latest OpenAI library and HTTP client, which is crucial for developers relying on llm for LLM interactions. The new embedding key support and template combination feature enhance flexibility and streamline workflows for users. The embedding models now follow the same key pattern as regular LLM models, with a compatibility fallback for existing plugins. Additionally, reasoning-capable Responses API models now support a reasoning_summary option with auto, concise, and detailed values.
 
-rss · Simon Willison · Aug 22, 15:56
+rss · Simon Willison · Aug 22, 17:01
 
-**Background**: Coding agents are AI systems that interpret goals, analyze context, and generate code changes, automating software development tasks beyond simple autocompletion. Agentic engineering is an emerging discipline that orchestrates autonomous AI agents to plan, execute, test, and refine code while humans provide high-level direction and oversight. This news reflects a broader trend in agentic engineering where human roles shift from manual code review to higher-level validation and guidance.
+**Background**: llm is a command-line tool for interacting with various large language models, allowing users to run prompts, manage templates, and perform embeddings. The OpenAI Python library is the official client for the OpenAI API, and httpx2 is a next-generation HTTP client for Python that supports both sync and async APIs.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/agentic-ai-patterns/coding-agents.html">Coding agents - AWS Prescriptive Guidance</a></li>
-<li><a href="https://grokipedia.com/page/Agentic_Engineering">Agentic Engineering</a></li>
+<li><a href="https://github.com/openai/openai-python">GitHub - openai/openai-python: The official Python library ...</a></li>
+<li><a href="https://github.com/pydantic/httpx2">GitHub - pydantic/httpx2: A next generation HTTP client for ...</a></li>
+<li><a href="https://pypi.org/project/httpx2/">httpx2 · PyPI</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#llm`, `#release`, `#OpenAI`, `#embedding`, `#CLI`
+
+---
+
+<a id="item-9"></a>
+## [Beyond Code Review: The Real Skill for Coding Agents](https://simonwillison.net/2026/Aug/22/more-than-just-code-review/) ⭐️ 7.0/10
+
+Simon Willison argues that the key skill for using coding agents is confidently instructing and verifying changes, not necessarily reviewing every line of code. He suggests alternative verification methods beyond line-by-line review. This perspective challenges traditional code review practices, which could significantly impact how developers adopt AI coding tools. It highlights a practical concern for the growing community of developers using coding agents, potentially reshaping software engineering workflows. Willison notes that eyeballing every line of code has never been the most effective way to validate a change. He implies that other methods, such as running tests or checking specific behaviors, can be more efficient.
+
+rss · Simon Willison · Aug 22, 15:56
+
+**Background**: Coding agents are AI-powered tools that can autonomously write, modify, and debug code, often operating in a terminal or IDE. Agentic engineering is a disciplined approach to AI-assisted development that emphasizes human oversight and engineering rigor. This post fits into a broader discussion about how to effectively integrate AI into software development.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://agentic.ai/best/coding-agents">20 Best AI Coding Agents in 2026 — Agentic.ai</a></li>
+<li><a href="https://www.ibm.com/think/topics/agentic-engineering">What is Agentic Engineering? | IBM</a></li>
+<li><a href="https://simonwillison.net/guides/agentic-engineering-patterns/what-is-agentic-engineering/">What is agentic engineering? - Agentic Engineering Patterns - Simon Willison's Weblog</a></li>
 
 </ul>
 </details>
 
 **Tags**: `#code-review`, `#coding-agents`, `#generative-ai`, `#agentic-engineering`, `#AI`
-
----
-
-<a id="item-9"></a>
-## [LLM 0.33 Release: OpenAI 3.x Upgrade and New Embedding Key Support](https://simonwillison.net/2026/Aug/22/llm/) ⭐️ 6.0/10
-
-LLM 0.33 has been released, upgrading to the OpenAI Python library 3.x and switching the HTTP client dependency from httpx to httpx2. It also adds --key support for llm embed and llm embed-multi commands, and allows repeating -t/--template to combine templates. This release ensures compatibility with the latest OpenAI Python library and improves the flexibility of embedding commands, making it easier for developers to manage API keys and combine templates. The template combination feature enables more powerful workflows, such as packaging models with default options. The upgrade to OpenAI 3.x required switching to httpx2, which is a new HTTP client library. The --key support for embedding commands allows passing a per-call key without changing shared model state, with a compatibility fallback for existing plugins. Additionally, the reasoning_summary option is now supported for Reasoning-capable Responses API models.
-
-rss · Simon Willison · Aug 22, 17:01
-
-**Background**: LLM is a command-line tool for accessing large language models, developed by Simon Willison. It supports various models and plugins, and this release follows a quick 0.32.1 fix that pinned openai<3 to address compatibility issues. The upgrade to OpenAI 3.x and httpx2 is part of ongoing maintenance to keep the tool up-to-date with dependencies.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://simonwillison.net/2026/Aug/21/llm/">Release : llm 0 .32.1 | Simon Willison’s Weblog</a></li>
-<li><a href="https://pypi.org/project/openai/">The official Python library for the openai API</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#llm`, `#release`, `#openai`, `#cli`, `#python`
 
 ---
