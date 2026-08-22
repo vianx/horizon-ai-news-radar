@@ -9,218 +9,214 @@ lang: zh
 
 ---
 
-1. [Linus Torvalds 称赞 AI 在调试 Linux 内核错误中的作用](#item-1) ⭐️ 8.0/10
-2. [开发者从零训练 250M 参数 LLM，60MB 部署，配 1 比特磁盘缓存](#item-2) ⭐️ 8.0/10
-3. [DelveRL：用于训练游戏智能体的开源 Roguelike](#item-3) ⭐️ 8.0/10
-4. [开源模型加速追赶：每代追平时间减半](#item-4) ⭐️ 8.0/10
-5. [SGLang v0.5.18：重大版本发布，新增模型与性能提升](#item-5) ⭐️ 7.0/10
-6. [为什么你的本地大语言模型感觉比实际更笨](#item-6) ⭐️ 7.0/10
-7. [苹果在 macOS 27 Golden Gate 中弃用 hdiutil](#item-7) ⭐️ 7.0/10
-8. [编码代理：超越代码审查的验证](#item-8) ⭐️ 7.0/10
-9. [llm 0.33 发布：升级 OpenAI 库并新增 --key 支持](#item-9) ⭐️ 6.0/10
+1. [SGLang v0.5.18：重大版本发布，新增模型与性能提升](#item-1) ⭐️ 8.0/10
+2. [林纳斯·托瓦兹称赞 AI 协助调试 Linux 内核错误](#item-2) ⭐️ 8.0/10
+3. [开发者从零构建 60MB 量化 LLM，配备磁盘缓存](#item-3) ⭐️ 8.0/10
+4. [DelveRL：用于训练强化学习代理的开源 Roguelike 游戏](#item-4) ⭐️ 8.0/10
+5. [评估分辨率伪影扭曲了未训练 CNN 的脑相似性](#item-5) ⭐️ 8.0/10
+6. [开源模型追赶加速，每代差距减半](#item-6) ⭐️ 8.0/10
+7. [美国团体敦促 FTC 调查 AI 公司销毁书籍行为](#item-7) ⭐️ 8.0/10
+8. [编码代理需要的不仅仅是代码审查](#item-8) ⭐️ 7.0/10
+9. [llm 0.33 发布：升级 OpenAI 3.x 并支持嵌入密钥](#item-9) ⭐️ 6.0/10
 
 ---
 
 <a id="item-1"></a>
-## [Linus Torvalds 称赞 AI 在调试 Linux 内核错误中的作用](https://simonwillison.net/2026/Aug/22/linus-torvalds/) ⭐️ 8.0/10
+## [SGLang v0.5.18：重大版本发布，新增模型与性能提升](https://github.com/sgl-project/sglang/releases/tag/v0.5.18) ⭐️ 8.0/10
 
-Linus Torvalds 公开称赞 AI 在 Linux 内核 Xe GPU 驱动程序的艰难调试过程中提供了巨大帮助，甚至让 AI 编写了提交信息。修复涉及单行更改，即 round_up() 应为 round_down()。 来自 Torvalds 这样备受尊敬的人物的认可，凸显了 AI 在复杂软件工程任务中日益增长的实用性，可能鼓励更广泛的采用。这也强调了在使用 AI 工具时人类坚持和监督的重要性，因为 AI 多次建议放弃。 调试过程需要 24 个调试补丁和 18 次内核启动才能隔离错误。Torvalds 指出，虽然 AI 多次准备放弃，但在推动下它忠实地添加调试代码并分析结果，展示了其局限性和实用性。
+SGLang v0.5.18 已发布，包含来自 212 位贡献者的 710 个拉取请求。此版本新增了对多个模型的支持，包括 Muse Glimmer、Intern-S2-Mobius 和 SANA-Video，并进行了性能优化，如重叠检查点暂存和 TP LMHead 的全对全通信。 此版本显著扩展了 SGLang 的模型覆盖范围并提升了推理效率，这对在生产环境中部署大型语言模型的开发者至关重要。启动速度加快和延迟降低等性能提升，将使在高端硬件上运行 DeepSeek-V4 等模型的用户受益。 关键优化包括重叠检查点暂存，使 Qwen3-32B 在 H100 上的启动速度提升高达 2.38 倍；TP LMHead 的全对全通信将 DeepSeek-V4-Pro B200 上的 LMHead 时间从 320 微秒降至 169 微秒。该版本还将编译内核缓存统一到 SGLANG_CACHE_DIR 下，并将依赖更新为 torch 2.13.0、flashinfer 0.6.17 和 sgl-kernel 0.4.6.post1。
 
-rss · Simon Willison · 8月22日 21:04
+github · Fridge003 · 8月22日 00:09
 
-**背景**: Linux 内核是许多操作系统的核心，而 Xe 驱动程序是英特尔为 Linux 开发的新 GPU 驱动程序。调试内核问题以复杂和耗时著称。AI 辅助编程工具（如大型语言模型）越来越多地用于帮助代码生成和调试，但它们有时可能不可靠或容易放弃。
+**背景**: SGLang 是一个用于大型语言模型和多模态模型的高性能服务框架，旨在优化推理吞吐量和延迟。它支持多种模型，并提供连续批处理、CUDA 图和 FlashInfer 集成等功能。该版本包含的新模型包括 Meta 的 30B 参数智能体模型 Muse Glimmer，以及 InternLM 的 35B 基础模型 Intern-S2-Mobius，反映了开源 AI 模型日益多样化的趋势。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.phoronix.com/news/Linus-Torvalds-Debug-AI">Linus Torvalds Endures A Debug Session From Hell ... - Phoronix</a></li>
-<li><a href="https://itsfoss.com/news/torvalds-used-ai-fix-kernel-bug/">Linux Creator Linus Torvalds Just Used AI to Fix a Kernel Bug</a></li>
-<li><a href="https://www.reddit.com/r/linux/comments/1vu7aw9/linus_torvalds_uses_ai_to_debug_an_intel_gpu/">Linus Torvalds uses AI to debug an Intel GPU driver bug : r/linux - Reddit</a></li>
+<li><a href="https://github.com/sgl-project/sglang/releases">Releases · sgl-project/ sglang</a></li>
+<li><a href="https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model">Introducing Muse Glimmer: An Open Agentic Model That Runs on Your Device | Meta AI Research</a></li>
+<li><a href="https://huggingface.co/internlm/Intern-S2-Mobius">internlm/Intern-S2-Mobius - Hugging Face</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: Reddit 上的讨论普遍称赞 Torvalds 对 AI 的务实使用，一些人指出 AI 的固执与他自己的固执相比具有讽刺意味。其他人则讨论了 AI 生成的提交信息的质量以及对内核开发的更广泛影响，一些人对 AI 在关键系统中的可靠性表示怀疑。
+**标签**: `#SGLang`, `#LLM inference`, `#release`, `#AI models`, `#open source`
+
+---
+
+<a id="item-2"></a>
+## [林纳斯·托瓦兹称赞 AI 协助调试 Linux 内核错误](https://simonwillison.net/2026/Aug/22/linus-torvalds/) ⭐️ 8.0/10
+
+林纳斯·托瓦兹公开承认，在调试一个棘手的 Linux 内核图形驱动问题时，AI 提供了巨大帮助，他甚至让 AI 撰写了提交信息。该修复提交 818bebeb63dd 解决了 Xe 驱动错误地将扁平 CCS 存储作为可用 VRAM 分配的问题。 这标志着软件工程界最具影响力的人物之一对 AI 辅助开发的显著认可，可能鼓励更广泛地在内核和系统编程中采用 AI 工具。同时，它也凸显了 AI 在复杂调试中的实际效用，并承认其局限性，例如过早地宣称问题无法解决。 调试过程涉及 24 个调试补丁和 18 次内核启动，最终将错误定位到一行代码，即应使用 round_down()却使用了 round_up()。托瓦兹指出，AI 多次声称问题不可能解决，但在他的推动下，AI 仍忠实地添加调试代码并分析结果。
+
+rss · Simon Willison · 8月22日 21:04
+
+**背景**: Linux 内核是许多操作系统的核心，其开发通常由像林纳斯·托瓦兹这样的维护者管理。Xe 驱动是英特尔为 Linux 开发的新一代图形驱动，该错误涉及计算命令流处理器（CCS）存储被错误地暴露为可用 VRAM，导致内存损坏。AI 辅助编程工具（如大型语言模型）越来越多地被用于生成代码和辅助调试，但它们在复杂系统中的可靠性仍存在争议。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://github.com/torvalds/linux/commit/818bebeb63dd6bf5f4e07e145f6cdbace520a34c">drm/xe: Don't hand out the flat CCS storage as usable VRAM · torvalds/linux@818bebe</a></li>
+<li><a href="https://www.phoronix.com/news/Linus-Torvalds-Debug-AI">Linus Torvalds Endures A Debug Session From Hell ... - Phoronix</a></li>
+<li><a href="https://itsfoss.com/news/torvalds-used-ai-fix-kernel-bug/">Linux Creator Linus Torvalds Just Used AI to Fix a Kernel Bug</a></li>
+
+</ul>
+</details>
 
 **标签**: `#AI-assisted development`, `#Linus Torvalds`, `#debugging`, `#Linux kernel`, `#AI limitations`
 
 ---
 
-<a id="item-2"></a>
-## [开发者从零训练 250M 参数 LLM，60MB 部署，配 1 比特磁盘缓存](https://www.reddit.com/r/MachineLearning/comments/1vv2nkh/i_developed_my_own_quantized_llm_from_scratch/) ⭐️ 8.0/10
+<a id="item-3"></a>
+## [开发者从零构建 60MB 量化 LLM，配备磁盘缓存](https://www.reddit.com/r/MachineLearning/comments/1vv2nkh/i_developed_my_own_quantized_llm_from_scratch/) ⭐️ 8.0/10
 
-一位开发者从零开始，在 30B token 上训练了一个 250M 参数的 LLM，并将其量化到 2 比特以下，实现了 60MB 的部署体积。该模型使用基于磁盘的 1 比特缓存，支持高达 1 亿 token 的上下文，最近的 2048 个 token 保留在 fp16 中。 这展示了一种在边缘设备上以极低内存且无需 GPU 运行 LLM 的实用方法，可能使消费级硬件上的长上下文应用成为可能。基于磁盘的缓存可能启发新的方法，在不需大量 RAM 的情况下处理超长上下文。 该模型在保留的英文网页文本上实现了 23.3 的困惑度，并使用每个 token 固定的 512 位编码代替学习的嵌入表，嵌入层零训练参数。磁盘缓存每个 token 约占用 320 字节，因此 100 万 token 在磁盘上约占用 320MB。
+一位开发者从零开始，在 30B token 的 FineWeb 数据上训练了一个 250M 参数的 LLM，量化到 2 比特以下，实现了 60MB 的部署体积，在 CPU 上运行速度达 400 tok/s。该模型使用基于磁盘的缓存来处理长上下文，将较早的 token 压缩至 1 比特并存储在磁盘上。 这展示了一种极端的模型压缩和高效长上下文处理的实用方法，可能使 LLM 在资源受限设备上的部署成为可能。它还引入了一种新颖的固定 512 位 token 嵌入，无需训练参数，这可能激发对高效 token 表示的进一步研究。 该模型的词汇表使用固定 512 位编码，共 131k 个 token，总计 8.4 MB，且零训练参数，在 WordSim-353 上达到 0.619 的 Spearman 相关性。长上下文缓存将较早的 token 以每 token 320 字节存储，使 100 万 token 的历史记录仅占约 320 MB 磁盘空间，模型被训练为从该缓存中检索最多 1 亿个 token。
 
 reddit · r/MachineLearning · /u/Final-Data-1410 · 8月22日 04:39
 
-**背景**: 量化通过减少每个权重使用的比特数来减小模型体积，但极低比特量化通常会损害性能。近期研究表明，训练不足的模型可能对低比特量化更鲁棒，这与本项目的做法一致。长上下文处理通常需要大型 KV 缓存，但本项目将较旧的 token 以压缩形式卸载到磁盘，用存储换取内存。
+**背景**: LLM 量化通过降低权重精度来减小模型大小，通常降至 4 位或 2 位，但极端压缩通常会降低质量。传统的 KV 缓存以高精度存储所有过去的 token，随着上下文长度线性增长，使得长上下文内存密集。该项目结合了激进的量化和基于磁盘的缓存，以同时解决模型大小和上下文长度带来的挑战。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://arxiv.org/html/2411.17691v2">Low-Bit Quantization Favors Undertrained LLMs: Scaling Laws ...</a></li>
-<li><a href="https://arxiv.org/html/2410.03065v1">Compute or Load KV Cache? Why not both?</a></li>
+<li><a href="https://arxiv.org/abs/2508.05571">[2508.05571] iFairy: the First 2-bit Complex LLM with All Parameters in $\{\pm1, \pm i\}$</a></li>
+<li><a href="https://github.com/pprp/awesome-llm-quantization">GitHub - pprp/Awesome-LLM-Quantization: Awesome list for LLM quantization · GitHub</a></li>
+<li><a href="https://hackernoon.com/optimizing-llm-performance-with-lm-cache-architectures-strategies-and-real-world-applications">Optimizing LLM Performance with LM Cache ... | HackerNoon</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区反应非常积极和好奇，作者表示松了一口气，没有被批评。评论者乐于助人且积极参与，项目 GitHub 星标升至 7 个。
+**社区讨论**: Reddit 社区反应积极，作者对好奇且有帮助的评论表示感谢。讨论可能集中在该方法的技术新颖性、潜在应用和权衡上。
 
-**标签**: `#LLM`, `#quantization`, `#long-context`, `#edge deployment`, `#training`
-
----
-
-<a id="item-3"></a>
-## [DelveRL：用于训练游戏智能体的开源 Roguelike](https://www.reddit.com/r/MachineLearning/comments/1vvii1j/i_built_an_opensource_roguelike_specifically_for/) ⭐️ 8.0/10
-
-DelveRL，一个专为训练游戏智能体而设计的开源、可人类游玩的 Roguelike 游戏已发布。它具备结构化 API、确定性模拟、程序化关卡和部分可观测性，基线 PPO 智能体达到中位数 18 层，延长运行可达 33 层。 该项目通过提供一个可人类游玩、确定性、部分可观测且易于与智能体框架集成的基准，填补了强化学习环境中的空白。它为研究社区提供了一个新的平台来测试和比较算法，可能加速基于游戏的 AI 训练进展。 DelveRL 与渲染器无关，并支持批量环境以高效训练。包含的循环 PPO 训练器和基线智能体，以及游戏、训练代码、检查点、桥接文档和原始基准均已开源。
-
-reddit · r/MachineLearning · /u/SnyderConsulting · 8月22日 17:32
-
-**背景**: Roguelike 是角色扮演游戏的一个子类型，特点是程序化生成的关卡、回合制游戏和永久死亡。强化学习（RL）智能体常常在部分可观测性上遇到困难，即它们缺乏关于环境状态的完整信息。PPO（近端策略优化）是一种流行的同策略 RL 算法，直接估计随机策略并使用价值函数评论家。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://github.com/SnyderConsulting/DelveRL">GitHub - SnyderConsulting/DelveRL: A human-playable turn ...</a></li>
-<li><a href="https://kblip.com/products/delverl-open-source-roguelike-for-training-game-playing-T3Sm12A">DelveRL: Open-source roguelike for training game-playing ...</a></li>
-<li><a href="https://www.mathworks.com/help/reinforcement-learning/ug/proximal-policy-optimization-agents.html">Proximal Policy Optimization (PPO) Agent - MATLAB & Simulink</a></li>
-
-</ul>
-</details>
-
-**标签**: `#reinforcement learning`, `#open-source`, `#game AI`, `#environment`, `#PPO`
+**标签**: `#LLM`, `#quantization`, `#efficient inference`, `#long context`, `#from-scratch training`
 
 ---
 
 <a id="item-4"></a>
-## [开源模型加速追赶：每代追平时间减半](https://newsletter.semianalysis.com/p/are-open-models-catching-up) ⭐️ 8.0/10
+## [DelveRL：用于训练强化学习代理的开源 Roguelike 游戏](https://www.reddit.com/r/MachineLearning/comments/1vvii1j/i_built_an_opensource_roguelike_specifically_for/) ⭐️ 8.0/10
 
-SemiAnalysis 报告指出，开源模型正以加速的速度缩小与闭源模型的差距，每一代追平时间减半，尤其是在智能体时代。例如，Kimi K2.6 在 4.8 个月内超越了 Opus 4.5，GLM-5.2 在 6 个月内超过了 GPT-5.2。 这一趋势预示着模型层可能商品化，因为像 GLM 5.3 和 Kimi K3 这样的开源模型现在能够胜任许多曾帮助 Anthropic 获得超过 650 亿美元年化收入的编程和智能体任务。这凸显了产品化（而非仅仅是基准分数）将是闭源领导者保持优势的关键。 SemiAnalysis 将大模型历史分为早期扩展、推理和智能体三个时代，并发现开源与闭源前沿的能力差距呈周期性变化。文章指出，基准测试的追平先于产品追平，这意味着开源模型可能在分数上匹敌，但在实际产品体验上仍落后。
+作者发布了 DelveRL，这是一个专为训练游戏代理而设计的开源 Roguelike 游戏。它具有结构化 API、确定性模拟、程序化关卡、部分可观测性，并包含一个循环 PPO 训练器，基线结果达到中位数 18 层，扩展运行达到 33 层。 该项目通过提供一个易于与代理框架集成且可人类游玩的游戏环境，弥合了游戏开发与强化学习研究之间的鸿沟，填补了现有环境的空白。它为社区提供了一个基准，用于测试各种 RL 方法，可能加速游戏 AI 的进展。 DelveRL 完全在本地运行，包括批处理的无渲染器环境和循环 PPO 训练器。游戏、训练代码、检查点、桥接文档和原始基准全部开源，邀请社区贡献并改进基线。
 
-telegram · zaihuapd · 8月22日 08:26
+reddit · r/MachineLearning · /u/SnyderConsulting · 8月22日 17:32
 
-**背景**: 开源 AI 模型是指权重公开可用的模型，任何人都可以使用和修改，而闭源模型则是专有的。智能体时代指的是 AI 系统能够自主操作工具和数据，而不仅仅是响应提示。历史上，闭源模型在能力上领先，但最近像 Kimi K3 和 GLM-5.2 这样的开源模型已显著缩小了差距。
+**背景**: Roguelike 是一种游戏类型，特点是程序化生成、回合制游戏和永久死亡，由于部分可观测性和战略深度，对 AI 代理来说具有挑战性。强化学习（RL）代理通过与环境的交互来学习，而 PPO（近端策略优化）是一种流行的同策略算法。循环 PPO 使用循环神经网络通过跨时间步保持记忆来处理部分可观测性。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://semianalysis.com/">SemiAnalysis – Bridging the gap between the world's most important...</a></li>
-<li><a href="https://www.superpowerdaily.com/posts/open-models-are-catching-the-frontier-faster-benchmark-scores-aren-t-the-whole-contest">Open Models Are Catching the Frontier Faster. | Superpower Daily</a></li>
-<li><a href="https://www.oneusefulthing.org/p/a-guide-to-which-ai-to-use-in-the">A Guide to Which AI to Use in the Agentic Era</a></li>
+<li><a href="https://github.com/MarcoMeter/recurrent-ppo-truncated-bptt">GitHub - MarcoMeter/recurrent-ppo-truncated-bptt: Baseline ...</a></li>
+<li><a href="https://docs.pytorch.org/tutorials/intermediate/reinforcement_ppo.html">Reinforcement Learning (PPO) with TorchRL Tutorial</a></li>
 
 </ul>
 </details>
 
-**标签**: `#open-source`, `#AI models`, `#industry analysis`, `#SemiAnalysis`, `#model commoditization`
+**标签**: `#reinforcement learning`, `#open-source`, `#game environment`, `#AI training`, `#procedural generation`
 
 ---
 
 <a id="item-5"></a>
-## [SGLang v0.5.18：重大版本发布，新增模型与性能提升](https://github.com/sgl-project/sglang/releases/tag/v0.5.18) ⭐️ 7.0/10
+## [评估分辨率伪影扭曲了未训练 CNN 的脑相似性](https://www.reddit.com/r/MachineLearning/comments/1vvdxwt/the_evaluation_resolution_has_been_shown_to_have/) ⭐️ 8.0/10
 
-SGLang v0.5.18 已发布，包含来自 212 位贡献者的 710 个 PR。它新增了对 Muse Glimmer、Intern-S2-Mobius、SANA-Video 等多个新模型的支持，并进行了性能优化，如重叠检查点暂存和 TP LMHead 的全对全通信。 此次发布意义重大，它扩展了 SGLang 的模型覆盖范围，纳入了 Meta 的 Muse Glimmer 和 NVIDIA 的 SANA-Video 等前沿模型，使其成为更通用的 LLM 推理工具。性能改进（如更快的启动速度和更低的 LMHead 延迟）直接降低了推理成本并提高了吞吐量，使广大用户受益。 该版本引入了重叠检查点暂存，使 Qwen3-32B 在 H100 上的启动速度提升最高 2.38 倍；TP LMHead 的全对全通信将 DeepSeek-V4-Pro B200 上的 LMHead 时间从 320 微秒降至 169 微秒。此外，它将编译内核缓存统一到 SGLANG_CACHE_DIR，并将依赖更新为 torch 2.13.0、flashinfer 0.6.17 和 sgl-kernel 0.4.6.post1。
+一篇新的预印本表明，未训练 CNN 在 V1 区域表现出的脑相似性在很大程度上是评估分辨率的伪影，而非学习规则的真实属性。研究显示，经过训练和未训练的 BP CNN 之间的差距从 32 像素时的-0.001±0.007 缩小到 224 像素时的+0.044±0.006，这一趋势在图像尺寸范围内是非单调的。 这一发现挑战了计算神经科学中一个常见论断，即未训练的 CNN 在 V1 区域可以媲美甚至超越经过训练的 CNN，这对模型-大脑比较的方式具有重要影响。它强调了仔细控制评估参数以避免对生物合理性得出误导性结论的必要性。 该研究使用了一个在 CIFAR-10 子集上以 32 像素训练的小型 CNN，包含五种学习规则（随机初始化、反向传播、反馈对齐、预测编码、STDP），并在 THINGS-fMRI 刺激上以从 32 像素到 224 像素的六种分辨率进行评估。他们排除了训练/评估分辨率匹配、Gabor/像素低级结构、未校准的批归一化以及向全局亮度收敛等因素，并发现 LOC 区域的反向传播优于未训练的效果在所有分辨率下都存在。
 
-github · Fridge003 · 8月22日 00:09
+reddit · r/MachineLearning · /u/ConfusionSpiritual19 · 8月22日 14:30
 
-**背景**: SGLang 是一个开源的 LLM 推理框架，旨在实现高性能和高效率。它支持多种模型，并提供连续批处理、张量并行和优化内核等功能。此次发布延续了其快速发展的趋势，增加了对新兴模型的支持，并通过重叠检查点和全对全通信等先进技术提升了性能。
+**背景**: 在模型-大脑比较中，研究人员通常使用表征相似性分析（RSA）来衡量模型内部表征与大脑活动的一致性。一个常见的论断是，未训练的 CNN 在早期视觉皮层（V1）可以媲美甚至超越经过训练的 CNN，这表明像反向传播这样的学习规则可能不是产生脑相似表征所必需的。本研究调查了这种论断是否是评估分辨率的伪影，因为评估分辨率会影响表观相似性。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model">Introducing Muse Glimmer: An Open Agentic Model That Runs on ...</a></li>
-<li><a href="https://huggingface.co/internlm/Intern-S2-Mobius">internlm/Intern-S2-Mobius · Hugging Face</a></li>
-<li><a href="https://nvlabs.github.io/Sana/Video/">SANA Video - nvlabs.github.io</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Spike-timing-dependent_plasticity">Spike-timing-dependent plasticity - Wikipedia</a></li>
+<li><a href="https://www.emergentmind.com/topics/feedback-alignment-fa">Feedback Alignment in Neural Networks</a></li>
+<li><a href="https://arxiv.org/html/2505.19458">Recurrent Self - Attention Dynamics: An Energy-Agnostic Perspective...</a></li>
 
 </ul>
 </details>
 
-**标签**: `#LLM inference`, `#SGLang`, `#release`, `#AI/ML`, `#open source`
+**社区讨论**: Reddit 上的讨论强调了这一方法论发现的重要性，评论者指出，这可能使之前未控制评估分辨率的研究失效。一些人就 LOC 效应的解释及其对其他架构和数据集的普适性展开了辩论。
+
+**标签**: `#computational neuroscience`, `#CNN`, `#brain-like models`, `#evaluation methodology`, `#RSA`
 
 ---
 
 <a id="item-6"></a>
-## [为什么你的本地大语言模型感觉比实际更笨](https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917) ⭐️ 7.0/10
+## [开源模型追赶加速，每代差距减半](https://newsletter.semianalysis.com/p/are-open-models-catching-up) ⭐️ 8.0/10
 
-一篇论坛帖子解释了为什么本地大语言模型在实践中常常表现不佳，并提供了提升其感知智能的实用技巧，社区成员分享了实际经验和基准测试。 这很重要，因为许多用户出于隐私和成本原因依赖本地大语言模型，了解性能陷阱可以帮助他们在不升级硬件的情况下获得更好的结果。它也凸显了理论性能与实际性能之间的差距，这对本地 AI 的更广泛采用至关重要。 帖子和评论提到了 Ollama、VLLM 和 sglang 等具体工具，并指出 Ollama 可能存在超出批处理范围的推理质量问题。用户报告了高令牌率（例如在 5090 上达到 150+ tok/s）以及在正确设置下成功完成复杂任务，但也提醒注意量化和上下文长度设置。
+SemiAnalysis 报告称，开源模型正以加速的速度追赶闭源模型，每代差距减半，尤其是在智能体时代。例如，Kimi K2.6 在 4.8 个月内超越了 Opus 4.5，GLM-5.2 在 6 个月内超过了 GPT-5.2。 这一趋势标志着模型层的商品化，将定价权和利润扩张转移到芯片和基础设施层。它可能重塑竞争格局，因为像 GLM 5.3 和 Kimi K3 这样的开源模型现在可以处理许多此前推动 Anthropic 收入的编程和智能体任务。 SemiAnalysis 将模型历史分为三个时代：早期扩展、推理和智能体，并指出能力差距呈周期性波动。尽管基准测试有所提升，文章提醒基准测试并非全部，Anthropic 的产品化能力仍是其优势。
 
-hackernews · felineflock · 8月22日 18:14 · [社区讨论](https://news.ycombinator.com/item?id=49402232)
+telegram · zaihuapd · 8月22日 08:26
 
-**背景**: 本地大语言模型是在个人硬件上运行的大型语言模型，提供隐私和离线功能。性能可能受到量化、上下文长度和推理引擎选择等因素的影响，这可能使它们看起来比基准分数所暗示的更笨。
+**背景**: 开源模型是指权重公开可用的 AI 模型，允许开发者自由使用和修改。闭源模型（如 OpenAI 和 Anthropic 的模型）是专有的，通过 API 访问。智能体时代指的是能够自主操作工具和数据的 AI 系统，而不仅仅是响应提示。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://medium.com/@kapildevkhatik2/optimizing-ollama-performance-on-windows-hardware-quantization-parallelism-more-fac04802288e">Optimizing Ollama Performance on Windows: Hardware, Quantization, Parallelism & More | by Kapil Khatik | Medium</a></li>
-<li><a href="https://openclawsanctuary.com/ollama-advanced">Ollama Slow on CPU? Tune These Parameters for Faster Local LLMs (2026) | OpenClaw Sanctuary</a></li>
-<li><a href="https://julsimon.medium.com/what-to-buy-for-local-llms-april-2026-a4946a381a6a">What to Buy for Local LLMs (April 2026) | by Julien Simon | Medium</a></li>
+<li><a href="https://x.com/SemiAnalysis_/status/2090842316655243463">SemiAnalysis on X: "Are Open Models Catching Up? Comparing ...</a></li>
+<li><a href="https://www.mindstudio.ai/blog/what-is-the-agentic-era-google-io-2026">What Is the Agentic Era? How Google I/O 2026 Defined the Next Phase of AI | MindStudio</a></li>
+<li><a href="https://www.reddit.com/r/aiagents/comments/1rqtjjf/opus_46_vs_kimi_25_i_ran_a_logic_stress_test_for/">r/aiagents on Reddit: Opus 4.6 vs Kimi 2.5: I ran a logic stress test for agent workflows (no synthetic benchmarks)</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区评论显示了正面体验（例如 MacBook Pro 上的 Qwen 3.8 27B）和关于 Ollama 与 VLLM 的技术争论，一些用户质疑 Ollama 的推理质量。其他人分享了在高端 GPU 上使用 sglang 的令人印象深刻的结果，而一些人则指出了像 Codex 这样的模型中的安全过滤等限制。
+**社区讨论**: 社区讨论强调了实际比较，例如 Reddit 用户测试 Opus 4.6 与 Kimi 2.5 在智能体工作流中的表现，指出溢价定价可能不合理。还有人指出成本差异巨大，K2.6 支持更广泛的重试策略和并行工作进程。
 
-**标签**: `#LLM`, `#local-ai`, `#performance`, `#Ollama`, `#hardware`
+**标签**: `#open-source AI`, `#model comparison`, `#AI trends`, `#SemiAnalysis`, `#commoditization`
 
 ---
 
 <a id="item-7"></a>
-## [苹果在 macOS 27 Golden Gate 中弃用 hdiutil](https://lapcatsoftware.com/articles/2026/8/7.html) ⭐️ 7.0/10
+## [美国团体敦促 FTC 调查 AI 公司销毁书籍行为](https://www.axios.com/2026/08/21/ftc-ai-companies-book-destruction-investigate) ⭐️ 8.0/10
 
-苹果已在 macOS 27 Golden Gate 中弃用命令行工具 hdiutil，标志着其正逐步淘汰传统的磁盘映像和 RAM 磁盘管理工具。该弃用消息于 2026 年 8 月 7 日通过 Lapcat Software 的博客文章公布。 此次弃用对依赖 hdiutil 创建、挂载和管理磁盘映像以及创建 RAM 磁盘的开发者和高级用户意义重大。它引发了人们对苹果长期支持这些工作流程的质疑，并可能迫使社区寻找替代方案或适应新工具。 弃用消息在 macOS 27 Golden Gate 版本中提及，但尚未公布替代工具。历史上，hdiutil 是在 macOS 上创建 RAM 磁盘的主要方法，因此其弃用可能也意味着通过该工具创建 RAM 磁盘的方式将被淘汰。
+2026 年 8 月 21 日，包括 Demand Progress 教育基金和美国消费者联合会在内的十余家美国民间团体联名致信联邦贸易委员会（FTC），要求调查 AI 公司购买、扫描并销毁实体书以训练模型的行为，认为这违反了《联邦贸易委员会法》第 5 条，构成不公平竞争。 这标志着 AI 训练数据之争从版权领域扩展至反垄断和竞争监管领域。若 FTC 受理此案，可能对 AI 公司获取训练数据的方式施加新限制，影响 Anthropic、谷歌、微软和 OpenAI 等主要企业，并塑造 AI 发展的未来。 信中特别提到 Anthropic 耗资数百万美元购书、切除书脊并扫描页面以训练 Claude 的做法。团体认为这种“囤积并销毁”的做法抬高了对手成本、构筑了护城河，但并未主张限制 AI 训练本身。
 
-hackernews · zdw · 8月22日 19:04 · [社区讨论](https://news.ycombinator.com/item?id=49402741)
+telegram · zaihuapd · 8月22日 15:40
 
-**背景**: hdiutil 是 macOS 中的命令行工具，用于操作磁盘映像，包括创建、挂载、验证和转换。它依赖于 DiskImages 框架，常用于挂载 DMG 文件或创建 RAM 磁盘。此次弃用遵循了苹果逐步淘汰旧工具的模式，类似于早前弃用的 xip，而 xip 仍用于分发 Xcode。
+**背景**: AI 公司需要海量文本数据来训练大型语言模型（如 Claude、GPT-4 和 Gemini）。虽然大部分数据来自互联网，但一些公司转而购买实体书，尤其是珍本或绝版书，以获取高质量内容。这种做法因销毁实体副本而受到批评，可能导致珍贵作品永久消失。FTC 依据《联邦贸易委员会法》第 5 条有权监管不公平竞争方法，此次投诉旨在将该条款适用于 AI 训练数据的获取。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://ss64.com/mac/hdiutil.html">HDIUtil Command: Manipulate disk images in macOS</a></li>
-<li><a href="https://osxhub.com/macos-hdiutil-command-disk-image-management/">The hdiutil Command on macOS: Disk Images, DMG-to-ISO, and the .cdr Gotcha - osxhub</a></li>
-<li><a href="https://commandmasters.com/commands/hdiutil-osx/">How to Use the Command 'hdiutil' (with examples)</a></li>
+<li><a href="https://www.nationpress.com/all/ftc-urged-to-probe-ai-book-destruction-practices">FTC urged to probe AI firms buying and destroying books for ...</a></li>
+<li><a href="https://startupfortune.com/ai-firms-are-buying-and-pulping-rare-books-after-scanning-them-for-training-data/">AI Firms Are Buying and Pulping Rare Books After Scanning ...</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区评论对 hdiutil 是否真的会被移除表示怀疑，指出 xip 已被弃用多年，但仍用于 Xcode 分发。一些用户批评苹果的 bug 处理方式，而另一些用户则指出普通用户很少使用 hdiutil，并质疑其弃用的影响。
-
-**标签**: `#macOS`, `#Apple`, `#deprecation`, `#developer tools`, `#hdiutil`
+**标签**: `#AI`, `#FTC`, `#regulation`, `#training data`, `#competition`
 
 ---
 
 <a id="item-8"></a>
-## [编码代理：超越代码审查的验证](https://simonwillison.net/2026/Aug/22/more-than-just-code-review/) ⭐️ 7.0/10
+## [编码代理需要的不仅仅是代码审查](https://simonwillison.net/2026/Aug/22/more-than-just-code-review/) ⭐️ 7.0/10
 
-西蒙·威利森认为，使用编码代理的关键技能是自信地指示和验证更改，这并不总是需要逐行代码审查。他指出，逐行检查代码从来都不是验证更改的最有效方式。 这一观点对于日益增长的 AI 辅助开发领域具有重要意义，因为它将焦点从传统的代码审查转向更广泛的验证策略。它为采用编码代理的开发者和团队提供了实用指导，可能影响生产力和代码质量。 文章没有提供具体的技术细节，但强调可以通过逐行审查以外的方法实现验证。这是一篇简洁的观点文章，缺乏深入的技术细节或新颖的研究。
+Simon Willison 认为，使用编码代理的关键技能是自信地指示更改并验证更改，这不一定涉及逐行代码审查。他提出，其他验证方法可能比逐行审查代码更有效。 这一观点挑战了 AI 辅助开发中对代码审查的传统重视，可能改变开发者进行验证的方式。它指出了许多开发者在采用编码代理时面临的实际技能差距，这可能影响培训和工具开发。 Willison 强调“逐行检查代码从来都不是验证更改的最有效方式”。他暗示，替代验证策略，如运行测试或使用其他自动化检查，可能更可靠。
 
 rss · Simon Willison · 8月22日 15:56
 
-**背景**: 编码代理是能够根据自然语言指令自主编写、调试和重构代码的 AI 工具。随着这些代理能力的增强，开发者需要新的技能来有效指导和验证它们的工作，超越传统的代码审查实践。
+**背景**: 编码代理是能够根据用户指令自主编写或修改代码的 AI 工具。代理工程是一个新兴学科，涉及在人工监督下编排这些代理。传统代码审查涉及手动检查每一行代码，但随着 AI 生成的代码越来越普遍，开发者正在探索更高效的验证方法。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://agentic.ai/best/coding-agents">20 Best AI Coding Agents in 2026 — Agentic.ai</a></li>
 <li><a href="https://grokipedia.com/page/Agentic_Engineering">Agentic Engineering</a></li>
+<li><a href="https://coder.com/solutions/agents">Coder Agents - AI Coding Agents on Your Infrastructure | Coder</a></li>
 
 </ul>
 </details>
 
-**标签**: `#coding-agents`, `#code-review`, `#generative-ai`, `#agentic-engineering`, `#AI`
+**标签**: `#coding-agents`, `#code-review`, `#AI`, `#LLMs`, `#agentic-engineering`
 
 ---
 
 <a id="item-9"></a>
-## [llm 0.33 发布：升级 OpenAI 库并新增 --key 支持](https://simonwillison.net/2026/Aug/22/llm/) ⭐️ 6.0/10
+## [llm 0.33 发布：升级 OpenAI 3.x 并支持嵌入密钥](https://simonwillison.net/2026/Aug/22/llm/) ⭐️ 6.0/10
 
-llm 0.33 是一个次要版本，升级到 OpenAI Python 库 3.x，并将 HTTP 客户端依赖从 httpx 切换到 httpx2。它还增加了对嵌入命令的 --key 支持，并允许重复使用 -t/--template 来组合模板。 此版本提高了与最新 OpenAI 库的兼容性，并为嵌入模型提供了更灵活的密钥管理，这对依赖 llm 进行各种 AI 任务的用户很重要。模板组合功能允许用户将模型与默认选项打包并在多个提示中复用，从而支持更强大的工作流。 升级到 OpenAI 3.x 需要将 httpx 切换为 httpx2，这是一个由 Pydantic 维护的下一代 HTTP 客户端。嵌入命令的新 --key 选项和 Python 方法的 key= 参数允许按调用解析密钥，而不改变共享模型状态，并为现有插件提供兼容性回退。此外，Responses API 模型的 reasoning_summary 选项支持 auto、concise 和 detailed 值。
+llm 0.33 已发布，升级到 OpenAI Python 库 3.x，并将 HTTP 客户端依赖从 httpx 切换到 httpx2。同时为 llm embed 和 llm embed-multi 命令添加了 --key 支持，并允许重复使用 -t/--template 来组合模板。 此版本提高了 llm 用户的一致性和灵活性，尤其是在嵌入工作流和模板组合方面。升级到 OpenAI 3.x 确保了与最新 OpenAI API 变更的兼容性，这对依赖该工具的开发者至关重要。 嵌入模型现在使用与常规 LLM 模型相同的密钥模式，并为现有插件提供了兼容性回退。此外，支持推理的 Responses API 模型现在支持 reasoning_summary 选项，其值可为 auto、concise 和 detailed，这对于模仿 OpenAI Responses API 的模型很有用。
 
 rss · Simon Willison · 8月22日 17:01
 
-**背景**: llm 是 Simon Willison 开发的命令行工具，可从终端访问大型语言模型。它支持多种模型和插件，此版本继续其演进，与最新的 OpenAI 库保持一致，并为嵌入引入更灵活的密钥处理。切换到 httpx2 反映了 Python 生态系统向这一新 HTTP 客户端的更广泛转变。
+**背景**: llm 是一个用于与大型语言模型交互的命令行工具，允许用户运行提示、管理模板和执行嵌入。OpenAI Python 库是访问 OpenAI API 的官方客户端，httpx2 是用于发出请求的 HTTP 客户端库。此版本解决了之前的修复问题，并引入了新功能以增强可用性。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://simonwillison.net/2026/aug/21/llm/">Release : llm 0 .32.1 | Simon Willison’s Weblog</a></li>
-<li><a href="https://github.com/pydantic/httpx2">GitHub - pydantic/httpx2: A next generation HTTP client for Python. 🦋</a></li>
-<li><a href="https://pypi.org/project/openai/">OpenAI Python API library</a></li>
+<li><a href="https://pypi.org/project/openai/">The official Python library for the openai API</a></li>
+<li><a href="https://github.com/simonw/llm/issues/757">llm embed -- key option · Issue #757 · simonw/ llm · GitHub</a></li>
 
 </ul>
 </details>
 
-**标签**: `#llm`, `#release`, `#CLI`, `#OpenAI`, `#embedding`
+**标签**: `#llm`, `#release`, `#OpenAI`, `#embedding`, `#CLI`
 
 ---
