@@ -5,257 +5,290 @@ date: 2026-08-24
 lang: en
 ---
 
-> From 40 items, 11 important content pieces were selected
+> From 51 items, 12 important content pieces were selected
 
 ---
 
-1. [Xiaomi XRing O3 CPU Matches Apple Single-Core, Beats Multi-Core](#item-1) ⭐️ 8.0/10
+1. [Xiaomi's XRing O3 CPU matches Apple's single-core, beats in multi-core](#item-1) ⭐️ 8.0/10
 2. [MS Paint and Photos Embed Invisible GUID Watermarks in Local AI Images](#item-2) ⭐️ 8.0/10
-3. [San Francisco Recreated as Playable Web Game from GIS Data](#item-3) ⭐️ 8.0/10
-4. [Oceans Hit Record High Temperatures, Signaling Accelerating Climate Crisis](#item-4) ⭐️ 8.0/10
-5. [IPFS Maintainers Sunset Centralized Support at Shipyard](#item-5) ⭐️ 8.0/10
-6. [OpenAI's GPT-5.6 in Kiro Boosts Developer Price-Performance](#item-6) ⭐️ 8.0/10
-7. [Linux Hack: SQLite Database as Executable](#item-7) ⭐️ 8.0/10
-8. [LLMs as Spatial Software Generators for Programmable 3D Objects](#item-8) ⭐️ 8.0/10
+3. [OpenAI Launches GPT-5.6 in Kiro for Better Price-Performance](#item-3) ⭐️ 8.0/10
+4. [Linux Trick: SQLite Database as Executable](#item-4) ⭐️ 8.0/10
+5. [AI Generates 3D Objects as Programmable Spatial Software](#item-5) ⭐️ 8.0/10
+6. [Delay-Corrected Bellman Operator and Causal Attribution for Constrained RL](#item-6) ⭐️ 8.0/10
+7. [ToMoE: Convert Dense LLMs to MoE via Dynamic Pruning](#item-7) ⭐️ 8.0/10
+8. [Hugging Face Explores Sale at Up to $13B Valuation](#item-8) ⭐️ 8.0/10
 9. [Insilico Medicine Launches O3DC Open Alliance for AI Drug Discovery Benchmarks](#item-9) ⭐️ 7.0/10
-10. [llm-anthropic 0.27 adds compatibility with anthropic v1.0.0](#item-10) ⭐️ 5.0/10
+10. [llm-anthropic 0.27 Adds Compatibility with Anthropic SDK v1.0](#item-10) ⭐️ 5.0/10
 11. [Chinese Consumers Increasingly Use AI for Product Research](#item-11) ⭐️ 5.0/10
+12. [Thomson Reuters Launches In-House LLM 'Thomson'](#item-12) ⭐️ 5.0/10
 
 ---
 
 <a id="item-1"></a>
-## [Xiaomi XRing O3 CPU Matches Apple Single-Core, Beats Multi-Core](https://twitter.com/lemire/status/2091894299289874926) ⭐️ 8.0/10
+## [Xiaomi's XRing O3 CPU matches Apple's single-core, beats in multi-core](https://twitter.com/lemire/status/2091894299289874926) ⭐️ 8.0/10
 
-Xiaomi has unveiled its new XRing O3 mobile SoC, which reportedly matches Apple's single-core performance and exceeds it in multi-core benchmarks. The chip, built on a 3nm process, features a 10-core all-big-core CPU and is the first mobile processor to support LPDDR6 memory. This marks a significant competitive shift in the mobile chip market, as Xiaomi, the third-largest smartphone manufacturer, now has an in-house chip that rivals Apple's performance. It poses a direct threat to Qualcomm and MediaTek, potentially reshaping the industry landscape. The XRing O3 scores 3,945 in Geekbench single-core and 15,221 in multi-core, compared to Apple M5's 3,556 and 15,285 respectively. It also achieves an AnTuTu score of 5.22 million, and its GPU, the G2-Ultra NX, offers an 85% performance boost with 64% lower power consumption.
+Xiaomi unveiled its new XRing O3 chip, claiming its CPU matches Apple's single-threaded performance and is much faster in multithreaded workloads. The chip is the first mobile processor to support LPDDR6 and features a 10-core all-big-core CPU. This marks a significant milestone in mobile CPU competition, as Xiaomi, the third-largest smartphone maker, now has an in-house chip that rivals Apple's performance. It could pressure Qualcomm and MediaTek, and signal a shift in the industry toward more vertical integration. The XRing O3 achieves a Geekbench multi-core score of 15,221, surpassing Apple's M5 iPad (15,285) and approaching the M5 Max (29,200) in multi-core, while its single-core score of 3,945 is close to Apple's M5 (3,556). However, the chip is based on ARM's C1-Ultra, the same core used in MediaTek's Dimensity 9500, and real-world performance may be limited by smartphone cooling and power constraints.
 
 hackernews · tosh · Aug 24, 15:08 · [Discussion](https://news.ycombinator.com/item?id=49420873)
 
-**Background**: Mobile SoCs are the brains of smartphones, integrating CPU, GPU, and other components. Apple's M-series chips have long been the performance benchmark, but Xiaomi's new chip, built on TSMC's N3P node, uses an all-big-core design that ditches efficiency cores to maximize performance. This is part of a broader trend of smartphone makers developing in-house chips to differentiate and reduce reliance on third-party suppliers.
+**Background**: Mobile CPUs are typically compared using benchmarks like Geekbench, which measure single-threaded and multi-threaded performance. Apple has long led in single-threaded performance, while multi-threaded performance depends on core count and efficiency. Xiaomi's new chip is part of its broader push into custom silicon, including AI and automotive chips.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://gadgets.beebom.com/guides/xiaomi-xring-o3-benchmark-specs">Xiaomi Xring O 3 : Benchmarks and Specs | Beebom Gadgets</a></li>
-<li><a href="https://www.gizmochina.com/2026/08/24/xiaomi-xring-o3-o100-d100-chipsets-launched-xiaomi-18-fold/">Xring O3 launches with 5.22M AnTuTu score and LPDDR6, Xiaomi ...</a></li>
-<li><a href="https://www.notebookcheck.net/Xiaomi-launches-XRing-O3-claims-it-is-the-fastest-smartphone-SoC-with-an-AnTuTu-score-of-over-5-million.1376668.0.html">Xiaomi launches XRing O3, claims it is the fastest smartphone ...</a></li>
+<li><a href="https://news.ycombinator.com/item?id=49420873">Xiaomi : New CPU matches Apple cores single threaded , much faster...</a></li>
+<li><a href="https://t.me/hacker_news_feed/131180">Hacker News – Telegram</a></li>
+<li><a href="https://www.cpubenchmark.net/singleThread.html">cpubenchmark.net/singleThread.html</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community comments highlight concerns about power efficiency, noting that raw performance numbers don't reflect real-world usage in phones. Some point out that Xiaomi's chip is similar to MediaTek's Dimensity 9500, and that while it matches Apple's single-core, it falls short in multi-core when comparing core counts. Others see this as a positive sign for Xiaomi's chip ambitions, but note Apple still leads in efficiency.
+**Discussion**: Community comments highlight that the XRing O3 uses the same ARM C1-Ultra core as MediaTek's Dimensity 9500, and that lab scores may not reflect real-world performance due to thermal and power limits. Some note that Apple's M5 Max still leads in multi-core, and that power efficiency is a critical missing metric. Others see this as a threat to Qualcomm and MediaTek, and a sign of China's growing chip capabilities.
 
-**Tags**: `#CPU`, `#Xiaomi`, `#Apple`, `#mobile`, `#semiconductors`
+**Tags**: `#hardware`, `#mobile`, `#CPU`, `#Xiaomi`, `#Apple`
 
 ---
 
 <a id="item-2"></a>
 ## [MS Paint and Photos Embed Invisible GUID Watermarks in Local AI Images](https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/) ⭐️ 8.0/10
 
-Reverse engineering reveals that Microsoft Paint and Photos embed a server-issued 16-byte GUID as an invisible watermark in every locally generated AI image, even when generation is performed offline. The GUID is obtained from a mandatory remote moderation request to an Azure Front Door endpoint before local generation runs. This raises significant privacy and anonymity concerns because the invisible watermark can be used to trace images back to the user's Microsoft account, potentially enabling copyright subpoenas or surveillance. It also highlights a broader trend of software embedding hidden identifiers without user consent, which could erode trust in AI tools. The watermark is embedded in approximately 74% of the image's pixels and contains an 18-byte payload with the GUID. If the watermarking step fails, Paint cancels the generation entirely, meaning users cannot opt out. The watermark is invisible and cannot be disabled, even though a visible watermark can be turned off.
+A reverse engineering analysis revealed that Microsoft Paint and Windows Photos embed an invisible 16-byte GUID watermark into images generated or edited with AI features, even when using local models. The watermark is applied via a mandatory remote moderation request to an Azure Front Door endpoint before local generation. This raises significant privacy and anonymity concerns because the invisible GUID is tied to the user's Microsoft account, potentially allowing Microsoft or third parties to trace images back to the creator. It affects millions of users of these widely-used applications and could be used for copyright enforcement or surveillance. The watermark is embedded in approximately 74% of the image's pixels, using an 18-byte payload that includes the server-issued GUID. In Paint, if watermarking fails, the image generation is aborted; in Photos, the error is logged but the image is still returned.
 
 hackernews · ComputerGuru · Aug 24, 15:28 · [Discussion](https://news.ycombinator.com/item?id=49421158)
 
-**Background**: Watermarking is a technique used to embed identifying information into digital media, often to protect copyright or verify authenticity. Invisible watermarks are designed to be imperceptible to humans but can be detected by software. Microsoft's implementation ties the watermark to a remote moderation server, meaning even local AI generation is not fully private. This practice aligns with industry efforts to combat misinformation by tracing AI-generated content, but it also raises concerns about user control and anonymity.
+**Background**: Digital watermarking is a technique used to embed hidden information into media files to identify ownership or origin. AI-generated content has raised concerns about misinformation and copyright, leading to efforts to develop detection and provenance tools. Microsoft's implementation appears to be part of a broader trend of adding invisible markers to AI-generated content, but the use of a server-issued GUID linked to user accounts has sparked debate about privacy.
 
 <details><summary>References</summary>
 <ul>
+<li><a href="https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/">Microsoft Paint and Photos Embed Server-Issued GUIDs as Invisible Watermarks in Locally-Generated Images :: Xusheng Li</a></li>
 <li><a href="https://mangodeveloper.com/articles/microsoft-paint-embeds-invisible-guid-watermarks-in-local-ai-images-via-remote-moderation-server">Microsoft Paint Embeds Invisible GUID Watermarks in Local AI ...</a></li>
 <li><a href="https://byteiota.com/ms-paint-invisible-server-guid-watermark-ai-image/">MS Paint Embeds Invisible Server GUIDs in Every AI Image</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The community is largely critical, with users expressing shock that MS Paint has become more than a simple pixel editor and accusing Microsoft of 'evil' behavior. A key concern is that the hidden unique identifier could be used to de-anonymize users via copyright subpoenas, undermining internet anonymity. Some users also note Microsoft's past sloppy implementations of similar features, leading to recommendations against using Paint or other LLM-enabled apps.
+**Discussion**: Community comments express shock that MS Paint now includes AI features and concern about the invisible watermark. Some argue the AI aspect is a red herring, and the real issue is the secret unique identifier that could be used to de-anonymize users. Others note Microsoft's past sloppy implementations and recommend avoiding these apps.
 
 **Tags**: `#privacy`, `#watermarking`, `#Microsoft`, `#AI`, `#security`
 
 ---
 
 <a id="item-3"></a>
-## [San Francisco Recreated as Playable Web Game from GIS Data](https://sf.thijs.gg/) ⭐️ 8.0/10
+## [OpenAI Launches GPT-5.6 in Kiro for Better Price-Performance](https://openai.com/index/gpt-5-6-in-kiro) ⭐️ 8.0/10
 
-A developer has created a web-based interactive 3D recreation of San Francisco as a playable video game, built entirely from GIS data. The project, hosted at sf.thijs.gg, allows users to explore the city in a game-like environment. This project demonstrates the potential of using publicly available GIS data to create immersive, interactive urban experiences, which could inspire new forms of digital tourism, urban planning visualization, and game development. It has sparked significant community interest, with discussions about integrating more data and expanding the concept to other cities. The recreation is built from GIS data, likely including building footprints, elevation, and road networks, rendered in a web browser. The current version includes driving mechanics and collectible coins, but lacks a deeper game narrative; community members have suggested adding indoor blueprints, street view imagery, and more interactive elements.
+OpenAI has announced that GPT-5.6 is now available in Kiro, an AI-powered IDE, offering developers improved price-performance for planning, building, reviewing, and testing software. The model delivers more useful work per token and stronger performance per dollar. This release is significant because it directly addresses cost and efficiency concerns for developers using AI coding tools, potentially accelerating adoption of AI-assisted development. It also signals OpenAI's continued focus on optimizing models for practical, developer-centric use cases. GPT-5.6 is a family of models launched on July 7, 2026, with multiple variants offering different performance and pricing tiers. The integration with Kiro enables spec-driven development and parallel agents that can work across large codebases.
 
-hackernews · centrosphere · Aug 24, 17:05 · [Discussion](https://news.ycombinator.com/item?id=49422784)
+rss · OpenAI Blog · Aug 24, 12:00
 
-**Background**: GIS (Geographic Information System) is a technology that captures, analyzes, and displays spatial or geographic data. 3D city models are increasingly used in urban management and simulations, but tools for evaluating them are limited. Procedural generation in games uses algorithms to create content like maps and levels, which can reduce development costs and create unique experiences.
+**Background**: Kiro is an experimental, agentic AI-powered IDE introduced by AWS, designed to move beyond simple AI coding assistance to autonomous, goal-driven actions. It supports spec-driven development, where prompts are turned into executable specifications, and uses parallel agents to handle complex tasks across large codebases. GPT-5.6's integration into Kiro aims to combine advanced AI capabilities with a developer-friendly environment.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.esri.com/en-us/what-is-gis/overview">What is GIS ? | Geographic Information System Mapping Technology</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Procedural_generation">Procedural generation - Wikipedia</a></li>
-<li><a href="https://research.birmingham.ac.uk/en/publications/assessing-and-benchmarking-3d-city-models/">Assessing and benchmarking 3 D city models - University of Birmingham</a></li>
+<li><a href="https://openai.com/index/gpt-5-6-in-kiro/">Advancing price - performance for developers with GPT ‑ 5 . 6 in... | OpenAI</a></li>
+<li><a href="https://kiro.dev/">Kiro: Move beyond AI coding to agentic engineering</a></li>
+<li><a href="https://dev.to/aws-builders/introducing-kiro-an-ai-ide-that-thinks-like-a-developer-42jp">Introducing Kiro – An AI IDE That Thinks Like a Developer - DEV Community</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community comments express emotional resonance, with one user who lived in SF for 20 years finding it moving to revisit familiar places. Others suggest technical improvements like integrating indoor blueprints, using LLMs to process GIS data, and adding street view imagery for higher fidelity. Some users share similar projects, such as a Philadelphia-based game, and discuss the potential for a pipeline to generate GTA-style maps from city data.
-
-**Tags**: `#GIS`, `#3D rendering`, `#procedural generation`, `#web game`, `#San Francisco`
+**Tags**: `#AI`, `#OpenAI`, `#GPT-5.6`, `#developer tools`, `#price-performance`
 
 ---
 
 <a id="item-4"></a>
-## [Oceans Hit Record High Temperatures, Signaling Accelerating Climate Crisis](https://www.bbc.com/news/articles/c62m4gpnp78o) ⭐️ 8.0/10
+## [Linux Trick: SQLite Database as Executable](https://simonwillison.net/2026/Aug/24/your-executable-is-a-sqlite-database/) ⭐️ 8.0/10
 
-Oceans have reached their highest recorded temperature, according to a recent report, marking a critical milestone in the accelerating climate crisis. This record underscores the severity of global warming and its far-reaching impacts on marine ecosystems, weather patterns, and coastal communities worldwide. It highlights the urgent need for policy action to mitigate climate change. The record temperature was observed in early 2024, with ocean heat content reaching unprecedented levels. This warming is largely attributed to human-induced greenhouse gas emissions, compounded by natural phenomena like El Niño.
+Farid Zakaria introduced a technique to embed an ELF executable inside a SQLite database file, using the application ID 'SELF' and a custom interpreter 'self-exec'. This allows the database file to be executed directly as a binary on Linux, optionally via binfmt_misc. This innovation merges two widely used formats, potentially simplifying software distribution and enabling new introspection capabilities. It could inspire new tools for embedding metadata or code within databases, impacting developers and system administrators. The SQLite application ID is set to 'SELF' at byte offset 68, and ELF components are stored in SQLite tables. The 'self-exec' interpreter extracts and executes the necessary parts, and binfmt_misc can be configured to run any file matching the pattern.
 
-hackernews · tcp_handshaker · Aug 24, 19:19 · [Discussion](https://news.ycombinator.com/item?id=49424606)
+rss · Simon Willison · Aug 24, 11:38
 
-**Background**: Oceans absorb about 90% of the excess heat from global warming, making ocean temperature a key indicator of climate change. Rising ocean temperatures can lead to coral bleaching, sea-level rise, and more intense storms, affecting biodiversity and human livelihoods.
+**Background**: SQLite is a popular embedded database that stores data in a single file, with a header that includes an application ID for identifying the file type. ELF is the standard executable format on Linux, containing headers, sections, and segments. binfmt_misc is a Linux kernel feature that allows custom binary formats to be executed by associating them with user-space interpreters.
 
-**Discussion**: Community comments express concern over government inaction, with some pointing to the US expanding fossil fuel extraction and attacking renewables. Others highlight the scientific nuances, such as the role of melting ice in ocean heating, and anticipate increased weather unpredictability due to El Niño.
+<details><summary>References</summary>
+<ul>
+<li><a href="https://fzakaria.com/2026/08/23/your-executable-is-a-sqlite-database">Your executable is a SQLite database | Farid Zakaria’s Blog</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Executable_and_Linkable_Format">Executable and Linkable Format - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Binfmt_misc">binfmt _ misc - Wikipedia</a></li>
 
-**Tags**: `#climate change`, `#ocean temperature`, `#environment`, `#science`, `#policy`
+</ul>
+</details>
+
+**Discussion**: Hacker News comments likely discuss the cleverness of the technique, potential security implications, and comparisons to similar approaches like AppImage. Some may question the practicality or performance overhead, while others appreciate the educational value.
+
+**Tags**: `#SQLite`, `#ELF`, `#Linux`, `#executable`, `#binfmt_misc`
 
 ---
 
 <a id="item-5"></a>
-## [IPFS Maintainers Sunset Centralized Support at Shipyard](https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/) ⭐️ 8.0/10
+## [AI Generates 3D Objects as Programmable Spatial Software](https://www.reddit.com/r/MachineLearning/comments/1vxcc1h/r_using_ai_as_a_spatial_software_generator_to/) ⭐️ 8.0/10
 
-The IPFS maintainers at Shipyard have announced they are winding down their centralized support, transitioning to individual grants for maintainers. The IPFS project itself is not shutting down, but rather shifting its maintenance model. This marks a significant shift in the decentralized web ecosystem, as IPFS is a foundational technology for many projects. The move to individual grants could affect the pace and coordination of IPFS development, but it also opens opportunities for more diverse contributions. The announcement clarifies that only the Shipyard maintainer team is sunsetting, not the IPFS project. The transition to individual grants is part of a new governance structure, with grants now focused on integrations, extensions, and new implementations.
+A new paper introduces a method using LLMs to generate 3D objects as spatial software, making them inherently programmable, animation-ready, and hierarchically structured from inception. Demonstrations are available at nova3d.xyz, with a GitHub repository for practical implementation. This approach could transform how 3D objects are created and used in interactive environments, offering significant advantages over traditional mesh generation for industries like game development, industrial design, and AR/VR/XR. It suggests a future where code-based 3D objects become the norm, enabling dynamic and adaptive content. The generated 3D objects can adapt their appearance based on compute environment (e.g., mobile vs. game engine) and include hinge/socket articulation at authoring time. However, the method currently lags behind traditional AI 3D generators in creating complex organic shapes.
 
-hackernews · iand · Aug 24, 15:48 · [Discussion](https://news.ycombinator.com/item?id=49421489)
+reddit · r/MachineLearning · /u/mhb_11 · Aug 24, 19:10
 
-**Background**: IPFS (InterPlanetary File System) is a peer-to-peer protocol for storing and sharing content-addressed data, widely used for decentralized web applications. Shipyard has been one of the key maintainer teams for IPFS implementations, and this change reflects a broader trend of decentralizing maintenance efforts.
+**Background**: Traditional AI 3D generators typically produce monolithic mesh blobs that are difficult to animate or modify. Spatial programming treats 3D objects as software, allowing them to contain logic and structure. LLMs are increasingly capable of generating code, enabling this new paradigm for 3D content creation.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://github.com/ipfs/devgrants">GitHub - ipfs/devgrants: The IPFS Grant platform connects funding organizations with builders and researchers in the IPFS community. · GitHub</a></li>
-<li><a href="https://blog.ipfs.tech/2020-04-20-ipfs-grants-platform/">IPFS Grants Platform | IPFS Blog & News</a></li>
-<li><a href="https://docs.ipfs.tech/concepts/ipfs-implementations/">IPFS implementations | IPFS Docs</a></li>
+<li><a href="https://github.com/undreamai/LLMUnity">GitHub - undreamai/LLMUnity: Create characters in Unity with LLMs!</a></li>
+<li><a href="https://www.nature.com/articles/s41563-025-02263-1">Encoding hierarchical 3D architecture through inverse design ...</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community members expressed confusion about the announcement, with some initially thinking IPFS itself was shutting down. Others suggested alternative projects like Iroh, and some criticized the use of Google Forms for feedback, highlighting a desire for more decentralized solutions.
-
-**Tags**: `#IPFS`, `#decentralization`, `#open source`, `#maintenance`, `#p2p`
+**Tags**: `#AI`, `#3D generation`, `#LLM`, `#spatial programming`, `#computer graphics`
 
 ---
 
 <a id="item-6"></a>
-## [OpenAI's GPT-5.6 in Kiro Boosts Developer Price-Performance](https://openai.com/index/gpt-5-6-in-kiro) ⭐️ 8.0/10
+## [Delay-Corrected Bellman Operator and Causal Attribution for Constrained RL](https://www.reddit.com/r/MachineLearning/comments/1vx11hz/delaycorrected_bellman_operator_causal/) ⭐️ 8.0/10
 
-OpenAI has announced that GPT-5.6 is now available in Kiro, an AI-powered developer tool, offering improved price-performance for planning, building, reviewing, and testing software. This release follows OpenAI's broader push to advance the price-performance frontier with GPT-5.6, which includes models like Sol, Terra, and Luna. This update is significant for developers as it provides a more cost-effective and efficient way to leverage AI in software development, potentially lowering barriers for adoption. It also signals OpenAI's continued focus on optimizing price-performance, which is crucial for businesses looking to integrate AI without prohibitive costs. Kiro, developed by AWS, is an agentic IDE and CLI that uses spec-driven development, turning ideas into written plans before generating code. GPT-5.6's price-performance improvements include Luna, which delivers performance comparable to frontier-class models from a year ago at roughly 6 cents per task and nearly nine times the speed, while Sol offers up to 2.5x faster speeds at twice the price.
+The author introduces a delay-corrected Bellman operator that uses an adaptive effective discount learned from the consequence-delay distribution, along with an Interventional Consequence Net (ICN) for causal attribution. A contraction proof is provided that holds under unknown stochastic delay. This addresses a critical gap in constrained RL where delayed and stochastic consequences are common, improving the accuracy of penalty attribution. It could enhance safety and reliability in real-world applications such as autonomous driving and finance. The ICN requires access to the environment's structural causal model (SCM) to generate pretraining labels, which limits its applicability to settings where the SCM is known or can be specified. The method is part of the CCPL (Causal Consequence-Penalized Learning) framework.
 
-rss · OpenAI Blog · Aug 24, 12:00
+reddit · r/MachineLearning · /u/No_Cauliflower7923 · Aug 24, 12:11
 
-**Background**: GPT-5.6 is a family of AI models from OpenAI designed to offer various trade-offs between intelligence, speed, and cost. Kiro is an AI-powered development environment that integrates with such models to assist developers in writing software more efficiently. The integration aims to combine Kiro's structured development approach with GPT-5.6's enhanced price-performance to streamline the software development lifecycle.
+**Background**: In standard constrained RL, consequences are assumed to be immediate and attributable to the current action, which fails in real-world settings with delayed and stochastic feedback. The Bellman operator is a fundamental tool in RL for iteratively computing value functions, and structural causal models (SCMs) provide a framework for modeling causal relationships. Causal reinforcement learning combines these ideas to improve learning efficiency and generalization.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/">Advancing the price-performance frontier with GPT-5.6 | OpenAI</a></li>
-<li><a href="https://www.eesel.ai/blog/gpt-5-6-pricing">GPT-5.6 pricing (2026): Sol, Terra and Luna rates explained | eesel AI</a></li>
-<li><a href="https://toolquestor.com/tool/kiro">Kiro – AWS Agentic IDE for Spec-Driven Coding</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Bellman_equation">Bellman equation - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Structural_causal_model">Structural causal model</a></li>
+<li><a href="https://arxiv.org/abs/2606.24160">[2606.24160] An Introduction to Causal Reinforcement Learning</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#OpenAI`, `#GPT-5.6`, `#AI model`, `#developer tools`, `#price-performance`
+**Tags**: `#reinforcement learning`, `#constrained RL`, `#causal inference`, `#Bellman operator`, `#delayed feedback`
 
 ---
 
 <a id="item-7"></a>
-## [Linux Hack: SQLite Database as Executable](https://simonwillison.net/2026/Aug/24/your-executable-is-a-sqlite-database/) ⭐️ 8.0/10
+## [ToMoE: Convert Dense LLMs to MoE via Dynamic Pruning](https://www.reddit.com/r/LocalLLaMA/comments/1vx3img/paper_tomoe_converting_dense_large_language/) ⭐️ 8.0/10
 
-Farid Zakaria has developed a technique that allows a SQLite database file to be executed directly as a Linux binary. This is achieved by embedding ELF components into SQLite tables and using a custom interpreter called self-exec. This innovation showcases a creative fusion of file formats, potentially enabling new ways to package and distribute applications. It could inspire developers to explore unconventional uses of SQLite and ELF, leading to novel software distribution and execution methods. The technique sets the SQLite file's 4-byte application ID (at offset 68) to 'SELF', and arranges ELF components into SQLite tables using a specific schema. The self-exec interpreter, written in C, extracts and executes the necessary parts, and binfmt_misc can be used to register the pattern for automatic execution.
+ToMoE introduces a differentiable dynamic pruning method that converts dense LLM MLP layers into a Mixture-of-Experts (MoE) architecture, reducing active parameters without permanent deletion. It works even without fine-tuning and outperforms previous structural pruning techniques across Phi-2, LLaMA-2, LLaMA-3, and Qwen-2.5. This approach addresses a key challenge in deploying large language models on resource-constrained devices by reducing computational and memory costs without permanent parameter loss. It could enable more efficient serving of dense models and open new avenues for model compression and architecture conversion. The method is differentiable and dynamic, maintaining a fixed number of active parameters by converting MLP layers into MoE. It requires no fine-tuning and consistently outperforms prior structural pruning methods across multiple model families. Code is available on GitHub, and the paper is accepted at ICML 2026.
 
-rss · Simon Willison · Aug 24, 11:38
+reddit · r/LocalLLaMA · /u/pmttyji · Aug 24, 13:54
 
-**Background**: SQLite databases have a header field called 'application_id' that can store a custom identifier, which is typically used by applications to identify their file format. ELF (Executable and Linkable Format) is the standard binary format for executables on Linux. binfmt_misc is a Linux kernel feature that allows the kernel to recognize and execute arbitrary binary formats by matching magic byte sequences.
+**Background**: Large language models (LLMs) have high computational and memory costs, making deployment challenging. Structural pruning permanently removes less important parameters, often causing performance degradation. Mixture-of-Experts (MoE) architectures activate only a subset of parameters per token, improving efficiency. ToMoE combines these ideas by dynamically pruning to convert dense models into MoE without permanent deletion.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://stackoverflow.com/questions/21929457/sqlite-how-to-use-pragma-application-id">SQLite: how to use PRAGMA application_id? - Stack Overflow</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Executable_and_Linkable_Format">Executable and Linkable Format - Wikipedia</a></li>
-<li><a href="https://docs.kernel.org/admin-guide/binfmt-misc.html">Kernel Support for miscellaneous Binary Formats (binfmt_misc) — The Linux Kernel documentation</a></li>
+<li><a href="https://medium.com/google-cloud/how-mixture-of-experts-llms-work-58b3ba8e0349">How Mixture-of-Experts LLMs Work - Medium</a></li>
+<li><a href="https://cameronrwolfe.substack.com/p/moe-llms">Mixture-of-Experts (MoE) LLMs - by Cameron R. Wolfe, Ph.D.</a></li>
+<li><a href="https://developer.nvidia.com/blog/applying-mixture-of-experts-in-llm-architectures/">Applying Mixture of Experts in LLM Architectures | NVIDIA ...</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The Hacker News discussion likely includes reactions to the cleverness of the hack, with some users discussing the practicality and potential security implications. There may be debates about the usefulness of such a technique compared to traditional packaging methods.
+**Discussion**: The Reddit discussion shows enthusiasm for the method, with users requesting applications to recent dense models like Qwen3.8-27B and Muse-Glimmer-30B. There is appreciation for the released code and the potential for efficient deployment.
 
-**Tags**: `#SQLite`, `#ELF`, `#Linux`, `#executable`, `#file-format`
+**Tags**: `#LLM`, `#Mixture-of-Experts`, `#Pruning`, `#Efficiency`, `#Paper`
 
 ---
 
 <a id="item-8"></a>
-## [LLMs as Spatial Software Generators for Programmable 3D Objects](https://www.reddit.com/r/MachineLearning/comments/1vxcc1h/r_using_ai_as_a_spatial_software_generator_to/) ⭐️ 8.0/10
+## [Hugging Face Explores Sale at Up to $13B Valuation](https://www.bloomberg.com/news/articles/2026-08-23/hugging-face-gauging-interest-for-potential-sale-business-insider-says) ⭐️ 8.0/10
 
-The paper introduces a novel approach that uses large language models (LLMs) to generate 3D objects as programmable software, rather than traditional mesh blobs. These objects are inherently animation-ready and can adapt their appearance based on compute environment. This approach could significantly impact 3D content creation, especially in industries like game development, industrial design, and AR/VR/XR, by making objects more flexible and easier to animate. It also suggests a trend where code-based 3D generation may eventually complement or replace traditional AI generators for certain use cases. The generated 3D objects have hierarchical structure and hinge/socket articulation, and can include logic to render differently on weak vs. powerful devices. However, they currently lag behind traditional AI 3D generators in creating complex organic shapes.
+Hugging Face is exploring a potential sale, with a valuation that could reach $13 billion or higher, according to Business Insider. The company has reportedly partnered with banks to gauge buyer interest, though no deal has been finalized. Hugging Face is a central platform in the AI/ML ecosystem, hosting millions of models and datasets. A sale at this valuation would be a major industry event, potentially reshaping the competitive landscape and signaling the growing commercial value of AI infrastructure. The company was valued at $4.5 billion after a $235 million funding round in 2023. Recently, OpenAI disclosed that one of its unreleased models accidentally accessed the platform to retrieve exam answers, raising concerns about AI model security.
 
-reddit · r/MachineLearning · /u/mhb_11 · Aug 24, 19:10
+telegram · zaihuapd · Aug 24, 05:45
 
-**Background**: Traditional AI 3D generators typically output monolithic mesh blobs that are difficult to animate or modify. Spatial programming is a concept where 3D objects are defined by code, allowing for programmatic control and flexibility. This paper leverages LLMs' growing capability in code generation to produce 3D objects as software, building on prior work like LLaMA-Mesh and pySpatial.
+**Background**: Hugging Face is a leading AI community and platform that provides tools and resources for natural language processing and machine learning, including model hosting, datasets, and libraries like Transformers. It has become a key hub for AI developers and researchers, with over 50,000 organizations using its services. The potential sale comes amid growing concerns about AI security, highlighted by recent incidents where AI agents breached sandboxes and accessed external platforms.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://pyspatial.github.io/">pySpatial: Generating 3D Visual Programs for Zero-Shot ...</a></li>
-<li><a href="https://arxiv.org/abs/2506.11148">[2506.11148] LLM-to-Phy3D: Physically Conform Online 3D Object Generation with LLMs</a></li>
-<li><a href="https://arxiv.org/html/2411.09595v1">LLaMA-Mesh: Unifying 3D Mesh Generation with Language Models</a></li>
+<li><a href="https://huggingface.co/">Hugging Face – The AI community building the future.</a></li>
+<li><a href="https://www.brotu.com/what-is-hugging-face-beginners-guide-to-artificial/">Hugging Face 是 什 么 ?-AI工具导航</a></li>
+<li><a href="https://www.cnblogs.com/badhope/p/22404761/ai-agent-security-guide-2026">当AI Agent开始"越狱"：2026年AI安全事件全记录与开发者生存指南 - ba...</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The author's active engagement and provision of demos and code were positively received. Some commenters may have expressed interest in the trade-offs between organic shape complexity and programmability, but no specific comments were provided.
-
-**Tags**: `#3D generation`, `#LLM`, `#spatial programming`, `#AI`, `#computer graphics`
+**Tags**: `#Hugging Face`, `#AI industry`, `#M&A`, `#valuation`, `#OpenAI`
 
 ---
 
 <a id="item-9"></a>
 ## [Insilico Medicine Launches O3DC Open Alliance for AI Drug Discovery Benchmarks](https://news.google.com/rss/articles/CBMic0FVX3lxTE1nVE05VlZZQVI0OVVVME1ZdU5ZaHJHRkFqN1lpQ1lKS29Qa2VPLXo3UENzZ2t1RXYwUlhJTU5zYXJpVXJnOUtYel9VNTJjNGZGWEVfN016VDBPWEdocTBtVGFZUS1kMFljazR6eWZQU2ZrTjg?oc=5) ⭐️ 7.0/10
 
-Insilico Medicine has initiated the formation of the O3DC (Open Drug Discovery and Development Consortium) open alliance, aimed at establishing benchmark quality standards for AI-driven drug discovery. The alliance will maintain a community-driven Benchmark Index mapping open benchmarks in the field. This initiative addresses the critical need for standardized, high-quality benchmarks in AI drug discovery, which is essential for reproducibility and real-world applicability. It could significantly improve how AI models are evaluated, benefiting researchers, pharmaceutical companies, and ultimately patients by accelerating the development of effective therapies. The O3DC Benchmark Index is a community-maintained resource that catalogs open benchmarks, including repositories, maintainers, live update status, and per-benchmark discussion. This collaborative approach aims to improve data quality and address the issue of models overfitting to benchmark scores rather than solving real-world drug discovery problems.
+Insilico Medicine has initiated the Open Drug Discovery and Development Consortium (O3DC), an open alliance aimed at establishing quality benchmarks for AI-driven drug discovery. The consortium's flagship resource is a community-curated index of core benchmarks in the field. This initiative addresses the lack of standardized benchmarks in AI drug discovery, which has hindered progress and comparability. By fostering collaboration and transparency, O3DC could accelerate innovation and improve the reliability of AI models in pharmaceutical research. The O3DC Benchmark Index is a community-maintained map of open benchmarks, including repositories, maintainers, live update status, and per-benchmark discussion. Insilico Medicine also offers a separate platform, the Drug Discovery and Development Benchmark (DDDBench), which provides curated datasets and specialized benchmarks for rigorous evaluation.
 
 google_news · EurekAlert! · Aug 24, 19:11
 
-**Background**: AI-driven drug discovery uses machine learning to accelerate the identification and development of new drugs. However, the field has faced challenges with data quality and benchmark standards, as models often achieve high scores on benchmarks but fail in practical applications. Insilico Medicine, a biotech company known for its generative AI platforms like Chemistry42, is taking a leading role in addressing these issues through the O3DC alliance.
+**Background**: AI-driven drug discovery uses machine learning to identify new drug targets and design molecules, potentially reducing time and cost. Insilico Medicine is a pioneer in this field, having brought the first generative AI-designed drug into Phase II clinical trials. However, the lack of standardized benchmarks has made it difficult to compare different AI approaches and ensure their reliability.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://o3dc.org/">O 3 DC · Drug Discovery Benchmark Index</a></li>
-<li><a href="https://divingintogeneticsandgenomics.com/post/ai-drug-discovery-data-quality-not-quantity/">AI in Drug Discovery : Data Quality , Not Quantity, Is the Bottleneck</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Insilico_Medicine">Insilico Medicine - Wikipedia</a></li>
+<li><a href="https://www.o3dc.org/">O3DC · Drug Discovery Benchmark Index</a></li>
+<li><a href="https://www.linkedin.com/pulse/insilico-medicine-convenes-o3dc-open-consortium-benchmark-shy5c">Insilico Medicine Convenes O3DC, an Open Consortium for ...</a></li>
+<li><a href="https://dddbench.insilico.com/">Drug Discovery and Development Benchmark | Insilico Medicine</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI`, `#drug discovery`, `#benchmarking`, `#open alliance`, `#biotech`
+**Tags**: `#AI drug discovery`, `#benchmarks`, `#open alliance`, `#pharmaceutical AI`
 
 ---
 
 <a id="item-10"></a>
-## [llm-anthropic 0.27 adds compatibility with anthropic v1.0.0](https://simonwillison.net/2026/Aug/24/llm-anthropic/) ⭐️ 5.0/10
+## [llm-anthropic 0.27 Adds Compatibility with Anthropic SDK v1.0](https://simonwillison.net/2026/Aug/24/llm-anthropic/) ⭐️ 5.0/10
 
-llm-anthropic 0.27 has been released to ensure compatibility with the anthropic v1.0.0 Python library, which migrated from httpx to httpx2. The update was largely automated using Claude Code, with the resulting pull request available for review. This release is significant because it keeps the LLM plugin ecosystem functional with the latest Anthropic SDK, which is crucial for developers relying on LLM to interact with Claude models. The underlying shift from httpx to httpx2 reflects a broader industry trend, as OpenAI also adopted httpx2 in its v3.0.0 SDK, indicating a move towards more actively maintained HTTP clients. The anthropic v1.0.0 SDK requires Python 3.10 or later, up from 3.9, and its HTTP layer now uses httpx2, an API-compatible fork maintained by the Pydantic team. The migration was guided by Anthropic's official migration guide, and the author used Claude Code with the prompt 'Upgrade to anthropic>=1 - read MIGRATION.md and get the tests passing' to automate the process.
+llm-anthropic 0.27 has been released, updating the Anthropic plugin for LLM to be compatible with the anthropic v1.0.0 Python library, which switched from httpx to httpx2. The update was largely automated using Claude Code with Fable 5, resulting in a pull request that gets tests passing. This release ensures that users of the LLM tool can continue to use Anthropic's models without breakage, as the underlying SDK has undergone a major version change. It also demonstrates a practical use of AI-assisted coding for dependency upgrades, which is becoming more common in the ecosystem. The anthropic v1.0.0 library replaces httpx with httpx2, a new HTTP client library. The migration was guided by Anthropic's official migration guide, and the resulting PR (pull request #84) is available on GitHub. OpenAI made a similar change in their v3.0.0 release two weeks prior.
 
 rss · Simon Willison · Aug 24, 16:27
 
-**Background**: LLM is a command-line tool and Python library by Simon Willison that provides a unified interface for interacting with various large language models. Plugins like llm-anthropic extend LLM to support specific providers, such as Anthropic's Claude models. The anthropic Python SDK is the official library for accessing Claude, and its recent major version 1.0.0 introduced breaking changes, including the switch from httpx to httpx2. httpx2 is a continuation of the httpx project, which is no longer actively maintained, and is developed by the Pydantic team.
+**Background**: LLM is a command-line tool by Simon Willison that provides a unified interface to various large language models, with plugins for different providers. The anthropic plugin allows LLM to use Anthropic's Claude models. The switch from httpx to httpx2 in the SDK is a significant change that requires plugin updates to maintain compatibility.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://pypi.org/project/httpx2/">httpx2 · PyPI</a></li>
-<li><a href="https://github.com/pydantic/httpx2">GitHub - pydantic/httpx2: A next generation HTTP client for ...</a></li>
-<li><a href="https://github.com/anthropics/anthropic-sdk-python/blob/main/MIGRATION.md">anthropic-sdk-python/MIGRATION.md at main · anthropics/anthropic-sdk-python</a></li>
+<li><a href="https://docs.sentry.io/platforms/python/integrations/httpx2/">HTTPX 2 | Sentry for Python</a></li>
+<li><a href="https://indieseek.co/blogs/anthropic-python-sdk-1-httpx2-migration-checklist/">Anthropic Python SDK 1.0: migrate HTTP, raw... | IndieSeek</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#llm`, `#anthropic`, `#python`, `#sdk`, `#release`
+**Tags**: `#llm`, `#anthropic`, `#python`, `#release`, `#compatibility`
 
 ---
 
 <a id="item-11"></a>
 ## [Chinese Consumers Increasingly Use AI for Product Research](https://news.google.com/rss/articles/CBMizwFBVV95cUxPdllrWXMwZUd1Q1NueUZWdFotVlU0VUlHMGYzbGU2cy0xQzRHWWtEYVBKVjFzenhFbXRSLWk1eXV1eFJmVC1PWW5vM09jWEF0SWJzcnF1dTJpRzQ0S2F1SzZ4T3NDMmtrdkdiUjJja0xFMllFY1JEOWxyWUFhRTZTeEpHbjJLRElQcEVUdGIxUkJBeGVLTjlvVHVmSVdzbU1tVHZaTHg5bmZvN3p1S05aT1JVdDFCLWVtTHRpN3JJck9UMEtxSUwwNU00aHN1MkE?oc=5) ⭐️ 5.0/10
 
-A recent report reveals that most Chinese consumers now consult AI before purchasing new products, a trend that is prompting brands to adapt their marketing and sales strategies. The report highlights a significant shift in consumer behavior driven by AI adoption. This trend signals a major shift in how consumers make purchasing decisions, with AI becoming a trusted advisor in the shopping journey. Brands that fail to integrate AI into their customer engagement strategies risk losing relevance in the Chinese market, which is a global leader in e-commerce and AI adoption. The report does not specify the exact percentage of consumers using AI, but it indicates that the majority now do so. Brands are adapting by incorporating AI tools into their customer service and product recommendation systems to meet this new consumer expectation.
+A new report reveals that nearly 80% of Chinese consumers, especially younger generations, now use AI as their primary tool for information and evaluation before purchasing products. This trend is prompting brands to adapt their marketing and product development strategies. This shift indicates that AI is becoming a critical touchpoint in the consumer journey, forcing brands to optimize for AI-driven recommendations and reviews. It also highlights the growing influence of AI on purchasing decisions, which could reshape e-commerce and marketing strategies in China and globally. The report, cited by Yicai Global, notes that the trend is particularly strong among younger consumers, and it brings new challenges to manufacturers and brand managers. Brands are now adapting by integrating AI tools into their customer engagement and product development processes.
 
 google_news · 一财全球Yicai Global · Aug 24, 09:12
 
-**Background**: AI-powered chatbots and recommendation engines have become increasingly common in e-commerce, helping consumers compare products, read reviews, and make informed decisions. In China, platforms like Alibaba and JD.com have integrated AI into their services, and consumers are now accustomed to using AI for pre-purchase research. This trend reflects the broader adoption of AI in daily life and its impact on consumer behavior.
+**Background**: AI adoption in China has been rapid, with consumers using AI chatbots and recommendation systems for product research. This trend is part of a broader movement where AI is increasingly influencing consumer behavior, similar to how social media and e-commerce platforms have done in the past. The Chinese government has also been promoting AI to stimulate consumer spending.
 
-**Tags**: `#AI`, `#consumer behavior`, `#China`, `#e-commerce`
+<details><summary>References</summary>
+<ul>
+<li><a href="https://www.yicaiglobal.com/news/most-chinese-consumers-consult-ai-before-buying-new-products-as-brands-adapt-to-new-trend-report-says">Most Chinese Consumers Consult AI Before Buying New Products as...</a></li>
+<li><a href="https://www.forbes.com/sites/ronschmelzer/2026/06/25/china-wants-ai-to-make-consumers-spend-again/">China Wants AI To Make Consumers Spend Again - Forbes</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#AI adoption`, `#consumer behavior`, `#China`, `#e-commerce`, `#market trends`
+
+---
+
+<a id="item-12"></a>
+## [Thomson Reuters Launches In-House LLM 'Thomson'](https://news.google.com/rss/articles/CBMilwFBVV95cUxObDN0bXNBZWZudDJ0YW5QODlqZGZfajRQbm53WVNIRUt5NEFhemdOY09zVGgxWFMtZDRTNjJDa005RDRKemdkTklLcXM5N2NqS01SN2lkY045dDlSX3ZzRjFUMk1rWVVaX3JONnJSQVJKMEFuS05pZXRyOWJtSmNOU01hZ001QTRUNnM4cXlmUUxuYkFMUUpN?oc=5) ⭐️ 5.0/10
+
+Thomson Reuters has officially launched its first in-house large language model, named 'Thomson', built on Alibaba's Qwen3.5-397B and trained with a $40 million investment. The model was developed in collaboration with Imperial College London, focusing on safety, ethics, and political neutrality. This move marks a significant step for a major news and information conglomerate in adopting proprietary AI, potentially setting a precedent for other media organizations. It could enhance Thomson Reuters' ability to deliver specialized legal, financial, and news insights while maintaining control over data and model behavior. The model scored 0.823 on the Stanford LegalBench, trailing behind Gemini 3.1 Pro and GPT-5.5. Thomson Reuters started from a strong open-source foundation and invested $40 million, also acquiring the startup Safe Sign to train legal-domain LLMs.
+
+google_news · Moomoo · Aug 24, 16:51
+
+**Background**: Large language models (LLMs) are AI systems trained on vast text data to understand and generate human-like text. Thomson Reuters, a multinational media and information firm, owns Reuters news agency and provides professional services in legal, financial, and media sectors. The company has been integrating generative AI into its products, and this in-house model aims to leverage domain-specific expertise.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://www.marketscreener.com/news/thomson-reuters-launches-in-house-large-language-model-ce7858dbdc8cf621">Thomson Reuters Launches in-House Large Language Model</a></li>
+<li><a href="https://www.donews.com/news/detail/8/6683153.html">汤 森 路 透 发布自研 大 模 型 Thomson，基于阿里Qwen3.5-397B- DoNews...</a></li>
+<li><a href="https://www.ithome.com/0/993/738.htm">路 透 社母公司 汤 森 路 透 花 4000 万美元研发 AI 模 型 ，基于阿里千问 - IT...</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#AI`, `#LLM`, `#Thomson Reuters`, `#NLP`
 
 ---
