@@ -9,246 +9,246 @@ lang: zh
 
 ---
 
-1. [苹果发布 M6 与 M5 Ultra 芯片](#item-1) ⭐️ 9.0/10
-2. [OpenAI 的 Jalapeño 芯片在测试中超越英伟达 Blackwell](#item-2) ⭐️ 9.0/10
-3. [FDA 批准首款连续监测酮体和血糖的可穿戴设备](#item-3) ⭐️ 8.0/10
-4. [苹果发布搭载 M6 和 M5 Pro 芯片的新款 Mac mini](#item-4) ⭐️ 8.0/10
-5. [Nitter 项目收到停止函，实例全部下线](#item-5) ⭐️ 8.0/10
-6. [OpenAI 首席财务官阐述实现智能充裕的全栈路径](#item-6) ⭐️ 8.0/10
-7. [OpenAI 瓦解俄罗斯关联的 AI 影响力行动](#item-7) ⭐️ 8.0/10
-8. [EVE Online 启动大规模 Python 3 迁移](#item-8) ⭐️ 8.0/10
-9. [基于开放权重模型的持续学习实现主权 AI](#item-9) ⭐️ 8.0/10
-10. [OpenAI 推出适用于 ChatGPT Work 和 Codex 的管理员插件](#item-10) ⭐️ 7.0/10
+1. [苹果发布 M6 和 M5 Ultra 芯片，AI 性能大幅提升](#item-1) ⭐️ 9.0/10
+2. [FDA 批准首款可连续监测酮体和血糖的可穿戴设备](#item-2) ⭐️ 8.0/10
+3. [OpenAI 的 Jalapeño 芯片在推理性能上超越英伟达 Blackwell](#item-3) ⭐️ 8.0/10
+4. [苹果发布搭载 M6 和 M5 Pro 的 Mac mini，价格上涨](#item-4) ⭐️ 8.0/10
+5. [Nitter 项目因收到 X Corp. 的停止函而关闭](#item-5) ⭐️ 8.0/10
+6. [OpenAI 首席财务官阐释丰富智能背后的全栈](#item-6) ⭐️ 8.0/10
+7. [OpenAI 瓦解俄罗斯 AI 影响力行动](#item-7) ⭐️ 8.0/10
+8. [EVE Online 开始从 Python 2.7 迁移到 Python 3](#item-8) ⭐️ 8.0/10
+9. [持续学习使主权 AI 成为可能，基于开放权重模型](#item-9) ⭐️ 8.0/10
+10. [OpenAI 推出 ChatGPT Work 和 Codex 的 Admin 插件](#item-10) ⭐️ 6.0/10
 
 ---
 
 <a id="item-1"></a>
-## [苹果发布 M6 与 M5 Ultra 芯片](https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/) ⭐️ 9.0/10
+## [苹果发布 M6 和 M5 Ultra 芯片，AI 性能大幅提升](https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/) ⭐️ 9.0/10
 
-苹果于 2026 年 8 月 25 日发布了 M6 和 M5 Ultra 芯片，标志着性能和 AI 计算能力的重大飞跃。M6 是苹果首款 2nm 芯片，而 M5 Ultra 则采用四芯片架构，是苹果有史以来最强大的芯片。 这些新芯片将为未来的 Mac 及其他设备提供动力，带来速度和 AI 能力的显著提升。这可能加剧 PC 市场的竞争，并影响消费者的升级决策，尤其是对于使用旧款 M1 机型的用户。 M6 配备 12 核 CPU、12 核 GPU 和双 16 核神经引擎，统一内存带宽最高可达 170GB/s。M5 Ultra 则包含 32 核神经引擎和更强大的媒体引擎，支持同时播放多达 33 路 8K ProRes 422 视频流。
+苹果于 2026 年 8 月 25 日发布了 M6 和 M5 Ultra 芯片。M6 是苹果首款 2nm 芯片，配备 12 核 CPU、12 核 GPU 和双 16 核神经引擎，而 M5 Ultra 是苹果迄今最强大的芯片，采用四芯片封装架构。 这一发布标志着苹果芯片在性能和 AI 算力上的重大飞跃，可能加速端侧 AI 能力的发展，并影响整个 PC 市场。M6 的 2nm 工艺和 M5 Ultra 的四芯片封装设计为能效和性能树立了新标杆。 M6 配备更大的 12 核 CPU 和 12 核 GPU，以及双 16 核神经引擎，采用 2nm 工艺。M5 Ultra 使用苹果下一代 UltraFusion 技术连接两个双芯片封装的 M5 Max 芯片，这是 M 系列芯片首次采用四芯片封装架构。
 
 hackernews · interpol_p · 8月25日 13:01 · [社区讨论](https://news.ycombinator.com/item?id=49433292)
 
-**背景**: 苹果的 M 系列芯片是基于 ARM 架构的系统级芯片，集成了 CPU、GPU 和神经处理单元。M6 采用 2nm 制程，这是制造工艺的重大进步，可提升性能和能效。M5 Ultra 采用四芯片设计，通过组合多个芯片实现更高性能，定位为面向专业工作负载的终极性能怪兽。
+**背景**: 苹果的 M 系列芯片是基于 ARM 的片上系统（SoC），集成了 CPU、GPU 和用于 AI 任务的神经引擎。M6 和 M5 Ultra 旨在支持苹果对端侧 AI 日益增长的关注，它们将运行 macOS 27，该系统预计今年秋季发布，并更深度集成 Apple Intelligence。
 
 <details><summary>参考链接</summary>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Apple_M6">Apple M6 - Wikipedia</a></li>
 <li><a href="https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/">Apple introduces M6 and M5 Ultra for a big leap in performance and AI compute - Apple</a></li>
-<li><a href="https://www.macrumors.com/2026/08/25/apple-debuts-m5-ultra/">Apple Debuts M5 Ultra as Most Powerful Chip Ever - MacRumors</a></li>
+<li><a href="https://www.macrumors.com/2026/08/25/apple-debuts-m5-ultra/">Apple Debuts M 5 Ultra as Most Powerful Chip Ever - MacRumors</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区评论反映出对性能提升的兴奋，一些用户指出相比旧款机型有显著改进。同时也有关于价格的讨论，有用户计算顶配 M5 Ultra Studio 可能超过 24,000 美元。此外，有传言称苹果可能跳过 M6 Pro、Max 和 Ultra 版本，专注于开发面向 AI 的 M7 芯片，这引发了关于苹果未来芯片策略的讨论。
+**社区讨论**: 社区评论对性能提升表示兴奋，有人指出 M6 比前代明显更快。然而，也有人担心价格上涨，因为顶配 M5 Ultra 系统售价可能超过 24,000 美元。此外，有传言称苹果可能跳过 M6 Pro/Max/Ultra，专注于开发具备 AI 能力的 M7，这引发了关于苹果未来芯片策略的讨论。
 
 **标签**: `#Apple`, `#Hardware`, `#AI`, `#Chips`, `#Performance`
 
 ---
 
 <a id="item-2"></a>
-## [OpenAI 的 Jalapeño 芯片在测试中超越英伟达 Blackwell](https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia) ⭐️ 9.0/10
+## [FDA 批准首款可连续监测酮体和血糖的可穿戴设备](https://www.fda.gov/news-events/press-announcements/fda-authorizes-first-wearable-device-continuously-monitors-both-ketone-levels-and-blood-sugar) ⭐️ 8.0/10
 
-OpenAI 发布了其首款自研推理芯片 Jalapeño（与博通联合设计）的初步基准测试结果。据称，与英伟达 Blackwell 架构相比，该芯片的能效提升 1.5 至 1.9 倍，延迟降低 1.7 至 3.6 倍，高交互场景性能提升 2.1 至 4.1 倍。 这一进展可能颠覆 AI 硬件市场，挑战英伟达的主导地位。如果 OpenAI 的自研芯片在大规模应用中证明可行，可能会减少对英伟达 GPU 的依赖，并推动行业更广泛地采用专用推理 ASIC。 基准测试在 GPT-OSS 120B、DeepSeek R1 670B 和 Kimi K2.5 1T 等模型上进行。该芯片是 OpenAI 到 2029 年建设 10 GW 基础设施承诺的一部分，专为 LLM 推理设计，而非通用计算。
+美国食品药品监督管理局（FDA）已批准 Libre Duo 10 天连续双葡萄糖酮体监测系统，这是首款可连续监测酮体水平和血糖的可穿戴设备，适用于 2 岁及以上糖尿病患者。 这一里程碑可能通过早期发现糖尿病酮症酸中毒（DKA）这一危及生命的状况，显著改善糖尿病管理。它还为更集成的可穿戴健康监测铺平道路，可能惠及数百万糖尿病患者，并推动个性化医疗发展。 该设备基于 Abbott 的 FreeStyle Libre 3 传感器，该传感器以全球最小最薄的连续血糖监测仪（CGM）著称。它在开发过程中获得了 FDA 的突破性设备认定，授权覆盖 2 岁及以上人群。
+
+hackernews · sunnynagra · 8月25日 19:07 · [社区讨论](https://news.ycombinator.com/item?id=49439017)
+
+**背景**: 连续血糖监测仪（CGM）是小型可穿戴传感器，通过测量间质液中的葡萄糖水平提供实时数据，帮助管理糖尿病。酮体是肝脏在身体分解脂肪供能时产生的化学物质；水平过高可能导致糖尿病酮症酸中毒（DKA），这是一种严重并发症。此前，没有设备能同时连续监测这两个指标，酮体检测通常需要指尖采血或尿试纸。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.fda.gov/news-events/press-announcements/fda-authorizes-first-wearable-device-continuously-monitors-both-ketone-levels-and-blood-sugar">FDA Authorizes First Wearable Device That Continuously Monitors Both Ketone Levels and Blood Sugar | FDA</a></li>
+<li><a href="https://www.abbott.com/en-us/corpnewsroom/strategy-and-strength/abbotts-biowearable-one-sensor-for-glucose-ketones">Abbott's Biowearable: One Sensor for Glucose, Ketones | Newsroom</a></li>
+<li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0165993623000250">Ketone bodies detection: Wearable and mobile sensors for personalized medicine and nutrition - ScienceDirect</a></li>
+
+</ul>
+</details>
+
+**社区讨论**: 社区评论反映了个人情感与技术怀疑的混合。一位用户分享了一位因 DKA 去世的朋友的感人轶事，并对进展表示感激。其他人则希望更广泛的获取和报销，同时有人质疑其对普通糖尿病患者的实用性，指出酮体仅在极端饮食状态下升高。还有人对其他可穿戴传感器如 Stelo 和 Lingo 表示好奇。
+
+**标签**: `#FDA`, `#wearable`, `#diabetes`, `#health tech`, `#glucose monitoring`
+
+---
+
+<a id="item-3"></a>
+## [OpenAI 的 Jalapeño 芯片在推理性能上超越英伟达 Blackwell](https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia) ⭐️ 8.0/10
+
+OpenAI 发布了其首款自研推理芯片 Jalapeño（与博通合作设计），并公布了基准测试数据，显示其在能效和延迟方面优于英伟达 GB300（Blackwell）。该芯片在 GPT-OSS 120B、DeepSeek R1 670B 和 Kimi K2.5 1T 等模型上，每瓦特产生的 AI 工作量是对比系统的 1.5 至 1.9 倍，端到端延迟低 1.7 至 3.6 倍，高交互场景性能高 2.1 至 4.1 倍。 这标志着 OpenAI 在减少对英伟达 AI 推理依赖方面迈出了重要一步，可能重塑 AI 硬件格局。如果 Jalapeño 的性能如宣称的那样，它可能加速定制芯片的趋势并降低推理成本，影响云服务提供商、AI 初创公司以及整个 GPU 市场。 该芯片额定功耗为 700 瓦，但实测持续功耗不高于 550 瓦。基准测试对标的是英伟达 GB300，而非刚开始出货的 Vera Rubin，且该芯片不用于模型训练。OpenAI 计划今年年底前在自有算力设施中部署 Jalapeño，第二代已在开发中，第三代正在设计。
 
 hackernews · bmulholland · 8月25日 14:06 · [社区讨论](https://news.ycombinator.com/item?id=49434378)
 
-**背景**: 英伟达的 Blackwell 架构于 2024 年推出，是 AI 训练和推理的领先 GPU 平台。OpenAI 与博通合作设计定制芯片，反映了大型 AI 实验室通过定制硬件来优化成本和性能、减少对英伟达通用 GPU 依赖的行业趋势。
+**背景**: AI 推理硬件是用于在新数据上运行已训练 AI 模型的专用计算基础设施，与训练硬件相对。英伟达的 Blackwell 架构于 2024 年推出，为其最新的 GPU（如 GB300）提供动力，这些 GPU 广泛用于 AI 工作负载。OpenAI 与博通合作设计定制芯片，反映了大型 AI 公司通过定制硅片来优化性能和成本的更广泛行业趋势。
 
 <details><summary>参考链接</summary>
 <ul>
 <li><a href="https://www.linkedin.com/pulse/openais-jalapeño-chip-what-developers-need-know-its-move-ashish-jain-9uoof">OpenAI ’s Jalapeño Chip : What Developers Need to Know About Its...</a></li>
 <li><a href="https://www.stork.ai/blog/jalapeo-openais-nvidia-killer">OpenAI 's Jalapeño Chip : A Custom ASIC to Challenge... | Stork.AI</a></li>
-<li><a href="https://www.spheron.network/blog/openai-jalapeno-chip-gpu-cloud-inference-2026/">OpenAI Jalapeño Chip Explained: What... | Spheron Blog</a></li>
+<li><a href="https://www.nxcode.io/resources/news/openai-broadcom-jalapeno-inference-chip-developer-guide-2026">OpenAI Jalapeño Chip Guide: What It Means for AI Coding... | NxCode</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区评论将这一竞争类比为早期显卡市场的竞争（如 3dfx、Riva 等），并对芯片的裸片尺寸和能效声明提出疑问。有人指出，人类语音的能效仍比该芯片高 22 倍，也有人认为依赖 DeepSeek 和 Kimi 作为基准反映了行业方向。
+**社区讨论**: 社区评论将新兴的推理芯片努力与早期 GPU 市场动态相提并论，一位用户将其比作 3dfx、Riva 和 PowerVR 的早期时代。另一位用户指出 FP4 精度的讽刺性，回忆 20 年前就已经需要更低精度，并指出芯片尺寸与 Rubin 相当，但 NVFP4 PFLOPs 只有其三分之一。还有人对持续硬件改进将推动 token 价格进一步下降表示乐观。
 
 **标签**: `#AI hardware`, `#OpenAI`, `#Nvidia`, `#chip design`, `#inference`
 
 ---
 
-<a id="item-3"></a>
-## [FDA 批准首款连续监测酮体和血糖的可穿戴设备](https://www.fda.gov/news-events/press-announcements/fda-authorizes-first-wearable-device-continuously-monitors-both-ketone-levels-and-blood-sugar) ⭐️ 8.0/10
-
-FDA 已批准首款可连续监测酮体水平和血糖的可穿戴设备，标志着糖尿病技术领域的一个重要监管里程碑。这一批准为日常生活中更整合的代谢监测铺平了道路。 该设备采用可穿戴传感器，可能通过间质液连续测量这两种生物标志物，并将数据传输到配套应用程序。尽管这是 FDA 首次批准，但设备可能仍需指尖采血校准以确保准确性，其可用性和报销状态尚不明确。
-
-hackernews · sunnynagra · 8月25日 19:07 · [社区讨论](https://news.ycombinator.com/item?id=49439017)
-
-**背景**: 连续血糖监测仪（CGM）已被糖尿病患者广泛用于实时追踪血糖水平，但酮体监测传统上需要血液或尿液检测。酮体是身体分解脂肪供能时产生的物质，水平升高可能表明糖尿病酮症酸中毒，这是一种严重的并发症。FDA 的 510(k)许可流程要求设备证明安全性和有效性，而这款新设备将两项重要的代谢指标整合到一个可穿戴设备中。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://www.fda.gov/medical-devices/510k-clearances/medical-device-safety-and-510k-clearance-process">Medical Device Safety and the 510(k) Clearance Process - FDA</a></li>
-<li><a href="https://www.medscape.com/viewarticle/continuous-ketone-monitoring-essential-or-optional-2025a10008h7">Continuous Ketone Monitoring : Essential or Optional?</a></li>
-
-</ul>
-</details>
-
-**社区讨论**: 社区评论反映了个人情感和技术怀疑的混合。一位用户分享了一位朋友因糖尿病酮症酸中毒去世的感人故事，并对进展表示感激。其他人则希望提高可及性和报销覆盖，同时一些人对酮体监测对普通糖尿病患者的实用性以及非侵入性血糖传感的准确性提出质疑。
-
-**标签**: `#FDA`, `#wearable`, `#diabetes`, `#healthtech`, `#medical devices`
-
----
-
 <a id="item-4"></a>
-## [苹果发布搭载 M6 和 M5 Pro 芯片的新款 Mac mini](https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/) ⭐️ 8.0/10
+## [苹果发布搭载 M6 和 M5 Pro 的 Mac mini，价格上涨](https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/) ⭐️ 8.0/10
 
-苹果发布了搭载全新 M6 和 M5 Pro 芯片的新款 Mac mini，这是 Mac mini 近两年来的首次更新。M6 芯片是苹果首款 2nm 处理器，M5 Pro 则是面向高要求工作负载的高端选择。 这一发布意义重大，因为它引入了苹果首款 2nm 芯片 M6，可能为桌面计算树立新的性能和能效标准。然而，Mac mini 的涨价引发了用户讨论，可能影响苹果在平价桌面市场的地位。 M6 芯片采用 12 核 CPU，由台积电以 2nm 工艺制造。M5 Pro 于 2026 年 3 月早些时候发布，基于苹果的 Fusion 架构，提供 18 核 CPU。欧洲地区基础款 M6/16GB/256GB 的售价超过 1000 欧元，突破了心理价格门槛。
+苹果于 2026 年 8 月 25 日发布了搭载全新 M6 和 M5 Pro 芯片的新款 Mac mini。M6 芯片是苹果首款 2nm 处理器，M5 Pro 相比 M4 Pro 多线程性能提升高达 30%。 此次发布标志着 Mac mini 定位的重大转变，价格显著上涨，在欧洲突破了 1000 欧元的心理关口。同时，它引入了苹果首款 2nm 芯片，为紧凑型台式机树立了性能和能效的新标准。 M6 芯片采用 12 核 CPU，而 M5 Pro 提供 15 或 18 核 CPU 以及 16 或 20 核 GPU 的配置。M5 Pro 支持高达 64GB 的统一内存，并采用集成专用神经加速器的下一代 GPU 架构。
 
 hackernews · runako · 8月25日 13:13 · [社区讨论](https://news.ycombinator.com/item?id=49433450)
 
-**背景**: Apple Silicon 芯片是基于 ARM 架构的系统级芯片，集成了 CPU、GPU、NPU 和统一内存。Mac mini 是苹果的紧凑型台式电脑，历来以价格亲民著称。M6 是 M5 的继任者，M5 于 2025 年 10 月发布，而 M5 Pro 是面向专业用户的更高端版本。
+**背景**: Mac mini 长期以来一直是苹果最实惠的台式机，深受注重预算的用户和开发者欢迎。然而，新款机型价格更高，反映了先进的技术和面向 AI 的功能。苹果 M 系列芯片是基于 ARM 的片上系统，每一代都在性能和能效上带来显著提升。
 
 <details><summary>参考链接</summary>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Apple_M6">Apple M 6 - Wikipedia</a></li>
 <li><a href="https://9to5mac.com/2026/08/25/apple-launches-next-gen-apple-silicon-chips-m6-and-m5-ultra/">Apple launches next-gen Apple Silicon chips : M 6 and... - 9to5Mac</a></li>
-<li><a href="https://www.notebookcheck.net/Apple-M5-Pro-18-Core-Processor-Benchmarks-and-Specs.1242671.0.html">Apple M5 Pro 18-Core Processor - Benchmarks and Specs</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apple_M5">Apple M5 - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区评论表达了复杂情绪：一些用户怀念便宜的 Mac mini 型号，另一些则质疑价格上涨以及缺乏 M6 与 M5 Pro 的直接对比基准。还有人批评苹果的发布时机，认为即时可用比预购更好。
+**社区讨论**: 社区情绪复杂：一些用户感叹超廉价 Mac mini 时代的结束，而另一些用户则赞赏性能提升。还有人批评苹果的发布策略，认为应提供立即购买而非等待预购，部分用户质疑 M6 与 M5 Pro 之间的基准比较。
 
-**标签**: `#Apple`, `#Mac mini`, `#M6 chip`, `#M5 Pro`, `#hardware`
+**标签**: `#Apple`, `#Mac mini`, `#M6`, `#M5 Pro`, `#hardware`
 
 ---
 
 <a id="item-5"></a>
-## [Nitter 项目收到停止函，实例全部下线](https://github.com/zedeus/nitter/issues/1442) ⭐️ 8.0/10
+## [Nitter 项目因收到 X Corp. 的停止函而关闭](https://github.com/zedeus/nitter/issues/1442) ⭐️ 8.0/10
 
-Nitter，一个广受欢迎的注重隐私的 Twitter 前端，收到了停止函，导致其所有实例无限期下线。项目维护者在 GitHub 上宣布了这一消息，并表示正在等待法律建议。 这一事件凸显了为大型平台提供替代访问方式的开源项目在法律上的脆弱性，可能影响用户隐私和信息获取。它还引发了对企业控制网络言论以及类似工具未来的担忧。 根据 xcancel 网站上的消息，停止函于 8 月 24 日（周一）美国东部时间晚上 8 点收到。维护者表示，在寻求法律建议期间，所有 Nitter 实例将在可预见的未来保持下线。
+Nitter，一个流行的注重隐私的 Twitter/X 前端，收到了 X Corp. 的停止函，导致其所有实例关闭。项目维护者于 2026 年 8 月 24 日宣布关闭，等待法律建议。 此事件凸显了依赖网络抓取的开源项目在法律上的脆弱性，可能开创先例，阻碍类似隐私工具的发展。这也影响了依赖 Nitter 无需登录或追踪即可访问 X 内容的用户，并可能影响使用此类聚合器获取数据的 AI 公司。 停止函于 8 月 24 日（周一）晚上 8 点（美国东部时间）收到，所有 Nitter 实例预计在可预见的未来保持关闭。维护者正在等待法律建议，社区猜测 X Corp. 可能针对聚合器以增强其与 Anthropic 和 OpenAI 等 AI 公司的议价能力。
 
 hackernews · Banditoz · 8月25日 17:08 · [社区讨论](https://news.ycombinator.com/item?id=49437283)
 
-**背景**: Nitter 是一个免费开源的非官方 Twitter 前端，旨在提供无需跟踪、广告或账号的访问方式。它使用 Nim 语言构建，注重隐私和性能。停止函是一种法律通知，要求停止涉嫌的非法活动，常用于版权侵权案件。
+**背景**: Nitter 是 Twitter/X 的开源替代前端，允许用户无需 JavaScript、广告或跟踪即可浏览推文，也无需账户。它被注重隐私的个人和组织广泛用于访问 X 内容，尤其是在 X 官方平台要求登录或施加限制时。停止函是要求停止涉嫌侵权活动的正式请求，虽然不具有法律约束力，但通常会导致合规以避免诉讼。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Nitter">Nitter - Wikipedia</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Cease_and_desist">Cease and desist - Wikipedia</a></li>
-<li><a href="https://www.law.cornell.edu/wex/cease_and_desist_letter">cease and desist letter | Wex | US Law | LII / Legal Information Institute</a></li>
+<li><a href="https://techcrunch.com/2026/08/25/x-sends-cease-and-desist-to-open-source-project-nitter-over-alleged-scraping/">X sends cease - and - desist to open source project ... | TechCrunch</a></li>
+<li><a href="https://www.investopedia.com/terms/c/cease-and-desist.asp">investopedia.com/terms/c/ cease - and - desist .asp</a></li>
+<li><a href="https://nitter.tiekoetter.com/about">nitter .tiekoetter.com</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区成员表达了失望和沮丧，一些人指出他们依赖 Nitter 来无需登录即可访问 Twitter 内容。其他人建议中等强国应为这类项目提供法律保护，还有人猜测停止函可能与 AI 公司使用 Nitter 抓取推文有关。
+**社区讨论**: 社区评论表达了沮丧和担忧，一些人指出 Nitter 对于访问地方议会等组织的 X 内容至关重要。其他人建议中等强国应为这类项目提供法律保护，还有人猜测关闭可能与 X Corp. 与 AI 公司的谈判有关。也有讨论关于 X 的受欢迎程度下降以及对依赖它获取新闻的用户的影响。
 
-**标签**: `#Nitter`, `#Twitter`, `#cease and desist`, `#open source`, `#privacy`
+**标签**: `#open-source`, `#legal`, `#privacy`, `#twitter`, `#web-scraping`
 
 ---
 
 <a id="item-6"></a>
-## [OpenAI 首席财务官阐述实现智能充裕的全栈路径](https://openai.com/index/the-full-stack-behind-abundant-intelligence) ⭐️ 8.0/10
+## [OpenAI 首席财务官阐释丰富智能背后的全栈](https://openai.com/index/the-full-stack-behind-abundant-intelligence) ⭐️ 8.0/10
 
-OpenAI 首席财务官 Sarah Friar 发布了一篇博文，阐述了芯片、计算、模型和产品方面的叠加改进如何推动 AI 变得更强大且更具成本效益。该文将智能扩展视为这四个相互关联层面进步的体现。 这标志着 OpenAI 的战略方向，并强化了行业向整体性、全栈优化而非仅关注模型规模发展的趋势。它强调了降低成本和提高规模对于让 AI 广泛可及的重要性，影响开发者、企业和终端用户。 该文强调了芯片、计算基础设施、核心模型和最终产品方面进步的叠加效应。它表明这些领域的持续进步对于以更大规模和更低运营成本提供越来越有用的智能至关重要。
+OpenAI 首席财务官 Sarah Friar 发布了一篇题为《丰富智能背后的全栈》的博客文章，阐述了芯片、计算、模型和产品方面的进步如何相互叠加，以更大规模、更低成本提供更有用的智能。 这篇文章表明 OpenAI 战略上注重降低成本和提高可扩展性，这对于让 AI 更易获取和更可持续至关重要。它也揭示了公司的长期愿景，可能影响行业趋势和投资者信心。 该文章由 Sarah Friar 撰写，她于 2024 年 6 月加入 OpenAI，担任其首位首席财务官。文章强调整个 AI 堆栈（从硬件到终端用户产品）改进的复合效应，而非单一突破。
 
 rss · OpenAI Blog · 8月25日 07:05
 
-**背景**: AI 系统依赖于一系列组件：用于计算的专业芯片（如 GPU）、用于训练和推理的大规模计算基础设施、复杂的模型（如 GPT-4）以及面向用户的产品。历史上，进展常以模型规模来衡量，但近期趋势强调效率和系统级优化。该文反映了行业向复合 AI 系统和成本效益扩展的更广泛转变。
+**背景**: OpenAI 是开发 ChatGPT 的人工智能研究组织。AI 供应链经过数十年发展，从早期的晶体管到如今需要数十亿参数和专用硬件的尖端模型。芯片、计算、模型和产品的进步相互依存，其复合效应在提升能力的同时降低成本。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://openai.com/index/the-full-stack-behind-abundant-intelligence/">The full stack behind abundant intelligence - OpenAI</a></li>
-<li><a href="https://vff.ai/article/2026/08/25/the-full-stack-behind-abundant-intelligence">OpenAI CFO: AI Scaling Requires Full-Stack Advances</a></li>
-<li><a href="https://releasebytes.com/item/openai-cfo-explains-full-stack-for-abundant-ai-intelligence">OpenAI CFO Explains Full Stack for Abundant AI Intelligence</a></li>
+<li><a href="https://openai.com/index/the-full-stack-behind-abundant-intelligence/">The full stack behind abundant intelligence | OpenAI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sarah_Friar">Sarah Friar - Wikipedia</a></li>
+<li><a href="https://www.traxtech.com/ai-in-supply-chain/how-ai-supply-chains-evolved-from-transistors-to-trillion-dollar-models">How AI Supply Chains Evolved From Transistors to Trillion-Dollar Models</a></li>
 
 </ul>
 </details>
 
-**标签**: `#OpenAI`, `#AI infrastructure`, `#compute`, `#AI models`, `#industry trends`
+**标签**: `#OpenAI`, `#AI infrastructure`, `#compute`, `#cost reduction`, `#strategy`
 
 ---
 
 <a id="item-7"></a>
-## [OpenAI 瓦解俄罗斯关联的 AI 影响力行动](https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia) ⭐️ 8.0/10
+## [OpenAI 瓦解俄罗斯 AI 影响力行动](https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia) ⭐️ 8.0/10
 
-OpenAI 封禁了来自俄罗斯的账户，这些账户利用其 AI 工具推广一个虚假的以色列智库和一个赞扬俄罗斯、批评西方的“主权”指数。此举是 OpenAI 持续打击隐蔽影响力行动的一部分。 这凸显了 AI 在虚假信息中的双重用途风险，以及 AI 公司为减轻滥用所采取的主动措施。它强调了 AI 在地缘政治影响力行动中日益增长的作用，以及建立强健安全协议的必要性。 该行动涉及一个虚假智库和一个“主权”指数，可能旨在为亲俄叙事增添可信度。OpenAI 未披露被封禁账户的数量或所使用的具体 AI 模型，但此举反映了其反对恶意使用其服务的政策。
+OpenAI 宣布已封禁来自俄罗斯的账户，这些账户利用 AI 开展秘密影响力行动，推广一个虚假的以色列智库和一个赞扬俄罗斯、批评西方的“主权指数”。这是新报道的行动，OpenAI 已采取措施予以瓦解。 此次瓦解行动凸显了 AI 在国家支持的影响力行动中的日益广泛使用，以及 AI 公司积极应对此类威胁的必要性。它强调了 AI 滥用的地缘政治影响，以及 AI 治理和安全措施的重要性。 该行动最显著的特点是创建了一个“主权指数”，由所谓的智库推广，以赞扬俄罗斯并贬低西方国家。OpenAI 表示，据其所知，这是一个新的、此前未被报道的秘密影响力行动。
 
 rss · OpenAI Blog · 8月25日 00:00
 
-**背景**: OpenAI 此前曾报告过利用其模型的影响力行动，例如生成反乌克兰评论的 Doppelganger 行动。AI 生成的内容可以通过大规模创建逼真的文本和图像来放大虚假信息，使用户更难分辨事实与虚构。像 OpenAI 这样的公司正越来越多地投资于检测和瓦解以应对这些威胁。
+**背景**: 秘密影响力行动是俄罗斯等外国对手进行的信息行动，旨在制造分裂和破坏机构，通常在选举期间进行。AI 的进步使国家能够以前所未有的规模开展此类行动，因此 AI 开发者监控和瓦解其技术的恶意使用至关重要。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.scworld.com/news/openai-report-reveals-threat-actors-using-chatgpt-in-influence-operations">OpenAI report reveals threat actors using ChatGPT in influence ...</a></li>
-<li><a href="https://www.nytimes.com/2024/05/30/technology/openai-influence-campaigns-report.html">OpenAI Says Russia and China Used Its A.I. in Covert Campaigns ...</a></li>
-<li><a href="https://www.bbc.com/news/articles/cx2r7grrdwzo">How AI is supercharging Russia's online disinformation campaigns</a></li>
+<li><a href="https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia/">Disrupting a new covert influence campaign from Russia | OpenAI</a></li>
+<li><a href="https://nationalsecurity.gmu.edu/disinformation-campaigns-and-covert-influence-in-the-united-states/">Disinformation Campaigns and Covert Influence in the United States - National Security Institute</a></li>
 
 </ul>
 </details>
 
-**标签**: `#AI safety`, `#disinformation`, `#OpenAI`, `#influence campaign`, `#security`
+**标签**: `#AI safety`, `#cybersecurity`, `#influence operations`, `#OpenAI`, `#geopolitics`
 
 ---
 
 <a id="item-8"></a>
-## [EVE Online 启动大规模 Python 3 迁移](https://simonwillison.net/2026/Aug/25/eve-online-move-to-python-3/) ⭐️ 8.0/10
+## [EVE Online 开始从 Python 2.7 迁移到 Python 3](https://simonwillison.net/2026/Aug/25/eve-online-move-to-python-3/) ⭐️ 8.0/10
 
-EVE Online 宣布开始从 Stackless Python 2.7 迁移到 Python 3，使用 futurize 脚本处理 240 万行代码，并手动审查约 2 万个行为差异。 此次迁移意义重大，因为它展示了一种升级庞大且长期运行的 Python 代码库的策略，为面临类似挑战的其他大型项目提供了见解。它也凸显了弃用 Python 2.7 和 Stackless Python 的持续需求。 迁移将使用 futurize 脚本自动转换，然后手动审查约 2 万个 Python 2 和 3 行为差异的地方，例如整数除法。公告未说明如何替换 Stackless，但之前的演示描述了在 EVE Frontier 中使用 carbonengine/scheduler 库。
+EVE Online 宣布开始从 Stackless Python 2.7 迁移到 Python 3，使用 futurize 脚本处理 240 万行代码，随后手动审查约 2 万个 Python 2 和 Python 3 行为差异之处。 此次迁移意义重大，因为 EVE Online 是生产环境中规模最大、运行时间最长的 Python 代码库之一，其向 Python 3 的迁移标志着 Python 社区的一个重要里程碑。同时，它也凸显了大型遗留 Python 系统迁移的挑战和策略，许多组织仍面临这些问题。 迁移将使用 futurize 脚本，该脚本自动将 Python 2 代码转换为兼容 Python 2/3 的代码库，随后手动审查约 2 万个行为差异之处，例如整数除法。公告未说明如何替换 Stackless Python，但之前的演示描述了在其较新的游戏 EVE Frontier 中使用开源 carbonengine/scheduler 库。
 
 rss · Simon Willison · 8月25日 22:59
 
-**背景**: EVE Online 自 2003 年起运行于 Stackless Python，上一次重大升级是在 2010 年升级到 Stackless Python 2.7。Stackless Python 是 CPython 的一个变体，提供微线程（tasklet）以实现轻量级并发，但该项目已停止维护，其 GitHub 仓库已归档。由于代码库规模庞大以及 Python 2 和 3 之间的行为差异，迁移到 Python 3 是一项重大工程。
+**背景**: EVE Online 自 2003 年推出以来一直运行在 Stackless Python 上，其上一次重大升级是在 2010 年升级到 Stackless Python 2.7。Stackless Python 是 Python 的一个变体，提供微线程（tasklets）以实现轻量级并发，但该项目已正式停止维护，其 GitHub 仓库自 2025 年 2 月起已归档。futurize 脚本是 python-future 项目的一部分，用于将 Python 2 代码迁移到 Python 3，同时保持与 Python 2 的兼容性。
 
 <details><summary>参考链接</summary>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Stackless_Python">Stackless Python</a></li>
-<li><a href="https://python-future.org/futurize.html">futurize: Py2 to Py2/3 — Python-Future documentation</a></li>
-<li><a href="https://github.com/stackless-dev/stackless/wiki">Home · stackless-dev/stackless Wiki · GitHub</a></li>
+<li><a href="https://python-future.org/futurize.html">futurize : Py2 to Py2/ 3 — Python -Future documentation</a></li>
+<li><a href="https://github.com/PythonCharmers/python-future">GitHub - PythonCharmers/ python -future: Easy, clean, reliable Python ...</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: Lobsters 上的讨论可能包含关于迁移规模、离开 Stackless 的挑战以及使用 futurize 的评论。有些人可能会质疑选择 futurize 而非其他工具，或讨论如此庞大代码库的长期维护问题。
+**社区讨论**: Lobsters 上的社区讨论强调了迁移的规模以及 EVE Online 使用 Python 的历史意义。一些评论者对他们将如何替换 Stackless Python 表示好奇，而另一些则指出迁移如此庞大代码库的挑战以及手动审查步骤的重要性。
 
-**标签**: `#Python`, `#Migration`, `#EVE Online`, `#Stackless Python`, `#Large-scale systems`
+**标签**: `#Python`, `#Migration`, `#EVE Online`, `#Stackless Python`, `#Software Engineering`
 
 ---
 
 <a id="item-9"></a>
-## [基于开放权重模型的持续学习实现主权 AI](https://www.reddit.com/r/MachineLearning/comments/1vxvzju/continual_learning_of_frontier_models_for/) ⭐️ 8.0/10
+## [持续学习使主权 AI 成为可能，基于开放权重模型](https://www.reddit.com/r/MachineLearning/comments/1vxvzju/continual_learning_of_frontier_models_for/) ⭐️ 8.0/10
 
-该报告介绍了 Thomson，一个通过持续学习在开放权重模型上训练的新型通用前沿模型，证明以大幅降低的计算和人员预算即可实现前沿性能。它为主权 AI 提出了具体方法，使更广泛的机构能够构建和管理自己的 AI 系统。 这挑战了前沿 AI 开发仅为少数资金雄厚机构专属的假设，可能使 AI 能力民主化，减少信息、经济和权力不对称。它为组织实现主权 AI 提供了实用路径，这对国家安全、数据隐私和文化代表性日益重要。 Thomson 展现出独特的π形性能模式，在广泛能力上有所提升，同时几乎消除了灾难性遗忘。该方法采用现代中后期训练栈，并引入保持可塑性和稳定性的保障措施，对参数进行最少的高影响干预。
+一份新的技术报告介绍了 Thomson，这是一个通过在开放权重模型上进行持续学习训练的前沿模型，展示了在显著降低计算和人员预算的情况下具有竞争力的性能。报告认为，这种方法使更广泛的机构能够实现主权 AI。 这挑战了前沿 AI 开发仅属于少数资金充足实验室的假设，可能使 AI 开发民主化并解决权力不对称问题。它为不同机构提供了构建、部署和管理自己 AI 的具体路径，与主权 AI 运动一致。 Thomson 表现出独特的π形性能模式，在广泛能力上有所提升，同时最小化灾难性遗忘。该方法使用现代中期和后期训练堆栈，并具有可塑性和稳定性的保障，需要最少的高影响参数干预。
 
 reddit · r/MachineLearning · /u/Forsaken_Scientist · 8月25日 10:30
 
-**背景**: 持续学习是一种 AI 方法，模型按顺序学习新任务同时保留已学知识，以应对灾难性遗忘的挑战。开放权重模型是公开其学习参数的 AI 模型，允许他人下载、使用甚至修改。主权 AI 指组织独立构建、部署和管理 AI 使用的能力，以减少对外部供应商的依赖。
+**背景**: 持续学习是一种机器学习方法，模型按顺序训练新任务，同时保留先前学到的知识，解决灾难性遗忘问题。开放权重模型公开训练参数，允许他人下载、微调和运行，这对主权 AI 至关重要——即组织独立构建、部署和管理 AI 使用的能力。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.ibm.com/think/topics/continual-learning">What is continual learning? - IBM</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Continual_learning">Continual learning</a></li>
+<li><a href="https://www.ibm.com/think/topics/continual-learning">What is Continual Learning? | IBM</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Open-weight_model">Open-weight model</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Sovereign_AI">Sovereign AI</a></li>
 
 </ul>
 </details>
 
-**标签**: `#continual learning`, `#open-weight models`, `#SovereignAI`, `#frontier models`, `#AI democratization`
+**标签**: `#continual learning`, `#frontier models`, `#SovereignAI`, `#open-weight models`, `#AI democratization`
 
 ---
 
 <a id="item-10"></a>
-## [OpenAI 推出适用于 ChatGPT Work 和 Codex 的管理员插件](https://openai.com/index/introducing-admin-plugin) ⭐️ 7.0/10
+## [OpenAI 推出 ChatGPT Work 和 Codex 的 Admin 插件](https://openai.com/index/introducing-admin-plugin) ⭐️ 6.0/10
 
-OpenAI 推出了适用于 ChatGPT Work 和 Codex 的管理员插件，使工作区管理员能够分析使用情况、管理成员和权限、调整限制并处理管理员请求。该插件将管理员指令映射到支持的读取或写入操作，并返回结构化结果。 该插件标志着 OpenAI 企业级战略的重要一步，为组织提供了对 ChatGPT Work 和 Codex 使用的更多控制和可见性。它简化了管理任务，可能会提高需要强大治理和合规性的企业的采用率。 该管理员插件将 Admin Console 的功能作为权限感知工具提供给 ChatGPT Work 和 Codex。它支持内置的企业角色，如所有者、管理员、成员和分析查看者，在支持的套餐中，自定义角色和成员 RBAC 控制对插件和其他功能的访问。
+OpenAI 推出了适用于 ChatGPT Work 和 Codex 的 Admin 插件，使工作区管理员能够直接通过对话命令管理成员、权限、限制并分析使用情况。该插件将管理员指令映射到支持的读取或写入操作，并返回结构化结果。 该插件通过允许 IT 团队使用自然语言执行复杂的管理任务，减少了手动控制台导航的需求，从而简化了企业管理。它增强了 ChatGPT Work 和 Codex 对企业客户的可用性，可能提高采用率和运营效率。 该插件将 Admin Console 的功能作为权限感知工具提供，并能从使用数据生成报告和见解。它支持内置的企业角色，如 Owner、Admin、Member 和 Analytics Viewer，并在支持的方案中支持自定义角色和 RBAC。
 
 rss · OpenAI Blog · 8月25日 00:00
 
-**背景**: ChatGPT Work 是面向专业用途的订阅层级，提供更高的使用限制和高级模型访问等功能。Codex 是 OpenAI 的编程代理，帮助开发者完成代码生成和调试等任务。管理员插件扩展了现有的 Admin Console（一个基于 Web 的管理工作区设置的界面），使其可以直接在这些工具中访问。
+**背景**: ChatGPT Work 是 ChatGPT 面向企业使用的付费层级，提供高级功能和管理能力。Codex 是 OpenAI 的 AI 驱动的编码助手。Admin 插件弥合了对话式 AI 与管理任务之间的差距，使管理员无需离开聊天界面即可与工作区设置进行交互。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://openai.com/index/introducing-admin-plugin/">Introducing the Admin plugin for ChatGPT Work and Codex - OpenAI</a></li>
+<li><a href="https://openai.com/index/introducing-admin-plugin/">Introducing the Admin plugin for ChatGPT Work and Codex | OpenAI</a></li>
 <li><a href="https://learn.chatgpt.com/docs/enterprise/work-admin-faq">ChatGPT Work admin FAQ | ChatGPT Learn</a></li>
 <li><a href="https://9to5mac.com/2026/08/25/openai-announces-the-admin-plugin-for-chatgpt-work-and-codex/">OpenAI announces the Admin plugin for ChatGPT Work and Codex</a></li>
 
 </ul>
 </details>
 
-**标签**: `#OpenAI`, `#ChatGPT`, `#Codex`, `#Admin plugin`, `#Enterprise`
+**标签**: `#OpenAI`, `#ChatGPT`, `#Admin`, `#Enterprise`, `#Plugin`
 
 ---
