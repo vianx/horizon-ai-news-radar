@@ -5,255 +5,246 @@ date: 2026-08-25
 lang: en
 ---
 
-> From 41 items, 11 important content pieces were selected
+> From 43 items, 10 important content pieces were selected
 
 ---
 
-1. [Xiaomi XRing O3 CPU Matches Apple Single-Core, Beats Multi-Core](#item-1) ⭐️ 8.0/10
-2. [MS Paint and Photos Embed Invisible GUID Watermarks in Local AI Images](#item-2) ⭐️ 8.0/10
-3. [Entire San Francisco Rendered as Playable 3D Web Game](#item-3) ⭐️ 8.0/10
-4. [Oceans Hit Record High Temperatures](#item-4) ⭐️ 8.0/10
-5. [IPFS Maintainers at Shipyard Wind Down, Project Continues](#item-5) ⭐️ 8.0/10
-6. [seL4 Security Proofs Complete on AArch64](#item-6) ⭐️ 8.0/10
-7. [OpenAI's GPT-5.6 in Kiro boosts developer price-performance](#item-7) ⭐️ 8.0/10
-8. [Executable as SQLite Database: A Clever Linux Hack](#item-8) ⭐️ 8.0/10
-9. [Insilico Medicine Launches O3DC Open Alliance for AI Drug Discovery Benchmarks](#item-9) ⭐️ 7.0/10
-10. [llm-anthropic 0.27 Adds Compatibility with Anthropic SDK v1.0.0](#item-10) ⭐️ 5.0/10
-11. [Most Chinese Consumers Use AI for Product Research, Report Finds](#item-11) ⭐️ 5.0/10
+1. [Apple Unveils M6 and M5 Ultra Chips with Major AI and Performance Gains](#item-1) ⭐️ 9.0/10
+2. [OpenAI's Jalapeño Chip Outperforms Nvidia Blackwell in Tests](#item-2) ⭐️ 9.0/10
+3. [FDA Approves First Wearable Dual Glucose-Ketone Monitor](#item-3) ⭐️ 8.0/10
+4. [Nitter Shuts Down After Cease and Desist from X Corp.](#item-4) ⭐️ 8.0/10
+5. [OpenAI CFO Explains Full Stack Behind Abundant Intelligence](#item-5) ⭐️ 8.0/10
+6. [OpenAI Bans Russia-Linked Accounts in Covert Influence Campaign](#item-6) ⭐️ 8.0/10
+7. [EVE Online Begins Migration from Stackless Python 2.7 to Python 3](#item-7) ⭐️ 8.0/10
+8. [Continual Learning Enables SovereignAI with Open-Weight Frontier Models](#item-8) ⭐️ 8.0/10
+9. [SpaceX to Launch NVIDIA Vera Rubin NVL72 into Orbit by 2027](#item-9) ⭐️ 8.0/10
+10. [OpenAI Launches Admin Plugin for ChatGPT Work and Codex](#item-10) ⭐️ 7.0/10
 
 ---
 
 <a id="item-1"></a>
-## [Xiaomi XRing O3 CPU Matches Apple Single-Core, Beats Multi-Core](https://twitter.com/lemire/status/2091894299289874926) ⭐️ 8.0/10
+## [Apple Unveils M6 and M5 Ultra Chips with Major AI and Performance Gains](https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/) ⭐️ 9.0/10
 
-Xiaomi's new XRing O3 chip reportedly matches Apple's single-threaded CPU performance and is much faster in multithreaded tasks, according to a tweet by Daniel Lemire. The chip scores over 5 million on AnTuTu and is the first mobile processor to support LPDDR6 memory. This marks a significant competitive shift in the mobile chip market, as Xiaomi, the third-largest smartphone maker, now produces a chip that rivals Apple's performance. It could pressure Qualcomm and MediaTek, and signals China's growing semiconductor capabilities. The XRing O3 uses a 10-core all-big-core CPU design with 6 super cores and 4 large cores, delivering a 60% peak performance increase over the previous generation. It also features the G2-Ultra NX GPU with 85% performance boost and 64% power reduction, and supports LPDDR6 with 113.8 GB/s bandwidth.
+On August 25, 2026, Apple announced the M6 and M5 Ultra chips, featuring a 2nm process for the M6 and a quad-chip UltraFusion architecture for the M5 Ultra, delivering significant performance and AI compute improvements. This announcement marks a major leap in Apple silicon, potentially reshaping the high-performance computing and AI landscape. The new chips will likely power upcoming Macs and Pro devices, affecting developers, creatives, and AI researchers who rely on Apple hardware. The M6 uses a 2nm process with three types of CPU cores and a 12-core CPU, while the M5 Ultra combines four 3nm dies with 1.2TB/s memory bandwidth, a 32-core Neural Engine, and supports up to 33 streams of 8K ProRes 422 video. Pricing for maxed-out configurations can exceed $24,000.
 
-hackernews · tosh · Aug 24, 15:08 · [Discussion](https://news.ycombinator.com/item?id=49420873)
+hackernews · interpol_p · Aug 25, 13:01 · [Discussion](https://news.ycombinator.com/item?id=49433292)
 
-**Background**: Mobile processors are judged by benchmarks like Geekbench and AnTuTu, which measure single-threaded and multi-threaded performance. Apple's A-series chips have long led in single-core performance, but Xiaomi's new chip narrows that gap while exceeding in multi-core due to more cores. This development is part of China's broader push to advance its semiconductor industry.
+**Background**: Apple silicon is Apple's line of ARM-based processors used in Macs and iPads. The M6 and M5 Ultra are the latest in this series, succeeding the M5 family. The M5 Ultra uses a new UltraFusion technology that combines four chips into one system, a first for Apple. These chips are designed to handle demanding tasks like AI inference and high-end video editing.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://x.com/lemire/status/2091894299289874926">Daniel Lemire on X: "Xiaomi is the Chinese tech giant. Their phones compete with iPhones. Their new CPU roughly matches Apple cores on single threaded tasks, and is much faster in multithreaded execution. Of course, Apple may soon announce their next processor, so this edge may not last long. And" / X</a></li>
-<li><a href="https://nokiapoweruser.com/xiaomi-xring-o3-chip-specs-benchmarks/">Xiaomi XRING O3 Specs & Benchmarks: 3nm TSMC, 10-Core CPU & LPDDR6 Memory - NPowerUser</a></li>
-<li><a href="https://www.techtimes.com/articles/325315/20260824/xiaomi-xring-o3-tops-5m-antutu-all-big-core-cpu-first-lpddr6-mobile-chip.htm">Xiaomi Xring O3 Tops 5M AnTuTu With All-Big-Core CPU and First LPDDR6 ...</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apple_M6">Apple M 6 - Wikipedia</a></li>
+<li><a href="https://xenospectrum.com/en/apple-silicon-chip-architecture/">Apple 's M 6 Chip Debuts 2nm Process, While... | XenoSpectrum</a></li>
+<li><a href="https://www.macrumors.com/2026/08/25/apple-debuts-m5-ultra/">Apple Debuts M5 Ultra as Most Powerful Chip Ever - MacRumors</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters noted that the XRing O3 is essentially an ARM C1-Ultra, similar to the MediaTek Dimensity 9500, and questioned power efficiency per watt, which is critical for phones. Some pointed out that Apple's next chips may reclaim the lead, while others highlighted China's upcoming 5nm manufacturing as a potential game-changer.
+**Discussion**: Community comments show a mix of excitement and concern. Some users are impressed by the performance gains, while others discuss the high pricing, noting that inflation-adjusted costs are comparable to early Macs. There is also speculation that Apple might skip M6 Pro/Max/Ultra to focus on an AI-focused M7 chip.
 
-**Tags**: `#Xiaomi`, `#CPU`, `#Apple`, `#mobile processors`, `#semiconductors`
+**Tags**: `#Apple`, `#hardware`, `#AI`, `#chips`, `#performance`
 
 ---
 
 <a id="item-2"></a>
-## [MS Paint and Photos Embed Invisible GUID Watermarks in Local AI Images](https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/) ⭐️ 8.0/10
+## [OpenAI's Jalapeño Chip Outperforms Nvidia Blackwell in Tests](https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia) ⭐️ 9.0/10
 
-Microsoft Paint and Photos now silently embed invisible GUID watermarks into images that have been AI-manipulated, even when the AI processing is performed locally on the user's device. This was discovered through reverse engineering, revealing that the watermarking is automatic and cannot be disabled by the user. This raises significant privacy and anonymity concerns, as the invisible watermark can potentially be used to trace images back to the user's Microsoft account, linking them to personal information. It also highlights a broader trend of AI content watermarking, which could impact user trust and the perception of local processing as private. The watermark is a 16-byte GUID issued by Microsoft's servers, embedded via a function called ApplyWatermark in Watermarker.dll. In Paint, a watermarking failure is treated as a generation failure, whereas Photos logs an error but still returns the image. It is unclear if the watermark applies to all AI features, such as background removal.
+OpenAI has released the first benchmark results for its custom inference chip, Jalapeño, claiming it outperforms Nvidia's Blackwell in efficiency and latency. The chip delivers 1.5 to 1.9 times more AI work per unit of power, 1.7 to 3.6 times lower end-to-end latency, and 2.1 to 4.1 times higher performance in high-interaction scenarios across models like GPT-OSS 120B, DeepSeek R1 670B, and Kimi K2.5 1T. This is a significant development in the AI hardware landscape, as it suggests that custom inference chips from AI companies like OpenAI could challenge Nvidia's dominance. If these results hold up in real-world deployments, it could lead to more competition, lower costs, and faster innovation in AI infrastructure. Jalapeño was developed in collaboration with Broadcom and is optimized for LLM inference. The benchmarks were conducted using SemiAnalysis' InferenceX benchmark, and OpenAI's head of hardware, Richard Ho, described the results as showing a 'very, very significant performance advance over state of the art.' The chip is rated for high throughput and low latency, but die size and other architectural details were not fully disclosed.
 
-hackernews · ComputerGuru · Aug 24, 15:28 · [Discussion](https://news.ycombinator.com/item?id=49421158)
+hackernews · bmulholland · Aug 25, 14:06 · [Discussion](https://news.ycombinator.com/item?id=49434378)
 
-**Background**: Digital watermarking is a technique used to embed hidden information into media to identify ownership or provenance. In the context of AI, watermarking is increasingly used to mark AI-generated content to combat misinformation and track its spread. Microsoft has been integrating AI features into its consumer apps, and this discovery shows that even local AI processing is not exempt from such tracking.
+**Background**: Nvidia's Blackwell architecture is the current state-of-the-art for AI accelerators, powering GPUs like the B200 and GB200. OpenAI, like other major AI labs, has historically relied on Nvidia GPUs for training and inference, but has been exploring custom silicon to reduce costs and improve performance. Custom inference chips are designed specifically for running trained models, offering potential efficiency gains over general-purpose GPUs.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/">Microsoft Paint and Photos Embed Server-Issued GUIDs as Invisible Watermarks in Locally-Generated Images :: Xusheng Li</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Digital_watermarking">Digital watermarking - Wikipedia</a></li>
-<li><a href="https://www.brookings.edu/articles/detecting-ai-fingerprints-a-guide-to-watermarking-and-beyond/">Detecting AI fingerprints: A guide to watermarking and beyond | Brookings</a></li>
+<li><a href="https://openai.com/index/openai-broadcom-jalapeno-inference-chip/">OpenAI and Broadcom unveil LLM-optimized inference chip | OpenAI</a></li>
+<li><a href="https://openai.com/index/jalapeno-first-results/">Jalapeño’s first results show industry-leading speed and efficiency in AI inference | OpenAI</a></li>
+<li><a href="https://techcrunch.com/2026/08/25/openais-jalapeno-chip-is-built-for-fast-inference-at-scale-benchmarks-show/">OpenAI’s Jalapeño chip is built for fast inference at scale, benchmarks show | TechCrunch</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community comments express concern that the invisible watermark undermines anonymity, with one user noting it could enable copyright subpoenas to Microsoft to reveal personal data. Others point out that Microsoft has a history of sloppy implementations, such as incorrectly watermarking Azure DevOps commits, and recommend avoiding Paint and other LLM-enabled apps. There is also skepticism about the AI aspect, with some arguing the real issue is the secret unique identifier in every image.
+**Discussion**: Community comments reflect a mix of excitement and skepticism. Some see parallels to the early 3dfx era of graphics chips, speculating on which company will dominate inference. Others note the efficiency gap with human brains, and one commenter highlights the trend of using DeepSeek and Kimi as benchmarks, suggesting a shift in AI model landscape.
 
-**Tags**: `#privacy`, `#watermarking`, `#Microsoft`, `#AI`, `#security`
+**Tags**: `#AI hardware`, `#OpenAI`, `#Nvidia`, `#chip design`, `#inference`
 
 ---
 
 <a id="item-3"></a>
-## [Entire San Francisco Rendered as Playable 3D Web Game](https://sf.thijs.gg/) ⭐️ 8.0/10
+## [FDA Approves First Wearable Dual Glucose-Ketone Monitor](https://www.fda.gov/news-events/press-announcements/fda-authorizes-first-wearable-device-continuously-monitors-both-ketone-levels-and-blood-sugar) ⭐️ 8.0/10
 
-A web-based project at sf.thijs.gg renders the entire city of San Francisco as an explorable 3D video game, allowing users to drive around and collect coins. The project has gained significant attention on Hacker News, with 309 points and 109 comments. This project showcases the potential of web-based 3D rendering for large-scale urban environments, which could inspire new applications in gaming, urban planning, and virtual tourism. It demonstrates that entire cities can be rendered in real-time in a browser, making such experiences accessible to a wide audience. The project uses web technologies to render the city, and users can drive vehicles and collect coins. Some users have reported performance issues on Safari, and there are suggestions for adding features like street names, landmarks, and address teleportation.
+The U.S. Food and Drug Administration (FDA) has authorized the Libre Duo 10 Day Continuous Dual Glucose Ketone Monitoring System, the first wearable device that continuously monitors both ketone levels and blood sugar, for people aged 2 years and older with diabetes. This regulatory milestone could significantly improve diabetes management by providing real-time data on both glucose and ketones, helping to prevent diabetic ketoacidosis (DKA) and enabling more personalized care. It may also pave the way for more advanced closed-loop systems and expand access to critical metabolic monitoring for patients, especially children with type 1 diabetes. The device is authorized for people aged 2 years and older with diabetes. It combines continuous glucose monitoring (CGM) with continuous ketone monitoring (CKM) in a single wearable sensor, which is a first-of-its-kind combination. The FDA's authorization is based on a de novo classification request, indicating a novel device with moderate risk.
 
-hackernews · centrosphere · Aug 24, 17:05 · [Discussion](https://news.ycombinator.com/item?id=49422784)
+hackernews · sunnynagra · Aug 25, 19:07 · [Discussion](https://news.ycombinator.com/item?id=49439017)
 
-**Background**: 3D city rendering has been used in urban planning and architectural visualization, but real-time web-based rendering of an entire city is relatively novel. This project leverages modern web technologies to create an interactive experience without requiring downloads or specialized hardware.
+**Background**: Continuous glucose monitors (CGMs) are wearable devices that track blood sugar levels in real-time, widely used by people with diabetes. Ketone monitoring is traditionally done via blood or urine tests, but continuous ketone monitoring (CKM) is an emerging technology that tracks ketone bodies like beta-hydroxybutyrate in interstitial fluid. Elevated ketones can lead to diabetic ketoacidosis (DKA), a life-threatening complication, so continuous monitoring can help detect and prevent this condition. The FDA's approval process for novel devices often involves a de novo pathway, which establishes new device classifications and can take several months to years.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://github.com/KingTroy125/3D-City">GitHub - KingTroy125/3D-City: 3D City is an interactive ...</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Category:Video_games_set_in_San_Francisco">Category:Video games set in San Francisco - Wikipedia</a></li>
+<li><a href="https://www.fda.gov/news-events/press-announcements/fda-authorizes-first-wearable-device-continuously-monitors-both-ketone-levels-and-blood-sugar">FDA Authorizes First Wearable Device That Continuously Monitors Both Ketone Levels and Blood Sugar | FDA</a></li>
+<li><a href="https://www.envisioning.com/research/helix/wearable-continuous-ketone-monitors">Wearable Continuous Ketone Monitors (CKM) | Helix | Envisioning</a></li>
+<li><a href="https://pubs.acs.org/doi/10.1021/acssensors.3c02677">Continuous Ketone Monitoring via Wearable Microneedle Patch Platform | ACS Sensors</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The community response is overwhelmingly positive, with users expressing emotional connections to the city and excitement about the technical achievement. Some users report technical issues, such as Safari freezing, and suggest improvements like adding street names and using higher-resolution data.
+**Discussion**: Community comments reflect a mix of personal connection and technical skepticism. One user shared a poignant story of a friend who died from diabetic ketoacidosis, expressing gratitude for progress. Others expressed hope for automated glucose control and reimbursement, while some questioned the utility of ketone monitoring for average diabetics and pointed to other wearable sensors. Overall, sentiment is cautiously optimistic, with a focus on accessibility and real-world impact.
 
-**Tags**: `#3D rendering`, `#web development`, `#city simulation`, `#interactive maps`, `#Hacker News`
+**Tags**: `#FDA`, `#wearable`, `#diabetes`, `#health tech`, `#medical devices`
 
 ---
 
 <a id="item-4"></a>
-## [Oceans Hit Record High Temperatures](https://www.bbc.com/news/articles/c62m4gpnp78o) ⭐️ 8.0/10
+## [Nitter Shuts Down After Cease and Desist from X Corp.](https://github.com/zedeus/nitter/issues/1442) ⭐️ 8.0/10
 
-According to a BBC report, the world's oceans have reached their highest recorded temperature, underscoring the accelerating pace of climate change. This record was set recently, with data indicating a significant rise in sea surface temperatures. This milestone is critical because warmer oceans drive extreme weather events, sea-level rise, and marine ecosystem disruption, affecting billions of people worldwide. It signals that climate change is intensifying faster than expected, demanding urgent policy and action. The record was set in early 2025, with average sea surface temperatures surpassing previous highs. Scientists note that the combination of greenhouse gas emissions and a developing El Niño is contributing to the extreme heat.
+Nitter, a popular privacy-focused Twitter frontend, received cease and desist letters from X Corp., leading to the shutdown of all its instances for the foreseeable future. The project's maintainer announced this on GitHub, stating they are awaiting legal advice. This event highlights the legal vulnerabilities of open-source projects that rely on web scraping, and could have broader implications for access to public information and AI training data. It also sparks debate about corporate control over public discourse and the need for legal protections for such projects. The cease and desist letters were received on Monday, August 24th at 8PM EST, according to a message on the xcancel website. The maintainer noted that all Nitter instances will remain down until legal advice is obtained, with no further details provided.
 
-hackernews · tcp_handshaker · Aug 24, 19:19 · [Discussion](https://news.ycombinator.com/item?id=49424606)
+hackernews · Banditoz · Aug 25, 17:08 · [Discussion](https://news.ycombinator.com/item?id=49437283)
 
-**Background**: Oceans absorb about 90% of the excess heat from global warming, making ocean temperature a key indicator of climate change. Rising temperatures can lead to coral bleaching, fish migration, and more powerful storms. The recent record follows a trend of consecutive warm years, with 2024 being the hottest on record.
+**Background**: Nitter is a free and open-source alternative front-end for Twitter that focuses on privacy, with no JavaScript or ads, and all requests go through the backend. It was inspired by the Invidious project and allows users to browse tweets without being tracked. A cease and desist letter is a formal request to stop allegedly illegal or infringing activity, often used in trademark or copyright disputes.
 
-**Discussion**: Community comments express concern and frustration, with some pointing to government inaction and the expansion of fossil fuels, while others reflect on the personal realization of climate impacts. There is also discussion of the scientific mechanisms, such as ice melt and El Niño, and predictions of increased weather unpredictability.
+<details><summary>References</summary>
+<ul>
+<li><a href="https://nlnet.nl/project/Nitter/">NLnet; Nitter</a></li>
+<li><a href="https://alternativeto.net/software/nitter/about/">Nitter : Free and open-source front-end mirror of Twitter... | AlternativeTo</a></li>
+<li><a href="https://www.investopedia.com/terms/c/cease-and-desist.asp">investopedia.com/terms/c/ cease - and - desist .asp</a></li>
 
-**Tags**: `#climate change`, `#ocean temperature`, `#environment`, `#global warming`, `#science`
+</ul>
+</details>
+
+**Discussion**: Community comments express frustration and concern, with some noting that Nitter was essential for accessing updates from organizations that still rely on X. Others suggest that middle powers should offer legal protection for such projects, and one commenter speculates that the shutdown may be linked to AI companies' need for Twitter data, as Claude AI was observed using Nitter to fetch tweets.
+
+**Tags**: `#open-source`, `#legal`, `#twitter`, `#privacy`, `#web-scraping`
 
 ---
 
 <a id="item-5"></a>
-## [IPFS Maintainers at Shipyard Wind Down, Project Continues](https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/) ⭐️ 8.0/10
+## [OpenAI CFO Explains Full Stack Behind Abundant Intelligence](https://openai.com/index/the-full-stack-behind-abundant-intelligence) ⭐️ 8.0/10
 
-The Interplanetary Shipyard, an independent collective maintaining many IPFS and libp2p implementations, has announced it is winding down its centralized maintenance efforts. Contributions to upstream projects like go-libp2p and js-libp2p will cease, and work on IPFS specifications and ecosystem coordination will end, shifting to individual maintainer grants. This marks a significant shift in the decentralized web ecosystem, as Shipyard has been a key maintainer of core IPFS implementations. The transition to individual grants could affect the pace and coordination of IPFS development, though the project itself remains active, and community members are discussing alternatives like Iroh. The announcement clarifies that only the Shipyard maintainer team is sunsetting, not the entire IPFS project. Shipyard was formed in April 2024 as an independent collective after an 'exit to community' from Protocol Labs, and its work on specifications, standards, and ecosystem coordination will also end.
+OpenAI CFO Sarah Friar published a blog post outlining how advances in chips, compute, models, and products compound to deliver more useful intelligence at greater scale and lower cost. The post highlights OpenAI's strategic focus on the entire AI stack, including custom silicon like the Jalapeño inference chip developed with Broadcom. This signals OpenAI's commitment to vertical integration and cost reduction, which could reshape the competitive landscape in AI infrastructure. It matters because it indicates a shift from relying solely on external chips like Nvidia's to developing in-house solutions, potentially lowering barriers for AI deployment and influencing industry trends. The post mentions compounding advances across the stack, but specific technical details are limited. Web search results reveal that OpenAI has assembled a team of about 20 chip experts, including former Google engineers who worked on TPUs, and is partnering with Broadcom and TSMC for its first in-house AI chip, Jalapeño, designed for inference.
 
-hackernews · iand · Aug 24, 15:48 · [Discussion](https://news.ycombinator.com/item?id=49421489)
+rss · OpenAI Blog · Aug 25, 07:05
 
-**Background**: IPFS (InterPlanetary File System) is a peer-to-peer hypermedia protocol designed to make the web faster, safer, and more open by using content-addressing. Shipyard was an independent collective of maintainers for many IPFS and libp2p implementations, funded through grants and community support. The IPFS ecosystem also includes a grants platform to fund builders and researchers, and other projects like Iroh offer alternative p2p solutions.
+**Background**: AI scaling laws describe how model performance improves with increased data, parameters, or compute. OpenAI's strategy involves optimizing the entire stack, from chips to products, to achieve 'abundant intelligence'—making AI more accessible and affordable. Custom inference chips like Jalapeño aim to reduce costs and improve efficiency for serving models.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/">The end of IPFS at Shipyard</a></li>
-<li><a href="https://blog.ipfs.tech/shipyard-hello-world/">IPFS & libp2p Devs Go Independent: Meet Interplanetary Shipyard | IPFS Blog & News</a></li>
-<li><a href="https://github.com/ipfs/devgrants">GitHub - ipfs/devgrants: The IPFS Grant platform connects funding organizations with builders and researchers in the IPFS community. · GitHub</a></li>
+<li><a href="https://btw.co/node/11271729/openai-chip/">OpenAI Chip - Break The Web</a></li>
+<li><a href="https://www.ainews.com/p/openai-partners-with-broadcom-and-tsmc-for-first-in-house-ai-chip">OpenAI Partners with Broadcom and TSMC for First In-House AI Chip</a></li>
+<li><a href="https://blogs.nvidia.com/blog/ai-scaling-laws/">How Scaling Laws Drive Smarter, More Powerful AI | NVIDIA Blog</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community comments express confusion over the announcement's wording, with some initially thinking IPFS itself was shutting down. There is sadness over the loss, with one former maintainer suggesting Iroh as a more sustainable alternative, and criticism of IPNS for not supporting non-static webapps, which may have hindered adoption. A user also jokingly criticized the use of a Google Form for feedback, given the project's focus on decentralization.
-
-**Tags**: `#IPFS`, `#decentralized web`, `#open source`, `#maintenance`, `#p2p`
+**Tags**: `#AI`, `#OpenAI`, `#compute`, `#chips`, `#strategy`
 
 ---
 
 <a id="item-6"></a>
-## [seL4 Security Proofs Complete on AArch64](https://proofcraft.systems/news-2026/#2026-08-21) ⭐️ 8.0/10
+## [OpenAI Bans Russia-Linked Accounts in Covert Influence Campaign](https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia) ⭐️ 8.0/10
 
-The seL4 microkernel's formal security proofs have been completed on the AArch64 architecture, as announced by Proofcraft. This marks a significant milestone in formally verified operating system kernels. This achievement extends the highest level of formal verification to a widely used 64-bit ARM architecture, potentially enhancing security assurance for embedded and military systems. It could also influence broader adoption of formally verified kernels in critical infrastructure. The proofs are limited to unicore (single-core) and non-MCS (mixed criticality system) configurations, as noted in community comments. The verification covers the functional correctness and security properties of the kernel, assuming correctness of the compiler, assembly code, and hardware.
+OpenAI has banned a cluster of ChatGPT accounts originating from Russia that were used to run a covert influence campaign. The operation promoted a fake Israel-based think tank and a 'sovereignty' index that praised Russia and criticized the West. This disruption highlights the real-world misuse of AI for disinformation and underscores the growing threat of AI-powered influence operations. It is significant for AI safety and cybersecurity, as it demonstrates how platforms like OpenAI are actively countering such threats. The campaign was previously unreported and used AI to generate content for social media. OpenAI's action is part of a broader effort to detect and disrupt deceptive influence operations, as detailed in their recent report on five such campaigns.
 
-hackernews · snvzz · Aug 24, 11:32 · [Discussion](https://news.ycombinator.com/item?id=49418255)
+rss · OpenAI Blog · Aug 25, 00:00
 
-**Background**: seL4 is a microkernel designed for high-assurance systems, with formal verification providing mathematical proof that the implementation meets its specification. AArch64 is the 64-bit execution state of the ARM architecture, widely used in mobile and embedded devices. Formal verification of an OS kernel is a complex process that involves proving correctness from abstract specification down to C code, and this milestone extends that to a new architecture.
+**Background**: Influence operations are coordinated efforts to manipulate public opinion, often using fake accounts and content. AI tools like ChatGPT can be misused to generate convincing text at scale, making such operations more efficient. OpenAI has previously disrupted similar campaigns, including one from Iran, and continues to develop methods to identify and ban malicious accounts.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://dl.acm.org/doi/10.1145/1629575.1629596">seL4 | Proceedings of the ACM SIGOPS 22nd symposium on Operating systems principles</a></li>
-<li><a href="https://www.researchgate.net/publication/220910193_SeL4_Formal_verification_of_an_OS_kernel">(PDF) SeL4: Formal verification of an OS kernel</a></li>
-<li><a href="https://sel4.systems/Research/pdfs/comprehensive-formal-verification-os-microkernel.pdf">Comprehensive Formal Verification of an OS Microkernel</a></li>
+<li><a href="https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia/">Disrupting a new covert influence campaign from Russia | OpenAI</a></li>
+<li><a href="https://the-decoder.com/russia-used-chatgpt-to-run-a-covert-influence-campaign-pushing-pro-kremlin-narratives-across-the-west/">Russia used ChatGPT to run a covert influence campaign pushing...</a></li>
+<li><a href="https://www.aa.com.tr/en/world/openai-shuts-down-russia-linked-chatgpt-accounts-over-covert-influence-campaign-/4037086">OpenAI shuts down Russia -linked ChatGPT accounts over ‘ covert ...</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community comments highlight skepticism about the practical impact, with one user joking about side-channel attacks invalidating the result, and another pointing out the limitations to unicore and non-MCS configurations. Others discuss the adoption of seL4 in various systems, such as GenodeOS and LionsOS, and question whether a native seL4/Linux is needed to truly improve security.
-
-**Tags**: `#seL4`, `#formal verification`, `#AArch64`, `#OS security`
+**Tags**: `#AI safety`, `#disinformation`, `#OpenAI`, `#cybersecurity`, `#influence operations`
 
 ---
 
 <a id="item-7"></a>
-## [OpenAI's GPT-5.6 in Kiro boosts developer price-performance](https://openai.com/index/gpt-5-6-in-kiro) ⭐️ 8.0/10
+## [EVE Online Begins Migration from Stackless Python 2.7 to Python 3](https://simonwillison.net/2026/Aug/25/eve-online-move-to-python-3/) ⭐️ 8.0/10
 
-OpenAI has announced that GPT-5.6 is now available in Kiro, an agentic coding tool, offering developers improved price-performance for planning, building, reviewing, and testing software. The model delivers more useful work per token and stronger performance per dollar. This release is significant for the AI and software engineering community as it directly addresses the cost-efficiency of AI-assisted development, a key factor for widespread adoption. By improving price-performance, OpenAI aims to make advanced AI coding capabilities more accessible to developers and enterprises. GPT-5.6 is integrated into Kiro, which supports spec-driven workflows, custom agents, and parallel agents for large codebases. The model is also available as GPT-5.6 Sol (max) on platforms like Artificial Analysis, and benchmarks show it competes with models like Kimi K3, though Kimi costs 64% less per completed task.
+EVE Online has announced the start of its migration from Stackless Python 2.7 to Python 3, using the futurize script on 2.4 million lines of code and manual review of approximately 20,000 behavioral differences. This migration is significant because it addresses a long-standing technical debt in one of the largest and oldest Python codebases in production, demonstrating a practical path for other legacy Python 2 systems. It also highlights the challenges and strategies involved in upgrading massive, mission-critical codebases. The migration will use the futurize script to automatically convert code, followed by manual review of ~20,000 places where Python 2 and 3 behavior differ, such as integer division. The announcement does not specify how they will replace Stackless, but they previously presented a solution using the carbonengine/scheduler library for their game EVE Frontier.
 
-rss · OpenAI Blog · Aug 24, 12:00
+rss · Simon Willison · Aug 25, 22:59
 
-**Background**: Kiro is an agentic coding service that turns prompts into executable specs, then into working code, docs, and tests, helping developers solve complex problems and automate tasks. GPT-5.6 is OpenAI's latest model iteration, focusing on delivering more value per token and per dollar, which is crucial for developers who rely on AI for coding assistance.
+**Background**: EVE Online has run on Stackless Python since 2003, with its last major upgrade to Stackless Python 2.7 in 2010. Stackless Python is a variant of Python that supports microthreads (tasklets) for lightweight concurrency. The futurize script is part of the python-future project, which helps convert Python 2 code to be compatible with Python 3.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://openai.com/index/gpt-5-6-in-kiro/">Advancing price - performance for developers with GPT ‑ 5 . 6 in... | OpenAI</a></li>
-<li><a href="https://kiro.dev/">Kiro: Move beyond AI coding to agentic engineering</a></li>
-<li><a href="https://artificialanalysis.ai/models/gpt-5-6-sol">GPT - 5 . 6 Sol (max) - Intelligence, Performance & Price Analysis</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Stackless_Python">Stackless Python</a></li>
+<li><a href="https://python-future.org/futurize.html">futurize: Py2 to Py2/3 — Python-Future documentation</a></li>
+<li><a href="https://github.com/stackless-dev/stackless/wiki/">Home · stackless-dev/stackless Wiki · GitHub</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#OpenAI`, `#GPT-5.6`, `#AI`, `#developer tools`, `#price-performance`
+**Tags**: `#Python`, `#Migration`, `#EVE Online`, `#Stackless Python`, `#Legacy Code`
 
 ---
 
 <a id="item-8"></a>
-## [Executable as SQLite Database: A Clever Linux Hack](https://simonwillison.net/2026/Aug/24/your-executable-is-a-sqlite-database/) ⭐️ 8.0/10
+## [Continual Learning Enables SovereignAI with Open-Weight Frontier Models](https://www.reddit.com/r/MachineLearning/comments/1vxvzju/continual_learning_of_frontier_models_for/) ⭐️ 8.0/10
 
-Farid Zakaria has developed a technique to create a SQLite database file that can be directly executed as a binary on Linux. This is achieved by embedding ELF components into SQLite tables and using a custom interpreter called self-exec. This innovation could enable new ways of packaging self-contained executables that also carry structured data, potentially simplifying distribution and data management. It showcases the flexibility of both SQLite and the Linux kernel's binfmt_misc mechanism. The trick sets the SQLite file's 4-byte application ID (at offset 68) to 'SELF' (Structured Executable & Linkable Format). The ELF components are stored in various SQLite tables according to a schema, and the self-exec interpreter extracts and executes them. binfmt_misc can be used to register the pattern so the kernel automatically invokes the interpreter.
+A new technical report introduces Thomson, a general-purpose frontier model trained via continual learning on open-weight models, demonstrating that frontier-level performance is achievable with substantially lower compute and personnel budgets. The model shows a distinctive π-shaped improvement pattern across capabilities while minimizing catastrophic forgetting. This work challenges the assumption that frontier AI development is exclusive to a few well-funded labs, offering a concrete path for a wider range of institutions to achieve SovereignAI. By showing that continual learning on open-weight models can yield competitive results, it could democratize AI development and reduce the power asymmetry between developers and users. The report emphasizes a mid- and post-training stack with safeguards for plasticity and stability, and Thomson is evaluated across domains including agentic tasks, safety, legal, tax, multilingualism, and deep research. The π-shaped pattern indicates broad improvements while nearly eliminating the forgetting problem common in narrow domain adaptation.
 
-rss · Simon Willison · Aug 24, 11:38
+reddit · r/MachineLearning · /u/Forsaken_Scientist · Aug 25, 10:30
 
-**Background**: ELF (Executable and Linkable Format) is the standard binary format for executables and libraries on Linux and Unix-like systems. SQLite is a popular embedded database that stores data in a single file, and its format includes an application ID field for identifying the file type. binfmt_misc is a Linux kernel feature that allows custom binary formats to be executed by associating them with user-space interpreters.
+**Background**: Continual learning is an AI approach where a model is sequentially trained on new tasks while preserving previously learned knowledge, addressing the challenge of adapting to changing data distributions. SovereignAI refers to an organization's or nation's ability to independently develop, deploy, and govern AI systems using its own infrastructure, data, and models. Open-weight models are AI models whose learned parameters are publicly released, allowing others to download, modify, and run them, which is a key enabler for such independent development.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Executable_and_Linkable_Format">Executable and Linkable Format - Wikipedia</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Binfmt_misc">binfmt_misc - Wikipedia</a></li>
-<li><a href="https://stackoverflow.com/questions/35557487/where-can-i-register-a-sqlite-application-id">registration - Where can I register a sqlite application ID ?</a></li>
+<li><a href="https://www.ibm.com/think/topics/continual-learning">What is Continual Learning? | IBM</a></li>
+<li><a href="https://www.opentext.com/what-is/sovereign-ai">What is sovereign AI? Enterprise AI for global compliance</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Open-weight_model">Open-weight model</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#SQLite`, `#ELF`, `#Linux`, `#executable`, `#hack`
+**Tags**: `#continual learning`, `#frontier models`, `#SovereignAI`, `#open weights`, `#AI democratization`
 
 ---
 
 <a id="item-9"></a>
-## [Insilico Medicine Launches O3DC Open Alliance for AI Drug Discovery Benchmarks](https://news.google.com/rss/articles/CBMic0FVX3lxTE1nVE05VlZZQVI0OVVVME1ZdU5ZaHJHRkFqN1lpQ1lKS29Qa2VPLXo3UENzZ2t1RXYwUlhJTU5zYXJpVXJnOUtYel9VNTJjNGZGWEVfN016VDBPWEdocTBtVGFZUS1kMFljazR6eWZQU2ZrTjg?oc=5) ⭐️ 7.0/10
+## [SpaceX to Launch NVIDIA Vera Rubin NVL72 into Orbit by 2027](https://www.theregister.com/off-prem/2026/08/25/spacex-claims-it-will-put-a-vera-rubin-nvl72-rack-scale-system-into-orbit-next-year/5292067) ⭐️ 8.0/10
 
-Insilico Medicine announced the launch of the Open Drug Discovery and Development Consortium (O3DC) on August 24, 2026, to establish quality benchmarks for AI-driven drug discovery. The consortium's flagship resource is a community-curated index of open benchmarks in the field. This initiative addresses the critical need for standardized evaluation in AI-driven drug discovery, which is currently fragmented across numerous benchmarks. By providing a unified, community-maintained index, O3DC could accelerate progress and improve reproducibility in the field, benefiting researchers and pharmaceutical companies alike. The O3DC Benchmark Index is a community-maintained map of every open benchmark in AI-driven drug discovery, including repositories, maintainers, live update status, and per-benchmark discussion. Insilico Medicine also offers a unified research platform at dddbench.insilico.com, combining curated datasets and specialized benchmarks for rigorous evaluation.
+SpaceX announced plans to launch an NVIDIA Vera Rubin NVL72 rack-scale AI system into orbit by 2027 to test space-based AI data center technologies. The system, comprising 72 Rubin GPUs and 36 Vera CPUs, has a power draw exceeding 100 kilowatts. This initiative could pioneer orbital AI data centers, potentially enabling low-latency, space-based computing for defense and commercial applications. It also highlights the growing convergence of space exploration and AI infrastructure, with major players like SpaceX and NVIDIA collaborating. The NVL72 system requires complex liquid cooling and power supply, which must be adapted for space conditions including radiation and thermal management. SpaceX has not yet disclosed specific launch dates, orbital altitude, or how the system will be powered and cooled in orbit.
 
-google_news · EurekAlert! · Aug 24, 19:11
+telegram · zaihuapd · Aug 25, 08:03
 
-**Background**: AI-driven drug discovery uses machine learning to accelerate the identification and development of new drugs. However, the evaluation landscape is scattered across dozens of benchmarks, making it difficult to compare methods and assess progress. Open consortia like O3DC aim to standardize these benchmarks, fostering collaboration and transparency in the field.
+**Background**: Space-based data centers are a proposed concept to build AI data centers in orbit, using space-based solar power and radiative cooling. Historically, military programs like the Strategic Defense Initiative's Brilliant Pebbles envisioned on-orbit data processing, and more recently, the Space Development Agency has pursued decentralized space architectures. NVIDIA's Vera Rubin NVL72 is a rack-scale AI supercomputer that unifies 72 Rubin GPUs and 36 Vera CPUs with NVLink 6, designed for high-performance AI workloads.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.o3dc.org/">O3DC · Drug Discovery Benchmark Index</a></li>
-<li><a href="https://www.linkedin.com/pulse/insilico-medicine-convenes-o3dc-open-consortium-benchmark-shy5c">Insilico Medicine Convenes O3DC, an Open Consortium for ...</a></li>
-<li><a href="https://dddbench.insilico.com/">Drug Discovery and Development Benchmark | Insilico Medicine</a></li>
+<li><a href="https://grokipedia.com/page/nvidia-vera-rubin-nvl72">NVIDIA Vera Rubin NVL72</a></li>
+<li><a href="https://www.nvidia.com/en-us/data-center/technologies/rubin/">Infrastructure for Scalable AI Reasoning | NVIDIA Vera Rubin Platform</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Space-based_data_center">Space-based data center</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI drug discovery`, `#benchmarks`, `#open alliance`, `#biotech`, `#Insilico Medicine`
+**Tags**: `#SpaceX`, `#NVIDIA`, `#AI infrastructure`, `#Space computing`, `#Orbital data center`
 
 ---
 
 <a id="item-10"></a>
-## [llm-anthropic 0.27 Adds Compatibility with Anthropic SDK v1.0.0](https://simonwillison.net/2026/Aug/24/llm-anthropic/) ⭐️ 5.0/10
+## [OpenAI Launches Admin Plugin for ChatGPT Work and Codex](https://openai.com/index/introducing-admin-plugin) ⭐️ 7.0/10
 
-llm-anthropic 0.27 was released to ensure compatibility with the recently released anthropic v1.0.0 Python library, which switches from httpx to httpx2. The update was largely automated using Claude Code with Fable 5, following the official migration guide. This update is significant because it keeps the LLM plugin ecosystem in sync with major SDK changes, ensuring users can continue using Anthropic models without disruption. The shift from httpx to httpx2 reflects a broader industry trend, as OpenAI also made a similar change in its v3.0.0 release. The minimum supported Python version for anthropic v1.0.0 has increased from 3.9 to 3.10, but Pydantic v1 and v2 remain supported. The migration was performed via a pull request generated by prompting Claude Code with the migration guide URL.
+OpenAI has introduced an Admin plugin for ChatGPT Work and Codex, enabling administrators to manage workspace usage, members, permissions, limits, and admin requests directly from these tools. The plugin maps admin instructions to supported read or write actions and returns structured results. This plugin significantly enhances enterprise adoption of ChatGPT Work and Codex by streamlining administrative tasks and providing permission-aware tools. It empowers organizations to manage their AI tooling more efficiently, potentially reducing overhead and improving governance. The plugin makes Admin Console capabilities available as permission-aware tools within ChatGPT Work and Codex. It supports actions such as analyzing workspace usage, managing members and permissions, adjusting limits, and acting on admin requests.
 
-rss · Simon Willison · Aug 24, 16:27
+rss · OpenAI Blog · Aug 25, 00:00
 
-**Background**: LLM is a command-line tool and Python library by Simon Willison for interacting with various language models. llm-anthropic is a plugin that provides access to Anthropic's Claude models. The anthropic SDK recently moved to httpx2, a next-generation HTTP client that supports both HTTP/1.1 and HTTP/2, requiring plugin updates for compatibility.
+**Background**: ChatGPT Work is a paid tier of ChatGPT designed for professional use, while Codex is OpenAI's AI-powered coding assistant. Enterprise plans typically include roles like Owner, Admin, Member, and Analytics Viewer, with custom roles and RBAC for finer control. The Admin plugin aims to simplify these management tasks by integrating them into the conversational interface.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://pypi.org/project/httpx2/">httpx2 · PyPI</a></li>
-<li><a href="https://github.com/anthropics/anthropic-sdk-python/blob/main/MIGRATION.md">anthropic - sdk -python/ MIGRATION .md at main...</a></li>
-<li><a href="https://simonwillison.net/2026/Aug/24/llm-anthropic/">Release: llm- anthropic 0.27 | Simon Willison’s Weblog</a></li>
+<li><a href="https://openai.com/index/introducing-admin-plugin/">Introducing the Admin plugin for ChatGPT Work and Codex | OpenAI</a></li>
+<li><a href="https://learn.chatgpt.com/docs/enterprise/work-admin-faq">ChatGPT Work admin FAQ | ChatGPT Learn</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#llm`, `#anthropic`, `#python`, `#sdk`, `#release`
-
----
-
-<a id="item-11"></a>
-## [Most Chinese Consumers Use AI for Product Research, Report Finds](https://news.google.com/rss/articles/CBMizwFBVV95cUxPdllrWXMwZUd1Q1NueUZWdFotVlU0VUlHMGYzbGU2cy0xQzRHWWtEYVBKVjFzenhFbXRSLWk1eXV1eFJmVC1PWW5vM09jWEF0SWJzcnF1dTJpRzQ0S2F1SzZ4T3NDMmtrdkdiUjJja0xFMllFY1JEOWxyWUFhRTZTeEpHbjJLRElQcEVUdGIxUkJBeGVLTjlvVHVmSVdzbU1tVHZaTHg5bmZvN3p1S05aT1JVdDFCLWVtTHRpN3JJck9UMEtxSUwwNU00aHN1MkE?oc=5) ⭐️ 5.0/10
-
-A recent report reveals that the majority of Chinese consumers now consult AI tools before purchasing new products, and brands are adapting their strategies to accommodate this behavior. This trend signifies a shift in consumer behavior where AI becomes a primary source of product information, impacting how brands approach marketing and customer engagement in China's e-commerce landscape. The report highlights that AI is used for product research, comparisons, and recommendations, and brands are incorporating AI-driven features into their platforms to meet consumer expectations.
-
-google_news · 一财全球Yicai Global · Aug 24, 09:12
-
-**Background**: In China's rapidly digitizing economy, consumers increasingly rely on digital tools for shopping decisions. AI-powered assistants and recommendation systems have become more sophisticated, offering personalized advice that traditional search methods may not provide. This trend reflects broader global adoption of AI in e-commerce.
-
-**Tags**: `#AI adoption`, `#consumer behavior`, `#China`, `#e-commerce`, `#marketing`
+**Tags**: `#OpenAI`, `#ChatGPT`, `#Codex`, `#Admin`, `#Enterprise`
 
 ---
